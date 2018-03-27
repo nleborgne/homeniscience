@@ -11,8 +11,8 @@ footer{
   right: 0;
   bottom: 0;
   left: 0;
+  height:60px;
   padding: 1rem;
-
 
   text-align:center;
   padding:20px;
