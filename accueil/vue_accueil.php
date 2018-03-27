@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<meta name="robots" content="noindex">
-<html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="style_main.css">
-  <title>Menu domisep</title>
-</head>
-<header>
-  <nav>
-    <div class="navbar">
-      <a href="#home">Accueil</a>
-      <a href="#news">Mon Domicile</a>
-      <a href="#contact">Paramètres</a>
-      <a href="#contact">Support</a>
-    </div>
-  </nav>
-</header>
+<?php require('../header.php'); ?>
 <body>
   <div class="container">
     <div class="column">
@@ -105,12 +86,4 @@
     }
 
     </script>
-    <footer>
-      <a href="support">Support | </a>
-      <a href="legale">Mentions Légales | </a>
-      <a href="use">CGU | </a>
-      <a href="about">À Propos</a>
-    </footer>
-  </body>
-
-    </html>
+  <?php include('../footer.php'); ?>

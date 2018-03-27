@@ -153,19 +153,6 @@ aside:hover{
   box-shadow: 1px 1px 1px 2px #BEBEBE;
 
 }
-footer{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-
-
-  text-align:center;
-  padding:20px;
-  background-color: #696969;
-  width:100%;
-}
 
 article > ::-webkit-scrollbar-track
 {
