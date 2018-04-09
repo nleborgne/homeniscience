@@ -1,0 +1,169 @@
+* {
+    /*modifier l'allure generale de la page*/
+    font-family: 'Comfortaa',sans-serif;
+    text-decoration: none;
+    color:#343434
+    background: white;
+}
+html{
+    background: white;
+    /*modifier l'allure generale de la page*/
+}
+
+
+/*code du header*/
+div.navbar {
+    overflow: hidden;
+//background-color: #4650E2;
+    background:linear-gradient(-90deg, #4650E2, #00A2E8);
+    position: static;
+    top: 0;
+    width: 100%;
+    padding-top: 3rem;
+    text-align: center;
+    box-shadow: 0px 2px 2px 0px #BEBEBE;
+    z-index: 2;
+//height: 60px;
+}
+
+div.navbar a {
+
+    display: inline-block;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px
+
+
+}
+/*ajouter de l'effet quand la souris passe sur le header*/
+div.navbar a:hover {
+    background: #1111;
+//font-size:150%;
+    color: black;
+}
+
+
+
+
+
+
+
+
+div.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-content: flex-start;
+    text-align: center;
+    justify-content:center;
+//border:1px solid black;
+    width: 100%;
+    z-index: -1;
+}
+div.column {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    background-color: white;
+
+}
+article{
+    display: inline-block;
+    background-color:#1111;
+    margin: 40px 20px 00px 0px;
+    box-shadow: 1px 1px 1px 1px #BEBEBE;
+    width:450px;
+    height: 300px;
+    overflow:hidden;
+
+}
+
+aside{
+    text-align:center;
+    display: inline-block;
+    background-color: #1111;
+//border: solid #BEBEBE;
+    box-shadow: 1px 1px 1px 1px #BEBEBE;
+    margin: 40px 20px 0px 20px;
+
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+
+}
+div.container a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+div.container a {
+    overflow: hidden;
+//background-color: #1E77F3;
+
+    top: 0;
+    display:block;
+
+}
+
+
+
+
+
+/*gerer la couleur de chaque dessus de boite */
+a.domicile {
+    background-color: #00A2E8;
+}
+a.historique {
+    background-color: #1E77F3;
+}
+a.alarme {
+    background-color: #1E77F3;
+}
+a.stats {
+    background-color: #00A2E8;
+}
+a.general {
+    background-color: #4650E2;
+}
+
+
+/*augmenter la taille et l'ombre qd le curseur est sur la boite*/
+article:hover{
+    height:150%;
+    box-shadow: 1px 1px 1px 2px #BEBEBE;
+
+}
+/*augmenter la taille et l'ombre qd le curseur est sur la boite*/
+aside:hover{
+    height:150%;
+    box-shadow: 1px 1px 1px 2px #BEBEBE;
+
+}
+
+
+
+
+
+
+/*position et style du footer */
+footer{
+
+//position: absolute;
+    display: block;
+    margin:100px auto 0 auto ;
+    overflow: hidden;
+    background-color: #BEBEBE;
+    position: static;
+    width: 1120px;
+    height: 100px;
+    color: #0000;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+
+}
