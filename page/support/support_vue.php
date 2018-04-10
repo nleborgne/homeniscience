@@ -5,44 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="support.css">
-    <title>support</title>
+    <title>SUPPORT</title>
 </head>
-<header>
-    <nav>
-        <div class="navbar">
-            <a href="#home">Menu</a>
-            <a href="#news">Mon Domicile</a>
-            <a href="#contact">Parametre</a>
-            <a href="#contact">SUPPORT</a>
-        </div>
-
-
-
-    </nav>
-</header>
+<?php require('header.php'); ?>
 <body>
 <div class="container">
     <div class="column">
         <aside>
             <a class="boxCeMac">boxCeMac</a>
-
-
         </aside>
-
     </div>
-
-
     <div class="column">
         <article>
-            <a class="probleme">En cas de probleme</a>
+            <a class="probleme">Liste des pannes</a>
         </article>
-
     </div>
-
-
-
 </div>
-
 </div>
 
 </body>

@@ -5,9 +5,9 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="style_main.css">
   <title>Menu domisep</title>
 </head>
+<body>
 <header>
   <nav>
     <div class="navbar">
@@ -67,8 +67,6 @@ div.navbar a {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px
-
-
 }
 
 div.navbar a:hover {
