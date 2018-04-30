@@ -22,31 +22,48 @@
         <br>
         <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
         <br><br>
-        <i class="fas fa-volume-up"></i>
+        <i class="fas fa-volume-up fa-2x"></i>
+        <input type="range" name="" value="">
+        <h3>Chambre enfants</h3>
+        <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
+        <br><br>
+        <i class="fas fa-volume-up fa-2x"></i>
         <input type="range" name="" value="">
       </div>
     </div>
     <div class="flex1">
       <button class="accordion" type="button" name="button">Historique</button>
       <div class="panel">
-        <p>TEST FLEXBOX ACCORDION</p>
-        <p>CONTENT GOES HERE</p>
+        <p>30/04 16:05 : fenêtre cuisine ouverte</p>
+        <p>30/04 17:05 : lumière chambre 2 allumée</p>
       </div>
     </div>
     <div class="flex1">
       <button class="accordion" type="button" name="button">Général</button>
       <div class="panel">
-        <p>TEST FLEXBOX ACCORDION</p>
-        <p>CONTENT GOES HERE</p>
+        <p><strong>superman</strong> : je ne serai pas là cette aprem </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="flex1">
-      <button class="accordion" type="button" name="button">Alarme</button>
+      <button class="accordion" type="button" name="button">Sécurité</button>
       <div class="panel">
-        <p>TEST FLEXBOX ACCORDION</p>
-        <p>CONTENT GOES HERE</p>
+        <br><br>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        &nbsp;&nbsp;&nbsp;
+        Alarme
       </div>
     </div>
     <div class="flex1">
