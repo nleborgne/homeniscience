@@ -1,156 +1,95 @@
-* {
-    font-family: 'Comfortaa',sans-serif;
-    text-decoration: none;
-    color:#343434
-
+html,body{
+  background: white;
 }
-html{
-    background: white;
-}
-
-/*code du header*/
-div.navbar {
-    overflow: hidden;
-//background-color: #4650E2;
-    background:linear-gradient(-90deg, #696969, #343434);
-    position: static;
-    top: 0;
-    width: 100%;
-    padding-top: 3rem;
-    text-align: center;
-    box-shadow: 0px 2px 2px 0px #BEBEBE;
-    z-index: 2;
-//height: 60px;
-}
-
-div.navbar a {
-
-    display: inline-block;
-    color: #F2F2F2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px
-
-
-}
-/*ajouter de l'effet quand la souris passe sur le header*/
-div.navbar a:hover {
-    background: #1111;
-//font-size:150%;
-    color: black;
-}
-
-
-
-
-
-
-
 div.container {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    align-content: flex-start;
-    text-align: center;
-    justify-content:center;
-//border:1px solid black;
-    width: 100%;
-    z-index: -1;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-content: flex-start;
+  text-align: center;
+  justify-content:center;
+  width: 100%;
+  z-index: -1;
+  margin-bottom: 50px;
 }
 div.column {
-    display: flex;
-    align-content: flex-start;
-    flex-direction: column;
-    background-color: white;
-
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  width:100%;
 }
 article{
-    display: inline-block;
-    background-color:#1111;
-    margin: 40px 40px 00px 0px;
-    box-shadow: 1px 1px 1px 1px #BEBEBE;
-    width:720px;
-    height: 500px;
-    overflow:hidden;
-
+  display: inline-block;
+  background-color:#1111;
+  margin: 40px 40px 00px 0px;
+  box-shadow: 1px 1px 1px 1px #BEBEBE;
+  width:100%;
+  overflow:hidden;
 }
-
+article.main {
+  height:500px;
+}
 aside{
-    text-align:center;
-    display: inline-block;
-    background-color: #1111;
-//border: solid #BEBEBE;
-    box-shadow: 1px 1px 1px 1px #BEBEBE;
-    margin: 40px 20px 0px 0px;
-
-    width: 360px;
-    height: 500px;
-    overflow: hidden;
-
+  text-align:center;
+  display: inline-block;
+  background-color: #1111;
+  box-shadow: 1px 1px 1px 1px #BEBEBE;
+  margin: 40px 20px 0px 0px;
+  width: 360px;
+  height: 500px;
+  overflow: hidden;
 }
-div.container a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+div.container a.probleme {
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  overflow: hidden;
+}
+  div.container a {
     text-decoration: none;
-    font-size: 17px;
+    color: #000;
 }
-div.container a {
-    overflow: hidden;
-//background-color: #1E77F3;
-
-    top: 0;
-    display:block;
-
-}
-
-
-/*gerer la couleur de chaque dessus de boite */
-a.boxCeMac{
-    background-color: #343434;
+div.container a:hover {
+  color: #696969;
 }
 a.probleme{
-    background-color: #696969;
+  background-color: #696969;
+  font-family: 'Comfortaa';
+  color:white;
 }
 
-
-
-
-
-/*augmenter la taille et l'ombre qd le curseur est sur la boite*/
-article:hover{
-    height:150%;
-    box-shadow: 1px 1px 1px 2px #BEBEBE;
-
+.liste {
+  list-style-type: none;
+  font-family: 'Lato';
 }
-/*augmenter la taille et l'ombre qd le curseur est sur la boite*/
-aside:hover{
-    height:150%;
-    box-shadow: 1px 1px 1px 2px #BEBEBE;
-
+.liste li {
+  display: inline-block;
+  font-size: 15px;
+  width: 100px;
+}
+.listepanne {
+  list-style-type: none;
+  font-family: 'Roboto';
+}
+.listepanne li {
+  display: inline-block;
+  font-size: 12px;
+  width:100px;
 }
 
-
-
-
-
-
-/*position et style du footer */
-footer{
-
-//position: absolute;
-    display: block;
-    margin:100px auto 0 auto ;
-    overflow: hidden;
-    background-color: #BEBEBE;
-    position: static;
-    width: 1120px;
-    height: 100px;
-    color: #0000;
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-
+.listeDetail {
+  list-style-type: none;
+  font-family: 'Lato';
+}
+.listeDetail li {
+  display: inline-block;
+  font-size: 15px;
+  width: 155px;
+}
+.listepanne input {
+  text-align: center;
 }
