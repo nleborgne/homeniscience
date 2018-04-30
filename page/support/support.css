@@ -1,0 +1,95 @@
+html,body{
+  background: white;
+}
+div.container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-content: flex-start;
+  text-align: center;
+  justify-content:center;
+  width: 100%;
+  z-index: -1;
+  margin-bottom: 50px;
+}
+div.column {
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  width:100%;
+}
+article{
+  display: inline-block;
+  background-color:#1111;
+  margin: 40px 40px 00px 0px;
+  box-shadow: 1px 1px 1px 1px #BEBEBE;
+  width:100%;
+  overflow:hidden;
+}
+article.main {
+  height:500px;
+}
+aside{
+  text-align:center;
+  display: inline-block;
+  background-color: #1111;
+  box-shadow: 1px 1px 1px 1px #BEBEBE;
+  margin: 40px 20px 0px 0px;
+  width: 360px;
+  height: 500px;
+  overflow: hidden;
+}
+div.container a.probleme {
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  overflow: hidden;
+}
+  div.container a {
+    text-decoration: none;
+    color: #000;
+}
+div.container a:hover {
+  color: #696969;
+}
+a.probleme{
+  background-color: #696969;
+  font-family: 'Comfortaa';
+  color:white;
+}
+
+.liste {
+  list-style-type: none;
+  font-family: 'Lato';
+}
+.liste li {
+  display: inline-block;
+  font-size: 15px;
+  width: 100px;
+}
+.listepanne {
+  list-style-type: none;
+  font-family: 'Roboto';
+}
+.listepanne li {
+  display: inline-block;
+  font-size: 12px;
+  width:100px;
+}
+
+.listeDetail {
+  list-style-type: none;
+  font-family: 'Lato';
+}
+.listeDetail li {
+  display: inline-block;
+  font-size: 15px;
+  width: 155px;
+}
+.listepanne input {
+  text-align: center;
+}
