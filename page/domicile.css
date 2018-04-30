@@ -1,51 +1,9 @@
 * {
-    font-family: 'Comfortaa',sans-serif;
     text-decoration: none;
-    color:#343434
-
 }
 html{
     background: white;
 }
-
-/*code du header*/
-div.navbar {
-    overflow: hidden;
-//background-color: #4650E2;
-    background:linear-gradient(-90deg, #4650E2, #99D9EA);
-    position: static;
-    top: 0;
-    width: 100%;
-    padding-top: 3rem;
-    text-align: center;
-    box-shadow: 0px 2px 2px 0px #BEBEBE;
-    z-index: 2;
-//height: 60px;
-}
-
-div.navbar a {
-
-    display: inline-block;
-    color: #F2F2F2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px
-
-
-}
-/*ajouter de l'effet quand la souris passe sur le header*/
-div.navbar a:hover {
-    background: #1111;
-//font-size:150%;
-    color: black;
-}
-
-
-
-
-
-
 
 div.container {
     display: flex;
@@ -54,7 +12,6 @@ div.container {
     align-content: flex-start;
     text-align: center;
     justify-content:center;
-//border:1px solid black;
     width: 100%;
     z-index: -1;
 }
@@ -73,7 +30,9 @@ article{
     width:360px;
     height: 500px;
     overflow:hidden;
-
+}
+article a {
+  font-family: 'Lato';
 }
 
 aside{
@@ -120,26 +79,6 @@ a.ceMac {
 a.utilisateur {
     background-color: #4650E2;
 }
-
-
-/*augmenter la taille et l'ombre qd le curseur est sur la boite*/
-article:hover{
-    height:150%;
-    box-shadow: 1px 1px 1px 2px #BEBEBE;
-
-}
-/*augmenter la taille et l'ombre qd le curseur est sur la boite*/
-aside:hover{
-    height:150%;
-    box-shadow: 1px 1px 1px 2px #BEBEBE;
-
-}
-
-
-
-
-
-
 
 
 

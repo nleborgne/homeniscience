@@ -1,9 +1,4 @@
-
-
-
-
-
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <?php
 //Step1
 $db = mysqli_connect('localhost','root','','homeniscience')
@@ -12,7 +7,7 @@ or die('Error connecting to MySQL server.');
 
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lato|Roboto" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="domicile.css">
@@ -21,24 +16,12 @@ or die('Error connecting to MySQL server.');
 
 
 </head>
-<header>
-    <nav>
-        <div class="navbar">
-            <a href="#home">Menu</a>
-            <a href="#news">MON DOMICILE</a>
-            <a href="#contact">Parametre</a>
-            <a href="#contact">Support</a>
-        </div>
-
-
-
-    </nav>
-</header>
+<?php require('header.php'); ?>
 <body>
 <div class="container">
     <div class="column">
         <article>
-            <a class="domicile">domicile</a>
+            <a class="domicile">Domicile</a>
             <div class="container">
                 <div class="column">
                     image domicile a placer ici elle ne doit pas etre ni trop grande ni trop petite, a px pres cette taille

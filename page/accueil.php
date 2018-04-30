@@ -3,6 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Lato" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Accueil</title>
@@ -14,8 +15,15 @@
     <div class="flex2">
       <button class="accordion" type="button" name="button">Domicile</button>
       <div class="panel">
-        <p>TEST FLEXBOX ACCORDION</p>
-        <p>CONTENT GOES HERE</p>
+        <h3>Salon</h3>
+        <i class="fas fa-lightbulb fa-2x"></i>
+        <input type="range" name="" value="">
+        <br>
+        <br>
+        <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
+        <br><br>
+        <i class="fas fa-volume-up"></i>
+        <input type="range" name="" value="">
       </div>
     </div>
     <div class="flex1">

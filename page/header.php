@@ -8,10 +8,10 @@
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
       <ul class="nav-list">
         <li>
-          <a href="#!">Accueil</a>
+          <a href="accueil.php">Accueil</a>
         </li>
         <li>
-          <a href="#!">Mon Domicile</a>
+          <a href="domicile.php">Mon Domicile</a>
         </li>
         <li>
           <a href="#!">Paramètres</a>

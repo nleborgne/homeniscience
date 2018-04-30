@@ -1,6 +1,5 @@
 <?php
 /* Contrôleur pour la page de support */
-
 /* Appel du modèle */
 require('support_modele.php');
 
