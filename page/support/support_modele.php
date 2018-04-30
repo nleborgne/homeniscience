@@ -39,14 +39,22 @@ function afficherPannes() {
       return $reponse;
     }
 
+    function afficherTypes() {
+      global $bdd;
+
+      $reponse = $bdd->query('SELECT * FROM type_statut');
+      return $reponse;
+    }
+
     function miseAJour() {
       global $bdd;
 
-      $reponse = $bdd->prepare('UPDATE panne SET date_panne = :date_panne, date_intervention = :date_intervention, descriptif_panne = :descriptif_panne WHERE ID = 1');
+      $reponse = $bdd->prepare('UPDATE panne SET date_panne = :date_panne, date_intervention = :date_intervention, descriptif_panne = :descriptif_panne, ID_type_statut = :ID_type_statut WHERE ID = 1');
       $reponse->execute(array(
         'date_panne' => $_POST['date_panne'],
         'date_intervention' => $_POST['date_intervention'],
-        'descriptif_panne' => $_POST['descriptif']
+        'descriptif_panne' => $_POST['descriptif'],
+        'ID_type_statut' => $_POST['ID_statut']
       ));
     }
     ?>

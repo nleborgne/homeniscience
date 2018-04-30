@@ -53,7 +53,7 @@ div.container a.probleme {
     text-decoration: none;
     color: #000;
 }
-div.container a:hover {
+.listepanne:hover {
   color: #696969;
 }
 a.probleme{

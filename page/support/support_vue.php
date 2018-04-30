@@ -44,6 +44,7 @@
       </article>
     </div>
   </div>
+
   <div class="container">
     <div class="column">
       <article id="detail">
@@ -56,19 +57,27 @@
           <li>descriptif</li>
         </ul>
         <form class="" action="form_edit_pannes.php" method="post">
-        <?php
-        while ($donnees = $details->fetch()) {
-          echo '<ul class="listepanne"> ';
-          echo '<input type="text" name="ID" value="'.$donnees['panne_ID'].'"> ';
-          echo '<input type="date" name="date_panne" value="'.$donnees['date_panne'].'"> ';
-          echo '<input type="date" name="date_intervention" value="'.$donnees['date_intervention'].'"> ';
-          echo '<input type="text" name="nom_type" value="'.$donnees['nom_type'].'"> ';
-          echo '<input type="text" name="descriptif" value="'.$donnees['descriptif_panne'].'"> ';
-          echo '</ul> ';
-        }
-        ?>
-        <input type="submit" name="" value="Enregistrer">
-      </form>
+          <?php
+          while ($donnees = $details->fetch()) {
+            echo '<ul class="listepanne"> ';
+            echo '<input type="text" name="ID" value="'.$donnees['panne_ID'].'"> ';
+            echo '<input type="date" name="date_panne" value="'.$donnees['date_panne'].'"> ';
+            echo '<input type="date" name="date_intervention" value="'.$donnees['date_intervention'].'"> ';
+            echo '<select name="ID_statut">';
+            while ($donneesType = $detailsType->fetch()) {
+              if($donneesType['ID'] == $donnees['ID_type_statut']) {
+                echo'<option value="'.$donneesType['ID'].'" selected>'.$donneesType['nom_type'].'</option>';
+              }else {
+                echo'<option value="'.$donneesType['ID'].'">'.$donneesType['nom_type'].'</option>';
+              }
+            }
+            echo '</select>';
+            echo '<input type="text" name="descriptif" value="'.$donnees['descriptif_panne'].'"> ';
+            echo '</ul> ';
+          }
+          ?>
+          <input type="submit" name="" value="Enregistrer">
+        </form>
       </article>
     </div>
   </div>

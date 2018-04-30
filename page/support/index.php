@@ -6,6 +6,7 @@ require('support_modele.php');
 try {
   $reponse = afficherPannes();
   $details = afficherDetails();
+  $detailsType = afficherTypes();
   require('support_vue.php');
 }catch (Exception $e) {
   echo 'Erreur : '.$e->getMessage();
