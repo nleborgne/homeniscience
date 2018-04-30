@@ -28,7 +28,7 @@
         </ul>
         <?php
         while ($donnees = $reponse->fetch()) {
-          echo '<a href="#detail">';
+          echo '<a href="index.php?id='.$donnees['ID'].'#detail">';
           echo '<ul class="listepanne">';
           echo '<li>'.$donnees['ID'].'</li> ';
           echo '<li>'.$donnees['ID_utilisateur_principal'].'</li> ';

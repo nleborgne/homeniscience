@@ -2,7 +2,7 @@
   <div class="nav-container">
     <div class="brand">
       <img class="logo" src="logo-destiny.png" alt="">
-      <a href="#">SUPPORT</a>
+      <a href="#">LOGO</a>
     </div>
     <nav>
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
@@ -11,13 +11,13 @@
           <a href="#!">Accueil</a>
         </li>
         <li>
-          <a href="#!">Pannes</a>
+          <a href="#!">Mon Domicile</a>
         </li>
         <li>
-          <a href="#!">Chat</a>
+          <a href="#!">Paramètres</a>
         </li>
         <li>
-          <a href="#!">Contact</a>
+          <a href="#!">Contacter le support</a>
         </li>
       </ul>
     </nav>
@@ -67,6 +67,7 @@ html,body {
   background:linear-gradient(-90deg, #4650E2, #00A2E8);
   font-family: Lato;
   height: 70px;
+  margin-bottom: 50px;
 }
 
 .brand {

@@ -1,7 +1,7 @@
 <?php
 // Connexion à la base de données via PDO
 try {
-  $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', 'root');
+  $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
 } catch (Exception $e) {
   die('Erreur : '.$e->getMessage());
 }
@@ -42,7 +42,7 @@ function afficherPannes() {
     function miseAJour() {
       global $bdd;
 
-      $reponse = $bdd->prepare('UPDATE panne SET date_panne = :date_panne, date_intervention = :date_intervention, descriptif_panne = :descriptif_panne WHERE ID = ?');
+      $reponse = $bdd->prepare('UPDATE panne SET date_panne = :date_panne, date_intervention = :date_intervention, descriptif_panne = :descriptif_panne WHERE ID = 1');
       $reponse->execute(array(
         'date_panne' => $_POST['date_panne'],
         'date_intervention' => $_POST['date_intervention'],

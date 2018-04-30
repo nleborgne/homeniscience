@@ -1,0 +1,50 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+.flex1 {
+  width:300px;
+  height:400px;
+}
+
+.flex2 {
+  width:500px;
+  height:400px;
+}
+
+.flex1 .accordion {
+  background-color: #99D9EA;
+}
+.flex2 .accordion {
+  background-color: #0099ff;
+}
+.accordion {
+  font-family: 'Roboto';
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  font-family: 'Lato';
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+}

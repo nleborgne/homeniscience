@@ -1,7 +1,9 @@
 <?php
-
 require('support_modele.php');
-miseAJour();
-/* header("Location:index.php?id=".$_POST['ID']); */
-
+try {
+  miseAJour();}
+  catch (Exception $e){
+    echo 'Erreur : '.$e->getMessage();
+  }
+header("Location:index.php?id=".$_POST['ID']);
 ?>
