@@ -13,21 +13,20 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=site_test;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=site-domisep;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
 
+$url = "../accueil/accueil_vue";
 
 
-
-if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['adresse']) && !empty($_POST['code_postal']) && !empty($_POST['ville']) && !empty($_POST['pays']) && !empty($_POST['mdp']) && !empty($_POST['tel_port'])) /* condition pour que tous les champs soient remplis */
+if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['mdp']) ) /* condition pour que tous les champs soient remplis */
 {
-    $mdp_hash = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
-    $verif_email = $bdd -> query('SELECT * FROM Membres WHERE email = "$_POST[\'email\']"'); /*Partie SQL pour vérifier si le mail est deja présent dans la bdd*/
+    $verif_email = $bdd -> query('SELECT * FROM utilisateur WHERE email = "$_POST[\'email\']"'); /*Partie SQL pour vérifier si le mail est deja présent dans la bdd*/
     if($verif_email->fetch() == $_POST['email']) {
         echo 'il existe deja un compte lié à cet email';
         include("Inscription.php"); /* redirection vers le formulaire*/
@@ -38,34 +37,43 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
         include("Inscription.php"); /* redirection vers le formulaire*/
     }
 
-    else
-    {
-        echo $nom = $_POST['nom'];echo('<br>');
-        echo $prenom = $_POST['prenom'];echo('<br>');
-        echo  $email = $_POST['email'];echo('<br>');
-        echo  $adresse = $_POST['adresse'];echo('<br>');
-        echo $code_postal = $_POST['code_postal'];echo('<br>');
-        echo  $ville = $_POST['ville'];echo('<br>');
-        echo  $pays = $_POST['pays'];echo('<br>');
-        echo  $tel_port = $_POST['tel_port'];echo('<br>');
-        echo  $tel_fixe = $_POST['tel_fixe'];echo('<br>');
-
-        $requete = $bdd ->prepare('INSERT INTO membres(nom ,prenom, email, adresse, code_postal, ville, pays, mdp_hash, tel_port, tel_fixe)
-                                            VALUES(:nom,:prenom,:email,:adresse,:code_postal,:ville,:pays,:mdp_mash,:tel_port,:tel_fixe)');
+    else {
+        /*$requete = $bdd ->prepare('INSERT INTO utilisateur(email, mot_de_passe, nom, prenom) VALUES(:email, :mdp_hash, :nom, :prenom)');
         $requete ->execute(array(
-            'nom' => $nom,
-            'prenom' => $prenom,
-            'email' => $email,
-            'adresse' => $adresse,
-            'code_postal' => $code_postal,
-            'ville' => $ville,
-            'pays' => $pays,
-            'mdp_hash' => $mdp_hash,
-            'tel_port' => $tel_port,
-            'tel_fixe' => $tel_fixe
+            'email' => $_POST['email'],
+            'mdp_hash' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
+            'nom' => $_POST['nom'],
+            'prenom' => $_POST['prenom']
+
+        ));*/
+        $requete = $bdd ->prepare('INSERT INTO utilisateur (ID, ID_domicile, email, mot_de_passe, nom, prenom, adresse, numero_fixe, numero_mobile, ID_type_utilisateur, ID_type_abonnement, ID_langue, image, ID_theme, ID_mode_paiement) 
+                                VALUES (:ID, :ID_domicile, :email, :mot_de_passe, :nom, :prenom, :adresse, :numero_fixe, :numero_mobile, :ID_type_utilisateur, :ID_type_abonnement, :ID_langue, :image, :ID_theme, :ID_mode_paiement');
+        $requete ->execute(array(
+            'ID' => NULL,
+            'ID_domicile' =>NULL,
+            'email' => $_POST['email'],
+            'mot_de_passe' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
+            'nom' => $_POST['nom'],
+            'prenom' => $_POST['prenom'],
+            'adresse' =>NULL,
+            'numero_fixe' =>NULL,
+            'numero_mobile' =>NULL,
+            'ID_type_utilisateur' =>NULL,
+            'ID_type_abonnement' =>NULL,
+            'ID_langue' =>NULL,
+            'image' =>NULL,
+            'ID_theme' =>NULL,
+            'ID_mode_paiement' =>NULL
+
         ));
 
-        echo 'membre bien enregistré';
+
+        echo "incription réussie";
+        ob_start();
+        header('Location: '.$url);
+        ob_end_flush();
+        die();
+
     }
 }
 
