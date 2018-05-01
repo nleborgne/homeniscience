@@ -13,14 +13,14 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=site-domisep;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
 
-$url = "../accueil/accueil_vue";
+$url = "../accueil/accueil_vue.php";
 
 
 if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['mdp']) ) /* condition pour que tous les champs soient remplis */
@@ -46,25 +46,22 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
             'prenom' => $_POST['prenom']
 
         ));*/
-        $requete = $bdd ->prepare('INSERT INTO utilisateur (ID, ID_domicile, email, mot_de_passe, nom, prenom, adresse, numero_fixe, numero_mobile, ID_type_utilisateur, ID_type_abonnement, ID_langue, image, ID_theme, ID_mode_paiement) 
-                                VALUES (:ID, :ID_domicile, :email, :mot_de_passe, :nom, :prenom, :adresse, :numero_fixe, :numero_mobile, :ID_type_utilisateur, :ID_type_abonnement, :ID_langue, :image, :ID_theme, :ID_mode_paiement');
+        $requete = $bdd ->prepare('INSERT INTO utilisateur (ID_domicile, email, mot_de_passe, nom, prenom, adresse, numero_fixe, numero_mobile, ID_type_utilisateur, ID_langue, image, ID_theme, ID_mode_paiement)
+                                VALUES (:ID_domicile, :email, :mot_de_passe, :nom, :prenom, :adresse, :numero_fixe, :numero_mobile, :ID_type_utilisateur, :ID_langue, :image, :ID_theme, :ID_mode_paiement)');
         $requete ->execute(array(
-            'ID' => NULL,
-            'ID_domicile' =>NULL,
+            'ID_domicile' =>0,
             'email' => $_POST['email'],
-            'mot_de_passe' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
+            'mot_de_passe' =>$_POST['mdp'],
             'nom' => $_POST['nom'],
             'prenom' => $_POST['prenom'],
-            'adresse' =>NULL,
-            'numero_fixe' =>NULL,
-            'numero_mobile' =>NULL,
-            'ID_type_utilisateur' =>NULL,
-            'ID_type_abonnement' =>NULL,
-            'ID_langue' =>NULL,
-            'image' =>NULL,
-            'ID_theme' =>NULL,
-            'ID_mode_paiement' =>NULL
-
+            'adresse' =>'',
+            'numero_fixe' =>'',
+            'numero_mobile' =>'',
+            'ID_type_utilisateur' =>2,
+            'ID_langue' =>1,
+            'image' =>'',
+            'ID_theme' =>1,
+            'ID_mode_paiement' =>1
         ));
 
 
