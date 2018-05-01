@@ -9,7 +9,7 @@
   <title>SUPPORT</title>
 </head>
 
-<?php require('header.php'); ?>
+<?php require('../header.php'); ?>
 
 <br>
 <body>

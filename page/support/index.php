@@ -1,0 +1,5 @@
+<?php
+
+/* Contrôleur page support */
+
+?>
