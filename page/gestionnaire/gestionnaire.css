@@ -2,21 +2,25 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+body{
+	width: 100%;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
 }
 .flex1 {
-  width:300px;
-  height:400px;
-  padding: 10px;
+  width:400px;
+  height:550px;
+  padding: 20px;
+  /margin-bottom:80px;
 }
 
 .flex2 {
   width: 1000px;
-  height:400px;
+  height:500px;
   align-items: center;
 }
 
@@ -49,11 +53,53 @@
   font-family: 'Lato';
   padding: 0 18px;
   background-color: white;
-  max-height: 200px;
+  height: 450px;
   overflow-y: auto;
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
+
+.panel p {
+	text-align:center;
+}
+.panel h3 {
+background:linear-gradient(-90deg, #4650E2, #00A2E8);
+border: 1px solid black;
+text-align:center;
+padding:5px;	
+color: white;
+}
+
+#sample {
+    border: 1px solid black;
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position :relative;    
+}
+
+#afficher{
+	margin: auto;
+}
+#afficher:hover {
+	cursor:pointer;
+	background-color: lightblue;
+	width: 45%;
+	
+	border-radius: 5px;
+}
+#sample img {
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.graphe{
+	width: 200px;
+	height: 300px
+}
+
 .panel::-webkit-scrollbar-track
 {
   border-radius: 10px;
@@ -128,4 +174,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+strong{
+	font-weight: bold;
 }
