@@ -80,13 +80,13 @@ color: white;
 
 #afficher{
 	margin: auto;
+	border: 1px solid black;
+	width: 45%;
+	border-radius: 5px;
 }
 #afficher:hover {
 	cursor:pointer;
 	background-color: lightblue;
-	width: 45%;
-	
-	border-radius: 5px;
 }
 #sample img {
 position: absolute;
