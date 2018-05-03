@@ -70,7 +70,7 @@ padding:5px;
 color: white;
 }
 
-#sample {
+#sample, #sample2 {
     border: 1px solid black;
     height: 0px;
     padding: 0px;
@@ -78,18 +78,18 @@ color: white;
     position :relative;    
 }
 
-#afficher{
+#afficher, #afficher2 {
 	margin: auto;
 	border: 1px solid black;
 	width: 45%;
 	border-radius: 5px;
 }
-#afficher:hover {
+#afficher:hover, #afficher2:hover {
 	cursor:pointer;
 	background-color: lightblue;
 }
-#sample img {
-position: absolute;
+#sample img, #sample2 img {
+	position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);

@@ -32,6 +32,10 @@
             </div>
             
             <p> Consommation d'electricit&eacute : value</p>
+            <p id="afficher2">Afficher le graphe</p>
+            <div id="sample2">
+            <img src="https://cdn.kastatic.org/ka-perseus-graphie/9637eaefb1a58a2ef2fb26f24f5bae9c8f1d25a9.svg" class="graphe"/>
+            </div>
             <?php 
             echo '</div>';
             echo '</div>';
@@ -41,6 +45,19 @@
    </div>
       
   <script type="text/javascript">
+  
+  var c = document.getElementById("sample2");
+  var d = document.getElementById("afficher2");
+   document.getElementById("afficher2").onclick = function() {
+ 	  	if(c.style.height != '200px') {
+ 		  	d.innerHTML = "Cacher le graphe";
+ 	    c.style.height = '200px';
+ 	  	}else {
+ 		  	d.innerHTML = "Afficher le graphe";
+ 		  	c.style.height='0';
+ 	}
+   }
+  
  var a = document.getElementById("sample");
  var b = document.getElementById("afficher");
   document.getElementById("afficher").onclick = function() {
