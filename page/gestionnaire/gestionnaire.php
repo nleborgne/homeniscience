@@ -17,7 +17,7 @@
   </div>
   <div class="container">
       	<?php 
-		while ($donnees = $reponse->fetch())
+      	while ($donnees = $reponse->fetch())
         {
             echo '<div class="flex1">';
             echo '<button class="accordion" type="button" name="button">'.$donnees['nom'].'</button>';
@@ -36,7 +36,10 @@
             <div id="sample2">
             <img src="https://cdn.kastatic.org/ka-perseus-graphie/9637eaefb1a58a2ef2fb26f24f5bae9c8f1d25a9.svg" class="graphe"/>
             </div>
-            <?php 
+            <?php
+            echo '<h3>Bareme de consommation</h3>';
+            
+             
             echo '</div>';
             echo '</div>';
         }
