@@ -9,22 +9,14 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<<<<<<< HEAD
 <?php require('header.php'); ?>
 <br>
-=======
-<?php require('header2.php'); ?>
->>>>>>> ff3a6a78274d4ef904ce386f2c32acb3c0de23fe
 <body>
   <div class="container">
     <a href="panne/index.php?id=0">
       <div class="child">
         <i class="fas fa-exclamation-triangle fa-5x"></i>
-<<<<<<< HEAD
         <h3>SIGNALER UNE PANNE</h3>
-=======
-        <h3>GÉRER LES PANNES</h3>
->>>>>>> ff3a6a78274d4ef904ce386f2c32acb3c0de23fe
       </div>
     </a>
     <a href="">
