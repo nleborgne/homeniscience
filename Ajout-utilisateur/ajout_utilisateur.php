@@ -19,6 +19,7 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
+<<<<<<< HEAD
 $recherche=' ';
 ?>
 <div class="formulaire">
@@ -43,6 +44,24 @@ $recherche=' ';
             while ($donnees_utilisateurs = $reponse_ajout->fetch()){
                 ?>
                 <option value="<?php echo $donnees_utilisateurs['nom'] ; echo  $donnees_utilisateurs['prenom']; ?>"> <?php echo $donnees_utilisateurs['nom']; echo $donnees_utilisateurs['prenom']; ?> </option>
+=======
+$recherche='meynet';
+?>
+<div class="formulaire">
+    <form class="add_capt" method="post">
+        <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
+        <select class="selection" id="piece" name="piece" required>
+
+            <?php
+            if(isset($_POST['nom'])){
+                $recherche=$_POST('nom');
+            }
+
+            $reponse_ajout = $bdd->query("SELECT nom,prenom FROM utilisateur WHERE nom='".$recherche."'  ");
+            while ($donnees_utilisateurs = $reponse_ajout->fetch()){
+                ?>
+                <option value="<?php echo $donnees_utilisateurs['nom']; echo $donnees_utilisateurs['prenom']; ?>"> <?php echo $donnees_utilisateurs['nom']; echo $donnees_utilisateurs['prenom']; ?> </option>
+>>>>>>> c8283bfbfc8532ad8a34eacfa35dbfd0bd2e9a42
                 <?php
             }
             ?>
