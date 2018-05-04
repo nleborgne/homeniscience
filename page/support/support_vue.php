@@ -9,14 +9,13 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<?php require('header.php'); ?>
-<br>
+<?php require('header2.php'); ?>
 <body>
   <div class="container">
     <a href="panne/index.php?id=0">
       <div class="child">
         <i class="fas fa-exclamation-triangle fa-5x"></i>
-        <h3>SIGNALER UNE PANNE</h3>
+        <h3>GÉRER LES PANNES</h3>
       </div>
     </a>
     <a href="">
