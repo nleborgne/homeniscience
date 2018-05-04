@@ -25,7 +25,7 @@ body{
 }
 
 .flex1 .accordion {
-  background-color: #99D9EA;
+  background:linear-gradient(-90deg, lightblue, rgba(0, 128, 255));
 }
 .flex2 .accordion {
   background-color: #0099ff;
@@ -123,6 +123,7 @@ color: white;
   display: inline-block;
   width: 60px;
   height: 34px;
+  vertical-align: top;
 }
 
 /* Hide default HTML checkbox */
@@ -179,3 +180,43 @@ input:checked + .slider:before {
 strong{
 	font-weight: bold;
 }
+
+.value
+{
+	display: inline-block;
+	margin-top: 5px;
+}
+
+input[type="range"] {
+    position: relative;
+    left: 40px;
+    margin-left: 1em;
+    width: 200px;
+    
+}
+input[type="range"]:after,
+input[type="range"]:before {
+    position: absolute;
+    top: 1em;
+    color: #aaa;
+}
+input[type="range"]:before {
+    left:0em;
+    content: attr(min);
+}
+input[type="range"]:after {
+    right: 0em;
+    content: attr(max);
+}
+
+#textInput
+{
+	postion: absolute;
+	margin-top: -28px;
+	margin-left: -160px;
+}
+
+
+
+
+
