@@ -5,5 +5,5 @@ try {
   catch (Exception $e){
     echo 'Erreur : '.$e->getMessage();
   }
-header("Location:index.php?id=".$_POST['ID']);
+header("Location:index/".$_POST['ID']);
 ?>
