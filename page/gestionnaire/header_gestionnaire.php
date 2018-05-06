@@ -11,7 +11,7 @@
           <a href="accueil.php">Accueil</a>
         </li>
         <li>
-          <a href="gestionnaire.php">Résidence</a>
+          <a href="index.php">Résidence</a>
         </li>
         <li>
           <a href="#!">Paramètres</a>

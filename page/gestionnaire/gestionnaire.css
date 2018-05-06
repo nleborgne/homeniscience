@@ -11,25 +11,43 @@ body{
   flex-wrap: wrap;
   justify-content: center;
 }
+.container_left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 60px;
+}
 .flex1 {
   width:400px;
   height:550px;
   padding: 20px;
-  /margin-bottom:80px;
+  margin-bottom:80px;
 }
 
 .flex2 {
-  width: 1000px;
-  height:500px;
-  align-items: center;
+  width: 300px;
+  height:200px;
+  padding: 20px;
+  margin-bottom:80px;
 }
 
-.flex1 .accordion {
-  background:linear-gradient(-90deg, lightblue, rgba(0, 128, 255));
+.flex3 {
+	width: 700px;
+	padding: 20px;
 }
-.flex2 .accordion {
-  background-color: #0099ff;
+
+
+
+
+.flex1 .accordion, .flex2 .accordion, .flex3 .accordion  {
+  background:linear-gradient(-45deg, #4650E2, #00A2E8);
+  color: white;
+  font-weight: bold;
+  font-size: 20x;
 }
+
+
+
 .accordion {
   font-family: 'Roboto';
   cursor: pointer;
@@ -49,7 +67,6 @@ body{
 }
 
 .panel {
-  height:380px;
   font-family: 'Lato';
   padding: 0 18px;
   background-color: white;
@@ -215,6 +232,8 @@ input[type="range"]:after {
 	margin-top: -28px;
 	margin-left: -160px;
 }
+
+
 
 
 

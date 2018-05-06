@@ -4,11 +4,15 @@
 require('gestionnaire_modele.php');
 
 try {
-    $reponse = AfficherDomicile();
+    $domicile = AfficherDomicile();
+    $piece = AfficherPiece();
   
     
     require('gestionnaire.php');
+    require('appart_description.php');
 }catch (Exception $e) {
     echo 'Erreur : '.$e->getMessage();
 }
+
+
 ?>

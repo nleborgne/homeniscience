@@ -16,7 +16,27 @@ function AfficherDomicile()
     $reponse->closeCursor();
 }
 
+function AfficherPiece()
+{
+    global $bdd;
+    $reponse = $bdd->query('SELECT * from piece WHERE ID_domicile = 1');
+    return $reponse;
+    $reponse->closeCursor();
+}
 
-
+function AfficherUser()
+{
+    global $bdd;
+    $reponse = $bdd->query('SELECT * from utilisateur WHERE ID_domicile = 1');
+    return $reponse;
+    $reponse->closeCursor();
+}
     
 ?>
+
+
+
+
+
+
+

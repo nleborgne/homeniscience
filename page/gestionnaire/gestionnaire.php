@@ -18,6 +18,7 @@
   	
 	<?php require ('gestionnaire_vue_inner.php')?>
 
+	
 </body>
 </html>
 

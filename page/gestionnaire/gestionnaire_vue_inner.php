@@ -1,10 +1,11 @@
 
 <div class="container">
       	<?php 
-      	while ($donnees = $reponse->fetch())
+      	while ($donnees = $domicile->fetch())
         {
             echo '<div class="flex1">';
-            echo '<button class="accordion" type="button" name="button">'.$donnees['nom'].'</button>';
+            echo '<form method="post" action="appart_description.php" enctype="multipart/form-data"><input type="button"
+    name="'.$donnees['nom'].'" value="'.$donnees['nom'].'" class="accordion" OnClick="window.location.href=\'appart_description.php\'"></form>';;  
             echo '<div class="panel">';
             echo '<p><strong>Adresse</strong> : '.$donnees['numero_habitation'].' '. $donnees['rue'].'</p>';
             echo '<h3>Consulter la consommation</h3>';
