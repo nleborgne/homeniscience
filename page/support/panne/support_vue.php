@@ -9,11 +9,8 @@
   <title>SUPPORT</title>
 </head>
 
-<<<<<<< HEAD
-<?php require('../header.php'); ?>
-=======
+
 <?php require('../header2.php'); ?>
->>>>>>> ff3a6a78274d4ef904ce386f2c32acb3c0de23fe
 
 <br>
 <body>
