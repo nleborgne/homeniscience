@@ -20,7 +20,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$url = "../accueil/accueil_vue.php";
+$url = "../page/accueil.php";
 
 
 if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['mdp']) ) /* condition pour que tous les champs soient remplis */
