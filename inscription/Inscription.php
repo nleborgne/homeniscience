@@ -21,7 +21,7 @@
         <div class="cgu">
             <input type="checkbox" name="cgu" id="cgu" required> <label for="cgu">J'accepte les <a href="">CGU</a></label>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LevW1YUAAAAAEQ-hWFFC_3QnQQ8MOj2ph4Z-qDr"></div>
+        <div class="g-recaptcha" data-sitekey="6LevW1YUAAAAAEQ-hWFFC_3QnQQ8MOj2ph4Z-qDr" ></div>
         <input class="boutton" type = "submit" value = "Valider">
 </div>
 

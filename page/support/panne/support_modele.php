@@ -49,8 +49,9 @@ function afficherPannes() {
     function miseAJour() {
       global $bdd;
 
-      $reponse = $bdd->prepare('UPDATE panne SET date_panne = :date_panne, date_intervention = :date_intervention, descriptif_panne = :descriptif_panne, ID_type_statut = :ID_type_statut WHERE ID = 1');
+      $reponse = $bdd->prepare('UPDATE panne SET date_panne = :date_panne, date_intervention = :date_intervention, descriptif_panne = :descriptif_panne, ID_type_statut = :ID_type_statut WHERE ID = :ID');
       $reponse->execute(array(
+        'ID' => $_POST['ID'],
         'date_panne' => $_POST['date_panne'],
         'date_intervention' => $_POST['date_intervention'],
         'descriptif_panne' => $_POST['descriptif'],

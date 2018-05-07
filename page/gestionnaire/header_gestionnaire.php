@@ -11,7 +11,7 @@
           <a href="accueil.php">Accueil</a>
         </li>
         <li>
-          <a href="gestionnaire.php">Résidence</a>
+          <a href="index.php">Résidence</a>
         </li>
         <li>
           <a href="#!">Paramètres</a>
@@ -67,7 +67,7 @@ html,body {
   background:linear-gradient(-90deg, #4650E2, #00A2E8);
   font-family: Lato;
   height: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .brand {

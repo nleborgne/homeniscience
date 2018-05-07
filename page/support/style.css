@@ -5,16 +5,13 @@ html,body {
   margin: 0;
   padding: 0;
 }
-
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
+  margin-top:200px;
+
 }
 .child {
   width:300px;
@@ -22,6 +19,7 @@ html,body {
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   background-color: #0099FF;
+  margin-bottom:50px;
 }
 .child h3 {
   color: #fff;
@@ -43,3 +41,9 @@ html,body {
 .child:hover {
   background-color: #4353E2;
 }
+@media screen and (max-width: 600px) {
+  .container {
+	  margin-top:20px;
+  }
+}
+
