@@ -165,4 +165,4 @@ while ($dom = $domicile->fetch()){
 
 
 </div>
-</body>
+</html>

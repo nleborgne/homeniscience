@@ -26,7 +26,7 @@
 
 }
 .flex1 {
-    width:300px;
+    width:500px;
     height:400px;
     display:inline-block;
     margin: 20px;
@@ -49,10 +49,10 @@
 }
 
 .flex1 .accordion {
-    background-color: #99D9EA;
+    background-color: #0D47A1;
 }
 .flex2 .accordion {
-    background-color: #0099ff;
+    background-color: #1565C0;
 }
 .accordion {
 
@@ -79,7 +79,7 @@
     padding: 0 18px;
     background-color: white;
     max-height: 480px;
-    max-width: 420px ;
+    max-width: 500px ;
     overflow-y: auto;
     transition: max-height 0.2s ease-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
