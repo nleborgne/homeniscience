@@ -19,7 +19,7 @@
   	
 	<?php require ('gestionnaire_vue_inner.php')?>
 	
-	
+    <?php require ('../../footer.php')?>
 	
 </body>
 </html>
