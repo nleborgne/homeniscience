@@ -239,7 +239,6 @@ or die('Error connecting to MySQL server.');
     </div>
 
 </div>
-
 </body>
 
 <footer>
