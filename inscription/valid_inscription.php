@@ -13,7 +13,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', 'tristank');
 }
 catch(Exception $e)
 {
@@ -38,20 +38,22 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
     }
 
     else {
-        /*$requete = $bdd ->prepare('INSERT INTO utilisateur(email, mot_de_passe, nom, prenom) VALUES(:email, :mdp_hash, :nom, :prenom)');
-        $requete ->execute(array(
-            'email' => $_POST['email'],
-            'mdp_hash' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
-            'nom' => $_POST['nom'],
-            'prenom' => $_POST['prenom']
+        /*
+    $requete = $bdd ->prepare('INSERT INTO utilisateur(email, mot_de_passe, nom, prenom) VALUES(:email, :mdp_hash, :nom, :prenom)');
+    $requete ->execute(array(
+        'email' => $_POST['email'],
+        'mdp_hash' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
+        'nom' => $_POST['nom'],
+        'prenom' => $_POST['prenom']
 
-        ));*/
+        ));
+        */
         $requete = $bdd ->prepare('INSERT INTO utilisateur (ID_domicile, email, mot_de_passe, nom, prenom, adresse, numero_fixe, numero_mobile, ID_type_utilisateur, ID_langue, image, ID_theme, ID_mode_paiement)
                                 VALUES (:ID_domicile, :email, :mot_de_passe, :nom, :prenom, :adresse, :numero_fixe, :numero_mobile, :ID_type_utilisateur, :ID_langue, :image, :ID_theme, :ID_mode_paiement)');
         $requete ->execute(array(
             'ID_domicile' =>0,
             'email' => $_POST['email'],
-            'mot_de_passe' =>$_POST['mdp'],
+            'mot_de_passe' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
             'nom' => $_POST['nom'],
             'prenom' => $_POST['prenom'],
             'adresse' =>'',
