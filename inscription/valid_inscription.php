@@ -13,7 +13,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=site-domisep;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', 'tristank');
 }
 catch(Exception $e)
 {
@@ -41,6 +41,16 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
     }
 
     else {
+        /*
+    $requete = $bdd ->prepare('INSERT INTO utilisateur(email, mot_de_passe, nom, prenom) VALUES(:email, :mdp_hash, :nom, :prenom)');
+    $requete ->execute(array(
+        'email' => $_POST['email'],
+        'mdp_hash' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
+        'nom' => $_POST['nom'],
+        'prenom' => $_POST['prenom']
+
+        ));
+        */
 
         /* Requête qui permet d'ajouter un utilisateur dans la base de donnée avec tous les attributs nécessaires */
 
@@ -49,7 +59,8 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
         $requete ->execute(array(
             'ID_domicile' =>0,
             'email' => $_POST['email'],
-            'mot_de_passe' =>password_hash($_POST['mdp'],PASSWORD_DEFAULT),
+            'mot_de_passe' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
+
             'nom' => $_POST['nom'],
             'prenom' => $_POST['prenom'],
             'adresse' =>'',

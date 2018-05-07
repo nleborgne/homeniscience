@@ -11,10 +11,10 @@
   <img class="imgHome" src="img/logo.png" alt="">
   <!-- Module de connexion -->
   <div class="connexion">
-    <form action="POST">
-      <input class="txtinput" type="text" placeholder="Email">
+    <form method="POST" action="traitement_connexion.php">
+      <input class="txtinput" type="text" name="email" placeholder="Email">
       <br>
-      <input class="txtinput" type="text" placeholder="Mot de passe">
+      <input class="txtinput" type="text" name="mot_de_passe" placeholder="Mot de passe">
       <input class="btn" type="submit">
     </form>
   </div>
