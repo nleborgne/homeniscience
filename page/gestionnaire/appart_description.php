@@ -64,7 +64,7 @@ $donnees_domicile = $req->fetch();
     		<button type="button" class="accordion" name="button">Statistiques</button>
     		<div class="panel">
     			<canvas id="myChart" width="400" height="250"></canvas>
-    			<!-- <canvas id="myChart2" width="400" height="250"></canvas> -->
+    			<canvas id="myChart2" width="400" height="250"></canvas>
     		</div>
     	</div>
     	
@@ -81,7 +81,7 @@ $donnees_domicile = $req->fetch();
 		
     </div>
     
-    
+ 
 	
 </body>
 </html>
@@ -89,13 +89,7 @@ $donnees_domicile = $req->fetch();
 
 	<script type="text/javascript">
 
-		var x = document.getElementById('case1');
-		var y = document.getElementById('case2');
-		if (x.checked == true) {
-			elec();
-		}else {
-			water();
-			}
+	elec();
 	
 	var acc = document.getElementsByClassName("accordion");
     var i;
@@ -121,6 +115,10 @@ $donnees_domicile = $req->fetch();
 	function elec() {
 
 	var ctx = document.getElementById("myChart").getContext('2d');
+	document.getElementById("myChart2").style.height = '0';
+	document.getElementById("myChart").style.height = 'auto';
+
+	
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
@@ -174,7 +172,10 @@ $donnees_domicile = $req->fetch();
 
 	function water(){
 		
-		var crx = document.getElementById("myChart").getContext('2d');
+		var crx = document.getElementById("myChart2").getContext('2d');
+		document.getElementById("myChart").style.height = '0';
+		document.getElementById("myChart2").style.height = 'auto';
+
 		var myChart2 = new Chart(crx, {
 		    type: 'bar',
 		    data: {
