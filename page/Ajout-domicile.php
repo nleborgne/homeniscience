@@ -32,7 +32,7 @@ while ($dom = $domicile->fetch()){
     <?php echo $dom['nom'], ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?>
     <?php
 }
-?>
+?>  <br>
     <br>
     <form method="post">
     <input class="boutton" type="submit" name="new" value="Suprimer" >
@@ -50,10 +50,14 @@ while ($dom = $domicile->fetch()){
 
     }
     ?>
+
     </form>
 </div>
 </div>
+    <br>
+    <br>
 <div class="formulaire">
+
     <form class="deff_domicile" method="post">
 
         <input type="text" id="name" name="nom" placeholder="nom ">
