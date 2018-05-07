@@ -23,8 +23,8 @@ $recherche=' ';
 $mail='';
 ?>
 <br>
-<div class="container">
-   <div class="formulaire">
+<img src="usericone.png" style="height: 85px;width: 100px; display:inline-block">
+<div class="formulaire">
     <form class="add_capt" method="post">
         <input class="champ" type="text" id="nom" name="nom" placeholder="Nom d'utilisateurs a rechercher" required>
         <input class="boutton" type="submit" name="recherche" value="rechercher">
@@ -40,7 +40,7 @@ $mail='';
     </form>
     <br>
     <form method="POST">
-        <select class="selection" id="piece" name="user" required>
+        <select class="select-style" id="piece" name="user" required>
 
             <?php
             $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."'  ");
@@ -67,13 +67,40 @@ $mail='';
         ?>
 
     </form>
-   </div>
+    <form method="POST">
+        <select class="select-style" id="piece" name="member" required>
+
+            <?php
+            $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=1  ");
+            while ($donnees_utilisateurs = $reponse_ajout->fetch()){
+                ?>
+                <option value="<?php echo $donnees_utilisateurs['ID'] ; ?>"> <?php echo $donnees_utilisateurs['prenom']; ?> </option>
+                <?php
+            }
+            ?>
+
+
+            <input class="boutton" type="submit" name="Supp" value="Supprimer" >
+
+            <?php
+            if(isset($_POST['Supp'])) {
+                $member= $_POST['member'];
+                $sql = "UPDATE utilisateur SET ID_domicile=0 WHERE ID=:ID";
+                $stmt = $bdd->prepare($sql);
+                $stmt->execute(array(
+                    'ID' => $member
+                ));
+
+            }
+            ?>
+
+    </form>
     <br>
     <br>
         <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=1 ORDER BY ID");
         while ($utilisateurs = $reponse_utilisateurs->fetch()){
             ?>
-            <?php echo $utilisateurs['prenom']; ?>
+            <p><?php echo $utilisateurs['prenom']; ?></p>
             <?php
         }
         ?>
