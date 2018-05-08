@@ -13,7 +13,7 @@
     <?php
     try
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=site-domisep;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
     }
     catch(Exception $e)
     {
@@ -22,11 +22,12 @@
     ?>
     <br>
     <img src="sensorsicon.png" style="height: 80px;width: 80px;">
+    <br>
     <div class="formulaire">
         <form class="add_capt" method="post">
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
             <select class="select-style" id="piece" name="piece" required>
-                <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece ORDER BY ID");
+                <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = 1 ORDER BY ID");
                 while ($donnees_piece = $reponse_piece->fetch()){
                     ?>
                     <option value="<?php echo $donnees_piece['ID']; ?>"> <?php echo $donnees_piece['nom']; ?> </option>
@@ -49,14 +50,14 @@
             if(isset($_POST['add'])){
                    if(!empty($_POST['nom'])) {
 
-                             $requete = $bdd ->prepare('INSERT INTO equipement(ID,ID_piece,nom,ID_type_equipement,consommation)
-                              VALUES (:ID,:ID_piece,:nom,:ID_type_equipement,:consommation)');
+                             $requete = $bdd ->prepare('INSERT INTO equipement( ID ,ID_piece ,nom, ID_type_equipement )
+                              VALUES ( :ID , :ID_piece , :nom , :ID_type_equipement )');
                              $requete ->execute(array(
-                             'ID' =>1,
+                             'ID' =>NULL,
                              'ID_piece' => $_POST['piece'],
                              'nom' => $_POST['nom'],
                              'ID_type_equipement' => $_POST['type_capteur'],
-                             'consommation' =>10,
+
 
                               ));
                          }
@@ -68,7 +69,7 @@
             <select class="select-style" id="piece" name="nom_capt" required>
 
                 <?php
-                $capt = $bdd->query("SELECT nom,consommation FROM equipement  ORDER BY ID ");
+                $capt = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1 ");
                 while ($cap = $capt->fetch()){
                     ?>
                     <option value="<?php echo $cap['nom'] ; ?>"> <?php echo $cap['nom']; ?> </option>
@@ -82,7 +83,7 @@
                 <?php
                 if(isset($_POST['dell'])) {
                     $nom_cap= $_POST['nom_capt'];
-                    $req = $bdd->exec('DELETE FROM equipement WHERE nom="'.$nom_cap.'" ' );
+                    $req = $bdd->exec('DELETE FROM equipement WHERE nom="'.$nom_cap.'"  ' );
                     if ( !$req AND isset($_POST['Suprimer'])) {
                         echo 'Erreur de suppression';
                     } else {
@@ -96,10 +97,10 @@
         </form>
 
 
-        <?php $equipement_ajoutés = $bdd->query("SELECT nom,consommation FROM equipement  ORDER BY ID");
+        <?php $equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1  ");
         while ($equ_dom = $equipement_ajoutés->fetch()){
             ?><br>
-            <?php echo $equ_dom['nom'],'  ',$equ_dom['consommation']; ?>
+            <?php echo $equ_dom['nom']; ?>
             <?php
         }
         ?>
