@@ -13,7 +13,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=site-domisep;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
@@ -26,7 +26,7 @@ $mail='';
 <div style="display:flex;flex-wrap: nowrap">
 <img src="homeicone.png" style="height: 100px;width: 100px;">
 <div style="display: inline-block">
-<?php $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID=10 ORDER BY ID");
+<?php $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID=1 ORDER BY ID");
 while ($dom = $domicile->fetch()){
     ?><br>
     <?php echo $dom['nom'], ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?>
@@ -40,7 +40,7 @@ while ($dom = $domicile->fetch()){
     <?php
     if(isset($_POST['new'])) {
 
-        $req = $bdd->exec('DELETE FROM domicile WHERE ID=10' );
+        $req = $bdd->exec('DELETE FROM domicile WHERE ID=1' );
         if ( !$req ) {
             echo 'Erreur de suppression';
         } else {
@@ -73,11 +73,11 @@ while ($dom = $domicile->fetch()){
             if(isset($_POST['ajouter'])){
                 if(!empty($_POST['nom']) AND !empty($_POST['rue']) AND !empty($_POST['num']) AND !empty($_POST['size']) ) {
 
-                    $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite)
-                                VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite)');
+                    $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire)
+                                VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire)');
                     $requete ->execute(array(
-                        'ID' =>10,
-                        'ID_utilisateur_principal' => 10,
+                        'ID' =>NULL,
+                        'ID_utilisateur_principal' => 1,
                         'nom' => $_POST['nom'],
                         'nombre_pieces' => 0,
                         'superficie' =>$_POST['size'],
@@ -87,6 +87,7 @@ while ($dom = $domicile->fetch()){
                         'code_postal' =>$_POST['post'],
                         'pays' =>$_POST['pays'],
                         'ID_confidentialite' =>1,
+                        'ID_gestionnaire'=>0,
                     ));
 
 
@@ -112,7 +113,7 @@ while ($dom = $domicile->fetch()){
                  $requete = $bdd->prepare('INSERT INTO piece(ID,ID_domicile,nom,nombre_capteurs)
                  VALUES (:ID,:ID_domicile,:nom,:nombre_capteurs)');
                  $requete->execute(array(
-                     'ID' => 10,
+                     'ID' => NULL,
                      'ID_domicile' => 1,
                      'nom' => $_POST['piece'],
                      'nombre_capteurs' => 0,
