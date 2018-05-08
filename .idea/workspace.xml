@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="306c3c9a-ca69-4334-8770-6519028bad7d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/Ajout-domicile.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/Ajout-domicile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/ajout_capteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/ajout_capteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/ajout_utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/ajout_utilisateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/domicile.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/domicile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,8 +61,8 @@
       <file leaf-file-name="ajout_capteur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/ajout_capteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="85" column="86" selection-start-line="85" selection-start-column="86" selection-end-line="85" selection-end-column="86" />
+            <state relative-caret-position="463">
+              <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -161,12 +157,12 @@
       <workItem from="1525713619106" duration="821000" />
       <workItem from="1525714462522" duration="4372000" />
       <workItem from="1525719838675" duration="985000" />
-      <workItem from="1525726742883" duration="8074000" />
+      <workItem from="1525726742883" duration="11473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20174000" />
+    <option name="totallyTimeSpent" value="23573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -494,8 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/ajout_capteur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="85" column="86" selection-start-line="85" selection-start-column="86" selection-end-line="85" selection-end-column="86" />
+        <state relative-caret-position="463">
+          <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
         </state>
       </provider>
     </entry>
