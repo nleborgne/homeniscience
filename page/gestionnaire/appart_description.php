@@ -68,11 +68,11 @@ $donnees_domicile = $req->fetch();
     		</div>
     	</div>
     	
-    	<p>Consommation : <br />
+    	<p><span class ="checktitle">Consommation</span> : <br />
     	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" onclick="elec()"/><label for="case1">Electricite</label><br />
 		<input type="radio" name="conso" id ="case2" value="eau" onclick="water()"/><label for="case2">Eau</label><br />
     	<br />
-    	Intervalle de temps : <br />
+    	<span class="checktitle">Intervalle de temps</span> : <br />
     	<input type="radio" name="temps" id="case3"  value="semaines" /><label for="case3">Semaines</label><br />
 		<input type="radio" name="temps" id ="case4" value="mois" checked="checked" /><label for="case4">Mois</label>
     	</p>
