@@ -10,9 +10,9 @@
 
     margin-top: 50px;
     width: AUTO;
-
+    min-height: 650px;
     flex-direction: row;
-
+    margin-bottom: 50px;
 
     justify-content: space-evenly;
     padding: 0px;
