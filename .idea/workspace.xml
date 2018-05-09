@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="306c3c9a-ca69-4334-8770-6519028bad7d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/page/domicile/Ajout-domicile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/ajout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/ajout_capteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/ajout_utilisateur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/domicile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/domicile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/domicile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/domicile2.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/domicile2.0.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/homeicone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/sensorsicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/domicile/usericone.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/Ajout-domicile.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/Ajout-domicile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/domicile.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/domicile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/domicile2.0.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/domicile2.0.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/domicile2.0.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/domicile2.0.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="domicile.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="domicile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/domicile.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="731">
-              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -29,20 +39,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="domicile2.0.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <file leaf-file-name="gestionnaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+            <state relative-caret-position="357">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ajout-domicile.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gestionnaire_vue_inner.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire_vue_inner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1258">
+              <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gestionnaire_modele.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire_modele.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gestionnaire.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="domicile2.0.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="Ajout-domicile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+            <state relative-caret-position="-568">
+              <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="126" />
             </state>
           </provider>
         </entry>
@@ -81,6 +119,7 @@
         <option value="$PROJECT_DIR$/page/domicile2.0.php" />
         <option value="$PROJECT_DIR$/page/domicile2.0.css" />
         <option value="$PROJECT_DIR$/page/domicile.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.php" />
       </list>
     </option>
   </component>
@@ -142,12 +181,12 @@
       <workItem from="1525719838675" duration="985000" />
       <workItem from="1525726742883" duration="13132000" />
       <workItem from="1525799121646" duration="1727000" />
-      <workItem from="1525849869669" duration="305000" />
+      <workItem from="1525849869669" duration="2562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27264000" />
+    <option name="totallyTimeSpent" value="29521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -181,58 +220,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/page/accueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/ajout_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/domicile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/accueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/ajout_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/domicile2.0.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/ajout.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -478,13 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/domicile2.0.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -496,27 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/ajout_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -534,13 +493,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout_utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Capteurs/Index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Capteurs/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/page/domicile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/gestionnaire/appart_description.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire_vue_inner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire_modele.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-568">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="126" />
         </state>
       </provider>
     </entry>
