@@ -2,7 +2,7 @@
 <meta name="robots" content="noindex">
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Lato" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Footer</title>
@@ -23,7 +23,7 @@
 
 <style media="screen">
 * {
-    font-family: 'Comfortaa',sans-serif;
+    font-family: 'Roboto',sans-serif;
     text-decoration: none;
     color:#343434;
 }
@@ -61,7 +61,7 @@
 #support_foot, #about_foot, #CGU_foot, #legale_foot
 {
     text-align: center;
-    padding: 25px 30px 21.5px 30px;
+    padding: 25px 30px 20.5px 30px;
 
 
 }
