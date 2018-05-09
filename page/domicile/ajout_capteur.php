@@ -66,13 +66,13 @@
         </form>
 
         <form method="POST">
-            <select class="select-style" id="piece" name="nom_capt" required>
+            <select class="select-style" id="piece" name="ID_capt" required>
 
                 <?php
-                $capt = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1 ");
+                $capt = $bdd->query("SELECT equipement.nom,equipement.ID FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1 ");
                 while ($cap = $capt->fetch()){
                     ?>
-                    <option value="<?php echo $cap['nom'] ; ?>"> <?php echo $cap['nom']; ?> </option>
+                    <option value="<?php echo $cap['ID'] ; ?>"> <?php echo $cap['nom']; ?> </option>
                     <?php
                 }
                 ?>
@@ -81,9 +81,11 @@
                 <input class="boutton" type="submit" name="dell" value="Suprimer" >
 
                 <?php
+
                 if(isset($_POST['dell'])) {
-                    $nom_cap= $_POST['nom_capt'];
-                    $req = $bdd->exec('DELETE FROM equipement WHERE nom="'.$nom_cap.'"  ' );
+
+                    $ID_cap= $_POST['ID_capt'];
+                    $req = $bdd->exec('DELETE FROM equipement WHERE ID="'.$ID_cap.'"  ' );
                     if ( !$req AND isset($_POST['Suprimer'])) {
                         echo 'Erreur de suppression';
                     } else {

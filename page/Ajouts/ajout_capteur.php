@@ -23,7 +23,7 @@
 
     ?>
     <br>
-    <img src="sensorsicon.png" style="height: 80px;width: 80px;">
+    <img src="../image/sensorsicon.png" style="height: 80px;width: 80px;">
     <div class="formulaire">
         <form class="add_capt" method="post">
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>

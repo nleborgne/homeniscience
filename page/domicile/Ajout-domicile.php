@@ -67,7 +67,7 @@ while ($dom = $domicile->fetch()){
         <input type="text" id="pays" name="pays" placeholder="pays">
         <input type="text" id="superficie" name="size" placeholder="areasize ">
 
-        <input class="boutton" type="submit" name="ajouter" value="definir">
+        <input class="boutton" type="submit" name="ajouter" value="definir" >
         <?php
 
             if(isset($_POST['ajouter'])){
