@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="/homeniscience/page/support/style.css">
 </head>
-<?php require('../header.php'); ?>
+<?php require('header2.php'); ?>
 <body>
   <div class="container">
     <a href="panne/index/0">

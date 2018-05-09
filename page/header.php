@@ -1,224 +1,117 @@
-<section class="navigation">
-  <div class="nav-container">
-    <div class="brand">
-      <img class="logo" src="logo-destiny.png" alt="">
-      <a href="#">LOGO</a>
-    </div>
-    <nav>
-      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-      <ul class="nav-list">
-        <li>
-          <a href="accueil.php">Accueil</a>
-        </li>
-        <li>
-          <a href="domicile.php">Mon Domicile</a>
-        </li>
-        <li>
-          <a href="#!">Paramètres</a>
-        </li>
-        <li>
-          <a href="#!">Contacter le support</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</section>
-
-
-<script>
-(function($) { // Begin jQuery
-  $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      // Close one dropdown when selecting another
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
-    });
-    // Hamburger to X toggle
-    $('#nav-toggle').on('click', function() {
-      this.classList.toggle('active');
-    });
-  }); // end DOM ready
-})(jQuery); // end jQuery
-</script>
-
-<style>
-
-html,body {
-  margin:0;
-  padding: 0;
-}
-
-.logo {
-  max-width: 60px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.navigation {
-  background:linear-gradient(-90deg, #4650E2, #00A2E8);
-  font-family: Lato;
-  height: 70px;
-  margin-bottom: 50px;
-}
-
-.brand {
-  position: absolute;
-  padding-left: 20px;
-  float: left;
-  line-height: 70px;
-  text-transform: uppercase;
-  font-size: 1.4em;
-}
-.brand a,
-.brand a:visited {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.nav-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-nav {
-  float: right;
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  float: left;
-  position: relative;
-}
-nav ul li a,
-nav ul li a:visited {
-  display: block;
-  padding: 0 20px;
-  line-height: 70px;
-  color: #ffffff;
-  text-decoration: none;
-}
-nav ul li a:hover,
-nav ul li a:visited:hover {
-  background: #2581DC;
-  color: #ffffff;
-}
-nav ul li a:not(:only-child):after,
-nav ul li a:visited:not(:only-child):after {
-  padding-left: 4px;
-  content: ' ▾';
-}
-nav ul li ul li {
-  min-width: 190px;
-}
-nav ul li ul li a {
-  padding: 15px;
-  line-height: 20px;
-}
-
-.nav-dropdown {
-  position: absolute;
-  display: none;
-  z-index: 1;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Mobile navigation */
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #262626;
-  height: 70px;
-  width: 70px;
-}
-
-@media only screen and (max-width: 798px) {
-  .nav-mobile {
-    display: block;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: 'Lato', Helvetica, sans-serif;
   }
 
-  nav {
-    width: 100%;
-    padding: 70px 0 15px;
+  .topnav {
+    overflow: hidden;
+    text-align: right;
+    background:linear-gradient(-90deg, #4650E2, #00A2E8);
+    margin-bottom: 50px;
   }
-  nav ul {
+  .topnav a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav .img_default {
+    display: inline-block;
+    float: left;
+    margin-left: 200px;
+  }
+  .topnav .text_default {
+    display: inline-block;
+    float:left;
+    color: white;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .active {
+    background-color: #343434;
+    color: white;
+  }
+
+  .topnav .icon {
     display: none;
   }
-  nav ul li {
-    float: none;
-  }
-  nav ul li a {
-    padding: 15px;
-    line-height: 20px;
-  }
-  nav ul li ul li a {
-    padding-left: 30px;
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav .invisible {display: none;}
+
   }
 
-  .nav-dropdown {
-    position: static;
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
   }
-}
-@media screen and (min-width: 799px) {
-  .nav-list {
-    display: block !important;
-  }
-}
-#nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-}
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: #ffffff;
-  position: absolute;
-  display: block;
-  content: '';
-  transition: all 300ms ease-in-out;
-}
-#nav-toggle span:before {
-  top: -10px;
-}
-#nav-toggle span:after {
-  bottom: -10px;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
-}
-
-article {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10px;
-}
 </style>
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <img class="img_default" id="img" src="/homeniscience/page/support/header_logo.png" alt="">
+    <p id="text" class="text_default">Homeniscience</p>
+    <a id="accueil" href="/homeniscience/page/accueil.php">Accueil</a>
+    <a id="domicile" href="/homeniscience/page/domicile.php">Mon Domicile</a>
+    <a id="residence" href="/homeniscience/page/gestionnaire">Résidence</a>
+    <a id="support" href="/homeniscience/page/support">Support</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+  </div>
+
+
+  <script>
+
+  var page = window.location.href;
+  if (page.includes("accueil")) {
+    document.getElementById('accueil').className += "active";
+  } else if (page.includes("domicile")) {
+    document.getElementById('domicile').className += "active";
+  } else if (page.includes("gestionnaire")) {
+    document.getElementById('gestionnaire').className += "active";
+  } else if (page.includes("support")) {
+    document.getElementById('support').className += "active";
+  }
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    var y = document.getElementById("img");
+    var z = document.getElementById("text");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+      y.className += " invisible";
+      z.className = "invisible";
+    } else {
+      x.className = "topnav";
+      y.className = "img_default";
+      z.className = "text_default";
+    }
+  }
+</script>
+
+</body>
+</html>

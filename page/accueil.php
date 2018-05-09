@@ -81,6 +81,7 @@
       </div>
     </div>
   </div>
+
   <script type="text/javascript">
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -98,4 +99,5 @@
   }
   </script>
 </body>
+<?php require('../footer.php')?>
 </html>
