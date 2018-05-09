@@ -1,10 +1,12 @@
 * {
   text-decoration: none;
   box-sizing: border-box;
+  
 }
 
 body{
 	width: 100%;
+	background-image: url("https://i.pinimg.com/originals/53/2f/10/532f1047905ddbf13f67562677f9d7be.jpg");
 }
 .container {
   display: flex;
