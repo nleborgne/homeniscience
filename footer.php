@@ -13,7 +13,7 @@
         <a id="support_foot" href="page/support.html" title="Nous contacter">Support</a>
         <a id="about_foot" href="About" title="Hexateam">À Propos</a>
         </div>
-        <a id="accueil_foot" href="page/acceuil.html"><img class="logo_foot" src="../logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
+        <a id="accueil_foot" href="page/acceuil.html"><img class="logo_foot" src="image/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
         <div id="elementdroit">
         <a id="CGU_foot" href="CGU" title="Conditions générales d'utilisation">CGU</a>
         <a id="legale_foot" href="MentionLegale" title="Mentions légales">Mentions Légales</a>
@@ -22,7 +22,7 @@
 </footer>
 
 <style media="screen">
-* {
+footer {
     font-family: 'Roboto',sans-serif;
     text-decoration: none;
     color:#343434;
