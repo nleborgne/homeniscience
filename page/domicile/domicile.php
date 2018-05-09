@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="domicile2.0.css">
     <title>MON DOMICILE</title>
 </head>
-<?php require ('header.php'); ?>
+<?php require ('../header.php'); ?>
 <body>
 <div class="container1" >
     <div class="container1">
@@ -41,7 +41,7 @@
 
 </body>
 <footer style="position: inherit">
-
+    <?php /*require ('../../footer.php')*/?>
 </footer>
 
 </html>
