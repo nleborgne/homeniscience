@@ -27,7 +27,7 @@
         <form class="add_capt" method="post">
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
             <select class="select-style" id="piece" name="piece" required>
-                <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = 1 ORDER BY ID");
+                <?php //$reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = 1 ORDER BY ID");
                 while ($donnees_piece = $reponse_piece->fetch()){
                     ?>
                     <option value="<?php echo $donnees_piece['ID']; ?>"> <?php echo $donnees_piece['nom']; ?> </option>
@@ -36,7 +36,7 @@
                 ?>
             </select>
             <select class="select-style" id="type_capteur" name="type_capteur" required>
-                <?php $reponse_capteur = $bdd->query("SELECT nom_type,ID FROM type_equipement ORDER BY ID");
+                <?php //$reponse_capteur = $bdd->query("SELECT nom_type,ID FROM type_equipement ORDER BY ID");
                 while ($donnees_capteur = $reponse_capteur->fetch()){
                     ?>
                     <option value="<?php echo $donnees_capteur['ID']; ?>"> <?php echo $donnees_capteur['nom_type']; ?> </option>
@@ -69,7 +69,7 @@
             <select class="select-style" id="piece" name="ID_capt" required>
 
                 <?php
-                $capt = $bdd->query("SELECT equipement.nom,equipement.ID FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1 ");
+                //$capt = $bdd->query("SELECT equipement.nom,equipement.ID FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1 ");
                 while ($cap = $capt->fetch()){
                     ?>
                     <option value="<?php echo $cap['ID'] ; ?>"> <?php echo $cap['nom']; ?> </option>
@@ -78,7 +78,7 @@
                 ?>
 
 
-                <input class="boutton" type="submit" name="dell" value="Suprimer" >
+                <input class="boutton" type="submit" name="dell" value="Supprimer" >
 
                 <?php
 
@@ -99,7 +99,7 @@
         </form>
 
 
-        <?php $equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1  ");
+        <?php //$equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=1  ");
         while ($equ_dom = $equipement_ajoutés->fetch()){
             ?><br>
             <?php echo $equ_dom['nom']; ?>
