@@ -15,7 +15,7 @@
 
 <body>
 	<header>
-  		<?php require ('header.php'); ?>
+  		<?php require ('../header.php'); ?>
   	</header>
   	<?php 
   	require('gestionnaire_modele.php');
@@ -81,7 +81,7 @@ $donnees_domicile = $req->fetch();
 		
     </div>
     
- 
+	<?php require ('../footer.php')?>
 	
 </body>
 </html>
