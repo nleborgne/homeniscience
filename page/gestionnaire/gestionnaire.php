@@ -14,12 +14,13 @@
 
 <body>
 	<header>
-  		<?php require ('header.php'); ?>
+  		<?php require ('../header.php'); ?>
   	</header>
   	
 	<?php require ('gestionnaire_vue_inner.php')?>
 	
-    <?php require ('../../footer.php')?>
+	<?php require ('../footer.php')?>
+	
 	
 </body>
 </html>

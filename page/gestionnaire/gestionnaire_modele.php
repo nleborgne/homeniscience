@@ -19,7 +19,7 @@ function AfficherDomicile()
 function AfficherPiece()
 {
     global $bdd;
-    $reponse = $bdd->query('SELECT * from piece WHERE ID_domicile = 1');
+    $reponse = $bdd->query('SELECT * from piece WHERE ID_domicile = 0');
     return $reponse;
     $reponse->closeCursor();
 }
@@ -27,7 +27,7 @@ function AfficherPiece()
 function AfficherUser()
 {
     global $bdd;
-    $reponse = $bdd->query('SELECT * from utilisateur WHERE ID_domicile = 1');
+    $reponse = $bdd->query('SELECT * from utilisateur WHERE ID_domicile = 0');
     return $reponse;
     $reponse->closeCursor();
 }

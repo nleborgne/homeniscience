@@ -241,9 +241,29 @@ input[type="range"]:after {
 	cursor: pointer;
 }
 
-.bareme{
+.bareme
+{
 	margin-top: 50px;
 }
+
+.checktitle
+{
+	border: 2px solid #00A2E8;
+	border-radius : 5px;
+	padding: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
