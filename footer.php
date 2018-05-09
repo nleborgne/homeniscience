@@ -50,7 +50,7 @@
     margin-right: auto;
     height: 120px;
     width: 120px;
-    padding: 10px 10px 10px 10px;
+    padding: 15px 10px 0px 10px;
 
 }
 .logo_foot:hover
@@ -61,7 +61,7 @@
 #support_foot, #about_foot, #CGU_foot, #legale_foot
 {
     text-align: center;
-    padding: 25px 30px 20px 30px;
+    padding: 25px 30px 21.5px 30px;
 
 
 }

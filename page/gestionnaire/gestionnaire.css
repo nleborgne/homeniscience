@@ -80,11 +80,12 @@ body{
 	text-align:center;
 }
 .panel h3 {
-background:linear-gradient(-90deg, #4650E2, #00A2E8);
-border: 1px solid black;
-text-align:center;
-padding:5px;	
-color: white;
+	background:linear-gradient(-90deg, #4650E2, #00A2E8);
+	text-align:center;
+	padding-top: 5px;
+	padding-bottom: 5px;	
+	color: white;
+	box-shadow: 0px 4px 4px #1c1a19;
 }
 
 #sample, #sample2 {
@@ -97,9 +98,10 @@ color: white;
 
 #afficher, #afficher2 {
 	margin: auto;
-	border: 1px solid black;
 	width: 45%;
 	border-radius: 5px;
+	background-color:#00A2E8;
+	color: white;
 }
 #afficher:hover, #afficher2:hover {
 	cursor:pointer;
@@ -233,8 +235,15 @@ input[type="range"]:after {
 	margin-left: -160px;
 }
 
+.list_user li
+{
+	padding-bottom: 5px;
+	cursor: pointer;
+}
 
-
+.bareme{
+	margin-top: 50px;
+}
 
 
 

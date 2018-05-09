@@ -10,31 +10,34 @@
 </head>
 <?php require ('header.php'); ?>
 <body>
+<div class="container1" >
 <div class="container1">
-    <div class="flex2" style="flex-basis:auto" >
-        <button class="accordion" type="button" name="button">Domicile</button>
-        <div class="panel">
+    <div class="flex1"  >
+        <button class="accordion" type="button" name="button" style="background-color: #3cb0fd ;  ">Domicile</button>
+        <div class="panel" >
             <?php require ('Ajout-domicile.php'); ?>
 
         </div>
 
     </div>
 </div>
-<div class="container2">
+<div class="container1">
     <div class="flex1">
-        <button class="accordion" type="button" name="button">CeMac</button>
-        <div class="panel">
+        <button class="accordion" type="button" name="button" style="background-color:#0667D0 ; ">CeMac</button>
+        <div class="panel" >
             <?php require ('ajout_capteur.php'); ?>
         </div>
     </div>
+</div>
+    <div class="container1">
     <div class="flex1">
-        <button class="accordion" type="button" name="button">Utilisateurs</button>
-        <div class="panel">
+        <button class="accordion" type="button" name="button" >Utilisateurs</button>
+        <div class="panel" >
             <?php require ('ajout_utilisateur.php'); ?>
         </div>
     </div>
 </div>
-
+</div
 
 </body>
 </html>
