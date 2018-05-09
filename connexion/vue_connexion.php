@@ -14,7 +14,7 @@
     <form method="POST" action="traitement_connexion.php">
       <input class="txtinput" type="text" name="email" placeholder="Email">
       <br>
-      <input class="txtinput" type="text" name="mot_de_passe" placeholder="Mot de passe">
+      <input class="txtinput" type="password" name="mot_de_passe" placeholder="Mot de passe">
       <input class="btn" type="submit">
     </form>
   </div>

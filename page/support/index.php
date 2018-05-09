@@ -1,6 +1,13 @@
 <?php
+/* Contrôleur pour la page de support */
+/* Appel du modèle */
+require('support_modele.php');
 
-/* Contrôleur page support */
-
-require('support_vue.php');
+try {
+  $reponse = afficherPannes();
+  $detailsType = afficherTypes();
+  require('support_vue.php');
+}catch (Exception $e) {
+  echo 'Erreur : '.$e->getMessage();
+}
 ?>

@@ -9,26 +9,25 @@
   <title>Accueil</title>
   <link rel="stylesheet" href="accueil.css">
 </head>
-<?php require ('header.php'); ?>
+<?php require ('../header.php'); ?>
 <body>
   <div class="container">
     <div class="flex2">
       <button class="accordion" type="button" name="button">Domicile</button>
       <div class="panel">
-        <h3>Salon</h3>
-        <i class="fas fa-lightbulb fa-2x"></i>
-        <input type="range" name="" value="">
-        <br>
-        <br>
-        <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
-        <br><br>
-        <i class="fas fa-volume-up fa-2x"></i>
-        <input type="range" name="" value="">
-        <h3>Chambre enfants</h3>
-        <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
-        <br><br>
-        <i class="fas fa-volume-up fa-2x"></i>
-        <input type="range" name="" value="">
+        <?php
+        while ($piece = $afficherPieces -> fetch() ) {
+          echo '<h3>'.$piece['piece_nom'].'</h3>';
+          echo '        <i class="fas fa-lightbulb fa-2x"></i>
+          <input type="range" name="" value="">
+          <br>
+          <br>
+          <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
+          <br><br>
+          <i class="fas fa-volume-up fa-2x"></i>
+          <input type="range" name="" value="">';
+        }
+        ?>
       </div>
     </div>
     <div class="flex1">
@@ -67,10 +66,9 @@
       </div>
     </div>
     <div class="flex1">
-      <button class="accordion" type="button" name="button">test</button>
+      <button class="accordion" type="button" name="button">Infos</button>
       <div class="panel">
-        <p>TEST FLEXBOX ACCORDION</p>
-        <p>CONTENT GOES HERE</p>
+
       </div>
     </div>
     <div class="flex2">
@@ -99,5 +97,4 @@
   }
   </script>
 </body>
-<?php require('../footer.php')?>
 </html>

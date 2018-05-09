@@ -13,12 +13,12 @@
 <body>
   <h1>SUPPORT</h1>
   <div class="container">
-    <a href="panne/index/0">
-      <button class="child">
+    <a href="javascript:window.open('ajout_capteur.php','mywindowtitle','width=300,height=400')">
+    <button class="child">
         <i class="fas  fa-exclamation-triangle"></i>&nbsp;
         <p>Ajouter une panne</p>
-      </button>
-    </a>
+    </button>
+  </a>
     <a href="mailto:support@domisep.fr">
       <button class="child">
         <i class="fas fa-comment"></i>&nbsp;
@@ -39,6 +39,7 @@
           <li>Statut</li>
           <li>Détail</li>
         </ul>
+
         <?php
         while ($donnees = $reponse->fetch()) {
           echo '<a href="/homeniscience/page/support/panne/index/'.$donnees['ID'].'#detail">';
