@@ -26,14 +26,15 @@ $mail='';
 <div style="display:flex;flex-wrap: nowrap">
 <img src="homeicone.png" style="height: 100px;width: 100px;">
 <div style="display: inline-block">
-<?php //$domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID=1 ORDER BY ID");
+<?php $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
 while ($dom = $domicile->fetch()){
     ?><br>
-    <?php echo $dom['nom'], ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?>
+    <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+        <?php echo $dom['nom'], ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?></h3>
     <?php
 }
-?>  <br>
-    <br>
+?>
+    
     <form method="post">
     <input class="boutton" type="submit" name="new" value="Supprimer" >
 
@@ -127,7 +128,7 @@ while ($dom = $domicile->fetch()){
         <select class="select-style" id="piece" name="nom_piece" required>
 
             <?php
-            //$piece = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=1  ");
+            $piece = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=$ID_domicile  ");
             while ($donnees_pieces = $piece->fetch()){
                 ?>
                 <option value="<?php echo $donnees_pieces['nom'] ; ?>"> <?php echo $donnees_pieces['nom']; ?> </option>
@@ -160,10 +161,11 @@ while ($dom = $domicile->fetch()){
 </div>
     <br>
     <br>
-    <?php //$piece_ajoutées = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=1 ORDER BY ID");
+    <?php $piece_ajoutées = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=$ID_domicile ORDER BY ID");
     while ($piece_dom = $piece_ajoutées->fetch()){
-        ?><br>
-        <?php echo $piece_dom['nom']; ?>
+        ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+        <?php  echo  $piece_dom['nom']; ?>
         <?php
     }
     ?>

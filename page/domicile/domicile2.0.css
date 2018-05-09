@@ -107,7 +107,7 @@
 .panel::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    background-color: #555;
+    background-color: #d1d1d1;
 }
 /* The switch - the box around the slider */
 .switch {
