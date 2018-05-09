@@ -39,6 +39,7 @@
           <li>Statut</li>
           <li>Détail</li>
         </ul>
+
         <?php
         while ($donnees = $reponse->fetch()) {
           echo '<a href="/homeniscience/page/support/panne/index/'.$donnees['ID'].'#detail">';
