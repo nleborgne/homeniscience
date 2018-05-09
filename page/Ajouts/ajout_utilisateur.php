@@ -23,7 +23,7 @@ $recherche=' ';
 $mail='';
 ?>
 <br>
-<img src="usericone.png" style="height: 85px;width: 100px; display:inline-block">
+<img src="../image/usericone.png" style="height: 85px;width: 100px; display:inline-block">
 <div class="formulaire">
     <form class="add_capt" method="post">
         <input class="champ" type="text" id="nom" name="nom" placeholder="Nom d'utilisateurs a rechercher" required>
