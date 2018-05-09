@@ -37,7 +37,10 @@
             </div>
         </div>
     </div>
-</div
+
+
+</div>
+
 
 </body>
 <footer style="position: inherit">

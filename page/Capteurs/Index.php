@@ -70,8 +70,10 @@ fieldset
 legend
 {
     border: 2px #00A2E8 solid;
+    color: #FFFFFF;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
+    background-color: #00A2E8;
 }
 form
 {
