@@ -41,7 +41,7 @@
 
 </body>
 <footer style="position: inherit">
-    <?php /*require ('../../footer.php')*/?>
+    <?php require ('../footer.php')?>
 </footer>
 
 </html>
