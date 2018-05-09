@@ -77,3 +77,4 @@
 
           </script>
         </div>
+<?php require('../footer.php'); ?>
