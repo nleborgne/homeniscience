@@ -14,6 +14,9 @@
     background:linear-gradient(-90deg, #4650E2, #00A2E8);
     margin-bottom: 50px;
   }
+  button {
+    cursor:pointer;
+  }
   .topnav a {
     display: inline-block;
     color: #f2f2f2;
@@ -81,7 +84,7 @@
     <a id="residence" href="/homeniscience/page/gestionnaire">Résidence</a>
     <a id="support" href="/homeniscience/page/support">Support</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-
+    
   </div>
 
 
