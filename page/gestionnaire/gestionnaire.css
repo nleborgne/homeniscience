@@ -14,8 +14,7 @@ body{
 .container_left {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-left: 60px;
+  justify-content: center;
 }
 .flex1 {
   width:400px;
