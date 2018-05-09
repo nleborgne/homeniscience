@@ -11,12 +11,13 @@
 </head>
 <?php require('../header.php'); ?>
 <body>
+<h1>SUPPORT</h1>
   <div class="container">
     <a href="panne/index/0">
-      <div class="child">
-        <i class="fas fa-exclamation-triangle fa-5x"></i>
-        <h3>GÉRER LES PANNES</h3>
-      </div>
+      <button class="child">
+        <i class="fas  fa-exclamation-triangle"></i>
+        <p>GÉRER LES PANNES</p>
+      </button>
     </a>
     <a href="">
       <div class="child">
