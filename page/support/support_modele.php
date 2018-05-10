@@ -26,7 +26,7 @@ function afficherPannes() {
     INNER JOIN domicile ON piece.ID_domicile = domicile.ID
     INNER JOIN utilisateur on domicile.ID_utilisateur_principal = utilisateur.ID
     WHERE utilisateur.ID = ?');
-    $reponse->execute(array(1));
+    $reponse->execute(array($_SESSION['ID']));
     return $reponse;
   }
 
