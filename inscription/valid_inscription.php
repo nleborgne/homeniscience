@@ -20,7 +20,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$url = "../page/accueil.php";
+$url = "../page/accueil/index.php";
 
 
 if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['mdp']) ) /* condition pour que tous les champs soient remplis */
@@ -41,16 +41,6 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
     }
 
     else {
-        /*
-    $requete = $bdd ->prepare('INSERT INTO utilisateur(email, mot_de_passe, nom, prenom) VALUES(:email, :mdp_hash, :nom, :prenom)');
-    $requete ->execute(array(
-        'email' => $_POST['email'],
-        'mdp_hash' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
-        'nom' => $_POST['nom'],
-        'prenom' => $_POST['prenom']
-
-        ));
-        */
 
         /* Requête qui permet d'ajouter un utilisateur dans la base de donnée avec tous les attributs nécessaires */
         $hash =  password_hash($_POST['mdp'], PASSWORD_DEFAULT);
@@ -86,7 +76,7 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
 else
 {
     echo "Vous n'avez pas rempli tous les champs necessaires"; /* message affichant que des champs manques */
-    //include("Inscription.php"); /* redirection vers le formulaire*/
+    include("Inscription.php"); /* redirection vers le formulaire*/
 }
 ?>
 

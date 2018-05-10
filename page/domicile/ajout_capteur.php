@@ -97,7 +97,7 @@
                 ?>
 
         </form>
-        
+
         <?php $equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=$ID_domicile  ");
         while ($equ_dom = $equipement_ajoutés->fetch()){
             ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
