@@ -10,7 +10,7 @@
 <footer>
     <nav class="nav_foot">
         <div id="elementdessus">
-            <a id="accueil_foot" href="page/acceuil.html"><img class="logo_foot" src="/homeniscience/page/img/logoHomniscience.png"" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
+            <a id="accueil_foot" href="page/acceuil.html"><img class="logo_foot" src="/homeniscience/page/img/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
             <div id="contact">
                 <h2 class="foot_titre">Contact</h2>
                 <p class="foot_para">+33 1 23 45 67 89</p>

@@ -70,7 +70,7 @@ div.container2 {
   text-align: center;
   justify-content:center;
   margin: 0 auto;
-  width:50vh;
+  max-width:70vh;
   z-index: -1;
   margin-bottom: 50px;
 }
@@ -144,4 +144,8 @@ a.probleme{
   display: inline-block;
   font-size: 12px;
   width:100px;
+}
+footer {
+  overflow-x: hidden;
+  display: none;
 }
