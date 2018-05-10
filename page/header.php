@@ -80,11 +80,11 @@
     <img class="img_default" id="img" src="/homeniscience/page/support/header_logo.png" alt="">
     <p id="text" class="text_default">Homeniscience</p>
     <a id="accueil" href="/homeniscience/page/accueil/index.php">Accueil</a>
-    <a id="domicile" href="/homeniscience/page/domicile/domicile.php">Mon Domicile</a>
+    <a id="domicile" href="/homeniscience/page/domicile/">Mon Domicile</a>
     <a id="residence" href="/homeniscience/page/gestionnaire">Résidence</a>
     <a id="support" href="/homeniscience/page/support">Support</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-    
+
   </div>
 
 
