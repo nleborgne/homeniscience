@@ -11,10 +11,16 @@ catch(Exception $e)
 function ID_domicile($ID_utilisateur_principal)
 {
     global $bdd;
+
     $ID = $bdd->query("SELECT ID FROM domicile WHERE ID_utilisateur_principal=$ID_utilisateur_principal");
     $ID_domicile=$ID->fetch();
-
-    return $ID_domicile['ID'];
+    if ($ID_domicile>0){
+        return $ID_domicile['ID'];
+    }
+    else{
+        $ID_domicile=0;
+        return $ID_domicile;
+    }
     $ID->closeCursor();
 
 }
@@ -26,6 +32,7 @@ function ID_domicile($ID_utilisateur_principal)
 function Affdomicile($ID_utilisateur_principal)
 {
     global $bdd;
+
     $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID_utilisateur_principal=$ID_utilisateur_principal");
     return $domicile;
     $domicile->closeCursor();

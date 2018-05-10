@@ -41,7 +41,7 @@ while ($dom = $domicile->fetch()){
     <?php
     if(isset($_POST['new'])) {
 
-        $req = $bdd->exec('DELETE FROM domicile WHERE ID=1' );
+        $req = $bdd->exec('DELETE FROM domicile WHERE ID="'.$ID_domicile.'" ' );
         if ( !$req ) {
             echo 'Erreur de suppression';
         } else {
@@ -97,6 +97,7 @@ while ($dom = $domicile->fetch()){
                     echo"ajout impossible";
                 }
             }
+
         ?>
     </form>
 
@@ -115,7 +116,7 @@ while ($dom = $domicile->fetch()){
                  VALUES (:ID,:ID_domicile,:nom,:nombre_capteurs)');
                  $requete->execute(array(
                      'ID' => NULL,
-                     'ID_domicile' => 1,
+                     'ID_domicile' => $ID_domicile,
                      'nom' => $_POST['piece'],
                      'nombre_capteurs' => 0,
 
@@ -146,7 +147,7 @@ while ($dom = $domicile->fetch()){
                 $stmt = $bdd->prepare($sql);
                 $stmt->execute(array(
                     'nom-piece' => $nom_piece*/
-                $req = $bdd->exec('DELETE FROM piece WHERE nom="'.$nom_piece.'" ' );
+                $req = $bdd->exec('DELETE FROM piece WHERE nom="'.$nom_piece.'"AND  ID_domicile="'.$ID_domicile.'"  ' );
                 if ( !$req AND isset($_POST['Suprimer'])) {
                     echo 'Erreur de suppression';
                 } else {

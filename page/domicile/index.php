@@ -6,7 +6,8 @@ $ID_utilisateur_principal=1;
 require('domicile-model.php');
 
 try {
-    $ID_domicile=ID_domicile($ID_utilisateur_principal);
+    $ID_domicile=ID_domicile($ID_utilisateur_principal);  //recupere ID_domicile si l'utilisateur principale a deja defini son domicile O sinon
+
     /*
     $domicile = Affdomicile($ID_utilisateur_principal);
     $piece= Affpiece($ID_domicile);
