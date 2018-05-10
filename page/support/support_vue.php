@@ -14,11 +14,17 @@
   <h1>SUPPORT</h1>
   <div class="container">
     <a href="javascript:window.open('ajout_capteur.php','mywindowtitle','width=300,height=400')">
-    <button class="child">
+      <button class="child">
         <i class="fas  fa-exclamation-triangle"></i>&nbsp;
         <p>Ajouter une panne</p>
-    </button>
-  </a>
+      </button>
+    </a>
+    <a href="">
+      <button class="child">
+        <i class="far fa-question-circle"></i>&nbsp;
+        <p>Foire aux questions</p>
+      </button>
+    </a>
     <a href="mailto:support@domisep.fr">
       <button class="child">
         <i class="fas fa-comment"></i>&nbsp;
@@ -31,9 +37,6 @@
       <article class="main">
         <a class="probleme">Liste des pannes</a>
         <ul class="liste">
-          <li>ID panne</li>
-          <li>ID user</li>
-          <li>Nom user</li>
           <li>Type capteur</li>
           <li>Date panne</li>
           <li>Statut</li>
@@ -44,9 +47,6 @@
         while ($donnees = $reponse->fetch()) {
           echo '<a href="/homeniscience/page/support/panne/index/'.$donnees['ID'].'#detail">';
           echo '<ul class="listepanne">';
-          echo '<li>'.$donnees['ID'].'</li> ';
-          echo '<li>'.$donnees['ID_utilisateur_principal'].'</li> ';
-          echo '<li>'.$donnees['nom_utilisateur'].'</li> ';
           echo '<li>'.$donnees['nom_equipement'].'</li> ';
           echo '<li>'.$donnees['date_panne'].'</li> ';
           echo '<li>'.$donnees['nom_type'].'</li> ';
@@ -58,5 +58,6 @@
       </article>
     </div>
   </div>
+  <?php include('../footer.php'); ?>
 </body>
 </html>
