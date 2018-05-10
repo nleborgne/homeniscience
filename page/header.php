@@ -7,7 +7,7 @@
   body {
     margin: 0;
     font-family: 'Lato', Helvetica, sans-serif;
-    #background-image: url("../image/fond_bleu.jpg");
+    background-image: url("../image/fond_bleu.jpg");
     background-size: auto;
     background-attachment :fixed;
   }
