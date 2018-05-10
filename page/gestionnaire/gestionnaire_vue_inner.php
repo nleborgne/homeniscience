@@ -5,7 +5,7 @@
         {
             echo '<div class="flex1">';
             echo '<form method="GET" action="appart_description.php" enctype="multipart/form-data"><input type="button"
-    name="'.$donnees['nom'].'" value="'.$donnees['nom'].'" class="accordion" OnClick="window.location.href=\'appart_description.php?id='.$donnees['ID'].'\'"></form>';  
+    name="'.$donnees['nom'].'" value="'.$donnees['nom'].'" class="accordion" title="Afficher le detail"" OnClick="window.location.href=\'appart_description.php?id='.$donnees['ID'].'\'"></form>';  
             echo '<div class="panel">';
             echo '<p><strong>Adresse</strong> : '.$donnees['numero_habitation'].' '. $donnees['rue'].'</p>';
             echo '<h3>Consulter la consommation</h3>';
