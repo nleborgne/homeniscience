@@ -40,15 +40,8 @@
     <div class="flex1">
       <button class="accordion" type="button" name="button">Général</button>
       <div class="panel">
-        <p><strong>superman</strong> : je ne serai pas là cette aprem </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
-        <p><strong>batman</strong> : ne fermez pas la cave à clé svp </p>
+        <p><strong>maman</strong> : je ne serai pas là cette aprem </p>
+        <p><strong>john</strong> : ne fermez pas la cave à clé svp </p>
       </div>
     </div>
   </div>
@@ -74,8 +67,7 @@
     <div class="flex2">
       <button class="accordion" type="button" name="button">Statistiques</button>
       <div class="panel">
-        <p>TEST FLEXBOX ACCORDION</p>
-        <p>CONTENT GOES HERE</p>
+        <img class="graph" src="graph.png" alt="">
       </div>
     </div>
   </div>

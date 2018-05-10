@@ -16,6 +16,7 @@ h1 {
   width: 100%;
   margin-top:10px;
   height: auto;
+
 }
 .child {
   width:300px;
@@ -73,6 +74,9 @@ div.container2 {
   max-width:70vh;
   z-index: -1;
   margin-bottom: 50px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+
+
 }
 div.column {
   display: flex;
@@ -80,12 +84,12 @@ div.column {
   flex-direction: column;
   background-color: white;
   width:100%;
+  position: relative;
 }
 article{
   display: inline-block;
   background-color: #fafafa;
   margin: 40px 40px 00px 0px;
-  box-shadow: 1px 1px 1px 1px #BEBEBE;
   width:100%;
   overflow:hidden;
 }
@@ -113,6 +117,9 @@ div.container2 a.probleme {
   text-decoration: none;
   font-size: 17px;
   overflow: hidden;
+  position: absolute;
+  top:0;
+  width: 100%;
 }
 div.container2 a {
   text-decoration: none;
