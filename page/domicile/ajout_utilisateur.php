@@ -57,7 +57,7 @@ $mail='';
         <?php
         if(isset($_POST['Valider'])) {
                 $mail= $_POST['user'];
-                $sql = "UPDATE utilisateur SET ID_domicile=1 WHERE email=:email";
+                $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile WHERE email=:email";
                 $stmt = $bdd->prepare($sql);
                 $stmt->execute(array(
                         'email' => $mail
@@ -71,7 +71,7 @@ $mail='';
         <select class="select-style" id="piece" name="member" required>
 
             <?php
-            $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=1  ");
+            $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  ");
             while ($donnees_utilisateurs = $reponse_ajout->fetch()){
                 ?>
                 <option value="<?php echo $donnees_utilisateurs['ID'] ; ?>"> <?php echo $donnees_utilisateurs['prenom']; ?> </option>
@@ -97,10 +97,10 @@ $mail='';
     </form>
     <br>
     <br>
-        <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=1 ORDER BY ID");
+        <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile ORDER BY ID");
         while ($utilisateurs = $reponse_utilisateurs->fetch()){
             ?>
-            <p><?php echo $utilisateurs['prenom']; ?></p>
+            <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);"><?php echo $utilisateurs['prenom']; ?></p>
             <?php
         }
         ?>
