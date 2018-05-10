@@ -9,13 +9,13 @@
             echo '<div class="panel">';
             echo '<p><strong>Adresse</strong> : '.$donnees['numero_habitation'].' '. $donnees['rue'].'</p>';
             echo '<h3>Consulter la consommation</h3>';
-            echo ' <p> Consommation d\'eau : value</p>
+            echo ' <p> Consommation d\'eau :</p>
 			<p id="afficher">Afficher le graphe</p>
             <div id="sample">
             	<canvas id="myChart2" width="400" height="250"></canvas>
             </div>
             
-            <p> Consommation d\'electricit&eacute : value</p>
+            <p> Consommation d\'electricit&eacute :</p>
             <p id="afficher2">Afficher le graphe</p>
             <div id="sample2">
             	<canvas id="myChart" width="400" height="250"></canvas>
