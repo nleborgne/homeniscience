@@ -46,6 +46,8 @@ html {
   text-decoration: none;
   margin-left: 35%;
   margin-top: 2%;
+  border:none;
+  cursor: pointer;
 }
 
 .btn:hover {
