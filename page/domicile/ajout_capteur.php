@@ -1,11 +1,15 @@
-<!DOCTYPE html>
 <?php
-
+if(!isset($_SESSION)){
+  session_start();
+  $ID_utilisateur_principal=$_SESSION['ID'];
+}
 ?>
+<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Validation inscription</title>
+    <title>ajouter capteur</title>
     <link rel="stylesheet" href="ajout.css" />
 </head>
 

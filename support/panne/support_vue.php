@@ -5,7 +5,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/homeniscience/page/support/panne/support.css">
+  <link rel="stylesheet" href="/homeniscience/support/panne/support.css">
   <title>SUPPORT</title>
 </head>
 
@@ -29,9 +29,9 @@
         </ul>
         <?php
         while ($donnees = $reponse->fetch()) {
-          echo '<a href="/homeniscience/page/support/panne/index/'.$donnees['ID'].'#detail">';
+          echo '<a href="/homeniscience/support/panne/index/'.$donnees['panne_ID'].'#detail">';
           echo '<ul class="listepanne">';
-          echo '<li>'.$donnees['ID'].'</li> ';
+          echo '<li>'.$donnees['panne_ID'].'</li> ';
           echo '<li>'.$donnees['ID_utilisateur_principal'].'</li> ';
           echo '<li>'.$donnees['nom_utilisateur'].'</li> ';
           echo '<li>'.$donnees['nom_equipement'].'</li> ';
@@ -57,7 +57,7 @@
           <li>statut panne</li>
           <li>descriptif</li>
         </ul>
-        <form class="" action="/homeniscience/page/support/panne/form_edit_pannes.php" method="post">
+        <form class="" action="/homeniscience/support/panne/form_edit_pannes.php" method="post">
           <?php
           while ($donnees = $details->fetch()) {
             echo '<ul class="listepanne"> ';

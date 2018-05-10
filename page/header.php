@@ -7,8 +7,9 @@
   body {
     margin: 0;
     font-family: 'Lato', Helvetica, sans-serif;
-    background-image: url("../image/fond_bleu.jpg");
-	background-size: auto;
+    #background-image: url("../image/fond_bleu.jpg");
+    background-size: auto;
+    background-attachment :fixed;
   }
 
   .topnav {
@@ -99,7 +100,7 @@
   } else if (page.includes("domicile")) {
     document.getElementById('domicile').className += "active";
   } else if (page.includes("gestionnaire")) {
-    document.getElementById('gestionnaire').className += "active";
+    document.getElementById('residence').className += "active";
   } else if (page.includes("support")) {
     document.getElementById('support').className += "active";
   }

@@ -15,7 +15,8 @@ function afficherPannes() {
   */
   $reponse = $bdd->query('SELECT *,
     equipement.nom AS nom_equipement,
-    utilisateur.nom AS nom_utilisateur
+    utilisateur.nom AS nom_utilisateur,
+    panne.ID AS panne_ID
     FROM panne
     INNER JOIN type_statut ON panne.ID_type_statut = type_statut.ID
     INNER JOIN equipement ON panne.ID_equipement = equipement.ID

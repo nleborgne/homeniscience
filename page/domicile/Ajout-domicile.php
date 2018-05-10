@@ -34,7 +34,7 @@ while ($dom = $domicile->fetch()){
     <?php
 }
 ?>
-    
+
     <form method="post">
     <input class="boutton" type="submit" name="new" value="Supprimer" >
 

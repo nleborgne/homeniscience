@@ -1,105 +1,76 @@
 * {
-    text-decoration: none;
+  text-decoration: none;
 }
 html{
-    background: white;
+  background: white;
 }
 
 div.container {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    align-content: flex-start;
-    text-align: center;
-    justify-content:center;
-    width: 100%;
-    z-index: -1;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-content: flex-start;
+  text-align: center;
+  justify-content:center;
+  width: 100%;
+  z-index: -1;
 }
 div.column {
-    display: flex;
-    align-content: flex-start;
-    flex-direction: column;
-    background-color: white;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  background-color: white;
 
 }
 article{
-    display: inline-block;
-    background-color:#1111;
-    margin: 40px 40px 00px 0px;
-    box-shadow: 1px 1px 1px 1px #BEBEBE;
-    width:360px;
-    height: 500px;
-    overflow:hidden;
+  display: inline-block;
+  background-color:#1111;
+  margin: 40px 40px 00px 0px;
+  box-shadow: 1px 1px 1px 1px #BEBEBE;
+  width:360px;
+  height: 500px;
+  overflow:hidden;
 }
 article a {
-  font-family: 'Lato';
+  font-family: 'Lato','sans-serif';
 }
 div.formulaire{
-    width: 300px;
-    height: 400px;
+  width: 300px;
+  height: 400px;
 }
 
 aside{
-    text-align:center;
-    display: inline-block;
-    background-color: #1111;
-//border: solid #BEBEBE;
-    box-shadow: 1px 1px 1px 1px #BEBEBE;
-    margin: 40px 20px 0px 0px;
+  text-align:center;
+  display: inline-block;
+  background-color: #1111;
+  box-shadow: 1px 1px 1px 1px #BEBEBE;
+  margin: 40px 20px 0px 0px;
 
-    width: 360px;
-    height: 230px;
-    overflow: hidden;
+  width: 360px;
+  height: 230px;
+  overflow: hidden;
 
 }
 div.container a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-div.container a {
-    overflow: hidden;
-//background-color: #1E77F3;
-
-    top: 0;
-    display:block;
-
-}
-
-
-
-
 
 /*gerer la couleur de chaque dessus de boite */
 a.domicile{
-    background-color: #99D9EA;
+  background-color: #99D9EA;
 }
 a.ceMac {
-    background-color: #00A2E8;
+  background-color: #00A2E8;
 }
 a.utilisateur {
-    background-color: #4650E2;
+  background-color: #4650E2;
 }
 
 
 
 /*position et style du footer */
-footer{
-
-//position: absolute;
-    display: block;
-    margin:100px auto 0 auto ;
-    overflow: hidden;
-    background-color: #BEBEBE;
-    position: static;
-    width: 1120px;
-    height: 100px;
-    color: #0000;
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-
-}

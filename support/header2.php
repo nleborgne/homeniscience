@@ -75,18 +75,17 @@
   <div class="topnav" id="myTopnav">
     <img class="img_default" id="img" src="/homeniscience/page/support/header_logo.png" alt="">
     <p id="text" class="text_default">Homeniscience</p>
-    <a id="accueil" href="/homeniscience/page/support/">Accueil</a>
-    <a id="pannes" href="/homeniscience/page/support/panne/index/0">Pannes</a>
+    <a id="accueil" href="/homeniscience/support/">Accueil</a>
+    <a id="pannes" href="/homeniscience/support/panne/index/0">Pannes</a>
     <a id="chat" href="">Chat</a>
     <a id="other" href="">Other</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 
-
   <script>
 
   var page = window.location.href;
-  if (page == "http://localhost/homeniscience/page/support/") {
+  if (page == "http://localhost/homeniscience/support/") {
     document.getElementById('accueil').className += "active";
   } else if (page.includes("panne")) {
     document.getElementById('pannes').className += "active";

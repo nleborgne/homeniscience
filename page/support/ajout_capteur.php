@@ -14,7 +14,8 @@ function getCapteurs() {
     equipement.nom AS nom_equipement,
     equipement.ID AS ID_equipement
     FROM equipement
-    INNER JOIN domicile ON equipement.ID_domicile = domicile.ID
+    INNER JOIN piece ON equipement.ID_piece = piece.ID
+    INNER JOIN domicile ON piece.ID_domicile = domicile.ID
     INNER JOIN utilisateur ON domicile.ID_utilisateur_principal = utilisateur.ID
     WHERE utilisateur.ID = ?');
     $get->execute(array(2));

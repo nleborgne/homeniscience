@@ -46,4 +46,9 @@ html,body {
 	  margin-top:20px;
   }
 }
-
+.chat, .other {
+  cursor:not-allowed;
+}
+.chat:hover,.other:hover {
+  background-color: #0099ff;
+}

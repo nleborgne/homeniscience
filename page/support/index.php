@@ -1,5 +1,8 @@
 <?php
 /* Contrôleur pour la page de support */
+if(!isset($_SESSION)){
+  session_start();
+}
 /* Appel du modèle */
 require('support_modele.php');
 

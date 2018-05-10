@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lato|Roboto" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="domicile2.0.css">
@@ -16,14 +15,13 @@
             <button class="accordion" type="button" name="button" style="background-color: #3cb0fd ;  ">Domicile</button>
             <div class="panel" >
                 <?php require ('Ajout-domicile.php'); ?>
-
             </div>
 
         </div>
     </div>
     <div class="container1">
         <div class="flex1">
-            <button class="accordion" type="button" name="button" style="background-color:#0667D0 ; ">CeMac</button>
+            <button class="accordion" type="button" name="button" style="background-color:#1887E6 ; ">CeMac</button>
             <div class="panel" >
                 <?php require ('ajout_capteur.php'); ?>
             </div>
