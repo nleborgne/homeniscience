@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION)){
+  session_start();
+}
 // Connexion à la base de données via PDO
 try {
   $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');

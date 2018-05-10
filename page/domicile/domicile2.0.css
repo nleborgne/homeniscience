@@ -1,18 +1,18 @@
 * {
     text-decoration: none;
-    font-family: 'Comfortaa',sans-serif;
+    //font-family: 'Comfortaa',sans-serif;
     box-sizing: border-box;
 }
 .container1 {
     display: flex;
     flex-wrap: wrap;
     //align-content: stretch;
-
+    min-height: 750px;
     margin-top: 50px;
     width: AUTO;
-
+    min-height: 650px;
     flex-direction: row;
-
+    margin-bottom: 50px;
 
     justify-content: space-evenly;
     padding: 0px;
@@ -107,7 +107,7 @@
 .panel::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    background-color: #555;
+    background-color: #d1d1d1;
 }
 /* The switch - the box around the slider */
 .switch {
