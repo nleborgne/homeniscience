@@ -97,8 +97,5 @@
   }
   </script>
 </body>
-<<<<<<< HEAD:page/accueil.php
-<?php require('footer.php')?>
-=======
->>>>>>> 8e0f895eb300348aad77f52b7b861a2664aca7c5:page/accueil/accueil_vue.php
+<?php require('../footer.php')?>
 </html>
