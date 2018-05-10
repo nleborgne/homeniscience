@@ -9,69 +9,113 @@
 </head>
 <footer>
     <nav class="nav_foot">
-        <div id="elementgauche">
-        <a id="support_foot" href="page/support.html" title="Nous contacter">Support</a>
-        <a id="about_foot" href="About" title="Hexateam">À Propos</a>
+        <div id="elementdessus">
+            <a id="accueil_foot" href="page/acceuil.html"><img class="logo_foot" src="image/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
+            <div id="contact">
+                <h2 class="foot_titre">Contact</h2>
+                <p class="foot_para">+33 1 23 45 67 89</p>
+                <p class="foot_para">dom@isep.fr</p>
+                <p class="foot_para">Rue notre Dame des champs</p>
+            </div>
+            <div id="reseau">
+                <h2 class="foot_titre">Réseaux sociaux</h2>
+                <!-- Insérer des icones de réseaux sociaux -->
+            </div>
+            <div id="about">
+                <h2 class="foot_titre">A propos d'Hexateam</h2>
+            </div>
         </div>
-        <a id="accueil_foot" href="page/acceuil.html"><img class="logo_foot" src="image/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
-        <div id="elementdroit">
-        <a id="CGU_foot" href="CGU" title="Conditions générales d'utilisation">CGU</a>
-        <a id="legale_foot" href="MentionLegale" title="Mentions légales">Mentions Légales</a>
+        <div id="elementdessous">
+            <a id="foot_emailing" href="la page de l'email">E-mailing</a>
+            <a id="foot_legale" href="MentionsLegales">Mentions légales</a>
+            <a id="foot_CGU" href="CGU">CGU</a>
+            <p class="copyright">Copyright © 2018 | Domisep.fr</p>
         </div>
     </nav>
 </footer>
 
 <style media="screen">
+
 footer {
     font-family: 'Roboto',sans-serif;
     text-decoration: none;
     color:#343434;
 }
-
 .nav_foot
 {
     position: static;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     bottom: 0;
-    height: 130px;
+    height: 160px;
     width:100%;
-    background-image: radial-gradient(circle at top center, #60C5F1, #00A2E8);
+    background:linear-gradient(-90deg, #4650E2, #00A2E8);
 }
-#elementgauche, #elementdroit
+#elementdessus
 {
     display: flex;
-    flex-direction: column;
+}
+#contact, #reseau
+{
+    padding: 0px 10px 0px 150px;
+    border-bottom: solid #343434 1px;
+}
+#about
+{
+    padding: 0px 190px 0px 160px;
+    border-bottom: solid #343434 1px;
+}
+h2
+{
+    font-size: 18px;
+}
+.foot_para
+{
+    font-size: 13px;
+}
+#elementdessous
+{
+    display: flex;
+    justify-content: flex-start;
+}
+#foot_emailing
+{
+    font-size: 10px;
+    font-weight: bold;
+    color:#343434;
+    margin: 0px 30px 0px 270px;
+}
+#foot_CGU, #foot_legale
+{
+    font-size: 10px;
+    font-weight: bold;
+    color:#343434;
+    margin: 0px 30px 0px 30px;
+}
+.copyright
+{
+    font-size: 10px;
+    font-weight: bold;
+    color:#343434;
+    margin: 0px 30px 0px 720px;
 }
 .logo_foot
 {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px 50px 0px 100px;
+    border-bottom: solid #343434 1px;
     height: 120px;
     width: 120px;
-    padding: 15px 10px 0px 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 70px;
+    background: rgba(255,255,255,0.4);
 
 }
 .logo_foot:hover
 {
     transition: all 0.5s ease;
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
-#support_foot, #about_foot, #CGU_foot, #legale_foot
-{
-    text-align: center;
-    padding: 25px 30px 20.5px 30px;
 
-
-}
-#support_foot:hover, #about_foot:hover, #CGU_foot:hover, #legale_foot:hover
-{
-    background-color: rgb(105,105,105);
-    color: #CECECE;
-    font-weight: bold;
-    transition: all 0.3s ease;
-
-}
 </style>
 
