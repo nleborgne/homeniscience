@@ -7,6 +7,7 @@
 body{
 	width: 100%;
 	background-image: url("https://i.pinimg.com/originals/53/2f/10/532f1047905ddbf13f67562677f9d7be.jpg");
+	background-size: 100%;
 }
 .container {
   display: flex;
@@ -249,8 +250,7 @@ input[type="range"]:after {
 
 .checktitle
 {
-	border: 2px solid #00A2E8;
-	border-radius : 5px;
+	
 	padding: 2px;
 }
 
