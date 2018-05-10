@@ -3,9 +3,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+
   body {
     margin: 0;
     font-family: 'Lato', Helvetica, sans-serif;
+    background-image: url("../image/fond_bleu.jpg");
+	background-size: auto;
   }
 
   .topnav {
