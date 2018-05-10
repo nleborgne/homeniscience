@@ -103,8 +103,8 @@
 
         $increment_nbr=$bdd->exec("UPDATE piece ");
 
-        $equipement_ajoutes = $bdd->query("SELECT nom,consommation FROM equipement  ORDER BY ID");
-        while ($equ_dom = $equipement_ajoutes->fetch()){
+        $equipement_ajoutés = $bdd->query("SELECT nom,consommation FROM equipement  ORDER BY ID");
+        while ($equ_dom = $equipement_ajoutés->fetch()){
             ?><br>
             <?php echo $equ_dom['nom'],'  ',$equ_dom['consommation'];
         }
