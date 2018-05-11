@@ -8,20 +8,23 @@
   <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 801px)" href="css/style.css" />
 </head>
 <body>
+<div class="bg">
   <img class="imgHome" src="img/logo.png" alt="">
   <!-- Module de connexion -->
-  <div class="connexion">
-    <form method="POST" action="traitement_connexion.php">
-      <input class="txtinput" type="text" name="email" placeholder="Email">
-      <br>
-      <input class="txtinput" type="password" name="mot_de_passe" placeholder="Mot de passe">
-      <input class="btn" type="submit">
-    </form>
-  </div>
-  <!-- Créer un compte / mdp oublié -->
-  <div class="links">
-    <a href="">Mot de passe oublié ?</a>
-    <a href="">Créer un compte</a>
+
+      <div class="connexion">
+        <form method="POST" action="traitement_connexion.php">
+          <input class="txtinput" type="text" name="email" placeholder="Email">
+          <br>
+          <input class="txtinput" type="password" name="mot_de_passe" placeholder="Mot de passe">
+          <input class="btn" type="submit">
+        </form>
+      </div>
+      <!-- Créer un compte / mdp oublié -->
+      <div class="links">
+        <a href="">Mot de passe oublié ?</a>
+        <a href="">Créer un compte</a>
+      </div>
   </div>
 </body>
 </html>

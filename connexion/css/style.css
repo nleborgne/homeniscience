@@ -1,7 +1,22 @@
+*{
+  text-decoration: none;
+  font-family: 'Comfortaa',sans-serif;
+}
 
+body, html {
+  height: 100%;
+}
+body{
+  margin: 0;
+}
+.bg {
+  background-image: url("../blurredcity2.jpg");
 
-html {
-  background-color: #0667D0;
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .imgHome {
@@ -15,7 +30,7 @@ html {
   width:25%;
   height: auto;
   margin: 0 auto;
-  background-color: #fff;
+  background-color:rgba(255,255,255,0.5);
   border:1px solid white;
   border-radius: 5px;
 }
