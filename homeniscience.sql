@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Lun 07 Mai 2018 à 22:25
+-- Généré le :  Ven 11 Mai 2018 à 11:02
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -121,16 +121,18 @@ CREATE TABLE `domicile` (
   `code_postal` char(5) NOT NULL,
   `pays` varchar(50) NOT NULL,
   `ID_confidentialite` int(11) NOT NULL,
-  `ID_gestionnaire` int(11) NOT NULL
+  `ID_gestionnaire` int(11) NOT NULL,
+  `consommation` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `domicile`
 --
 
-INSERT INTO `domicile` (`ID`, `ID_utilisateur_principal`, `nom`, `nombre_pieces`, `superficie`, `ID_type_habitation`, `numero_habitation`, `rue`, `code_postal`, `pays`, `ID_confidentialite`, `ID_gestionnaire`) VALUES
-(1, 1, 'Domicile 1', 2, 200, 1, '1', 'rue du Faubourg Saint Honoré', '75008', 'Paris', 1, 1),
-(2, 2, 'mon Domicile', 3, 600, 2, '5', 'rue Félix Faure', '75015', 'France', 1, 0);
+INSERT INTO `domicile` (`ID`, `ID_utilisateur_principal`, `nom`, `nombre_pieces`, `superficie`, `ID_type_habitation`, `numero_habitation`, `rue`, `code_postal`, `pays`, `ID_confidentialite`, `ID_gestionnaire`, `consommation`) VALUES
+(1, 1, 'Domicile 1', 2, 200, 1, '1', 'rue du Faubourg Saint Honoré', '75008', 'Paris', 1, 1, 0),
+(2, 2, 'mon Domicile', 3, 600, 2, '5', 'rue Félix Faure', '75015', 'France', 1, 0, 0),
+(3, 7, 'mon Domicile', 0, 200, 1, '10', 'rue de vanves', '92000', 'France', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -151,7 +153,8 @@ CREATE TABLE `equipement` (
 
 INSERT INTO `equipement` (`ID`, `ID_piece`, `nom`, `ID_type_equipement`) VALUES
 (1, 1, 'capteur luminosité', 1),
-(2, 3, 'luminosité chambre enfant', 2);
+(2, 3, 'luminosité chambre enfant', 2),
+(7, 8, 'capteur 1', 4);
 
 -- --------------------------------------------------------
 
@@ -179,6 +182,14 @@ CREATE TABLE `gestionnaire` (
   `ID_domicile` int(11) NOT NULL,
   `ID_utilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `gestionnaire`
+--
+
+INSERT INTO `gestionnaire` (`ID`, `gestionnaire`, `ID_domicile`, `ID_utilisateur`) VALUES
+(1, 1, 0, 1),
+(2, 0, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -223,7 +234,10 @@ CREATE TABLE `panne` (
 
 INSERT INTO `panne` (`ID`, `ID_equipement`, `ID_type_statut`, `date_panne`, `date_intervention`, `descriptif_panne`) VALUES
 (1, 1, 0, '2018-04-13', '2020-01-31', 'ne marche plus'),
-(2, 2, 0, '2018-05-07', '2018-05-07', 'probleme capteur');
+(2, 2, 0, '2018-05-07', '2018-05-07', 'probleme capteur'),
+(4, 2, 0, '2018-05-11', '0001-01-01', 'ne marche pas'),
+(6, 2, 1, '2018-05-11', '2018-05-12', 'ne fonctionne pas'),
+(7, 2, 0, '2018-05-11', '0001-01-01', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -246,7 +260,10 @@ INSERT INTO `piece` (`ID`, `ID_domicile`, `nom`, `nombre_capteurs`) VALUES
 (1, 1, 'chambre', 1),
 (2, 1, 'cuisine', 2),
 (3, 2, 'chambre enfant', 2),
-(4, 2, 'chambre parents', 3);
+(4, 2, 'chambre parents', 3),
+(8, 3, 'cuisine', 0),
+(9, 3, 'salon', 0),
+(10, 3, 'chambre', 0);
 
 -- --------------------------------------------------------
 
@@ -390,7 +407,7 @@ CREATE TABLE `utilisateur` (
   `ID` int(11) NOT NULL,
   `ID_domicile` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `mot_de_passe` varchar(50) NOT NULL,
+  `mot_de_passe` varchar(60) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `adresse` varchar(50) NOT NULL,
@@ -408,8 +425,10 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`ID`, `ID_domicile`, `email`, `mot_de_passe`, `nom`, `prenom`, `adresse`, `numero_fixe`, `numero_mobile`, `ID_type_utilisateur`, `ID_langue`, `image`, `ID_theme`, `ID_mode_paiement`) VALUES
-(1, 0, 'email@email.com', 'motdepasse', 'Martin', 'Jean', '1 rue du Faubourg Saint Honoré 75008 Paris', '0100000000', '0600000000', 2, 1, '', 1, 1),
-(2, 0, 'jean@email.com', 'test', 'Duval', 'Marie', '182 rue Félix Faure 75015 Paris', '010000000000', '060000000000', 1, 1, '', 1, 1);
+(1, 0, 'john@email.com', '$2y$10$yKk5qlSsWUjgNed5LDWpu.4N/b7.L7yPkfstqGw3KbW.FcNk6B6je', 'smith', 'john', '', '', '', 2, 1, '', 1, 1),
+(2, 0, 'email2@email.com', '$2y$10$tM58QfTRzpHdEV2QPRdvJemrfF3drwLxvIrsotiHm1iE6bLvUC66W', 'Dupond', 'Pierre', '', '', '', 2, 1, '', 1, 1),
+(3, 0, 'email@email.com', '$2j6OjIPo8Hl2', 'Martin', 'Jean', '1 rue du Faubourg Saint Honoré 75008 Paris', '0100000000', '0600000000', 2, 1, '', 1, 1),
+(7, 0, 'pconde@isep.fr', '$2y$10$VoMxSsTCY0wYKXQ/pqWhmucjtUnllp96SAukqI9gxyeaWJjCmVsHq', 'Conde', 'Patricia', '', '', '', 2, 1, '', 1, 1);
 
 --
 -- Index pour les tables exportées
@@ -449,6 +468,12 @@ ALTER TABLE `equipement`
 -- Index pour la table `forum_interne`
 --
 ALTER TABLE `forum_interne`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `gestionnaire`
+--
+ALTER TABLE `gestionnaire`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -546,17 +571,22 @@ ALTER TABLE `chat_domisep`
 -- AUTO_INCREMENT pour la table `domicile`
 --
 ALTER TABLE `domicile`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `equipement`
 --
 ALTER TABLE `equipement`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `forum_interne`
 --
 ALTER TABLE `forum_interne`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `gestionnaire`
+--
+ALTER TABLE `gestionnaire`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `langue`
 --
@@ -571,12 +601,12 @@ ALTER TABLE `mode_paiement`
 -- AUTO_INCREMENT pour la table `panne`
 --
 ALTER TABLE `panne`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `theme`
 --
@@ -616,7 +646,7 @@ ALTER TABLE `type_utilisateur`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
