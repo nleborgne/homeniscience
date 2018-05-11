@@ -20,7 +20,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$url = "../page/accueil/index.php";
+$url = "../connexion/vue_connexion.php";
 
 
 if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['mdp']) ) /* condition pour que tous les champs soient remplis */
@@ -65,7 +65,7 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
         ));
 
         /* Redirection vers la page de menu une fois que l'utilisateur a créé son compte */
-
+        session_start();
         header('Location: '.$url);
 
 

@@ -11,11 +11,8 @@ body{
 }
 .bg {
     background-image: url("../blurredcity2.jpg");
-
-    height: 100%;
-
+    background-repeat: repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .formulaire_connexion{

@@ -8,7 +8,8 @@ div.container {
   align-content: flex-start;
   text-align: center;
   justify-content:center;
-  width: 100%;
+  width: 80%;
+  margin : auto;
   z-index: -1;
   margin-bottom: 50px;
 }
@@ -92,4 +93,19 @@ a.probleme{
 }
 .listepanne input {
   text-align: center;
+}
+input[type=submit] {
+  width:auto;
+  line-height: 12px;
+  max-width:100px;
+  border-radius : 5px;
+  background-color: #0099ff;
+  color:white;
+  padding:10px;
+  font-size:12px;
+  border:none;
+  cursor:pointer;
+}
+input[type=submit]:hover {
+  background-color: #4353E2;
 }

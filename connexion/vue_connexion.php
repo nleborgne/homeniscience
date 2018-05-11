@@ -23,7 +23,7 @@
       <!-- Créer un compte / mdp oublié -->
       <div class="links">
         <a href="">Mot de passe oublié ?</a>
-        <a href="">Créer un compte</a>
+        <a href="../inscription/Inscription.php">Créer un compte</a>
       </div>
   </div>
 </body>
