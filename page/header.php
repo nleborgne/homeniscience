@@ -7,8 +7,7 @@
   body {
     margin: 0;
     font-family: 'Lato', Helvetica, sans-serif;
-    background-image: url("../image/fond_bleu.jpg");
-    background-size: auto;
+    background-image: url("../img/funky-lines.png");
     background-attachment :fixed;
   }
 

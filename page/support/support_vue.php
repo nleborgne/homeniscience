@@ -11,7 +11,7 @@
 </head>
 <?php require('../header.php'); ?>
 <body>
-  <h1>SUPPORT</h1>
+  <h1>Support</h1>
   <div class="container">
     <a href="javascript:window.open('ajout_capteur.php','mywindowtitle','width=300,height=400')">
       <button class="child">

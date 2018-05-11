@@ -1,13 +1,11 @@
 * {
   text-decoration: none;
   box-sizing: border-box;
-  
+
 }
 
 body{
 	width: 100%;
-	background-image: url("https://i.pinimg.com/originals/53/2f/10/532f1047905ddbf13f67562677f9d7be.jpg");
-	background-size: 100%;
 }
 .container {
   display: flex;
@@ -85,7 +83,7 @@ body{
 	background:linear-gradient(-90deg, #4650E2, #00A2E8);
 	text-align:center;
 	padding-top: 5px;
-	padding-bottom: 5px;	
+	padding-bottom: 5px;
 	color: white;
 	box-shadow: 0px 4px 4px #1c1a19;
 }
@@ -95,7 +93,7 @@ body{
     height: 0px;
     padding: 0px;
     overflow: hidden;
-    position :relative;    
+    position :relative;
 }
 
 #afficher, #afficher2 {
@@ -213,7 +211,7 @@ input[type="range"] {
     left: 40px;
     margin-left: 1em;
     width: 200px;
-    
+
 }
 input[type="range"]:after,
 input[type="range"]:before {
@@ -250,25 +248,11 @@ input[type="range"]:after {
 
 .checktitle
 {
-	
+
 	padding: 2px;
 }
 
-.checkside 
+.checkside
 {
-	color: white;
+	color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
