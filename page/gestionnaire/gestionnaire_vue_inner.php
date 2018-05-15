@@ -10,7 +10,7 @@
             echo '<p><strong>Adresse</strong> : '.$donnees['numero_habitation'].' '. $donnees['rue'].'</p>';
             echo '<h3><form method="GET" action="appart_description.php" enctype="multipart/form-data"><input type="button"
     name="Consulter la consommation" value="Consulter la consommation" class="consulter" title="Afficher le detail" OnClick="window.location.href=\'appart_description.php?id='.$donnees['ID'].'\'"></form></h3>';  
-            echo ' <p> Consommation d\'eau :</p>
+            echo '<p> Consommation d\'eau :</p>
 			<p class="afficher">Afficher le graphe</p>
             <div class="sample">
             	<canvas class="myChart" width="400" height="250"></canvas>
@@ -29,7 +29,7 @@
                   </label>';
             ?>
             <input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput(this.value);"></input>
-            <p id="textInput">0</p>
+            <p class="textInput">0</p>
 			<?php 
              
             echo '</div>';
@@ -42,20 +42,59 @@
   <script type="text/javascript">
 
 		
-   var compteur = 0;
-   document.getElementsByClassName("afficher")[compteur].onclick = function() {
-	   var c = document.getElementsByClassName("sample")[compteur];
-	   var d = document.getElementsByClassName("afficher")[compteur];
-	   compteur = ++compteur;
- 	  	if(c.style.height != '200px') {
- 		  	d.innerHTML = "Cacher le graphe";
- 	    	c.style.height = '200px';
- 	  	}else {
- 		  	d.innerHTML = "Afficher le graphe";
- 		  	c.style.height='0';
- 	}
-   }
-  
+	
+   
+  	   document.getElementsByClassName("afficher")[0].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[0];
+		   var d = document.getElementsByClassName("afficher")[0];
+		   
+ 		  	if(c.style.height != '200px') {
+ 			  	d.innerHTML = "Cacher le graphe";
+ 		    	c.style.height = '200px';
+ 		  	} else {
+ 			  	d.innerHTML = "Afficher le graphe";
+ 			  	c.style.height='0';
+ 			}
+ 	   }
+	
+  	 document.getElementsByClassName("afficher")[1].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[1];
+		   var d = document.getElementsByClassName("afficher")[1];
+		   
+		  	if(c.style.height != '200px') {
+			  	d.innerHTML = "Cacher le graphe";
+		    	c.style.height = '200px';
+		  	} else {
+			  	d.innerHTML = "Afficher le graphe";
+			  	c.style.height='0';
+			}
+	   }
+
+  	 document.getElementsByClassName("afficher")[2].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[2];
+		   var d = document.getElementsByClassName("afficher")[2];
+		   
+		  	if(c.style.height != '200px') {
+			  	d.innerHTML = "Cacher le graphe";
+		    	c.style.height = '200px';
+		  	} else {
+			  	d.innerHTML = "Afficher le graphe";
+			  	c.style.height='0';
+			}
+	   }
+
+  	document.getElementsByClassName("afficher")[3].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[3];
+		   var d = document.getElementsByClassName("afficher")[3];
+		   
+		  	if(c.style.height != '200px') {
+			  	d.innerHTML = "Cacher le graphe";
+		    	c.style.height = '200px';
+		  	} else {
+			  	d.innerHTML = "Afficher le graphe";
+			  	c.style.height='0';
+			}
+	   }
  
   
 
@@ -75,7 +114,7 @@
   }
 
   function updateTextInput(val) {
-      document.getElementById('textInput').innerHTML = val; 
+      document.getElementsByClassName('textInput')[0].innerHTML = val; 
     }
 
 

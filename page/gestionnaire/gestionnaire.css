@@ -5,7 +5,7 @@
 }
 
 body{
-	width: 100%;
+	
 }
 .container {
   display: flex;
@@ -290,11 +290,11 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
-#textInput
+.textInput
 {
-	postion: absolute;
+	position: absolute;
 	margin-top: -28px;
-	margin-left: -160px;
+	margin-left: 75px;
 }
 
 .list_user li
@@ -329,9 +329,29 @@ input[type=range]:focus::-ms-fill-upper {
 	cursor: pointer;
 }
 
+.new_gest 
+{
+	text-align: center;
+}
 
+.new_gest input
+{
+	cursor: pointer;
+}
 
+form{
+	text-align:center;
+}
+form p
+{
+	margin-bottom:0px;
+}
 
+.form_gest
+{
+	width: 1200px;
+	margin: auto;
+}
 
 
 
