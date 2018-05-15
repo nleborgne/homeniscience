@@ -40,7 +40,10 @@
 		<input type="text" name="nom_domicile" size="30" />
 		
 		<p>Type d'habitation :</p>
-		(liste deroulante)
+		<select name="choix">
+			<option value="Francais">Appartement</option>
+			<option value="Anglais">Maison</option>
+		</select>
 		
 		
 		<p>Numero :</p>

@@ -1,6 +1,7 @@
 
 <div class="container">
       	<?php 
+      	$compteur = 0;
       	while ($donnees = $domicile->fetch())
         {
             echo '<div class="flex1">';
@@ -34,6 +35,7 @@
              
             echo '</div>';
             echo '</div>';
+            $compteur += 2;
         }
         ?>
 
@@ -42,11 +44,11 @@
   <script type="text/javascript">
 
 		
-	
+	   for (var j = 0; j < 4; j++) {
    
-  	   document.getElementsByClassName("afficher")[0].onclick = function() {
-		   var c = document.getElementsByClassName("sample")[0];
-		   var d = document.getElementsByClassName("afficher")[0];
+  	   document.getElementsByClassName("afficher")[j].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[j];
+		   var d = document.getElementsByClassName("afficher")[j];
 		   
  		  	if(c.style.height != '200px') {
  			  	d.innerHTML = "Cacher le graphe";
@@ -55,47 +57,10 @@
  			  	d.innerHTML = "Afficher le graphe";
  			  	c.style.height='0';
  			}
- 	   }
+ 	   };
+	   }
 	
-  	 document.getElementsByClassName("afficher")[1].onclick = function() {
-		   var c = document.getElementsByClassName("sample")[1];
-		   var d = document.getElementsByClassName("afficher")[1];
-		   
-		  	if(c.style.height != '200px') {
-			  	d.innerHTML = "Cacher le graphe";
-		    	c.style.height = '200px';
-		  	} else {
-			  	d.innerHTML = "Afficher le graphe";
-			  	c.style.height='0';
-			}
-	   }
 
-  	 document.getElementsByClassName("afficher")[2].onclick = function() {
-		   var c = document.getElementsByClassName("sample")[2];
-		   var d = document.getElementsByClassName("afficher")[2];
-		   
-		  	if(c.style.height != '200px') {
-			  	d.innerHTML = "Cacher le graphe";
-		    	c.style.height = '200px';
-		  	} else {
-			  	d.innerHTML = "Afficher le graphe";
-			  	c.style.height='0';
-			}
-	   }
-
-  	document.getElementsByClassName("afficher")[3].onclick = function() {
-		   var c = document.getElementsByClassName("sample")[3];
-		   var d = document.getElementsByClassName("afficher")[3];
-		   
-		  	if(c.style.height != '200px') {
-			  	d.innerHTML = "Cacher le graphe";
-		    	c.style.height = '200px';
-		  	} else {
-			  	d.innerHTML = "Afficher le graphe";
-			  	c.style.height='0';
-			}
-	   }
- 
   
 
   var acc = document.getElementsByClassName("accordion");
