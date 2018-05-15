@@ -3,13 +3,14 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Lato" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+  integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Accueil</title>
   <link rel="stylesheet" href="accueil.css">
 </head>
-<?php require ('../header.php'); ?>
+<?php require('../header.php'); ?>
 <body>
   <div class="container">
     <div class="flex2">
@@ -20,7 +21,6 @@
     </div>
   </div>
   <div id="topContainer" class="container">
-
     <div class="flex1">
       <button class="accordion" type="button" name="button">Historique</button>
       <div class="panel">
@@ -43,7 +43,6 @@
           <input type="checkbox">
           <span class="slider round"></span>
         </label>
-        &nbsp;&nbsp;&nbsp;
         Alarme
       </div>
     </div>
@@ -54,16 +53,16 @@
         try {
           $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
         } catch (Exception $e) {
-          die('Erreur : '.$e->getMessage());
+          die('Erreur : ' . $e->getMessage());
         }
         $get = $bdd->prepare('SELECT * from utilisateur WHERE ID = ?');
         $get->execute(array($_SESSION['ID']));
         $data = $get->fetch();
-        echo 'Bonjour '.$data['prenom'].' '.$data['nom'];
+        echo 'Bonjour ' . $data['prenom'] . ' ' . $data['nom'];
         ?>
       </div>
     </div>
-    <div class="flex2">
+    <div class="flex1">
       <button class="accordion" type="button" name="button">Statistiques</button>
       <div class="panel">
         <img class="graph" src="graph.png" alt="">
@@ -72,24 +71,25 @@
   </div>
 
   <script type="text/javascript">
+      /*
   var acc = document.getElementsByClassName("accordion");
   //var cont = document.getElementById("topContainer");
   var i;
 
   for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
+    acc[i].addEventListener("click", function () {
       this.classList.toggle("active");
       var panel = this.nextElementSibling;
-      if (panel.style.maxHeight){
+      if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
         //cont.style.maxHeight = null;
       } else {
         panel.style.maxHeight = panel.scrollHeight + "px";
-      //  cont.style.maxHeight = panel.scrollHeight + "px";
+        //  cont.style.maxHeight = panel.scrollHeight + "px";
       }
     });
-  }
-  </script>
+  }*/
+</script>
 </body>
-<?php require('../footer.php')?>
+<?php require('../footer.php') ?>
 </html>
