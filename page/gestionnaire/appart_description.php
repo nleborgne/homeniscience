@@ -35,6 +35,7 @@
    
 $req = $bdd->prepare('SELECT * FROM domicile WHERE ID = ?');
 $req->execute(array($_GET['id']));
+
 $donnees_domicile = $req->fetch();
     ?>
     <div class="container_left">
