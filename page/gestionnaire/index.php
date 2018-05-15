@@ -1,12 +1,11 @@
 
 <?php 
-    session_start();
-?>
-
-
-
-<?php 
 /* controleur page gestionnaire */
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
 
 require('gestionnaire_modele.php');
 

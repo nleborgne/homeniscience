@@ -78,6 +78,8 @@
           }
           ?>
           <input type="submit" name="" value="Enregistrer">
+          <br>
+          <br>
         </form>
       </article>
     </div>

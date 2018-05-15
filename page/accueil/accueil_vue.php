@@ -61,7 +61,17 @@
     <div class="flex1">
       <button class="accordion" type="button" name="button">Infos</button>
       <div class="panel">
-
+        <?php
+        try {
+          $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
+        } catch (Exception $e) {
+          die('Erreur : '.$e->getMessage());
+        }
+        $get = $bdd->prepare('SELECT * from utilisateur WHERE ID = ?');
+        $get->execute(array($_SESSION['ID']));
+        $data = $get->fetch();
+        echo 'Bonjour '.$data['prenom'].' '.$data['nom'];
+        ?>
       </div>
     </div>
     <div class="flex2">
