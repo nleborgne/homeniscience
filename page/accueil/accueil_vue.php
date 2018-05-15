@@ -15,21 +15,12 @@
     <div class="flex2">
       <button class="accordion" type="button" name="button">Domicile</button>
       <div class="panel">
-        <?php
-        while ($piece = $afficherPieces -> fetch() ) {
-          echo '<h3>'.$piece['piece_nom'].'</h3>';
-          echo '        <i class="fas fa-lightbulb fa-2x"></i>
-          <input type="range" name="" value="">
-          <br>
-          <br>
-          <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
-          <br><br>
-          <i class="fas fa-volume-up fa-2x"></i>
-          <input type="range" name="" value="">';
-        }
-        ?>
+        <?php include('vue_domicile.php'); ?>
       </div>
     </div>
+  </div>
+  <div id="topContainer" class="container">
+
     <div class="flex1">
       <button class="accordion" type="button" name="button">Historique</button>
       <div class="panel">
@@ -44,8 +35,6 @@
         <p><strong>john</strong> : ne fermez pas la cave à clé svp </p>
       </div>
     </div>
-  </div>
-  <div class="container">
     <div class="flex1">
       <button class="accordion" type="button" name="button">Sécurité</button>
       <div class="panel">
@@ -84,6 +73,7 @@
 
   <script type="text/javascript">
   var acc = document.getElementsByClassName("accordion");
+  //var cont = document.getElementById("topContainer");
   var i;
 
   for (i = 0; i < acc.length; i++) {
@@ -92,8 +82,10 @@
       var panel = this.nextElementSibling;
       if (panel.style.maxHeight){
         panel.style.maxHeight = null;
+        //cont.style.maxHeight = null;
       } else {
         panel.style.maxHeight = panel.scrollHeight + "px";
+      //  cont.style.maxHeight = panel.scrollHeight + "px";
       }
     });
   }

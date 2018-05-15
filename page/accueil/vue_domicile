@@ -1,0 +1,13 @@
+<?php
+while ($piece = $afficherPieces -> fetch() ) {
+  echo '<h3>'.$piece['piece_nom'].'</h3>';
+  echo '<i class="fas fa-lightbulb fa-2x"></i>
+  <input type="range" name="" value="">
+  <br>
+  <br>
+  <i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C
+  <br><br>
+  <i class="fas fa-volume-up fa-2x"></i>
+  <input type="range" name="" value="">';
+}
+?>

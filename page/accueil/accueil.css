@@ -14,7 +14,7 @@
 }
 
 .flex2 {
-  width:500px;
+  width:1200px;
   height:400px;
 }
 
@@ -44,6 +44,7 @@
 
 .panel {
   height:380px;
+  display: flex;
   font-family: 'Lato';
   padding: 0 18px;
   background-color: white;
@@ -51,6 +52,9 @@
   overflow-y: auto;
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  flex-wrap:wrap;
+  flex-direction: space-evenly;
+  border:1px solid red;
 }
 .panel::-webkit-scrollbar-track
 {
@@ -127,11 +131,11 @@ input:checked + .slider:before {
   margin-top:1%;
   overflow-y:hidden;
 }
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
 
-  .slider.round:before {
-    border-radius: 50%;
-  }
+.slider.round:before {
+  border-radius: 50%;
+}
