@@ -88,7 +88,7 @@ body{
 	box-shadow: 0px 4px 4px #1c1a19;
 }
 
-#sample, #sample2 {
+.sample, .sample2 {
     border: 1px solid black;
     height: 0px;
     padding: 0px;
@@ -96,23 +96,18 @@ body{
     position :relative;
 }
 
-#afficher, #afficher2 {
+.afficher, .afficher2 {
 	margin: auto;
 	width: 45%;
 	border-radius: 5px;
 	background-color:#00A2E8;
 	color: white;
 }
-#afficher:hover, #afficher2:hover {
+.afficher:hover, .afficher2:hover {
 	cursor:pointer;
 	background-color: lightblue;
 }
-#sample img, #sample2 img {
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
+
 
 .graphe{
 	width: 200px;
