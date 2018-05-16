@@ -39,6 +39,30 @@ a {
 	text-decoration: none;
 }
 
+.submit
+{
+	cursor: pointer;
+	color: black;
+	background: white;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 1em;
+	border: 2px solid black;
+	font-weight: bold;
+	display: flex;
+  	align-items: center;
+  	flex-direction: column;
+  	justify-content: center;
+  	margin: auto;
+  	width: 30vh;
+}
+
+.submit:hover
+{
+	background: linear-gradient(-90deg, #4650E2, #00A2E8);
+	color: white;
+}
+/*
 .submit {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -56,23 +80,10 @@ a {
   cursor: pointer;
   width: 30vh;
   height: 5vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
+  
 }
 
-.submit:hover
-{
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
-}
+*/
 
 
 .form p, .form input:not(.submit), .choix
