@@ -1,6 +1,7 @@
 
 <div class="container">
       	<?php 
+      	$compteur = 0;
       	while ($donnees = $domicile->fetch())
         {
             echo '<div class="flex1">';
@@ -8,16 +9,17 @@
     name="'.$donnees['nom'].'" value="'.$donnees['nom'].'" class="accordion" title="Afficher le detail" OnClick="window.location.href=\'appart_description.php?id='.$donnees['ID'].'\'"></form>';  
             echo '<div class="panel">';
             echo '<p><strong>Adresse</strong> : '.$donnees['numero_habitation'].' '. $donnees['rue'].'</p>';
-            echo '<h3>Consulter la consommation</h3>';
-            echo ' <p> Consommation d\'eau :</p>
+            echo '<h3><form method="GET" action="appart_description.php" enctype="multipart/form-data"><input type="button"
+    name="Consulter la consommation" value="Consulter la consommation" class="consulter" title="Afficher le detail" OnClick="window.location.href=\'appart_description.php?id='.$donnees['ID'].'\'"></form></h3>';  
+            echo '<p> Consommation d\'eau :</p>
 			<p class="afficher">Afficher le graphe</p>
             <div class="sample">
             	<canvas class="myChart" width="400" height="250"></canvas>
             </div>
             
             <p> Consommation d\'electricit&eacute :</p>
-            <p class="afficher2">Afficher le graphe</p>
-            <div class="sample2">
+            <p class="afficher">Afficher le graphe</p>
+            <div class="sample">
             	<canvas class="myChart" width="400" height="250"></canvas>
             </div>';
            
@@ -28,41 +30,75 @@
                   </label>';
             ?>
             <input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput(this.value);"></input>
-            <p id="textInput">0</p>
+            <p class="textInput">0</p>
 			<?php 
              
             echo '</div>';
             echo '</div>';
+            $compteur += 2;
         }
         ?>
 
    </div>
       
   <script type="text/javascript">
+
+		
+	   // for (var j = 0; j < 4; j++) {
+   
+  	   document.getElementsByClassName("afficher")[0].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[0];
+		   var d = document.getElementsByClassName("afficher")[0];
+		   
+ 		  	if(c.style.height != '200px') {
+ 			  	d.innerHTML = "Cacher le graphe";
+ 		    	c.style.height = '200px';
+ 		  	} else {
+ 			  	d.innerHTML = "Afficher le graphe";
+ 			  	c.style.height='0';
+ 			}
+ 	   };
+	   
+
+	   document.getElementsByClassName("afficher")[1].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[1];
+		   var d = document.getElementsByClassName("afficher")[1];
+		   
+ 		  	if(c.style.height != '200px') {
+ 			  	d.innerHTML = "Cacher le graphe";
+ 		    	c.style.height = '200px';
+ 		  	} else {
+ 			  	d.innerHTML = "Afficher le graphe";
+ 			  	c.style.height='0';
+ 			}
+ 	   };
+	   
+ 	  document.getElementsByClassName("afficher")[2].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[2];
+		   var d = document.getElementsByClassName("afficher")[2];
+		   
+		  	if(c.style.height != '200px') {
+			  	d.innerHTML = "Cacher le graphe";
+		    	c.style.height = '200px';
+		  	} else {
+			  	d.innerHTML = "Afficher le graphe";
+			  	c.style.height='0';
+			}
+	   };
+
+	   document.getElementsByClassName("afficher")[3].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[3];
+		   var d = document.getElementsByClassName("afficher")[3];
+		   
+ 		  	if(c.style.height != '200px') {
+ 			  	d.innerHTML = "Cacher le graphe";
+ 		    	c.style.height = '200px';
+ 		  	} else {
+ 			  	d.innerHTML = "Afficher le graphe";
+ 			  	c.style.height='0';
+ 			}
+ 	   };
   
-  var c = document.getElementsByClassName("sample2")[0];
-  var d = document.getElementsByClassName("afficher2")[0];
-   document.getElementsByClassName("afficher2")[0].onclick = function() {
- 	  	if(c.style.height != '200px') {
- 		  	d.innerHTML = "Cacher le graphe";
- 	    c.style.height = '200px';
- 	  	}else {
- 		  	d.innerHTML = "Afficher le graphe";
- 		  	c.style.height='0';
- 	}
-   }
-  
- var a = document.getElementsByClassName("sample")[0];
- var b = document.getElementsByClassName("afficher")[0];
-  document.getElementsByClassName("afficher")[0].onclick = function() {
-	  	if(a.style.height != '200px') {
-		  	b.innerHTML = "Cacher le graphe";
-	    a.style.height = '200px';
-	  	}else {
-		  	b.innerHTML = "Afficher le graphe";
-		  	a.style.height='0';
-	}
-  }
 
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -79,9 +115,16 @@
     });
   }
 
+  
+	 
   function updateTextInput(val) {
-      document.getElementById('textInput').innerHTML = val; 
+      document.getElementsByClassName('textInput')[0].innerHTML = val; 
     }
+
+  function updateTextInput(val) {
+      document.getElementsByClassName('textInput')[1].innerHTML = val; 
+    }
+  
 
 
 
