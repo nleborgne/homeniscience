@@ -10,15 +10,15 @@
             echo '<p><strong>Adresse</strong> : '.$donnees['numero_habitation'].' '. $donnees['rue'].'</p>';
             echo '<h3>Consulter la consommation</h3>';
             echo ' <p> Consommation d\'eau :</p>
-			<p id="afficher">Afficher le graphe</p>
-            <div id="sample">
-            	<canvas id="myChart2" width="400" height="250"></canvas>
+			<p class="afficher">Afficher le graphe</p>
+            <div class="sample">
+            	<canvas class="myChart" width="400" height="250"></canvas>
             </div>
             
             <p> Consommation d\'electricit&eacute :</p>
-            <p id="afficher2">Afficher le graphe</p>
-            <div id="sample2">
-            	<canvas id="myChart" width="400" height="250"></canvas>
+            <p class="afficher2">Afficher le graphe</p>
+            <div class="sample2">
+            	<canvas class="myChart" width="400" height="250"></canvas>
             </div>';
            
             echo '<h3 class="bareme">Bareme de consommation</h3>';
@@ -40,9 +40,9 @@
       
   <script type="text/javascript">
   
-  var c = document.getElementById("sample2");
-  var d = document.getElementById("afficher2");
-   document.getElementById("afficher2").onclick = function() {
+  var c = document.getElementsByClassName("sample2")[0];
+  var d = document.getElementsByClassName("afficher2")[0];
+   document.getElementsByClassName("afficher2")[0].onclick = function() {
  	  	if(c.style.height != '200px') {
  		  	d.innerHTML = "Cacher le graphe";
  	    c.style.height = '200px';
@@ -52,9 +52,9 @@
  	}
    }
   
- var a = document.getElementById("sample");
- var b = document.getElementById("afficher");
-  document.getElementById("afficher").onclick = function() {
+ var a = document.getElementsByClassName("sample")[0];
+ var b = document.getElementsByClassName("afficher")[0];
+  document.getElementsByClassName("afficher")[0].onclick = function() {
 	  	if(a.style.height != '200px') {
 		  	b.innerHTML = "Cacher le graphe";
 	    a.style.height = '200px';
@@ -85,7 +85,7 @@
 
 
 
-  var ctx = document.getElementById("myChart").getContext('2d');
+  var ctx = document.getElementsByClassName("myChart")[1].getContext('2d');
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
@@ -135,7 +135,7 @@
   }
 	});
 
-	var crx = document.getElementById("myChart2").getContext('2d');
+	var crx = document.getElementsByClassName("myChart")[0].getContext('2d');
 	var myChart2 = new Chart(crx, {
 	    type: 'bar',
 	    data: {
