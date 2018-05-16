@@ -20,12 +20,7 @@ $name = getNom()->fetch();?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-  body {
-    margin:0;
-    font-family:'Lato';
-    background: url('/homeniscience/page/img/funky-lines.png');
-    background-attachment: fixed;
-  }
+  body {margin:0;font-family:'Lato';}
 
   .topnav {
     overflow: hidden;
@@ -98,12 +93,6 @@ $name = getNom()->fetch();?>
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  .imgheader{
-    text-align:center;
-    max-height:45px;
-    display:block;
-    margin:auto;
-  }
 
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
@@ -112,9 +101,6 @@ $name = getNom()->fetch();?>
     .topnav a.icon {
       float: right;
       display: block;
-    }
-    .imgheader {
-      display:none;
     }
   }
 
@@ -138,7 +124,7 @@ $name = getNom()->fetch();?>
       text-align: left;
     }
   }
-  </style>
+</style>
 </head>
 <body>
 
@@ -151,13 +137,11 @@ $name = getNom()->fetch();?>
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">Gérer son profil</a>
         <a href="#">Paramètres</a>
-        <a href="/homeniscience/page/disconnect.php">Se déconnecter</a>
+        <a href="#">Se déconnecter</a>
       </div>
     </div>
     <a id="support" href="/homeniscience/page/support">Support</a>
-    <img class="imgheader" src="/homeniscience/page/support/header_logo.png" alt="">
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 
@@ -181,21 +165,7 @@ $name = getNom()->fetch();?>
   } else if (page.includes("support")) {
     document.getElementById('support').className += "active";
   }
-
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    var y = document.getElementById("img");
-    var z = document.getElementById("text");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-      y.className += " invisible";
-      z.className = "invisible";
-    } else {
-      x.className = "topnav";
-      y.className = "img_default";
-      z.className = "text_default";
-    }
-  }
 </script>
+
 </body>
 </html>

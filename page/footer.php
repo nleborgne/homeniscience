@@ -10,19 +10,23 @@
 <footer>
     <nav class="nav_foot">
         <div id="elementdessus">
-            <a id="accueil_foot" href="page/acceuil.html"><img class="logo_foot" src="/homeniscience/page/img/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
+            <a id="accueil_foot" href="../accueil"><img class="logo_foot" src="/homeniscience/page/img/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
             <div id="contact">
                 <h2 class="foot_titre">Contact</h2>
-                <p class="foot_para">+33 1 23 45 67 89</p>
-                <p class="foot_para">dom@isep.fr</p>
-                <p class="foot_para">Rue notre Dame des champs</p>
+                <p><i class="fas fa-phone-square foot_small"><span class="foot_para">    +33 1 23 45 67 89</span></i></p>
+                <p><i class="fas fa-at foot_small"><span class="foot_para">    dom@isep.fr</span></i></p>
+                <p><i class="fas fa-map-marker foot_small"><span class="foot_para">    Rue notre Dame des champs</span></i></p>
             </div>
             <div id="reseau">
                 <h2 class="foot_titre">Réseaux sociaux</h2>
-                <!-- Insérer des icones de réseaux sociaux -->
+                <i class="fab fa-facebook-square foot_logo"></i>
+                <i class="fab fa-twitter-square foot_logo"></i>
+                <i class="fab fa-linkedin foot_logo"></i>
+                <i class="fab fa-google-plus-square foot_logo"></i>
             </div>
             <div id="about">
                 <h2 class="foot_titre">A propos d'Hexateam</h2>
+                <a id="hexateam_foot" href="Hexateam"><img class="logo_Hexateam" src="/homeniscience/page/img/logoHexateam.png" alt="Hexateam" title="Hexateam"></a>
             </div>
         </div>
         <div id="elementdessous">
@@ -39,7 +43,7 @@
 footer {
     font-family: 'Roboto',sans-serif;
     text-decoration: none;
-    color:#343434;
+    color:#f2f2f2;
 }
 .nav_foot
 {
@@ -58,16 +62,29 @@ footer {
 #contact, #reseau
 {
     padding: 0px 10px 0px 150px;
-    border-bottom: solid #343434 1px;
+    border-bottom: solid #f2f2f2 1px;
 }
 #about
 {
-    padding: 0px 190px 0px 160px;
-    border-bottom: solid #343434 1px;
+    padding: 0px 100px 0px 160px;
+    border-bottom: solid #f2f2f2 1px;
 }
 h2
 {
     font-size: 18px;
+}
+.foot_logo
+{
+    display: inline;
+    color:#f2f2f2;
+    font-size: 45px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.foot_small
+{
+    font-size: 13px;
+    display: inline;
 }
 .foot_para
 {
@@ -82,27 +99,27 @@ h2
 {
     font-size: 10px;
     font-weight: bold;
-    color:#343434;
+    color:#f2f2f2;
     margin: 0px 30px 0px 270px;
 }
 #foot_CGU, #foot_legale
 {
     font-size: 10px;
     font-weight: bold;
-    color:#343434;
+    color:#f2f2f2;
     margin: 0px 30px 0px 30px;
 }
 .copyright
 {
     font-size: 10px;
     font-weight: bold;
-    color:#343434;
+    color:#f2f2f2;
     margin: 0px 30px 0px 720px;
 }
 .logo_foot
 {
     display: block;
-    margin: 20px 50px 0px 100px;
+    margin: 20px 75px 0px 75px;
     border-bottom: solid #343434 1px;
     height: 120px;
     width: 120px;
@@ -115,6 +132,12 @@ h2
 {
     transition: all 0.5s ease;
     transform: scale(1.1);
+}
+.logo_Hexateam
+{
+    height: 80px;
+    width: 70px;
+    margin-left: 10px;
 }
 
 </style>
