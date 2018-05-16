@@ -9,7 +9,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width">
   <title>Accueil</title>
-  <link rel="stylesheet" href="gestionnaire.css">
+  <link rel="stylesheet" href="non_gestionnaire.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
   	<div class="new_gest">
 		<p>Vous n'etes pas gestionnaire, vous n'avez pas acces a cette page.</p>
 		
-		<input type="button" name="new_gest" value="Devenir gestionnaire" OnClick="window.location.href=\'formulaire_gestionnaire.php\'" /></form>
+		<button onclick="window.location='formulaire_gestionnaire.php';">Devenir Gestionnaire</button>
 	</div>
 
 	

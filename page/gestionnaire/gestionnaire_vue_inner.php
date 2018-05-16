@@ -44,11 +44,11 @@
   <script type="text/javascript">
 
 		
-	   for (var j = 0; j < 4; j++) {
+	   // for (var j = 0; j < 4; j++) {
    
-  	   document.getElementsByClassName("afficher")[j].onclick = function() {
-		   var c = document.getElementsByClassName("sample")[j];
-		   var d = document.getElementsByClassName("afficher")[j];
+  	   document.getElementsByClassName("afficher")[0].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[0];
+		   var d = document.getElementsByClassName("afficher")[0];
 		   
  		  	if(c.style.height != '200px') {
  			  	d.innerHTML = "Cacher le graphe";
@@ -58,9 +58,46 @@
  			  	c.style.height='0';
  			}
  	   };
-	   }
-	
+	   
 
+	   document.getElementsByClassName("afficher")[1].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[1];
+		   var d = document.getElementsByClassName("afficher")[1];
+		   
+ 		  	if(c.style.height != '200px') {
+ 			  	d.innerHTML = "Cacher le graphe";
+ 		    	c.style.height = '200px';
+ 		  	} else {
+ 			  	d.innerHTML = "Afficher le graphe";
+ 			  	c.style.height='0';
+ 			}
+ 	   };
+	   
+ 	  document.getElementsByClassName("afficher")[2].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[2];
+		   var d = document.getElementsByClassName("afficher")[2];
+		   
+		  	if(c.style.height != '200px') {
+			  	d.innerHTML = "Cacher le graphe";
+		    	c.style.height = '200px';
+		  	} else {
+			  	d.innerHTML = "Afficher le graphe";
+			  	c.style.height='0';
+			}
+	   };
+
+	   document.getElementsByClassName("afficher")[3].onclick = function() {
+		   var c = document.getElementsByClassName("sample")[3];
+		   var d = document.getElementsByClassName("afficher")[3];
+		   
+ 		  	if(c.style.height != '200px') {
+ 			  	d.innerHTML = "Cacher le graphe";
+ 		    	c.style.height = '200px';
+ 		  	} else {
+ 			  	d.innerHTML = "Afficher le graphe";
+ 			  	c.style.height='0';
+ 			}
+ 	   };
   
 
   var acc = document.getElementsByClassName("accordion");
@@ -78,9 +115,16 @@
     });
   }
 
+  
+	 
   function updateTextInput(val) {
       document.getElementsByClassName('textInput')[0].innerHTML = val; 
     }
+
+  function updateTextInput(val) {
+      document.getElementsByClassName('textInput')[1].innerHTML = val; 
+    }
+  
 
 
 

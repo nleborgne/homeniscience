@@ -1,0 +1,40 @@
+
+.new_gest 
+{
+	text-align: center;
+	height: 80vh;
+	margin-top: 20vh;
+	font-weight: bold;
+}
+
+.new_gest button
+{
+	cursor: pointer;
+	color: black;
+	background: white;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 1em;
+	border: 2px solid black;
+	font-weight: bold;
+}
+
+.new_gest button:hover
+{
+	background: linear-gradient(-90deg, #4650E2, #00A2E8);
+	color: white;
+}
+
+form{
+	text-align:center;
+}
+form p
+{
+	margin-bottom:0px;
+}
+
+.form_gest
+{
+	width: 1200px;
+	margin: auto;
+}

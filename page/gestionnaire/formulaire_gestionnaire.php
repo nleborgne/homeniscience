@@ -9,7 +9,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width">
   <title>Accueil</title>
-  <link rel="stylesheet" href="gestionnaire.css">
+  <link rel="stylesheet" href="non_gestionnaire.css">
 </head>
 
 <body>
@@ -41,8 +41,8 @@
 		
 		<p>Type d'habitation :</p>
 		<select name="choix">
-			<option value="Francais">Appartement</option>
-			<option value="Anglais">Maison</option>
+			<option value="appartement">Appartement</option>
+			<option value="maison">Maison</option>
 		</select>
 		
 		
@@ -63,6 +63,8 @@
 		
 		<p>Superficie :</p>
 		<input type="text" name="superficie" size="30"/>
+		<p></p>
+		<input type="submit" value="Valider" />
 		
 		
 	</form>
