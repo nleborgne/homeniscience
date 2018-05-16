@@ -20,8 +20,7 @@ try {
         
     }
     else {
-        echo "<script>alert('Vous n\'etes pas gestionnaire')</script>";
-        header( "Refresh:0.001; url=../domicile", true, 303);
+        header( "Refresh:0.001; url=non_gestionnaire.php", true, 303);
     }
     
     

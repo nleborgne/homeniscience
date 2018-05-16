@@ -1,7 +1,4 @@
 <?php
-if(!isset($_SESSION)){
-  session_start();
-}
 // Connexion à la base de données via PDO
 try {
   $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
@@ -19,6 +16,7 @@ function getUserInfos(){
 function getPieces() {
   global $bdd;
   $get = $bdd->prepare('SELECT *,
+    piece.ID AS piece_ID,
     piece.nom AS piece_nom,
     utilisateur.nom AS utilisateur_nom
     FROM piece
@@ -28,5 +26,10 @@ function getPieces() {
     $get->execute(array($_SESSION['ID']));
     return $get;
   }
-
+  function getEffecteurs($ID) {
+    global $bdd;
+    $get = $bdd->prepare('SELECT * FROM equipement WHERE ID_piece = ?');
+    $get->execute(array($ID));
+    return $get;
+  }
   ?>
