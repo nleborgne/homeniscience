@@ -13,16 +13,16 @@
             <a id="accueil_foot" href="../accueil"><img class="logo_foot" src="/homeniscience/page/img/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
             <div id="contact">
                 <h2 class="foot_titre">Contact</h2>
-                <p><i class="fas fa-phone-square small"><span class="foot_para">    +33 1 23 45 67 89</span></i></p>
-                <p><i class="fas fa-at small"><span class="foot_para">    dom@isep.fr</span></i></p>
-                <p><i class="fas fa-map-marker small"><span class="foot_para">    Rue notre Dame des champs</span></i></p>
+                <p><i class="fas fa-phone-square foot_small"><span class="foot_para">    +33 1 23 45 67 89</span></i></p>
+                <p><i class="fas fa-at foot_small"><span class="foot_para">    dom@isep.fr</span></i></p>
+                <p><i class="fas fa-map-marker foot_small"><span class="foot_para">    Rue notre Dame des champs</span></i></p>
             </div>
             <div id="reseau">
                 <h2 class="foot_titre">Réseaux sociaux</h2>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-google-plus-square"></i>
+                <i class="fab fa-facebook-square foot_logo"></i>
+                <i class="fab fa-twitter-square foot_logo"></i>
+                <i class="fab fa-linkedin foot_logo"></i>
+                <i class="fab fa-google-plus-square foot_logo"></i>
             </div>
             <div id="about">
                 <h2 class="foot_titre">A propos d'Hexateam</h2>
@@ -73,7 +73,7 @@ h2
 {
     font-size: 18px;
 }
-i
+.foot_logo
 {
     display: inline;
     color:#f2f2f2;
@@ -81,7 +81,7 @@ i
     margin-top: 10px;
     margin-right: 10px;
 }
-.small
+.foot_small
 {
     font-size: 13px;
     display: inline;
