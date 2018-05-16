@@ -25,8 +25,9 @@ if(!isset($_SESSION)){
     }
     ?>
     <br>
-    <img src="sensorsicon.png" style="height: 80px;width: 80px;">
+    <img src="sensorsicon.png" style="height: 100px;width: 100px;">
     <br>
+    <article>
     <div class="formulaire">
         <form class="add_capt" method="post">
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
@@ -68,7 +69,8 @@ if(!isset($_SESSION)){
             }
             ?>
         </form>
-
+    </div>
+    <div class="formulaire">
         <form method="POST">
             <select class="select-style" id="piece" name="ID_capt" required>
 
@@ -101,7 +103,8 @@ if(!isset($_SESSION)){
                 ?>
 
         </form>
-
+    </div>
+    </article>
         <?php $equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=$ID_domicile  ");
         while ($equ_dom = $equipement_ajoutés->fetch()){
             ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
@@ -109,5 +112,5 @@ if(!isset($_SESSION)){
             <?php
         }
         ?>
-    </div>
+
 </body>

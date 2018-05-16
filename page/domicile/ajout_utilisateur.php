@@ -24,6 +24,7 @@ $mail='';
 ?>
 <br>
 <img src="usericone.png" style="height: 85px;width: 100px; display:inline-block">
+<article>
 <div class="formulaire">
     <form class="add_capt" method="post">
         <input class="champ" type="text" id="nom" name="nom" placeholder="Nom d'utilisateurs a rechercher" required>
@@ -67,6 +68,8 @@ $mail='';
         ?>
 
     </form>
+</div>
+<div class="formulaire">
     <form method="POST">
         <select class="select-style" id="piece" name="member" required>
 
@@ -95,6 +98,8 @@ $mail='';
             ?>
 
     </form>
+</div>
+</article>
     <br>
     <br>
         <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile ORDER BY ID");
@@ -115,5 +120,5 @@ $mail='';
 
 
 
-</div>
+
 </body>

@@ -36,6 +36,7 @@ while ($dom = $domicile->fetch()){
 ?>
 
     <form method="post">
+
     <input class="boutton" type="submit" name="new" value="Supprimer" >
 
     <?php
@@ -56,10 +57,11 @@ while ($dom = $domicile->fetch()){
 </div>
 </div>
     <br>
-    <br>
-<div class="formulaire">
 
-    <form class="deff_domicile" method="post">
+    <article>
+        <div class="formulaire">
+
+            <form class="deff_domicile" method="post">
 
         <input type="text" id="name" name="nom" placeholder="nom ">
         <input type="text" id="adresse" name="rue" placeholder="Your adresse">
@@ -67,7 +69,7 @@ while ($dom = $domicile->fetch()){
         <input type="text" id="cpost" name="post" placeholder="postal">
         <input type="text" id="pays" name="pays" placeholder="pays">
         <input type="text" id="superficie" name="size" placeholder="areasize ">
-
+        <br>
         <input class="boutton" type="submit" name="ajouter" value="definir" >
         <?php
 
@@ -100,8 +102,8 @@ while ($dom = $domicile->fetch()){
 
         ?>
     </form>
-
-
+</div>
+<div class="formulaire">
     <br>
     <form class="add_room" method="post">
         <input type="text" id="piece" name="piece" placeholder="nom de la piece a ajouter ">
@@ -126,6 +128,7 @@ while ($dom = $domicile->fetch()){
     </form>
 
     <form method="POST">
+        <br>
         <select class="select-style" id="piece" name="nom_piece" required>
 
             <?php
@@ -159,9 +162,11 @@ while ($dom = $domicile->fetch()){
             ?>
 
     </form>
+
 </div>
+        </article>
     <br>
-    <br>
+
     <?php $piece_ajoutées = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=$ID_domicile ORDER BY ID");
     while ($piece_dom = $piece_ajoutées->fetch()){
         ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
