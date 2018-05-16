@@ -95,27 +95,27 @@
 
   var page = window.location.href;
   if (page.includes("accueil")) {
-    document.getElementById('accueil').className += "active";
+      document.getElementById('accueil').className += "active";
   } else if (page.includes("domicile")) {
-    document.getElementById('domicile').className += "active";
+      document.getElementById('domicile').className += "active";
   } else if (page.includes("gestionnaire")) {
-    document.getElementById('residence').className += "active";
+      document.getElementById('residence').className += "active";
   } else if (page.includes("support")) {
-    document.getElementById('support').className += "active";
+      document.getElementById('support').className += "active";
   }
   function myFunction() {
-    var x = document.getElementById("myTopnav");
-    var y = document.getElementById("img");
-    var z = document.getElementById("text");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-      y.className += " invisible";
-      z.className = "invisible";
-    } else {
-      x.className = "topnav";
-      y.className = "img_default";
-      z.className = "text_default";
-    }
+      var x = document.getElementById("myTopnav");
+      var y = document.getElementById("img");
+      var z = document.getElementById("text");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+          y.className += " invisible";
+          z.className = "invisible";
+      } else {
+          x.className = "topnav";
+          y.className = "img_default";
+          z.className = "text_default";
+      }
   }
 </script>
 
