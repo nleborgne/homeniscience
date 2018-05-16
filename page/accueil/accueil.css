@@ -2,7 +2,10 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
+.title {
+  text-align: center;
+  padding:20px;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
