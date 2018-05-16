@@ -16,6 +16,7 @@ function getUserInfos(){
 function getPieces() {
   global $bdd;
   $get = $bdd->prepare('SELECT *,
+    piece.ID AS piece_ID,
     piece.nom AS piece_nom,
     utilisateur.nom AS utilisateur_nom
     FROM piece
@@ -25,5 +26,10 @@ function getPieces() {
     $get->execute(array($_SESSION['ID']));
     return $get;
   }
-
+  function getEffecteurs($ID) {
+    global $bdd;
+    $get = $bdd->prepare('SELECT * FROM equipement WHERE ID_piece = ?');
+    $get->execute(array($ID));
+    return $get;
+  }
   ?>

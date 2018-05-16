@@ -9,19 +9,19 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width:1200px;
+    justify-content: space-between;
+    max-width:1100px;
     margin : 0 auto;
 }
 
 .flex1 {
     width: 300px;
     height: 380px;
-    margin-right: 1%;
+    margin : 0 auto;
 }
 
 .flex2 {
-    width: 1200px;
+    width: 1100px;
     height: 500px;
 }
 .flex2 .panel {
@@ -65,7 +65,7 @@
     transition: max-height 0.2s ease-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
 
 }
 
