@@ -21,7 +21,11 @@
     </div>
     <div class="container1">
         <div class="flex1">
+<<<<<<< HEAD
+            <button class="accordion" type="button" name="button" style="color: white">CeMac</button>
+=======
             <button class="accordion" type="button" name="button" style="background-color:#1887E6 ; ">Capteur</button>
+>>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
             <div class="panel" >
                 <?php require ('ajout_capteur.php'); ?>
             </div>

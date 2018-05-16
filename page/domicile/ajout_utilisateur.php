@@ -101,9 +101,48 @@ $mail='';
         while ($utilisateurs = $reponse_utilisateurs->fetch()){
             ?>
             <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);"><?php echo $utilisateurs['prenom']; ?></p>
+
+
+
+
             <?php
         }
         ?>
+
+
+    <form  method="post">
+        <?php $UTILI = $bdd->query("SELECT ID,prenom,ID_type_utilisateur FROM utilisateur WHERE ID_domicile=$ID_domicile ORDER BY ID");
+        while ($uti = $UTILI->fetch()){
+        ?>
+            <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);"><input type="checkbox" name="ADMIN"  value="<?php $uti["ID"] ?>"  <?php if($uti["ID_type_utilisateur"]==2){ echo 'checked';  }?>>  <?php echo $uti["prenom"]?></p>
+        <?php
+       } ?>
+        <input class="boutton" type="submit" name="admi" value="changer" >
+
+        <?php
+        if (isset($_POST['ADMIN'])) {
+            $adm=$_POST['ADMIN'];
+            echo $adm;
+        }
+
+
+        if(isset($_POST['admi'])) {
+
+
+                $sql = "UPDATE utilisateur SET ID_type_utilisateur=2 WHERE ID=:ID  ";
+                $stmt = $bdd->prepare($sql);
+                $stmt->execute(array(
+                    'ID' => $adm));
+
+
+
+
+
+        }
+        ?>
+    </form>
+
+
 
 
 </div>
