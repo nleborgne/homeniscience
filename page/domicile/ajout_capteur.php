@@ -30,6 +30,7 @@ if(!isset($_SESSION)){
     <article>
     <div class="formulaire">
         <form class="add_capt" method="post">
+            <h4>ajouter un capteur</h4>
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
             <select class="select-style" id="piece" name="piece" required>
                 <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = $ID_domicile ORDER BY ID");
@@ -49,6 +50,7 @@ if(!isset($_SESSION)){
                 }
                 ?>
             </select>
+            <br>
             <input class="boutton" name="add" type="submit" value="Valider">
             <?php
 
@@ -72,6 +74,7 @@ if(!isset($_SESSION)){
     </div>
     <div class="formulaire">
         <form method="POST">
+            <h4>supprimer un capteur</h4>
             <select class="select-style" id="piece" name="ID_capt" required>
 
                 <?php
