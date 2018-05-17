@@ -5,9 +5,10 @@
 article{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
 
-    flex-direction: initial;
+
+
+    flex-direction: row;
 
 }
 div.formulaire{
@@ -16,15 +17,16 @@ div.formulaire{
     width: 50%;
 
 
+
 }
 input{
     width: 200px;
-    height: 30px;
+    height: 28px;
 }
 .select-style {
     border: 1px solid #ccc;
     width: 200px;
-    height: 30px;
+    height: 28px;
     border-radius: 3px;
     overflow: hidden;
     margin-right: 5px;

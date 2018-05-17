@@ -28,8 +28,8 @@ $mail='';
 <div style="display: inline-block">
 <?php $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
 while ($dom = $domicile->fetch()){
-    ?><br>
-    <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+    ?>
+    <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px ">
         <?php echo $dom['nom'], ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?></h3>
     <?php
 }
@@ -68,7 +68,7 @@ while ($dom = $domicile->fetch()){
         <input type="text" id="num" name="num" placeholder="numero de rue">
         <input type="text" id="cpost" name="post" placeholder="code postal">
         <input type="text" id="pays" name="pays" placeholder="pays">
-        <input type="text" id="superficie" name="size" placeholder="areasize ">
+        <input type="text" id="superficie" name="size" placeholder="superficie ">
         <br>
         <input class="boutton" type="submit" name="ajouter" value="definir" >
         <?php
@@ -148,10 +148,7 @@ while ($dom = $domicile->fetch()){
             <?php
             if(isset($_POST['Suprimer'])) {
                 $nom_piece= $_POST['nom_piece'];
-                /*$sql = "UPDATE utilisateur SET ID_domicile=NULL ,ID=NULL ,nom=NULL ,nombre_capteurs=NULL, WHERE nom=:nom-piece";
-                $stmt = $bdd->prepare($sql);
-                $stmt->execute(array(
-                    'nom-piece' => $nom_piece*/
+
                 $req = $bdd->exec('DELETE FROM piece WHERE nom="'.$nom_piece.'"AND  ID_domicile="'.$ID_domicile.'"  ' );
                 if ( !$req AND isset($_POST['Suprimer'])) {
                     echo 'Erreur de suppression';
