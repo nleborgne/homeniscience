@@ -63,10 +63,10 @@ while ($dom = $domicile->fetch()){
 
             <form class="deff_domicile" method="post">
             <h4>ajouter un domicile</h4>
-        <input type="text" id="name" name="nom" placeholder="nom ">
-        <input type="text" id="adresse" name="rue" placeholder="Your adresse">
-        <input type="text" id="num" name="num" placeholder="numero">
-        <input type="text" id="cpost" name="post" placeholder="postal">
+        <input type="text" id="name" name="nom" placeholder="nom du domicile ">
+        <input type="text" id="adresse" name="rue" placeholder="votre adresse">
+        <input type="text" id="num" name="num" placeholder="numero de rue">
+        <input type="text" id="cpost" name="post" placeholder="code postal">
         <input type="text" id="pays" name="pays" placeholder="pays">
         <input type="text" id="superficie" name="size" placeholder="areasize ">
         <br>
@@ -74,7 +74,7 @@ while ($dom = $domicile->fetch()){
         <?php
 
             if(isset($_POST['ajouter'])){
-                if(!empty($_POST['nom']) AND !empty($_POST['rue']) AND !empty($_POST['num']) AND !empty($_POST['size']) ) {
+                if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
 
                     $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire)
                                 VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire)');
@@ -107,7 +107,7 @@ while ($dom = $domicile->fetch()){
 
     <h4>ajouter une piece</h4>
     <form class="add_room" method="post">
-        <input type="text" id="piece" name="piece" placeholder="nom de la piece a ajouter ">
+        <input type="text" id="piece" name="piece" placeholder="piece a ajouter ">
 
         <input class="boutton" type="submit" name="ajoutpiece" value="ajouter">
         <?php

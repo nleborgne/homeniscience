@@ -28,7 +28,7 @@ $mail='';
 <div class="formulaire">
     <h4>rechercher et ajouter un utilisateur</h4>
     <form class="add_capt" method="post">
-        <input class="champ" type="text" id="nom" name="nom" placeholder="Nom d'utilisateurs a rechercher" required>
+        <input class="champ" type="text" id="nom" name="nom" placeholder="utilisateurs a rechercher" required>
         <input class="boutton" type="submit" name="recherche" value="rechercher">
         <?php
 
