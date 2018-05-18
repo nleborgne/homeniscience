@@ -26,10 +26,9 @@ function IS_gestionnaire()
 function AfficherDomicile()
 {
         global $bdd;
-        $reponse = $bdd->prepare('SELECT *
-from gestionnaire
-INNER JOIN domicile ON gestionnaire.ID = domicile.ID_gestionnaire
-WHERE gestionnaire.ID_utilisateur = ?');
+        $reponse = $bdd->prepare('SELECT *,
+domicile.ID AS id_domicile 
+from gestionnaire INNER JOIN domicile ON gestionnaire.ID = domicile.ID_gestionnaire WHERE gestionnaire.ID_utilisateur = 1');
 
         $reponse -> execute(array($_SESSION['ID']));
         return $reponse;
@@ -55,16 +54,16 @@ function AfficherUser()
 }
 
 
-if (isset($donnees['ID_domicile'])) {
-    function User()
+
+    function User($domicil)
     {
         global $bdd;
-        $reponse = $bdd->prepare('SELECT * from utilisateur WHERE ID_domicile = ?');
-        $reponse -> execute(array($donnees['ID_domicile']));
+        $reponse = $bdd->query("SELECT nom, prenom FROM utilisateur WHERE ID_domicile= ? ");
+        $reponse -> execute(array($domicil));
         return $reponse;
         $reponse->closeCursor();
     }
-}
+
     
 
     
