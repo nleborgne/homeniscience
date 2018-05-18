@@ -123,5 +123,88 @@ $mail='';
 
 
 
+<article>
+    <div class="formulaire">
+
+        </form>
+
+        <form method="POST">
+            <h4>ajouter un utilisateur principal</h4>
+            <select class="select-style" id="piece" name="princip" required>
+
+                <?php
+                $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  ");
+                while ($donnees_utilisateurs = $reponse_ajout->fetch()){
+                    ?>
+                    <option value="<?php echo $donnees_utilisateurs['ID'] ; ?>"> <?php echo $donnees_utilisateurs['prenom']; ?> </option>
+                    <?php
+                }
+                ?>
+
+
+                <input class="boutton" type="submit" name="admin" value="ajouter" >
+
+                <?php
+                if(isset($_POST['admin'])) {
+                    $member= $_POST['princip'];
+                    $sql = "UPDATE utilisateur SET  	ID_type_utilisateur=2 WHERE ID=:ID";
+                    $stmt = $bdd->prepare($sql);
+                    $stmt->execute(array(
+                        'ID' => $member
+                    ));
+
+                }
+                ?>
+
+        </form>
+    </div>
+    <div class="formulaire">
+        <form method="POST">
+            <h4>supprimer un utilisateur principal</h4>
+            <select class="select-style" id="piece" name="noprincip" required>
+
+                <?php
+                $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  AND 	ID_type_utilisateur=2 ");
+                while ($donnees_utilisateurs = $reponse_ajout->fetch()){
+                    ?>
+                    <option value="<?php echo $donnees_utilisateurs['ID'] ; ?>"> <?php echo $donnees_utilisateurs['prenom']; ?> </option>
+                    <?php
+                }
+                ?>
+
+
+                <input class="boutton" type="submit" name="SuppAdmin" value="Supprimer" >
+
+                <?php
+                if(isset($_POST['SuppAdmin'])) {
+                    $member= $_POST['noprincip'];
+                    $sql = "UPDATE utilisateur SET  ID_type_utilisateur=1 WHERE ID=:ID";
+                    $stmt = $bdd->prepare($sql);
+                    $stmt->execute(array(
+                        'ID' => $member
+                    ));
+
+                }
+                ?>
+
+        </form>
+    </div>
+</article>
+
+<?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 ORDER BY ID");
+while ($utilisateurs = $reponse_utilisateurs->fetch()){
+    ?>
+    <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);" ><?php echo $utilisateurs['prenom']; ?></p>
+
+
+
+
+    <?php
+}
+?>
+
+
+
+
 
 </body>
