@@ -37,7 +37,7 @@ while ($dom = $domicile->fetch()){
 
     <form method="post">
 
-   
+
 
     <?php
     if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
