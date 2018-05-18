@@ -22,7 +22,7 @@
     <div class="container1">
         <div class="flex1">
 
-            <button class="accordion" type="button" name="button" style="background-color:#1887E6 ;color: white ">CeMac</button>
+            <button class="accordion" type="button" name="button" style="background-color:#1887E6 ;color: white ">Equipement</button>
 
             <div class="panel" >
                 <?php require ('ajout_capteur.php'); ?>

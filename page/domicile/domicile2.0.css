@@ -33,6 +33,8 @@
   width:800px;
   height:600px;
   display:inline-block;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .flex2 {
@@ -84,7 +86,7 @@
   padding: 0 18px;
   background-color: white;
   max-height: 700px;
-  max-width: 800px ;
+  max-width: 850px ;
   overflow-y: auto;
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
