@@ -18,7 +18,7 @@ function getCapteurs() {
     INNER JOIN domicile ON piece.ID_domicile = domicile.ID
     INNER JOIN utilisateur ON domicile.ID_utilisateur_principal = utilisateur.ID
     WHERE utilisateur.ID = ?');
-    $get->execute(array(2));
+    $get->execute(array($_SESSION['ID']));
     return $get;
   }
 
