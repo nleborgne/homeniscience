@@ -15,7 +15,6 @@ h1 {
   width: 100%;
   margin-top:10px;
   height: auto;
-
 }
 .child {
   width:300px;
@@ -63,19 +62,21 @@ h1 {
 }
 
 div.container2 {
+  margin-left:50px;
+  /*margin : 0 auto;*/
   display: flex;
   flex-direction: row;
   background-color: white;
   align-content: flex-start;
   text-align: center;
   justify-content:center;
-  margin: 0 auto;
   max-width:80vh;
-  z-index: -1;
+  z-index: 0;
   margin-bottom: 50px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-
-
+}
+#ajout_panne {
+  height:300px;
 }
 div.column {
   display: flex;

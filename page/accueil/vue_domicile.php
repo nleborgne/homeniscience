@@ -5,6 +5,7 @@ while ($piece = $afficherPieces -> fetch() ) {
   echo '<h3>'.$piece['piece_nom'].'</h3>';
   $afficherEffecteurs = getEffecteurs($piece['piece_ID']);
   while($effecteur = $afficherEffecteurs->fetch()) {
+    echo "<div class='blockEffecteur'>";
     switch ($effecteur['ID_type_equipement']) {
       case 1:
       echo '<i class="fas fa-tint fa-2x"></i>&nbsp;';
@@ -14,7 +15,12 @@ while ($piece = $afficherPieces -> fetch() ) {
       echo '<i class="fas fa-lightbulb fa-2x"></i>';
       echo '<input type="range" name="" value="">';
       break;
+      case 3:
+      echo '<i class="fas fa-child fa-2x"></i>&nbsp;';
+      echo 'nobody detected';
+      break;
     }
+    echo '</div>';
   }
   echo '</div>';
 }
@@ -45,91 +51,92 @@ echo '<input type="range" name="" value="">';*/
 .child h3 {
   text-align:center;
 }
-
-input[type=range] {
+.blockEffecteur {
+  height:45px;
+}input[type=range] {
   -webkit-appearance: none;
-  width: 80%;
-  margin: 13.8px 0 0 10px;
+  width: 90%;
+  margin: 7.3px 0;
 }
 input[type=range]:focus {
   outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8.4px;
+  height: 11.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
+  background: rgba(0, 102, 235, 0.78);
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 1.8px solid #00001e;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
   background: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -14px;
+  margin-top: -7.5px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+  background: rgba(5, 114, 255, 0.78);
 }
 input[type=range]::-moz-range-track {
   width: 100%;
-  height: 8.4px;
+  height: 11.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
+  background: rgba(0, 102, 235, 0.78);
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 1.8px solid #00001e;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
   background: #ffffff;
   cursor: pointer;
 }
 input[type=range]::-ms-track {
   width: 100%;
-  height: 8.4px;
+  height: 11.4px;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-  background: #2a6495;
+  background: rgba(0, 91, 210, 0.78);
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type=range]::-ms-fill-upper {
-  background: #3071a9;
+  background: rgba(0, 102, 235, 0.78);
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 1.8px solid #00001e;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
   background: #ffffff;
   cursor: pointer;
-  height: 8.4px;
+  height: 11.4px;
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #3071a9;
+  background: rgba(0, 102, 235, 0.78);
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: #367ebd;
+  background: rgba(5, 114, 255, 0.78);
 }
 
 
