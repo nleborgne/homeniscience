@@ -24,9 +24,11 @@ $mail='';
 ?>
 <br>
 <img src="usericone.png" style="height: 85px;width: 100px; display:inline-block">
+<article>
 <div class="formulaire">
+    <h4>rechercher et ajouter un utilisateur</h4>
     <form class="add_capt" method="post">
-        <input class="champ" type="text" id="nom" name="nom" placeholder="Nom d'utilisateurs a rechercher" required>
+        <input class="champ" type="text" id="nom" name="nom" placeholder="utilisateurs a rechercher" required>
         <input class="boutton" type="submit" name="recherche" value="rechercher">
         <?php
 
@@ -40,6 +42,7 @@ $mail='';
     </form>
     <br>
     <form method="POST">
+
         <select class="select-style" id="piece" name="user" required>
 
             <?php
@@ -67,7 +70,10 @@ $mail='';
         ?>
 
     </form>
+</div>
+<div class="formulaire">
     <form method="POST">
+        <h4>supprimer un utilisateur</h4>
         <select class="select-style" id="piece" name="member" required>
 
             <?php
@@ -95,16 +101,27 @@ $mail='';
             ?>
 
     </form>
+</div>
+</article>
     <br>
     <br>
         <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile ORDER BY ID");
         while ($utilisateurs = $reponse_utilisateurs->fetch()){
             ?>
-            <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);"><?php echo $utilisateurs['prenom']; ?></p>
+            <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);" ><?php echo $utilisateurs['prenom']; ?></p>
+
+
+
+
             <?php
         }
         ?>
 
 
-</div>
+
+
+
+
+
+
 </body>

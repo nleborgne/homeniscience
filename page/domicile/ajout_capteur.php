@@ -24,11 +24,107 @@ if(!isset($_SESSION)){
         die('Erreur : '.$e->getMessage());
     }
     ?>
-    <br>
-    <img src="sensorsicon.png" style="height: 80px;width: 80px;">
-    <br>
+
+    <div style="display:flex;flex-wrap: nowrap">
+        <img src="sensorsicon.png" style="height: 100px;width: 100px;">
+        <div style="display: inline-block">
+            <?php
+            $cemac = $bdd->query("SELECT cemac.nom,cemac.ID FROM cemac JOIN piece ON cemac.ID_piece = piece.ID WHERE piece.ID_domicile= $ID_domicile ");
+            while ($cem = $cemac->fetch()){
+                ?>
+                <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px;padding: 10px "><?php echo 'CeMac num:',' ', $cem['nom']; ?></h3>
+                <?php
+            }
+            ?>
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <article>
+    <div class="formulaire">
+        <form class="add_cEMAC" method="post">
+            <h4>ajouter un CeMac</h4>
+            <input class="champ" type="text" id="numero" name="numero" placeholder="numero CeMac" required>
+            <select class="select-style" id="piece" name="piece" required>
+                <?php $p = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = $ID_domicile ORDER BY ID");
+                while ($pie = $p->fetch()){
+                    ?>
+                    <option value="<?php echo $pie['ID']; ?>"> <?php echo $pie['nom']; ?> </option>
+                    <?php
+                }
+                ?>
+            </select>
+
+            <br>
+
+            <input class="boutton" name="addc" type="submit" value="Valider">
+            <?php
+
+            if(isset($_POST['addc'])){
+                if(!empty($_POST['numero'])) {
+
+                    $requete = $bdd ->prepare('INSERT INTO cemac( ID ,ID_piece ,nom, port )
+                              VALUES ( :ID , :ID_piece , :nom , :port )');
+                    $requete ->execute(array(
+                        'ID' =>NULL,
+                        'ID_piece' => $_POST['piece'],
+                        'nom' => $_POST['numero'],
+                        'port' => 10,
+
+
+                    ));
+                }
+            }
+            ?>
+        </form>
+    </div>
+        <div class="formulaire">
+        <form method="POST">
+            <h4>supprimer un CeMac</h4>
+            <select class="select-style" id="piece" name="ID_cem" required>
+
+                <?php
+                $cemac = $bdd->query("SELECT cemac.nom,cemac.ID FROM cemac JOIN piece ON cemac.ID_piece = piece.ID WHERE piece.ID_domicile= $ID_domicile ");
+                while ($cem = $cemac->fetch()){
+                    ?>
+                    <option value="<?php echo $cem['ID'] ; ?>"> <?php echo $cem['nom']; ?> </option>
+                    <?php
+                }
+                ?>
+
+
+                <input class="boutton" type="submit" name="delce" value="Supprimer" >
+
+                <?php
+
+                if(isset($_POST['delce'])) {
+
+                    $ID_cem= $_POST['ID_cem'];
+                    $req = $bdd->exec('DELETE FROM cemac WHERE ID="'.$ID_cem.'"  ' );
+                    if ( !$req AND isset($_POST['Suprimer'])) {
+                        echo 'Erreur de suppression';
+                    } else {
+                        echo 'Entrée supprimée';
+                    }
+                    //));
+
+                }
+                ?>
+
+        </form>
+    </div>
+    </article>
+
+
+    <article>
     <div class="formulaire">
         <form class="add_capt" method="post">
+            <h4>ajouter un capteur</h4>
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
             <select class="select-style" id="piece" name="piece" required>
                 <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = $ID_domicile ORDER BY ID");
@@ -48,6 +144,7 @@ if(!isset($_SESSION)){
                 }
                 ?>
             </select>
+            <br>
             <input class="boutton" name="add" type="submit" value="Valider">
             <?php
 
@@ -68,8 +165,10 @@ if(!isset($_SESSION)){
             }
             ?>
         </form>
-
+    </div>
+    <div class="formulaire">
         <form method="POST">
+            <h4>supprimer un capteur</h4>
             <select class="select-style" id="piece" name="ID_capt" required>
 
                 <?php
@@ -101,7 +200,8 @@ if(!isset($_SESSION)){
                 ?>
 
         </form>
-
+    </div>
+    </article>
         <?php $equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=$ID_domicile  ");
         while ($equ_dom = $equipement_ajoutés->fetch()){
             ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
@@ -109,5 +209,5 @@ if(!isset($_SESSION)){
             <?php
         }
         ?>
-    </div>
+
 </body>

@@ -1,27 +1,46 @@
 <?php
 while ($piece = $afficherPieces -> fetch() ) {
   echo '<div class="child">';
+  /* On affiche la pièce */
   echo '<h3>'.$piece['piece_nom'].'</h3>';
-  echo '<i class="fas fa-lightbulb fa-2x"></i>';
-  echo '<input type="range" name="" value="">';
-  echo '<br>';
-  echo '<br>';
-  echo '<i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C';
-  echo '<br><br>';
-  echo'<i class="fas fa-volume-up fa-2x"></i>';
-  echo '<input type="range" name="" value="">';
+  $afficherEffecteurs = getEffecteurs($piece['piece_ID']);
+  while($effecteur = $afficherEffecteurs->fetch()) {
+    switch ($effecteur['ID_type_equipement']) {
+      case 1:
+      echo '<i class="fas fa-tint fa-2x"></i>&nbsp;';
+      echo '10%';
+      break;
+      case 2:
+      echo '<i class="fas fa-lightbulb fa-2x"></i>';
+      echo '<input type="range" name="" value="">';
+      break;
+    }
+  }
   echo '</div>';
 }
+
+/* Tenter d'afficher les effecteurs d'une pièce
+echo '<i class="fas fa-lightbulb fa-2x"></i>';
+echo '<input type="range" name="" value="">';
+echo '<br>';
+echo '<br>';
+echo '<i class="fas fa-thermometer-three-quarters fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20°C';
+echo '<br><br>';
+echo'<i class="fas fa-volume-up fa-2x"></i>';
+echo '<input type="range" name="" value="">';*/
+
 ?>
 
 <style media="screen">
 .child {
+  margin-top:20px;
   width:320px;
   padding:1%;
   max-height:400px;
   box-shadow:2px 2px 10px rgba(0,0,0,0.2);
   margin-bottom:2%;
   margin-right:2%;
+  border-radius:30px;
 }
 .child h3 {
   text-align:center;

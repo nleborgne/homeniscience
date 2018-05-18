@@ -53,5 +53,19 @@ function AfficherUser()
     return $reponse;
     $reponse->closeCursor();
 }
+
+
+if (isset($donnees['ID_domicile'])) {
+    function User()
+    {
+        global $bdd;
+        $reponse = $bdd->prepare('SELECT * from utilisateur WHERE ID_domicile = ?');
+        $reponse -> execute(array($donnees['ID_domicile']));
+        return $reponse;
+        $reponse->closeCursor();
+    }
+}
+    
+
     
 ?>

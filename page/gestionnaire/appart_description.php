@@ -41,7 +41,7 @@ $donnees_domicile = $req->fetch();
     <div class="container_left">
     	<div class="flex2">
     		<?php echo '<form method="post" action="index.php" enctype="multipart/form-data"><input type="button"
-      name="'.$donnees_domicile['nom'].'" value="'.$donnees_domicile['nom'].'" class="accordion" OnClick="window.location.href=\'index.php\'"></form>';
+      name="'.$donnees_domicile['nom'].'" value="'.$donnees_domicile['nom'].'" class="accordion" title="Retour" OnClick="window.location.href=\'index.php\'"></form>';
             ?>
     		<div class="panel">
     			<?php echo '<p><strong>Adresse</strong> : '.$donnees_domicile['numero_habitation'].' '.$donnees_domicile['rue'].', '

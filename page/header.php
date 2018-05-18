@@ -31,7 +31,7 @@ $name = getNom()->fetch();?>
     overflow: hidden;
     background:linear-gradient(-90deg, #4650E2, #00A2E8);
   }
-  
+
   .topnav a {
     float: left;
     display: block;
@@ -98,6 +98,12 @@ $name = getNom()->fetch();?>
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .imgheader{
+    text-align:center;
+    max-height:45px;
+    display:block;
+    margin:auto;
+  }
 
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
@@ -106,6 +112,9 @@ $name = getNom()->fetch();?>
     .topnav a.icon {
       float: right;
       display: block;
+    }
+    .imgheader {
+      display:none;
     }
   }
 
@@ -142,11 +151,13 @@ $name = getNom()->fetch();?>
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
+        <a href="#">Gérer son profil</a>
         <a href="#">Paramètres</a>
-        <a href="#">Se déconnecter</a>
+        <a href="/homeniscience/page/disconnect.php">Se déconnecter</a>
       </div>
     </div>
     <a id="support" href="/homeniscience/page/support">Support</a>
+    <img class="imgheader" src="/homeniscience/page/support/header_logo.png" alt="">
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 
@@ -162,32 +173,29 @@ $name = getNom()->fetch();?>
 
   var page = window.location.href;
   if (page.includes("accueil")) {
-      document.getElementById('accueil').className += "active";
+    document.getElementById('accueil').className += "active";
   } else if (page.includes("domicile")) {
-      document.getElementById('domicile').className += "active";
+    document.getElementById('domicile').className += "active";
   } else if (page.includes("gestionnaire")) {
-      document.getElementById('residence').className += "active";
+    document.getElementById('residence').className += "active";
   } else if (page.includes("support")) {
-      document.getElementById('support').className += "active";
+    document.getElementById('support').className += "active";
   }
-<<<<<<< HEAD
-  function myFunction() {
-      var x = document.getElementById("myTopnav");
-      var y = document.getElementById("img");
-      var z = document.getElementById("text");
-      if (x.className === "topnav") {
-          x.className += " responsive";
-          y.className += " invisible";
-          z.className = "invisible";
-      } else {
-          x.className = "topnav";
-          y.className = "img_default";
-          z.className = "text_default";
-      }
-  }
-=======
->>>>>>> 3af4ed64330a51fd318e66eea394162df15497b7
-</script>
 
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    var y = document.getElementById("img");
+    var z = document.getElementById("text");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+      y.className += " invisible";
+      z.className = "invisible";
+    } else {
+      x.className = "topnav";
+      y.className = "img_default";
+      z.className = "text_default";
+    }
+  }
+</script>
 </body>
 </html>
