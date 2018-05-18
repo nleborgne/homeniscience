@@ -21,15 +21,17 @@ function getPieces() {
     utilisateur.nom AS utilisateur_nom
     FROM piece
     INNER JOIN domicile ON piece.ID_domicile = domicile.ID
-    INNER JOIN utilisateur ON domicile.ID_utilisateur_principal = utilisateur.ID
+    INNER JOIN utilisateur ON domicile.ID = utilisateur.ID_domicile
     WHERE utilisateur.ID = ?');
     $get->execute(array($_SESSION['ID']));
     return $get;
   }
+
   function getEffecteurs($ID) {
     global $bdd;
     $get = $bdd->prepare('SELECT * FROM equipement WHERE ID_piece = ?');
     $get->execute(array($ID));
     return $get;
   }
+
   ?>
