@@ -19,10 +19,10 @@
             </div>
             <div id="reseau">
                 <h2 class="foot_titre">Réseaux sociaux</h2>
-                <i class="fab fa-facebook-square foot_logo"></i>
-                <i class="fab fa-twitter-square foot_logo"></i>
-                <i class="fab fa-linkedin foot_logo"></i>
-                <i class="fab fa-google-plus-square foot_logo"></i>
+                <i class="fab fa-facebook-square foot_fb"></i>
+                <i class="fab fa-twitter-square foot_tw"></i>
+                <i class="fab fa-linkedin foot_in"></i>
+                <i class="fab fa-google-plus-square foot_gg"></i>
             </div>
             <div id="about">
                 <h2 class="foot_titre">A propos d'Hexateam</h2>
@@ -66,20 +66,40 @@ footer {
 }
 #about
 {
-    padding: 0px 100px 0px 160px;
+    padding: 0px 110px 0px 160px;
     border-bottom: solid #f2f2f2 1px;
 }
 h2
 {
     font-size: 18px;
 }
-.foot_logo
+.foot_fb,.foot_in,.foot_gg,.foot_tw
 {
     display: inline;
     color:#f2f2f2;
     font-size: 45px;
     margin-top: 10px;
     margin-right: 10px;
+}
+.foot_fb:hover
+{
+    transition: all 0.5s ease;
+    color: #3b5998;
+}
+.foot_tw:hover
+{
+    transition: all 0.5s ease;
+    color: #33CCFF;
+}
+.foot_in:hover
+{
+    transition: all 0.5s ease;
+    color: black;
+}
+.foot_gg:hover
+{
+    transition: all 0.5s ease;
+    color: #EA4335;
 }
 .foot_small
 {
