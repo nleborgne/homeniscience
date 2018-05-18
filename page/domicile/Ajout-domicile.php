@@ -37,10 +37,10 @@ while ($dom = $domicile->fetch()){
 
     <form method="post">
 
-    <input class="boutton" type="submit" name="new" value="Supprimer" >
+   
 
     <?php
-    if(isset($_POST['new'])) {
+    if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
 
         $req = $bdd->exec('DELETE FROM domicile WHERE ID="'.$ID_domicile.'" ' );
         if ( !$req ) {
