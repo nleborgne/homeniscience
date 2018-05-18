@@ -13,11 +13,14 @@ try {
     $gestionnaire = IS_gestionnaire();
     $piece = AfficherPiece();
     
+    
     $gest = $gestionnaire -> fetch();
     if ($gest['gestionnaire'] == 1) {
         $domicile = AfficherDomicile();
-       
+        
+        
         require('gestionnaire.php');
+        
         
     }
     else {

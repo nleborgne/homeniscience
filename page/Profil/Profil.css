@@ -1,0 +1,51 @@
+.modifier_profil
+{
+    max-width: 1200px;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex2 {
+    width: 300px;
+    height:500px;
+    padding: 20px;
+    margin-bottom:80px;
+}
+
+.flex2 .accordion  {
+    background:linear-gradient(-45deg, #4650E2, #00A2E8);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.accordion {
+    font-family: 'Roboto';
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+}
+
+.panel {
+    font-family: 'Lato';
+    padding: 0 18px;
+    background-color: white;
+    height: 450px;
+    overflow-y: auto;
+    transition: max-height 0.2s ease-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    text-align: center;
+}

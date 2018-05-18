@@ -12,6 +12,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: 2px solid gray;
 }
 .container_left {
   display: flex;
@@ -20,9 +21,10 @@ body{
 }
 .flex1 {
   width:400px;
-  height:550px;
+  height:350px;
   padding: 20px;
   margin-bottom:80px;
+  border: 2px solid red;
 }
 
 .flex2 {
@@ -30,11 +32,14 @@ body{
   height:200px;
   padding: 20px;
   margin-bottom:80px;
+  border: 2px solid red;
 }
 
 .flex3 {
 	width: 700px;
 	padding: 20px;
+	height: 550px;
+	border: 2px solid red;
 }
 
 
@@ -44,7 +49,7 @@ body{
   background:linear-gradient(-45deg, #4650E2, #00A2E8);
   color: white;
   font-weight: bold;
-  font-size: 20x;
+  font-size: 20px;
 }
 
 
@@ -75,6 +80,19 @@ body{
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
   text-align: center;
+  border: 2px solid green;
+}
+
+.panel2 {
+  font-family: 'Lato';
+  padding: 0 18px;
+  background-color: white;
+  height: 250px;
+  overflow-y: auto;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  text-align: center;
+  border: 2px solid green;
 }
 
 .panel h3 {
@@ -112,19 +130,19 @@ body{
 	height: 300px
 }
 
-.panel::-webkit-scrollbar-track
+.panel::-webkit-scrollbar-track, .panel2::-webkit-scrollbar-track
 {
   border-radius: 10px;
   background-color: #F5F5F5;
 }
 
-.panel::-webkit-scrollbar
+.panel::-webkit-scrollbar, .panel2::-webkit-scrollbar
 {
   width: 8px;
   background-color: #F5F5F5;
 }
 
-.panel::-webkit-scrollbar-thumb
+.panel::-webkit-scrollbar-thumb, .panel2::-webkit-scrollbar-thumb
 {
   border-radius: 10px;
   background-color: #555;
@@ -295,10 +313,19 @@ input[type=range]:focus::-ms-fill-upper {
 	margin-left: 75px;
 }
 
+
+
 .list_user li
 {
+	
 	padding-bottom: 5px;
 	cursor: pointer;
+	max-width: 100px;
+}
+
+.list_user li:hover
+{
+	color: gray;
 }
 
 .bareme
@@ -336,6 +363,10 @@ input[type=range]:focus::-ms-fill-upper {
 	color: white;
 }
 
+.dom
+{
+	text-align: center;
+}
 
 
 
