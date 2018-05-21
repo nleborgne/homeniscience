@@ -62,7 +62,7 @@ while ($dom = $domicile->fetch()){
         <div class="formulaire">
 
             <form class="deff_domicile" method="post">
-            <h4>ajouter un domicile</h4>
+            <h4>Ajouter un domicile</h4>
         <input type="text" id="name" name="nom" placeholder="nom du domicile ">
         <input type="text" id="adresse" name="rue" placeholder="votre adresse">
         <input type="text" id="num" name="num" placeholder="numero de rue">
@@ -105,7 +105,7 @@ while ($dom = $domicile->fetch()){
 </div>
 <div class="formulaire">
 
-    <h4>ajouter une piece</h4>
+    <h4>Ajouter une piece</h4>
     <form class="add_room" method="post">
         <input type="text" id="piece" name="piece" placeholder="piece a ajouter ">
 
@@ -130,7 +130,7 @@ while ($dom = $domicile->fetch()){
 
     <form method="POST">
         <br>
-        <h4>supprimer une piece</h4>
+        <h4>Supprimer une piece</h4>
         <select class="select-style" id="piece" name="nom_piece" required>
 
             <?php

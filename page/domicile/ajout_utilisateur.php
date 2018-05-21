@@ -23,10 +23,10 @@ $recherche=' ';
 $mail='';
 ?>
 <br>
-<img src="usericone.png" style="height: 85px;width: 100px; display:inline-block">
+<img src="usericone.png" style="height: 100px;width: 100px; display:inline-block">
 <article>
 <div class="formulaire">
-    <h4>rechercher et ajouter un utilisateur</h4>
+    <h4>Rechercher et ajouter un utilisateur</h4>
     <form class="add_capt" method="post">
         <input class="champ" type="text" id="nom" name="nom" placeholder="utilisateurs a rechercher" required>
         <input class="boutton" type="submit" name="recherche" value="rechercher">
@@ -73,7 +73,7 @@ $mail='';
 </div>
 <div class="formulaire">
     <form method="POST">
-        <h4>supprimer un utilisateur</h4>
+        <h4>Supprimer un utilisateur</h4>
         <select class="select-style" id="piece" name="member" required>
 
             <?php
@@ -129,7 +129,7 @@ $mail='';
         </form>
 
         <form method="POST">
-            <h4>ajouter un utilisateur principal</h4>
+            <h4>Ajouter un utilisateur principal</h4>
             <select class="select-style" id="piece" name="princip" required>
 
                 <?php
@@ -160,7 +160,7 @@ $mail='';
     </div>
     <div class="formulaire">
         <form method="POST">
-            <h4>supprimer un utilisateur principal</h4>
+            <h4>Supprimer un utilisateur principal</h4>
             <select class="select-style" id="piece" name="noprincip" required>
 
                 <?php
