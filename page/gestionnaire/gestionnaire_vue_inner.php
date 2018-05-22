@@ -5,15 +5,26 @@
     	<button type="button" class="accordion" name="button">Statistiques Globales de Consommation</button>
     	<div class="panel">
     		<canvas id="myChart" width="400" height="250"></canvas>
+    		<canvas id="myChart2" width="400" height="250"></canvas>
     	</div>
     </div>
-    	
+   <div class="checkpart">
     <div class="flex1">
     	<button type="button" class="accordion" name="button">Bareme de consommation</button>
     	<div class="panel2">
     	
     	</div>
     </div>
+   
+   	    <p class="checkside"><span class ="checktitle">Consommation</span> <br />
+    	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" onclick="elec()"/><label for="case1">Electricite</label><br />
+		<input type="radio" name="conso" id ="case2" value="eau" onclick="water()"/><label for="case2">Eau</label><br />
+    	<br />
+    	<span class="checktitle">Intervalle de temps</span> <br />
+    	<input type="radio" name="temps" id="case3"  value="semaines" /><label for="case3">Semaines</label><br />
+		<input type="radio" name="temps" id ="case4" value="mois" checked="checked" /><label for="case4">Mois</label>
+    	</p>
+   </div>
 </div>
     
     <h1 class="dom">Domiciles</h1>
@@ -77,6 +88,8 @@
 </div>
 
 <script type="text/javascript">
+
+elec();
 
 function elec() {
 

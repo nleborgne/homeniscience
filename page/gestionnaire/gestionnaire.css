@@ -23,7 +23,7 @@ body{
   width:400px;
   height:350px;
   padding: 20px;
-  margin-bottom:80px;
+  
   border: 2px solid red;
 }
 
@@ -342,6 +342,15 @@ input[type=range]:focus::-ms-fill-upper {
 .checkside
 {
 	color: #000;
+	border: 2px solid yellow;
+}
+
+.checkpart
+{
+	display: flex;
+	flex-direction: column;
+	border: 5px solid blue;
+	height: 550px;
 }
 
 .consulter
