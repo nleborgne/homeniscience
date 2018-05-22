@@ -168,7 +168,7 @@ while ($dom = $domicile->fetch()){
 
     <?php $piece_ajoutées = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=$ID_domicile ORDER BY ID");
     while ($piece_dom = $piece_ajoutées->fetch()){
-        ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+        ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
 
         <?php  echo  $piece_dom['nom']; ?>
         <?php

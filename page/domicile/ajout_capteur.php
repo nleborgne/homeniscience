@@ -32,7 +32,7 @@ if(!isset($_SESSION)){
             $cemac = $bdd->query("SELECT cemac.nom,cemac.ID FROM cemac JOIN piece ON cemac.ID_piece = piece.ID WHERE piece.ID_domicile= $ID_domicile ");
             while ($cem = $cemac->fetch()){
                 ?>
-                <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px;padding: 10px "><?php echo 'CeMac num:',' ', $cem['nom']; ?></h3>
+                <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px;padding: 10px "><?php echo 'CeMac num:','  ', '  ',$cem['nom']; ?></h3>
                 <?php
             }
             ?>
@@ -205,7 +205,7 @@ if(!isset($_SESSION)){
         <?php $equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=$ID_domicile  ");
 
         while ($equ_dom = $equipement_ajoutés->fetch()){
-            ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+            ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
             <?php echo $equ_dom['nom']; ?>
             <?php
         }

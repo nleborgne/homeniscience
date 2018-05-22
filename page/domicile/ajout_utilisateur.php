@@ -108,7 +108,7 @@ $mail='';
         <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile ORDER BY ID");
         while ($utilisateurs = $reponse_utilisateurs->fetch()){
             ?>
-            <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);" ><?php echo $utilisateurs['prenom']; ?></p>
+            <p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/" ><?php echo $utilisateurs['prenom']; ?></p>
 
 
 
@@ -194,7 +194,7 @@ $mail='';
 <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 ORDER BY ID");
 while ($utilisateurs = $reponse_utilisateurs->fetch()){
     ?>
-    <p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);" ><?php echo $utilisateurs['prenom']; ?></p>
+    <p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/" ><?php echo $utilisateurs['prenom']; ?></p>
 
 
 
