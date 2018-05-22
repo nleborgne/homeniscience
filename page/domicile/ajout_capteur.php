@@ -9,7 +9,7 @@ if(!isset($_SESSION)){
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>ajouter capteur</title>
+    <title>Ajouter capteur</title>
     <link rel="stylesheet" href="ajout.css" />
 </head>
 
@@ -26,13 +26,13 @@ if(!isset($_SESSION)){
     ?>
 
     <div style="display:flex;flex-wrap: nowrap">
-        <img src="sensorsicon.png" style="height: 100px;width: 100px;">
+        <img src="sensorsicon.png" style="height: 100px;width: 100px; margin: 10px ">
         <div style="display: inline-block">
             <?php
             $cemac = $bdd->query("SELECT cemac.nom,cemac.ID FROM cemac JOIN piece ON cemac.ID_piece = piece.ID WHERE piece.ID_domicile= $ID_domicile ");
             while ($cem = $cemac->fetch()){
                 ?>
-                <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px;padding: 10px "><?php echo 'CeMac num:',' ', $cem['nom']; ?></h3>
+                <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px;padding: 10px "><?php echo 'CeMac num:','  ', '  ',$cem['nom']; ?></h3>
                 <?php
             }
             ?>
@@ -48,7 +48,7 @@ if(!isset($_SESSION)){
     <article>
     <div class="formulaire">
         <form class="add_cEMAC" method="post">
-            <h4>ajouter un CeMac</h4>
+            <h4>Ajouter un CeMac</h4>
             <input class="champ" type="text" id="numero" name="numero" placeholder="numero CeMac" required>
             <select class="select-style" id="piece" name="piece" required>
                 <?php $p = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = $ID_domicile ORDER BY ID");
@@ -85,7 +85,7 @@ if(!isset($_SESSION)){
     </div>
         <div class="formulaire">
         <form method="POST">
-            <h4>supprimer un CeMac</h4>
+            <h4>Supprimer un CeMac</h4>
             <select class="select-style" id="piece" name="ID_cem" required>
 
                 <?php
@@ -124,7 +124,7 @@ if(!isset($_SESSION)){
     <article>
     <div class="formulaire">
         <form class="add_capt" method="post">
-            <h4>ajouter un capteur</h4>
+            <h4>Ajouter un capteur</h4>
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
             <select class="select-style" id="piece" name="piece" required>
                 <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = $ID_domicile ORDER BY ID");
@@ -168,7 +168,7 @@ if(!isset($_SESSION)){
     </div>
     <div class="formulaire">
         <form method="POST">
-            <h4>supprimer un capteur</h4>
+            <h4>Supprimer un capteur</h4>
             <select class="select-style" id="piece" name="ID_capt" required>
 
                 <?php
@@ -205,7 +205,7 @@ if(!isset($_SESSION)){
         <?php $equipement_ajoutés = $bdd->query("SELECT equipement.nom FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=$ID_domicile  ");
 
         while ($equ_dom = $equipement_ajoutés->fetch()){
-            ?><p style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+            ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
             <?php echo $equ_dom['nom']; ?>
             <?php
         }
