@@ -12,7 +12,6 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 2px solid gray;
 }
 .container_left {
   display: flex;
@@ -23,29 +22,38 @@ body{
   width:400px;
   height:350px;
   padding: 20px;
-  
-  border: 2px solid red;
 }
 
 .flex2 {
   width: 300px;
-  height:200px;
+  height:550px;
   padding: 20px;
   margin-bottom:80px;
-  border: 2px solid red;
 }
 
 .flex3 {
 	width: 700px;
 	padding: 20px;
 	height: 550px;
-	border: 2px solid red;
+}
+
+.flex4 {
+	width: 600px;
+	padding: 20px;
+	height: 550px;
+}
+
+.flex5 {
+	width: 400px;
+	
+	height: 200px;
 }
 
 
 
 
-.flex1 .accordion, .flex2 .accordion, .flex3 .accordion  {
+
+.flex1 .accordion, .flex2 .accordion, .flex3 .accordion, .flex4 .accordion  {
   background:linear-gradient(-45deg, #4650E2, #00A2E8);
   color: white;
   font-weight: bold;
@@ -56,7 +64,7 @@ body{
 
 .accordion {
   font-family: 'Roboto';
-  cursor: pointer;
+  
   padding: 18px;
   width: 100%;
   font-size: 16px;
@@ -80,7 +88,6 @@ body{
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
   text-align: center;
-  border: 2px solid green;
 }
 
 .panel2 {
@@ -92,10 +99,46 @@ body{
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
   text-align: center;
-  border: 2px solid green;
 }
 
-.panel h3 {
+.panel3 {
+  font-family: 'Lato';
+  padding: 0 18px;
+  background-color: white;
+  height: 220px;
+  width: 200px;
+  overflow-y: auto;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  text-align: center;
+}
+
+.panel4
+{
+  font-family: 'Lato';
+  padding: 0 18px;
+  background-color: white;
+  height: 400px;
+  
+  overflow-y: auto;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  text-align: center;
+}
+
+.panel5
+{
+  font-family: 'Lato';
+  padding: 0 18px;
+  background-color: white;
+  height: 180px;
+  overflow-y: auto;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  text-align: center;
+}
+
+.panel h3, .panel2 h3 {
 	background:linear-gradient(-90deg, #4650E2, #00A2E8);
 	text-align:center;
 	padding-top: 5px;
@@ -306,12 +349,20 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
-.textInput
+#textInput
 {
 	position: absolute;
-	margin-top: -28px;
+	margin-top: -29px;
 	margin-left: 75px;
 }
+
+#textInput2
+{
+	position: absolute;
+	margin-top: -29px;
+	margin-left: 75px;
+}
+
 
 
 
@@ -335,21 +386,41 @@ input[type=range]:focus::-ms-fill-upper {
 
 .checktitle
 {
+	
+	background:linear-gradient(-90deg, #4650E2, #00A2E8);
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: white;
+	box-shadow: 0px 4px 4px #1c1a19;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 
-	padding: 2px;
+.radio
+{
+	display: flex;
+	flex-direction: row;
+	align-items: left;
+	padding-top: 0px;
+	font-size: 1.1em;
+}
+
+label
+{
+	padding-left: 5px;
 }
 
 .checkside
 {
 	color: #000;
-	border: 2px solid yellow;
 }
 
 .checkpart
 {
 	display: flex;
 	flex-direction: column;
-	border: 5px solid blue;
 	height: 550px;
 }
 
