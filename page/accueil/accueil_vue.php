@@ -12,6 +12,8 @@
 <?php require('../header.php'); ?>
 <body>
   <h1 class="title">Bonjour <?php echo $name['prenom'].' '.$name['nom'];?></h1>
+
+  <!-- Affichage dynamique des pièces et capteurs avec barre de recherche-->
   <div class="container">
     <input class="search" id="search" name="search" placeholder="Rechercher..." type="text" autocomplete="off">
     <div class="flex2">
@@ -21,6 +23,8 @@
       </div>
     </div>
   </div>
+  
+  <!-- Affichage statique de l'historique -->
   <div id="topContainer" class="container">
     <div class="flex1">
       <button class="accordion" type="button" name="button">Historique</button>
@@ -29,6 +33,7 @@
         <p>30/04 17:05 : lumière chambre 2 allumée</p>
       </div>
     </div>
+
     <div class="flex1">
       <button class="accordion" type="button" name="button">Général</button>
       <div class="panel">
