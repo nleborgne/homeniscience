@@ -12,18 +12,44 @@
     <div class="flex1">
     	<button type="button" class="accordion" name="button">Bareme de consommation</button>
     	<div class="panel2">
-    	
+    		<h3>Bareme d'electricite</h3>
+    	    	<label class="switch">
+   			   		<input type="checkbox">
+    				<span class="slider round"></span>
+    			</label>
+  
+   			<input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput(this.value);"></input>
+   			<p id="textInput">0</p>
+    		<h3>Bareme d'eau</h3>
+    		<label class="switch">
+   			   		<input type="checkbox">
+    				<span class="slider round"></span>
+    			</label>
+  
+   			<input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput2(this.value);"></input>
+   			<p id="textInput2">0</p>
     	</div>
     </div>
-   
-   	    <p class="checkside"><span class ="checktitle">Consommation</span> <br />
+   	
+   	<div class="flex5">
+   	<div class=panel5>
+   	    <div class ="checktitle">Consommation Globale</div> 
+   	    <span class="radio">
     	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" onclick="elec()"/><label for="case1">Electricite</label><br />
+		</span>
+		<span class="radio">
 		<input type="radio" name="conso" id ="case2" value="eau" onclick="water()"/><label for="case2">Eau</label><br />
-    	<br />
-    	<span class="checktitle">Intervalle de temps</span> <br />
+    	</span>
+    	
+    	<div class="checktitle">Intervalle de temps</div> 
+    	<span class="radio">
     	<input type="radio" name="temps" id="case3"  value="semaines" /><label for="case3">Semaines</label><br />
+		</span>
+		<span class="radio">
 		<input type="radio" name="temps" id ="case4" value="mois" checked="checked" /><label for="case4">Mois</label>
-    	</p>
+    	</span>
+    </div>
+    </div>
    </div>
 </div>
     
@@ -206,10 +232,14 @@ function elec() {
 
 	}
 
-/*
+
 function updateTextInput(val) {
-  document.getElementsByClassName('textInput')[0].innerHTML = val;
+  document.getElementById('textInput').innerHTML = val;
 }
-*/
+
+function updateTextInput2(val2) {
+	  document.getElementById('textInput2').innerHTML = val2;
+	}
+
 
 </script>

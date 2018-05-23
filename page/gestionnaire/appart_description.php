@@ -43,7 +43,7 @@ $donnees_domicile = $req->fetch();
     		<?php echo '<form method="post" action="index.php" enctype="multipart/form-data"><input type="button"
       name="'.$donnees_domicile['nom'].'" value="'.$donnees_domicile['nom'].'" class="accordion" title="Retour" OnClick="window.location.href=\'index.php\'"></form>';
             ?>
-    		<div class="panel">
+    		<div class="panel4">
     			<?php echo '<p><strong>Adresse</strong> : '.$donnees_domicile['numero_habitation'].' '.$donnees_domicile['rue'].', '
       .$donnees_domicile['code_postal'].', '.$donnees_domicile['pays'].'.</p>'; 
     		    echo '<p><strong>Superficie</strong> : '.$donnees_domicile['superficie'].' m2</p>';
@@ -61,22 +61,31 @@ $donnees_domicile = $req->fetch();
     		</div>
     	</div>
     	
-    	<div class=flex3>
+    	<div class=flex4>
     		<button type="button" class="accordion" name="button">Statistiques</button>
-    		<div class="panel">
+    		<div class="panel4">
     			<canvas id="myChart" width="400" height="250"></canvas>
     			<canvas id="myChart2" width="400" height="250"></canvas>
     		</div>
     	</div>
     	
-    	<p class="checkside"><span class ="checktitle">Consommation</span> <br />
+    <div class=panel3>
+   	    <div class ="checktitle">Consommation Globale</div> 
+   	    <span class="radio">
     	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" onclick="elec()"/><label for="case1">Electricite</label><br />
+		</span>
+		<span class="radio">
 		<input type="radio" name="conso" id ="case2" value="eau" onclick="water()"/><label for="case2">Eau</label><br />
-    	<br />
-    	<span class="checktitle">Intervalle de temps</span> <br />
+    	</span>
+    	
+    	<div class="checktitle">Intervalle de temps</div> 
+    	<span class="radio">
     	<input type="radio" name="temps" id="case3"  value="semaines" /><label for="case3">Semaines</label><br />
+		</span>
+		<span class="radio">
 		<input type="radio" name="temps" id ="case4" value="mois" checked="checked" /><label for="case4">Mois</label>
-    	</p>
+    	</span>
+    </div>
     	
 		
 		

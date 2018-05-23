@@ -16,8 +16,8 @@ try {
     
     $gest = $gestionnaire -> fetch();
     if ($gest['gestionnaire'] == 1) {
-        $domicile = AfficherDomicile();
         
+        $domicile = AfficherDomicile();
         
         require('gestionnaire.php');
         
