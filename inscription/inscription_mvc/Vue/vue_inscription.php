@@ -11,7 +11,7 @@
     <p>Complétez le formulaire pour créer votre compte</p>
     <!-- création formulaire d'inscription avec tous les champs à remplir -->
     <div class="formulaire_connexion">
-        <form action= "../Controller/inscription.php" method = "post">
+        <form action= "Controller/inscription.php" method = "post">
             <input class="champ" type="text" name="nom" id="nom" placeholder="Nom" required>
             <input class="champ" type="text" name="prenom" id="prenom" placeholder="Prenom" required>
             <input class="champ" type="email" name="email" id="email" placeholder="E-mail" required>
