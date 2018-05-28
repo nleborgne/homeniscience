@@ -4,9 +4,9 @@ function htmlspe(array $post){
         $post['nom'] = htmlspecialchars($post['nom']);
         $post['prenom'] = htmlspecialchars($post['prenom']);
         $post['email'] = htmlspecialchars($post['email']);
-        $post['email_confirm'] = htmlspecialchars($post['email_confirm']);
+        $post['verif_email'] = htmlspecialchars($post['verif_email']);
         $post['mdp'] = htmlspecialchars($post['mdp']);
-        $post['mdp-confirm'] = htmlspecialchars($post['mdp-confirm']);
+        $post['verif_password'] = htmlspecialchars($post['verif_password']);
     return $post;
 }
 

@@ -1,12 +1,7 @@
 <?php
 
-
-function check_mail($bdd,$post){
-    global $bdd;
-    $query = $bdd->prepare( "SELECT email FROM utilisateur WHERE email = :email" );
-    $query->bindParam( 'email', $post['email'],PDO::PARAM_STR);
-    $query->execute();
-    return $query;
+if(!isset($_SESSION)){
+session_start();
 }
 
 function connexion_bdd(){
@@ -19,6 +14,14 @@ function connexion_bdd(){
         die('Erreur : '.$e->getMessage());
     }
     return $bdd;
+}
+
+function check_mail($bdd,$post){
+    global $bdd;
+    $query = $bdd->prepare( "SELECT email FROM utilisateur WHERE email = :email" );
+    $query->bindParam( 'email', $post['email'],PDO::PARAM_STR);
+    $query->execute();
+    return $query;
 }
 
 function inscription_bdd(array $post){
