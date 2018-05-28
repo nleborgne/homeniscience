@@ -1,3 +1,4 @@
+<!-- passer en mvc -->
 <table id="table" align="left">
   <?php
   while ($piece = $afficherPieces -> fetch() ) {

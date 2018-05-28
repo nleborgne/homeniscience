@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Affichage statique de l'historique -->
   <div id="topContainer" class="container">
     <div class="flex1">

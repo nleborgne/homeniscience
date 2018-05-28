@@ -63,10 +63,12 @@ function afficherPannes() {
         'ID_type_statut' => $_POST['ID_statut']
       ));
     }
+
     function getCapteurs() {
       global $bdd;
       $get = $bdd->prepare('SELECT *,
         equipement.nom AS nom_equipement,
+        piece.nom AS nom_piece,
         equipement.ID AS ID_equipement
         FROM equipement
         INNER JOIN piece ON equipement.ID_piece = piece.ID
@@ -77,7 +79,8 @@ function afficherPannes() {
         return $get;
       }
 
-      if (!empty($_POST['ID_equipement']) && !empty($_POST['descriptif_panne'])) {
+      function insererPanne() {
+        global $bdd;
         $insert = $bdd->prepare('INSERT INTO panne (ID_equipement,ID_type_statut,date_panne,date_intervention,descriptif_panne) VALUES (:ID_equipement,:ID_type_statut,:date_panne,:date_intervention,:descriptif_panne)');
         $insert->execute(array(
           'ID_equipement' => $_POST['ID_equipement'],
@@ -86,5 +89,7 @@ function afficherPannes() {
           'date_intervention' => '0001-01-01',
           'descriptif_panne' => $_POST['descriptif_panne']
         ));
+        header('Refresh:0');
       }
+
       ?>

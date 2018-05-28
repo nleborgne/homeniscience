@@ -27,41 +27,39 @@
   </div>
   <div class="container">
 
-  <div class="container2">
-    <div class="column">
-      <article class="main">
-        <a class="probleme">Mes pannes</a>
-        <ul class="liste">
-          <li>Type capteur</li>
-          <li>Date panne</li>
-          <li>Statut</li>
-          <li>Détail</li>
-        </ul>
-
-        <?php
-        while ($donnees = $reponse->fetch()) {
-          echo '<ul class="listepanne">';
-          echo '<li>'.$donnees['nom_equipement'].'</li> ';
-          echo '<li>'.$donnees['date_panne'].'</li> ';
-          echo '<li>'.$donnees['nom_type'].'</li> ';
-          echo '<li>'.$donnees['descriptif_panne'].'</li> ';
-          echo '</ul>';
-        }
-        ?>
-      </article>
+    <div class="container2">
+      <div class="column">
+        <article class="main">
+          <a class="probleme">Mes pannes</a>
+          <?php
+          while ($donnees = $reponse->fetch()) {
+            echo '<div class="childPanne">';
+            echo '<ul>';
+            echo '<li> <strong>Capteur </strong>: '.$donnees['nom_equipement'].'</li> ';
+            echo '<li><strong>Date de la panne </strong>: '.$donnees['date_panne'].'</li> ';
+            echo '<li><strong>Statut </strong>: <div class="statut">'.$donnees['nom_type'].'</div></li> ';
+            echo '<li><strong>Description </strong>: '.$donnees['descriptif_panne'].'</li> ';
+            echo '</ul>';
+            echo '</div>';
+          }
+          ?>
+        </article>
+      </div>
     </div>
-  </div>
 
-  <div id="ajout_panne" class="container2">
-    <div class="column">
-      <article class="main">
-        <a class="probleme">Ajouter une panne</a>
-        <?php require('ajout_capteur.php');?>
-      </article>
+    <div id="ajout_panne" class="container2">
+      <div class="columnSmall">
+        <article class="main">
+          <a class="probleme">Ajouter une panne</a>
+          <?php require('ajout_capteur.php');?>
+        </article>
+      </div>
     </div>
-  </div>
 
-</div>
+  </div>
   <?php include('../footer.php'); ?>
+
+  <script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
