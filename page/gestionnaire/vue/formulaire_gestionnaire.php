@@ -15,6 +15,7 @@
 <body>
 	
 	<?php require ('../../header.php'); ?>
+	
 	<section class="form_gest" />
 	<h1>Gestionnaire, c'est quoi ?</h1>
 	<article>
