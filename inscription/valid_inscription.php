@@ -65,7 +65,7 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
         ));
 
         /* Redirection vers la page de menu une fois que l'utilisateur a créé son compte */
-        session_start();
+
         header('Location: '.$url);
 
 

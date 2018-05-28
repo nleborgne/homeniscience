@@ -7,7 +7,7 @@ catch(Exception $e)
 {
   die('Erreur : '.$e->getMessage());
 }
-$url = "../page/accueil/index.php"; //définition de l'URL à laquelle accéder en cas de sccès de la connexion
+$url = "../page/accueil/index.php"; //définition de l'URL à laquelle accéder en cas de succès de la connexion
 
 $reponse = $bdd->query('SELECT ID, email, mot_de_passe FROM utilisateur');
 
