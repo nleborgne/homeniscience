@@ -10,15 +10,15 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width">
   <title>Accueil</title>
-  <link rel="stylesheet" href="gestionnaire.css">
+  <link rel="stylesheet" href="../css/gestionnaire.css">
 </head>
 
 <body>
 	<header>
-  		<?php require ('../header.php'); ?>
+  		<?php require ('../../header.php'); ?>
   	</header>
   	<?php 
-  	require('gestionnaire_modele.php');
+  	require('../modele/gestionnaire_modele.php');
   	
 	try {
     $domicile = AfficherDomicile();
@@ -41,7 +41,7 @@ $donnees_domicile = $req->fetch();
     <div class="container_left">
     	<div class="flex2">
     		<?php echo '<form method="post" action="index.php" enctype="multipart/form-data"><input type="button"
-      name="'.$donnees_domicile['nom'].'" value="'.$donnees_domicile['nom'].'" class="accordion" title="Retour" OnClick="window.location.href=\'index.php\'"></form>';
+      name="'.$donnees_domicile['nom'].'" value="'.$donnees_domicile['nom'].'" class="accordion" title="Retour" OnClick="window.location.href=\'../controller/index.php\'"></form>';
             ?>
     		<div class="panel4">
     			<?php echo '<p><strong>Adresse</strong> : '.$donnees_domicile['numero_habitation'].' '.$donnees_domicile['rue'].', '
@@ -91,7 +91,7 @@ $donnees_domicile = $req->fetch();
 		
     </div>
     
-	<?php require ('../footer.php')?>
+	<?php require ('../../footer.php')?>
 	
 </body>
 </html>

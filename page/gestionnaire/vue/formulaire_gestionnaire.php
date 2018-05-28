@@ -9,12 +9,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width">
   <title>Accueil</title>
-  <link rel="stylesheet" href="non_gestionnaire.css">
+  <link rel="stylesheet" href="../css/non_gestionnaire.css">
 </head>
 
 <body>
 	
-	<?php require ('../header.php'); ?>
+	<?php require ('../../header.php'); ?>
 	<section class="form_gest" />
 	<h1>Gestionnaire, c'est quoi ?</h1>
 	<article>
@@ -80,7 +80,7 @@
 	
 	<p></p>
 
-	<?php require ('../footer.php')?>
+	<?php require ('../../footer.php')?>
 	
 </body>
 </html>

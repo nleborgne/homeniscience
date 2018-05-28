@@ -20,7 +20,7 @@ function IS_gestionnaire()
     $ses = $bdd->prepare('SELECT * from gestionnaire WHERE ID_utilisateur = ?');
     $ses->execute(array($_SESSION['ID']));
     return $ses;
-    $ses -> closeCursor();
+    
 }
 
 function AfficherDomicile()
@@ -32,7 +32,7 @@ from gestionnaire INNER JOIN domicile ON gestionnaire.ID = domicile.ID_gestionna
 
         $reponse -> execute(array($_SESSION['ID']));
         return $reponse;
-        $reponse -> closeCursor();
+        
 }
     
     
@@ -41,7 +41,7 @@ function AfficherPiece()
     global $bdd;
     $reponse = $bdd->query('SELECT * from piece WHERE ID_domicile = 0');
     return $reponse;
-    $reponse->closeCursor();
+   
 }
 
 function AfficherUser()
@@ -50,7 +50,7 @@ function AfficherUser()
     $reponse = $bdd->prepare('SELECT * from utilisateur WHERE ID_domicile = ?');
     $reponse -> execute(array($_GET['id']));
     return $reponse;
-    $reponse->closeCursor();
+    
 }
 
 
@@ -58,13 +58,14 @@ function AfficherUser()
     function User($domicil)
     {
         global $bdd;
-        $reponse = $bdd->query("SELECT nom, prenom FROM utilisateur WHERE ID_domicile= ? ");
-        $reponse -> execute(array($domicil));
+        $reponse = $bdd->prepare("SELECT nom, prenom FROM utilisateur WHERE ID_domicile= :dom ");
+        $reponse -> bindParam('dom', $domicil, PDO::PARAM_INT);
+        $reponse -> execute();
         return $reponse;
-        $reponse->closeCursor();
+        
     }
 
     
 
     
-?>
+

@@ -7,7 +7,7 @@
     }
 
 
-require('gestionnaire_modele.php');
+require('../modele/gestionnaire_modele.php');
 
 try {
     $gestionnaire = IS_gestionnaire();
@@ -19,12 +19,12 @@ try {
         
         $domicile = AfficherDomicile();
         
-        require('gestionnaire.php');
+        require('../vue/gestionnaire_vue.php');
         
         
     }
     else {
-        header( "Refresh:0.001; url=non_gestionnaire.php", true, 303);
+        header( "Refresh:0.001; url=../vue/non_gestionnaire.php", true, 303);
     }
     
     
