@@ -9,6 +9,6 @@ if(test_remplissage($_POST)){
 
 }
 else{
-    echo "Veuillez remplir le formulaire correctement";
+    echo "<p>Veuillez remplir le formulaire correctement</p>";
     require("../vue/formulaire_gestionnaire.php");
 }

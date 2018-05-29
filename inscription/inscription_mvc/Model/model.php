@@ -63,3 +63,27 @@ function getUserInfos($session){
     $get->execute();
     return $get;
 }
+
+function get_ID($email){
+    global $bdd;
+    $req = $bdd-> prepare('SELECT ID FROM utilisateurs WHERE email=?');
+    $req->execute($email);
+    return $req;
+}
+
+function get_ID_dom($ID){
+    global $bdd;
+    $req=$bdd->prepare('SELECT ID_domicile FROM utilisateurs WHERE ID=?');
+    $req->execute($ID);
+    return $req;
+}
+
+function set_gestionnaire($ID, $ID_dom){
+    global $bdd;
+    $gest = 0;
+    $req = $bdd->prepare("INSERT INTO gestionnaire(gestionnaire, ID_domicile, ID_utilisateur) VALUES(:gestionnaire, :ID_domicile, :ID_utilisateur)");
+    $req -> bindParam('gestionnaire',$gest,PDO::PARAM_INT);
+    $req -> bindParam('ID_domicile',$ID_dom,PDO::PARAM_INT);
+    $req -> bindParam('ID_utilisateur', $ID,PDO::PARAM_INT);
+    $req->execute();
+}
