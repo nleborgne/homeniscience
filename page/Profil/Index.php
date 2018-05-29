@@ -9,6 +9,7 @@ require('profil_modele.php');
 $id_user = getUtilisateur($_SESSION['ID']);
 $donnees = $id_user -> fetch();
 
+
 if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email'])) {
     if ($_POST['email'] == $_POST['email2']){
         modifInfoUtilisateur($_POST['email'],$_POST['nom'],$_POST['prenom'],$_SESSION['ID']);
@@ -16,9 +17,6 @@ if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email'])) {
     else{
         echo 'E-mail non identiques';
     }
-}
-else{
-    echo 'Tous les champs doivent être remplis';
 }
 
 $id_user_mdp = getMdpUtilisateur($_SESSION['ID']);
