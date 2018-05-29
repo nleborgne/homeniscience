@@ -14,7 +14,9 @@
 
 <body>
 	
-	<?php require ('../../header.php'); ?>
+	<?php require ('../../header.php');
+	require('../controller/ajout_gestionnaire_controller.php')?>
+
 	
 	<section class="form_gest" />
 	<h1>Gestionnaire, c'est quoi ?</h1>
@@ -37,15 +39,17 @@
 	domicile en tant que gestionnaire :</p>
 	</article>
 	
-		<form method="post" action="index.php" enctype="multipart/form-data" class="form">
+		<form method="post" action="../controller/ajout_gestionnaire_controller.php" enctype="multipart/form-data" class="form">
 			<p>Nom du domicile :</p>
 			<input type="text" name="nom_domicile" size="50" placeholder="Choisissez un nom pour votre domicile"/>
 			
 			<div class="row">
 			<p class="type_habitation">Type d'habitation : &nbsp</p>
 			<select name="choix" class="choix">
-				<option value="appartement">Appartement</option>
+                <?php while($ID_habitations=$ID_habitation->fetch()){?>
+				><option value="<?php echo $ID_habitations ?>"></option>
 				<option value="maison">Maison</option>
+				<?php } ?>
 			</select>
 			</div>
 		

@@ -34,7 +34,7 @@ function AfficherDomicile()
     global $bdd;
     $reponse = $bdd->prepare('SELECT *,
 domicile.ID AS id_domicile 
-FROM gestionnaire INNER JOIN domicile ON gestionnaire.ID = domicile.ID_gestionnaire WHERE gestionnaire.ID_utilisateur = 1');
+FROM gestionnaire INNER JOIN domicile ON gestionnaire.ID = domicile.ID_gestionnaire WHERE gestionnaire.ID_utilisateur = ?');
 
     $reponse->execute(array($_SESSION['ID']));
     return $reponse;
@@ -49,3 +49,8 @@ function get_right_gest(){
     $req->execute();
 }
 
+function get_type_habitation(){
+    global $bdd;
+    $req= $bdd->query("SELECT nom_type FROM type_habitation ORDER BY ID");
+    return $req;
+}

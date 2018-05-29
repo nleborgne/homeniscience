@@ -1,6 +1,6 @@
 <?php
 
-function htmlspe(array $post)
+function htmlspe($post)
 {
     $post['numero'] = htmlspecialchars($post['numero']);
     $post['rue'] = htmlspecialchars($post['rue']);
