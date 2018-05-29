@@ -145,13 +145,13 @@ $name = getNom()->fetch();?>
   <div class="topnav" id="myTopnav">
     <a id="accueil" href="/homeniscience/page/accueil/index.php">Accueil</a>
     <a id="domicile" href="/homeniscience/page/domicile/">Mon Domicile</a>
-    <a id="residence" href="/homeniscience/page/gestionnaire">Résidence</a>
+    <a id="residence" href="/homeniscience/page/gestionnaire/controller">Résidence</a>
     <div class="dropdown">
       <button class="dropbtn"><?php echo $name['prenom'].' '.$name['nom']; ?>
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">Gérer son profil</a>
+        <a href="/homeniscience/page/Profil/Index.php">Gérer son profil</a>
         <a href="#">Paramètres</a>
         <a href="/homeniscience/page/disconnect.php">Se déconnecter</a>
       </div>

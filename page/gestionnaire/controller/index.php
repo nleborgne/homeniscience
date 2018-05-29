@@ -6,8 +6,14 @@
         session_start();
     }
 
+try {
+        $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    }
+catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
 
-require('gestionnaire_modele.php');
+require('../modele/gestionnaire_modele.php');
 
 try {
     $gestionnaire = IS_gestionnaire();
@@ -18,13 +24,14 @@ try {
     if ($gest['gestionnaire'] == 1) {
         
         $domicile = AfficherDomicile();
+        $domicile1 = AfficherDomicile();
         
-        require('gestionnaire.php');
+        require('../vue/gestionnaire_vue.php');
         
         
     }
     else {
-        header( "Refresh:0.001; url=non_gestionnaire.php", true, 303);
+        header( "Refresh:0.001; url=../vue/non_gestionnaire.php", true, 303);
     }
     
     
