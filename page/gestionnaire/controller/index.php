@@ -24,6 +24,7 @@ try {
     if ($gest['gestionnaire'] == 1) {
         
         $domicile = AfficherDomicile();
+        $domicile1 = AfficherDomicile();
         
         require('../vue/gestionnaire_vue.php');
         
