@@ -17,16 +17,17 @@
   		<?php require ('../../header.php'); ?>
   	</header>
   	
-  	<div class="ancre">
-  		<select  onchange="location.href='#'+this.value">
-  			<option value="" disabled selected>Aller a un appartement ...</option>
-  			<?php 
-  			while ($donnees1 = $domicile1 -> fetch()) { ?>
-  				<option value="<?php echo $donnees1['ID']; ?>"><?php echo $donnees1['nom']; ?></option>
-  			<?php    
-  			}
-  			?>
-  		</select>
+  	<div class="container">
+  		<h3>Selectionner un domicile pour y acceder : &nbsp</h3>
+      		<select  onchange="location.href='#'+this.value">
+      			<option value="" disabled selected>Aller a un appartement ...</option>
+      			<?php 
+      			while ($donnees1 = $domicile1 -> fetch()) { ?>
+      				<option value="<?php echo $donnees1['ID']; ?>"><?php echo $donnees1['nom']; ?></option>
+      			<?php    
+      			}
+      			?>
+      		</select>
   	</div>
   	
   	
@@ -94,7 +95,7 @@
       ?>
     <div class="flex1">
     	<form method="GET" action="appart_description.php" enctype="multipart/form-data"><input type="button"
-    name="appart" value="<?php echo $donnees['nom']; ?>" class="accordion" id="bonjour" title="Afficher le detail" OnClick="window.location.href='appart_controller.php?id=<?php echo $donnees['ID']?>'"></form>
+    name="appart" value="<?php echo $donnees['nom']; ?>" class="accordion" id="<?php echo $donnees['ID']; ?>" title="Afficher le detail" OnClick="window.location.href='appart_controller.php?id=<?php echo $donnees['ID']?>'"></form>
     	<div class="panel2">
     		<p><strong>Adresse</strong> : <?php echo $donnees['numero_habitation'].' '. $donnees['rue']; ?></p>
     	<form method="GET" action="appart_description.php" enctype="multipart/form-data"><input type="button"
