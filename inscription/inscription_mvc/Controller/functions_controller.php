@@ -4,14 +4,14 @@ function htmlspe(array $post){
         $post['nom'] = htmlspecialchars($post['nom']);
         $post['prenom'] = htmlspecialchars($post['prenom']);
         $post['email'] = htmlspecialchars($post['email']);
-        $post['verif_email'] = htmlspecialchars($post['verif_email']);
+        $post['email_verif'] = htmlspecialchars($post['email_verif']);
         $post['mdp'] = htmlspecialchars($post['mdp']);
-        $post['verif_password'] = htmlspecialchars($post['verif_password']);
+        $post['mdp_verif'] = htmlspecialchars($post['mdp_verif']);
     return $post;
 }
 
 function test_equal(array $post){
-    if(($post['email'] == $post['email-confirm']) || ($post['mdp'] == $post['mdp-confirm'])){
+    if(($post['email'] == $post['email_verif']) || ($post['mdp'] == $post['mdp_verif'])){
         return false;
     }
     return true;

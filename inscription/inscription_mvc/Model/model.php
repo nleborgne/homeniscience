@@ -4,19 +4,17 @@ if(!isset($_SESSION)){
 session_start();
 }
 
-function connexion_bdd(){
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
-    }
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
-    return $bdd;
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
 }
 
-function check_mail($bdd,$post){
+
+function check_mail($post){
     global $bdd;
     $query = $bdd->prepare( "SELECT email FROM utilisateur WHERE email = :email" );
     $query->bindParam( 'email', $post['email'],PDO::PARAM_STR);
@@ -24,10 +22,11 @@ function check_mail($bdd,$post){
     return $query;
 }
 
-function inscription_bdd(array $post){
+function inscription_bdd($post){
     global $bdd;
     /*Initialisations de toutes les valeurs par defaut pour les bindParam*/
     $ID_domicile=0;
+    $adresse='';
     $num_fixe='';
     $num_mobile='';
     $ID_type_utilisateur=2;
@@ -43,9 +42,10 @@ function inscription_bdd(array $post){
     /*bindParam sur tous les paramètres à rentrer dans la requête, pour eviter les injections SQL*/
     $requete->bindParam('ID_domicile', $ID_domicile,PDO::PARAM_INT);
     $requete->bindParam('email', $post['email'],PDO::PARAM_STR);
-    $requete->bindParam('mot_de_passe',$hash);
+    $requete->bindParam('mot_de_passe',$hash,PDO::PARAM_STR);
     $requete->bindParam('nom', $post['nom'],PDO::PARAM_STR);
-    $requete->bindParam('adresse', $post['adresse'],PDO::PARAM_STR);
+    $requete->bindParam('prenom', $post['prenom'],PDO::PARAM_STR);
+    $requete->bindParam('adresse', $adresse,PDO::PARAM_STR);
     $requete->bindParam('numero_fixe', $num_fixe,PDO::PARAM_INT);
     $requete->bindParam('numero_mobile',$num_mobile,PDO::PARAM_INT);
     $requete->bindParam('ID_type_utilisateur', $ID_type_utilisateur,PDO::PARAM_INT);

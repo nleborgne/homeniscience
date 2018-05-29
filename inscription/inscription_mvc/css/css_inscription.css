@@ -3,18 +3,18 @@
     font-family: 'Comfortaa',sans-serif;
 }
 
-body, html {
+html {
     height: 100%;
+
 }
 body{
+    min-height: 100%;
     margin: 0;
+    padding: 0;
+    background: url("../blurredcity2.jpg") center;
 }
-.bg {
-    background-image: url("../blurredcity2.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    background-size: cover;
-}
+
+
 .formulaire_connexion{
     width: 25%;
     display: flex;
@@ -42,10 +42,14 @@ body{
     border-width: 0px;
     color: #FFFFFF;
 }
-p{
+.phrase1{
     color: #353535;
     font-size: 20px;
     text-align: center;
+}
+.phrase2{
+    font-size: 20px;
+    color: #EA4335;
 }
 .imgHome{
     width: 20%;
@@ -59,4 +63,10 @@ p{
 .g-recaptcha{
     margin-left: 8%;
     margin-top: 5px;
+}
+.lien_connexion{
+    color: #353535;
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
 }
