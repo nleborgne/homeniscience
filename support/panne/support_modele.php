@@ -7,7 +7,7 @@ try {
 }
 
 /* Fonction permettant d'afficher les différentes pannes */
-function afficherPannes() {
+function afficherPannes($filtre,$order) {
   global $bdd;
   /* Explication de la requete MySQL :
   On selectionne d'abord la table panne , et on effectue des jointures internes pour récupérer les informations des autres tables dont on a besoin
@@ -15,6 +15,7 @@ function afficherPannes() {
   */
   $reponse = $bdd->query('SELECT *,
     equipement.nom AS nom_equipement,
+    DATE_FORMAT(panne.date_panne,"%d/%m/%Y") AS date_panne,
     utilisateur.nom AS nom_utilisateur,
     panne.ID AS panne_ID
     FROM panne
@@ -22,7 +23,7 @@ function afficherPannes() {
     INNER JOIN equipement ON panne.ID_equipement = equipement.ID
     INNER JOIN piece ON equipement.ID_piece = piece.ID
     INNER JOIN domicile ON piece.ID_domicile = domicile.ID
-    INNER JOIN utilisateur on domicile.ID_utilisateur_principal = utilisateur.ID');
+    INNER JOIN utilisateur on domicile.ID_utilisateur_principal = utilisateur.ID ORDER BY '.$filtre.' '.$order);
     return $reponse;
   }
 
@@ -59,4 +60,5 @@ function afficherPannes() {
         'ID_type_statut' => $_POST['ID_statut']
       ));
     }
+
     ?>

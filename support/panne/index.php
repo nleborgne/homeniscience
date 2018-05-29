@@ -4,7 +4,11 @@
 require('support_modele.php');
 
 try {
-  $reponse = afficherPannes();
+  if(isset($_POST['filtre']) && isset($_POST['ordre'])) {
+    $reponse = afficherPannes($_POST['filtre'],$_POST['ordre']);
+  } else {
+    $reponse = afficherPannes("panne_ID","DESC");
+  }
   $details = afficherDetails();
   $detailsType = afficherTypes();
   require('support_vue.php');
