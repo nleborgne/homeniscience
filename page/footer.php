@@ -9,31 +9,35 @@
 </head>
 <footer>
     <nav class="nav_foot">
-        <div id="elementdessus">
+        <div id="elementgauche">
             <a id="accueil_foot" href="../accueil"><img class="logo_foot" src="/homeniscience/page/img/logoHomniscience.png" alt="Homeniscience" title="Accueil" BackColor="transparent"/></a>
-            <div id="contact">
-                <h2 class="foot_titre">Contact</h2>
-                <p><i class="fas fa-phone-square foot_small"><span class="foot_para">    +33 1 23 45 67 89</span></i></p>
-                <p><i class="fas fa-at foot_small"><span class="foot_para">    dom@isep.fr</span></i></p>
-                <p><i class="fas fa-map-marker foot_small"><span class="foot_para">    Rue notre Dame des champs</span></i></p>
-            </div>
-            <div id="reseau">
-                <h2 class="foot_titre">Réseaux sociaux</h2>
-                <i class="fab fa-facebook-square foot_fb"></i>
-                <i class="fab fa-twitter-square foot_tw"></i>
-                <i class="fab fa-linkedin foot_in"></i>
-                <i class="fab fa-google-plus-square foot_gg"></i>
-            </div>
-            <div id="about">
-                <h2 class="foot_titre">A propos d'Hexateam</h2>
-                <a id="hexateam_foot" href="Hexateam"><img class="logo_Hexateam" src="/homeniscience/page/img/logoHexateam.png" alt="Hexateam" title="Hexateam"></a>
-            </div>
         </div>
-        <div id="elementdessous">
-            <a id="foot_emailing" href="la page de l'email">E-mailing</a>
-            <a id="foot_legale" href="MentionsLegales">Mentions légales</a>
-            <a id="foot_CGU" href="CGU">CGU</a>
-            <p class="copyright">Copyright © 2018 | Domisep.fr</p>
+        <div id="elementdroite">
+            <div id="elementdessus">
+                <div id="contact">
+                    <h2 class="foot_titre">Contact</h2>
+                    <p><i class="fas fa-phone-square foot_small"><span class="foot_para">    +33 1 23 45 67 89</span></i></p>
+                    <p><i class="fas fa-at foot_small"><span class="foot_para">    dom@isep.fr</span></i></p>
+                    <p><i class="fas fa-map-marker foot_small"><span class="foot_para">    Rue notre Dame des champs</span></i></p>
+                </div>
+                <div id="reseau">
+                    <h2 class="foot_titre">Réseaux sociaux</h2>
+                    <i class="fab fa-facebook-square foot_fb"></i>
+                    <i class="fab fa-twitter-square foot_tw"></i>
+                    <i class="fab fa-linkedin foot_in"></i>
+                    <i class="fab fa-google-plus-square foot_gg"></i>
+                </div>
+                <div id="about">
+                    <h2 class="foot_titre">A propos d'Hexateam</h2>
+                    <a id="hexateam_foot" href="Hexateam"><img class="logo_Hexateam" src="/homeniscience/page/img/logoHexateam.png" alt="Hexateam" title="Hexateam"></a>
+                </div>
+            </div>
+            <div id="elementdessous">
+                <a id="foot_emailing" href="la page de l'email">E-mailing</a>
+                <a id="foot_legale" href="MentionsLegales">Mentions légales</a>
+                <a id="foot_CGU" href="CGU">CGU</a>
+                <span class="copyright">Copyright © 2018 | Domisep.fr</span>
+            </div>
         </div>
     </nav>
 </footer>
@@ -47,27 +51,37 @@ footer {
 }
 .nav_foot
 {
-    position: static;
-    display: flex;
-    flex-direction: column;
+    position: sticky;
     bottom: 0;
-    height: 160px;
+    height: 190px;
     width:100%;
     background:linear-gradient(-90deg, #4650E2, #00A2E8);
+}
+#elementgauche
+{
+    float: left;
+    width: 25%;
+}
+#elementdroite
+{
+    float: left;
+    width: 65%;
 }
 #elementdessus
 {
     display: flex;
+    justify-content: space-between;
 }
-#contact, #reseau
+#elementdessous
 {
-    padding: 0px 10px 0px 150px;
-    border-bottom: solid #f2f2f2 1px;
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px #f2f2f2;
 }
-#about
+#contact, #reseau, #about
 {
-    padding: 0px 110px 0px 160px;
-    border-bottom: solid #f2f2f2 1px;
+
+    padding: 0px 10px 0px 10px;
 }
 h2
 {
@@ -85,21 +99,25 @@ h2
 {
     transition: all 0.5s ease;
     color: #3b5998;
+    cursor: pointer;
 }
 .foot_tw:hover
 {
     transition: all 0.5s ease;
     color: #33CCFF;
+    cursor: pointer;
 }
 .foot_in:hover
 {
     transition: all 0.5s ease;
     color: black;
+    cursor: pointer;
 }
 .foot_gg:hover
 {
     transition: all 0.5s ease;
     color: #EA4335;
+    cursor: pointer;
 }
 .foot_small
 {
@@ -110,31 +128,11 @@ h2
 {
     font-size: 13px;
 }
-#elementdessous
-{
-    display: flex;
-    justify-content: flex-start;
-}
-#foot_emailing
+#foot_CGU, #foot_legale, #foot_emailing, .copyright
 {
     font-size: 10px;
     font-weight: bold;
     color:#f2f2f2;
-    margin: 0px 30px 0px 270px;
-}
-#foot_CGU, #foot_legale
-{
-    font-size: 10px;
-    font-weight: bold;
-    color:#f2f2f2;
-    margin: 0px 30px 0px 30px;
-}
-.copyright
-{
-    font-size: 10px;
-    font-weight: bold;
-    color:#f2f2f2;
-    margin: 0px 30px 0px 720px;
 }
 .logo_foot
 {
@@ -158,6 +156,15 @@ h2
     height: 80px;
     width: 70px;
     margin-left: 10px;
+}
+@media screen and (max-width: 900px) {
+    #elementgauche{
+        display: block;
+    }
+    #elementdroite{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 </style>

@@ -25,6 +25,11 @@
             /* Requête qui permet d'ajouter un utilisateur dans la base de donnée avec tous les attributs nécessaires */
 
             inscription_bdd($_POST);
+            $ID_array=get_ID($_POST['email']);
+            $ID=$ID_array->fetch();
+            $ID_dom_array=get_ID_dom($ID);
+            $ID_dom=$ID_dom_array->fetch();
+            set_gestionnaire($ID, $ID_dom);
 
             /* Redirection vers la page de menu une fois que l'utilisateur a créé son compte */
             header('Location: ' . $url);
