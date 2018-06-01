@@ -1,5 +1,10 @@
 <?php
 
+if(!isset($_SESSION)){
+  session_start();
+}
+
+
 include("functions_ajout_gestionnaire.php");
 include("../modele/ajou_gestionnaire_model.php");
 
@@ -7,11 +12,11 @@ include("../modele/ajou_gestionnaire_model.php");
 
 $ID_habitation=get_type_habitation();
 
-if(test_remplissage($_POST)){
-    $_POST=htmlspe($_POST);
 
+
+if (!empty($_POST{'nom_domicile'})) {
+    Adddomicile($_SESSION['ID'], $_POST['nom_domicile'], $_POST['superficie'], $_POST['numero'], $_POST['rue'], $_POST['postal'], $_POST['pays']);
 }
-else{
-    echo "<p>Veuillez remplir le formulaire correctement</p>";
-    require("../vue/formulaire_gestionnaire.php");
-}
+
+
+

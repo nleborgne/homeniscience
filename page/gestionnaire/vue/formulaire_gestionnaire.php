@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION)){
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +21,7 @@
 <body>
 	
 	<?php require ('../../header.php');
-	require('../controller/ajout_gestionnaire_controller.php')?>
+	require('../controller/ajout_gestionnaire_controller.php'); ?>
 
 	
 	<section class="form_gest" />
@@ -46,30 +52,29 @@
 			<div class="row">
 			<p class="type_habitation">Type d'habitation : &nbsp</p>
 			<select name="choix" class="choix">
-                <?php while($ID_habitations=$ID_habitation->fetch()){?>
-				><option value="<?php echo $ID_habitations ?>"></option>
-				<option value="maison">Maison</option>
+                <?php while($ID_hab=$ID_habitation->fetch()){?>
+				<option value="<?php echo $ID_hab['ID'] ?>"><?php echo $ID_hab['nom_type'] ?></option>
 				<?php } ?>
 			</select>
 			</div>
 		
-			<p>Numero :</p>
-			<input type="text" name="numero" size="50" placeholder="Numero de rue" />
+			<p>Numéro :</p>
+			<input type="text" name="numero" size="50" placeholder="Numero de rue" required/>
 		
 			<p>Rue :</p>
-			<input type="text" name="rue" size="50" placeholder="Nom de rue" />
+			<input type="text" name="rue" size="50" placeholder="Nom de rue" required/>
 		
 			<p>Code Postal :</p>
-			<input type="text" name="postal" size="50" placeholder="Code postal" />
+			<input type="text" name="postal" size="50" placeholder="Code postal" required/>
 		
 			<p>Pays :</p>
-			<input type="text" name="pays" size="50" placeholder="Pays" />
+			<input type="text" name="pays" size="50" placeholder="Pays" required/>
 		
 			<p>Nombre de Pieces :</p>
-			<input type="text" name="nbre_piece" size="50" placeholder="Nombre de pieces dans votre habitation" />
+			<input type="text" name="nbre_piece" size="50" placeholder="Nombre de pieces dans votre habitation" required/>
 		
 			<p>Superficie :</p>
-			<input type="text" name="superficie" size="50" placeholder="Superficie de l'habitation" />
+			<input type="text" name="superficie" size="50" placeholder="Superficie de l'habitation" required/>
 			
 			<div class="row">
 			<input type="checkbox" name="cgu" id="case1" class="check_cgu" />
