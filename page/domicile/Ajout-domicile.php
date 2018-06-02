@@ -26,7 +26,7 @@ $mail='';
 <div style="display:flex;flex-wrap: nowrap">
 <img src="homeicone.png" style="height: 100px;width: 100px;">
 <div style="display: inline-block">
-<?php $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
+<?php
 while ($dom = $domicile->fetch()){
     ?>
     <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px ">
@@ -39,19 +39,7 @@ while ($dom = $domicile->fetch()){
 
 
 
-    <?php
-    if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
 
-        $req = $bdd->exec('DELETE FROM domicile WHERE ID="'.$ID_domicile.'" ' );
-        if ( !$req ) {
-            echo 'Erreur de suppression';
-        } else {
-            echo 'Entrée supprimée';
-        }
-        //));
-
-    }
-    ?>
 
     </form>
 </div>
@@ -71,36 +59,7 @@ while ($dom = $domicile->fetch()){
         <input type="text" id="superficie" name="size" placeholder="superficie ">
         <br>
         <input class="boutton" type="submit" name="ajouter" value="definir" >
-        <?php
 
-            if(isset($_POST['ajouter'])){
-                if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
-
-                    $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire)
-                                VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire)');
-                    $requete ->execute(array(
-                        'ID' =>NULL,
-                        'ID_utilisateur_principal' => $ID_utilisateur_principal,
-                        'nom' => $_POST['nom'],
-                        'nombre_pieces' => 0,
-                        'superficie' =>$_POST['size'],
-                        'ID_type_habitation' =>1,
-                        'numero_habitation' =>$_POST['num'],
-                        'rue' =>$_POST['rue'],
-                        'code_postal' =>$_POST['post'],
-                        'pays' =>$_POST['pays'],
-                        'ID_confidentialite' =>1,
-                        'ID_gestionnaire'=>0,
-                    ));
-
-
-                }
-                else{
-                    echo"ajout impossible";
-                }
-            }
-
-        ?>
     </form>
 </div>
 <div class="formulaire">
@@ -110,22 +69,7 @@ while ($dom = $domicile->fetch()){
         <input type="text" id="piece" name="piece" placeholder="piece a ajouter ">
 
         <input class="boutton" type="submit" name="ajoutpiece" value="ajouter">
-        <?php
 
-         if(isset($_POST['ajoutpiece'])){
-             if(!empty($_POST['piece'])) {
-
-                 $requete = $bdd->prepare('INSERT INTO piece(ID,ID_domicile,nom,nombre_capteurs)
-                 VALUES (:ID,:ID_domicile,:nom,:nombre_capteurs)');
-                 $requete->execute(array(
-                     'ID' => NULL,
-                     'ID_domicile' => $ID_domicile,
-                     'nom' => $_POST['piece'],
-                     'nombre_capteurs' => 0,
-
-                 ));
-
-             }};  ?>
     </form>
 
     <form method="POST">
@@ -134,7 +78,7 @@ while ($dom = $domicile->fetch()){
         <select class="select-style" id="piece" name="nom_piece" required>
 
             <?php
-            $piece = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=$ID_domicile  ");
+
             while ($donnees_pieces = $piece->fetch()){
                 ?>
                 <option value="<?php echo $donnees_pieces['nom'] ; ?>"> <?php echo $donnees_pieces['nom']; ?> </option>
@@ -145,20 +89,7 @@ while ($dom = $domicile->fetch()){
 
             <input class="boutton" type="submit" name="Suprimer" value="Supprimer" >
 
-            <?php
-            if(isset($_POST['Suprimer'])) {
-                $nom_piece= $_POST['nom_piece'];
 
-                $req = $bdd->exec('DELETE FROM piece WHERE nom="'.$nom_piece.'"AND  ID_domicile="'.$ID_domicile.'"  ' );
-                if ( !$req AND isset($_POST['Suprimer'])) {
-                    echo 'Erreur de suppression';
-                } else {
-                    echo 'Entrée '.$nom_piece.' supprimée';
-                }
-                //));
-
-            }
-            ?>
 
     </form>
 
@@ -166,7 +97,7 @@ while ($dom = $domicile->fetch()){
         </article>
     <br>
 
-    <?php $piece_ajoutées = $bdd->query("SELECT nom FROM piece WHERE ID_domicile=$ID_domicile ORDER BY ID");
+    <?php
     while ($piece_dom = $piece_ajoutées->fetch()){
         ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
 

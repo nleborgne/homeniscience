@@ -9,7 +9,7 @@
 </head>
 <?php require ('../header.php'); ?>
 <body>
-<div class="container1" >
+<div class="container1" id="home" >
     <div class="container1">
         <div class="flex1"  >
             <button class="accordion" type="button" name="button" style="background-color: #3cb0fd ;color: white  ">Domicile</button>
@@ -19,7 +19,7 @@
 
         </div>
     </div>
-    <div class="container1">
+    <div class="container1" id="gear">
         <div class="flex1">
 
             <button class="accordion" type="button" name="button" style="background-color:#1887E6 ;color: white ">Equipement</button>
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="container1">
+    <div class="container1" id="user">
         <div class="flex1">
             <button class="accordion" type="button" name="button" style="color: white " >Utilisateurs</button>
             <div class="panel" >

@@ -27,7 +27,7 @@ $mail='';
 <article>
 <div class="formulaire">
     <h4>Rechercher et ajouter un utilisateur</h4>
-    <form class="add_capt" method="post">
+    <form class="add_capt" method="post" action="index.php">
         <input class="champ" type="text" id="nom" name="nom" placeholder="utilisateurs a rechercher" required>
         <input class="boutton" type="submit" name="recherche" value="rechercher">
         <?php
@@ -46,7 +46,7 @@ $mail='';
         <select class="select-style" id="piece" name="user" required>
 
             <?php
-            $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."'  ");
+
             while ($donnees_utilisateurs = $reponse_ajout->fetch()){
                 ?>
                 <option value="<?php echo $donnees_utilisateurs['email'] ; ?>"> <?php echo $donnees_utilisateurs['email']; ?> </option>
@@ -56,19 +56,6 @@ $mail='';
 
 
         <input class="boutton" type="submit" name="Valider" value="Valider" >
-
-        <?php
-        if(isset($_POST['Valider'])) {
-                $mail= $_POST['user'];
-                $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile WHERE email=:email";
-                $stmt = $bdd->prepare($sql);
-                $stmt->execute(array(
-                        'email' => $mail
-                ));
-
-         }
-        ?>
-
     </form>
 </div>
 <div class="formulaire">
@@ -77,8 +64,8 @@ $mail='';
         <select class="select-style" id="piece" name="member" required>
 
             <?php
-            $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  ");
-            while ($donnees_utilisateurs = $reponse_ajout->fetch()){
+
+            while ($donnees_utilisateurs = $reponse_ajout2->fetch()){
                 ?>
                 <option value="<?php echo $donnees_utilisateurs['ID'] ; ?>"> <?php echo $donnees_utilisateurs['prenom']; ?> </option>
                 <?php
@@ -87,25 +74,12 @@ $mail='';
 
 
             <input class="boutton" type="submit" name="Supp" value="Supprimer" >
-
-            <?php
-            if(isset($_POST['Supp'])) {
-                $member= $_POST['member'];
-                $sql = "UPDATE utilisateur SET ID_domicile=0 WHERE ID=:ID";
-                $stmt = $bdd->prepare($sql);
-                $stmt->execute(array(
-                    'ID' => $member
-                ));
-
-            }
-            ?>
-
     </form>
 </div>
 </article>
     <br>
     <br>
-        <?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile ORDER BY ID");
+        <?php
         while ($utilisateurs = $reponse_utilisateurs->fetch()){
             ?>
             <p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/" ><?php echo $utilisateurs['prenom']; ?></p>
@@ -133,8 +107,8 @@ $mail='';
             <select class="select-style" id="piece" name="princip" required>
 
                 <?php
-                $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  ");
-                while ($donnees_utilisateurs = $reponse_ajout->fetch()){
+
+                while ($donnees_utilisateurs = $reponse_ajout3->fetch()){
                     ?>
                     <option value="<?php echo $donnees_utilisateurs['ID'] ; ?>"> <?php echo $donnees_utilisateurs['prenom']; ?> </option>
                     <?php
@@ -143,19 +117,6 @@ $mail='';
 
 
                 <input class="boutton" type="submit" name="admin" value="ajouter" >
-
-                <?php
-                if(isset($_POST['admin'])) {
-                    $member= $_POST['princip'];
-                    $sql = "UPDATE utilisateur SET  	ID_type_utilisateur=2 WHERE ID=:ID";
-                    $stmt = $bdd->prepare($sql);
-                    $stmt->execute(array(
-                        'ID' => $member
-                    ));
-
-                }
-                ?>
-
         </form>
     </div>
     <div class="formulaire">
@@ -164,8 +125,8 @@ $mail='';
             <select class="select-style" id="piece" name="noprincip" required>
 
                 <?php
-                $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  AND 	ID_type_utilisateur=2 ");
-                while ($donnees_utilisateurs = $reponse_ajout->fetch()){
+
+                while ($donnees_utilisateurs = $reponse_ajout4->fetch()){
                     ?>
                     <option value="<?php echo $donnees_utilisateurs['ID'] ; ?>"> <?php echo $donnees_utilisateurs['prenom']; ?> </option>
                     <?php
@@ -175,24 +136,12 @@ $mail='';
 
                 <input class="boutton" type="submit" name="SuppAdmin" value="Supprimer" >
 
-                <?php
-                if(isset($_POST['SuppAdmin'])) {
-                    $member= $_POST['noprincip'];
-                    $sql = "UPDATE utilisateur SET  ID_type_utilisateur=1 WHERE ID=:ID";
-                    $stmt = $bdd->prepare($sql);
-                    $stmt->execute(array(
-                        'ID' => $member
-                    ));
-
-                }
-                ?>
-
         </form>
     </div>
 </article>
 
-<?php $reponse_utilisateurs = $bdd->query("SELECT prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 ORDER BY ID");
-while ($utilisateurs = $reponse_utilisateurs->fetch()){
+<?php
+while ($utilisateurs = $reponse_utilisateurs2->fetch()){
     ?>
     <p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/" ><?php echo $utilisateurs['prenom']; ?></p>
 

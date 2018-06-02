@@ -29,11 +29,10 @@ function ID_domicile($ID_utilisateur_principal)
 
 
 
-function Affdomicile($ID_utilisateur_principal)
+function Afficher_domicile($ID_domicile)
 {
     global $bdd;
-
-    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID_utilisateur_principal=$ID_utilisateur_principal");
+    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
     return $domicile;
     $domicile->closeCursor();
 }
@@ -43,34 +42,47 @@ function Affdomicile($ID_utilisateur_principal)
 
 
 
-function Adddomicile($ID_utilisateur_principal,$nom,$size,$num,$rue,$cp,$pays)
+function Ajouter_domicile($ID_utilisateur_principal)
 {
     global $bdd;
-    $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire)
+    if(isset($_POST['ajouter'])){
+        if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
+
+            $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire)
                                 VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire)');
-    $requete ->execute(array(
-        'ID' =>NULL,
-        'ID_utilisateur_principal' => $ID_utilisateur_principal,
-        'nom' => $nom,
-        'nombre_pieces' => 0,
-        'superficie' =>$size,
-        'ID_type_habitation' =>1,
-        'numero_habitation' =>$num,
-        'rue' =>$rue,
-        'code_postal' =>$cp,
-        'pays' =>$pays,
-        'ID_confidentialite' =>1,
-        'ID_gestionnaire'=>0,
-    ));
+            $requete ->execute(array(
+                'ID' =>NULL,
+                'ID_utilisateur_principal' => $ID_utilisateur_principal,
+                'nom' => $_POST['nom'],
+                'nombre_pieces' => 0,
+                'superficie' =>$_POST['size'],
+                'ID_type_habitation' =>1,
+                'numero_habitation' =>$_POST['num'],
+                'rue' =>$_POST['rue'],
+                'code_postal' =>$_POST['post'],
+                'pays' =>$_POST['pays'],
+                'ID_confidentialite' =>1,
+                'ID_gestionnaire'=>0,
+            ));
+
+
+        }
+        else{
+            echo"ajout impossible";
+        }
+    }
 
 }
 
 
 
-function delldiomicile($ID)
+function Supprimer_domicile($ID_domicile)
 {
     global $bdd;
-    $req = $bdd->exec('DELETE FROM domicile WHERE ID='.$ID.' ');
+    if (!empty($_POST['nom']) AND !empty($_POST['rue']) AND !empty($_POST['size'])) {
+
+        $req = $bdd->exec('DELETE FROM domicile WHERE ID="' . $ID_domicile . '" ');
+    }
 
 
 }
@@ -79,18 +91,22 @@ function delldiomicile($ID)
 
 
 
-function addpiece($nom,$ID_domicile){
+function Ajouter_piece($ID_domicile){
     global $bdd;
-    $requete = $bdd->prepare('INSERT INTO piece(ID,ID_domicile,nom,nombre_capteurs)
+    if(isset($_POST['ajoutpiece'])){
+        if(!empty($_POST['piece'])) {
+
+            $requete = $bdd->prepare('INSERT INTO piece(ID,ID_domicile,nom,nombre_capteurs)
                  VALUES (:ID,:ID_domicile,:nom,:nombre_capteurs)');
-    $requete->execute(array(
-        'ID' => NULL,
-        'ID_domicile' => $ID_domicile,
-        'nom' => $nom,
-        'nombre_capteurs' => 0,
+            $requete->execute(array(
+                'ID' => NULL,
+                'ID_domicile' => $ID_domicile,
+                'nom' => $_POST['piece'],
+                'nombre_capteurs' => 0,
 
-    ));
+            ));
 
+        }};
 
 }
 
@@ -98,11 +114,11 @@ function addpiece($nom,$ID_domicile){
 
 
 
-function Affpiece($ID_domicile)
+function Afficher_piece($ID_domicile)
 {
     global $bdd;
-    $piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile=$ID_domicile  ");
-    return $piece;
+    $piece_ajoutées = $bdd->query("SELECT ID, nom FROM piece WHERE ID_domicile=$ID_domicile ORDER BY ID");
+    return $piece_ajoutées;
     $piece->closeCursor();
 }
 
@@ -112,12 +128,70 @@ function Affpiece($ID_domicile)
 
 
 
-function dellpiece($ID_domicile,$nom_piece)
+function Supprimer_piece($ID_domicile)
 {
     global $bdd;
-    $req = $bdd->exec('DELETE FROM piece WHERE nom="'.$nom_piece.'" AND ID_domicile="'.$ID_domicile.'"' );
+    if(isset($_POST['Suprimer'])) {
+        $nom_piece= $_POST['nom_piece'];
+
+        $req = $bdd->exec('DELETE FROM piece WHERE nom="'.$nom_piece.'"AND  ID_domicile="'.$ID_domicile.'"  ' );
+
+        //));
+
+    }
+}
 
 
+
+
+function Afficher_cemac($ID_domicile)
+{
+    global $bdd;
+    $cemac = $bdd->query("SELECT cemac.nom,cemac.ID FROM cemac JOIN piece ON cemac.ID_piece = piece.ID WHERE piece.ID_domicile= $ID_domicile ");
+    return $cemac;
+    $cemac->closeCursor();
+}
+
+
+
+
+
+function Ajouter_cemac()
+{
+    global $bdd;
+    if(isset($_POST['addc'])){
+        if(!empty($_POST['numero'])) {
+
+            $requete = $bdd ->prepare('INSERT INTO cemac( ID ,ID_piece ,nom, port )
+                              VALUES ( :ID , :ID_piece , :nom , :port )');
+            $requete ->execute(array(
+                'ID' =>NULL,
+                'ID_piece' => $_POST['piece'],
+                'nom' => $_POST['numero'],
+                'port' => 10,
+
+
+            ));
+        }
+    }
+}
+
+
+function Supprimer_cemac()
+{
+    global $bdd;
+    if(isset($_POST['delce'])) {
+
+        $ID_cem= $_POST['ID_cem'];
+        $req = $bdd->exec('DELETE FROM cemac WHERE ID="'.$ID_cem.'"  ' );
+        if ( !$req AND isset($_POST['Suprimer'])) {
+            echo 'Erreur de suppression';
+        } else {
+            echo 'Entrée supprimée';
+        }
+        //));
+
+    }
 }
 
 
@@ -126,7 +200,7 @@ function dellpiece($ID_domicile,$nom_piece)
 
 
 
-function Afftypecapt()
+function Afficher_type_capteur()
 {
     global $bdd;
     $reponse_capteur = $bdd->query("SELECT nom_type,ID FROM type_equipement ORDER BY ID");
@@ -141,19 +215,24 @@ function Afftypecapt()
 
 
 
-function Addcapt($ID_piece,$nom,$type)
+function Ajouter_capteur()
 {
     global $bdd;
-    $requete = $bdd ->prepare('INSERT INTO equipement( ID ,ID_piece ,nom, ID_type_equipement )
+    if(isset($_POST['add'])){
+        if(!empty($_POST['nom'])) {
+
+            $requete = $bdd ->prepare('INSERT INTO equipement( ID ,ID_piece ,nom, ID_type_equipement )
                               VALUES ( :ID , :ID_piece , :nom , :ID_type_equipement )');
-    $requete ->execute(array(
-        'ID' =>NULL,
-        'ID_piece' => $ID_piece,
-        'nom' => $nom,
-        'ID_type_equipement' => $type,
+            $requete ->execute(array(
+                'ID' =>NULL,
+                'ID_piece' => $_POST['piece'],
+                'nom' => $_POST['nom'],
+                'ID_type_equipement' => $_POST['type_capteur'],
 
 
-    ));
+            ));
+        }
+    }
 }
 
 
@@ -161,10 +240,10 @@ function Addcapt($ID_piece,$nom,$type)
 
 
 
-function Affcapt($ID_domicile)
+function Afficher_capteur($ID_domicile)
 {
     global $bdd;
-    $capt = $bdd->query("SELECT equipement.nom,equipement.ID FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=$ID_domicile ");
+    $capt = $bdd->query("SELECT equipement.nom,equipement.ID FROM equipement JOIN piece ON equipement.ID_piece = piece.ID WHERE piece.ID_domicile=$ID_domicile  ");
     return $capt;
     $capt->closeCursor();
 }
@@ -173,21 +252,42 @@ function Affcapt($ID_domicile)
 
 
 
-function dellcapt($ID_cap)
+function Supprimer_capteur()
 {
     global $bdd;
-    $req = $bdd->exec('DELETE FROM equipement WHERE ID="'.$ID_cap.'"  ' );
+    if(isset($_POST['dell'])) {
+
+        $ID_cap= $_POST['ID_capt'];
+        $req = $bdd->exec('DELETE FROM equipement WHERE ID="'.$ID_cap.'"  ' );
+        if ( !$req AND isset($_POST['Suprimer'])) {
+            echo 'Erreur de suppression';
+        } else {
+            echo 'Entrée supprimée';
+        }
+        //));
+
+    }
 }
 
 
 
 
 
-function Affmail($recherche)
+function Afficher_email()
 {
     global $bdd;
+    $recherche=' ';
     $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."'  ");
+    if(isset($_POST['recherche'])){
+        if(!empty(isset($_POST['nom']))) {
+            $recherche = $_POST['nom'];
+            $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."'  ");
+        }
+    }
+
     return $reponse_ajout;
+    //header('Location:../index.php#user');
+
     $reponse_ajout->closeCursor();
 }
 
@@ -198,17 +298,19 @@ function Affmail($recherche)
 
 
 
-function Adduser($ID,$ID_domicile)
+function Ajouter_utilisateur($ID_domicile)
 {
     global $bdd;
-    $member= $ID;
-    $dom=$ID_domicile;
-    $sql = "UPDATE utilisateur SET ID_domicile=:ID_domicile WHERE ID=:ID";
-    $stmt = $bdd->prepare($sql);
-    $stmt->execute(array(
-        'ID' => $member,
-        'ID_domicile' => $dom
+    $mail='';
+    if(isset($_POST['Valider'])) {
+        $mail= $_POST['user'];
+        $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile WHERE email=:email";
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute(array(
+        'email' => $mail
     ));
+
+}
 }
 
 
@@ -217,7 +319,7 @@ function Adduser($ID,$ID_domicile)
 
 
 
-function Affuseradd($ID_domicile)
+function Afficher_utilisateur($ID_domicile)
 {
     global $bdd;
     $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  ");
@@ -230,19 +332,57 @@ function Affuseradd($ID_domicile)
 
 
 
-function delluser($ID)
+function Supprimer_utilisateur()
 {
     global $bdd;
-    $member= $ID;
-    $sql = "UPDATE utilisateur SET ID_domicile=0 WHERE ID=:ID";
-    $stmt = $bdd->prepare($sql);
-    $stmt->execute(array(
-        'ID' => $member
-    ));
+    if (isset($_POST['Supp'])) {
+        $member = $_POST['member'];
+        $sql = "UPDATE utilisateur SET ID_domicile=0 WHERE ID=:ID";
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute(array(
+            'ID' => $member
+        ));
+
+    }
 }
 
 
-?>
 
 
+function Ajouter_utilisateur_principal()
+{
+    global $bdd;
+    if(isset($_POST['admin'])) {
+        $member= $_POST['princip'];
+        $sql = "UPDATE utilisateur SET  	ID_type_utilisateur=2 WHERE ID=:ID";
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute(array(
+            'ID' => $member
+        ));
 
+    }
+}
+
+
+function Supprimer_utilisateur_principal()
+{
+    global $bdd;
+    if(isset($_POST['SuppAdmin'])) {
+        $member= $_POST['noprincip'];
+        $sql = "UPDATE utilisateur SET  ID_type_utilisateur=1 WHERE ID=:ID";
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute(array(
+            'ID' => $member
+        ));
+
+    }
+}
+
+
+function Afficher_utilisateur_principal($ID_domicile)
+{
+    global $bdd;
+    $reponse_utilisateurs = $bdd->query("SELECT ID,prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 ORDER BY ID");
+    return $reponse_utilisateurs;
+    $reponse_utilisateurs->closeCursor();
+}
