@@ -46,6 +46,7 @@ function modifMdpUtilisateur($mdp, $idUser){
     $req = $bdd->prepare('UPDATE utilisateur SET mot_de_passe = :mdp WHERE ID = :id');
     $req->bindParam('mdp', $mdp, PDO::PARAM_STR);
     $req->bindParam('id', $idUser, PDO::PARAM_INT);
+    $req->execute();
 }
 
 

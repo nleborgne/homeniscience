@@ -62,4 +62,7 @@
   <script type="text/javascript" src="script.js"></script>
 
 </body>
+<footer style="position: inherit">
+    <?php require ('../footer.php')?>
+</footer>
 </html>

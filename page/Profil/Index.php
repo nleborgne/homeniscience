@@ -28,7 +28,8 @@ if(!empty($_POST['OldMdp'])){
     $mdp_client = $_POST['OldMdp'];
     if(password_verify($mdp_client, $bdd_mdp['mot_de_passe'])) {
         if ($_POST['NewMdp'] == $_POST['NewMdp2']) {
-            modifMdpUtilisateur($_POST['NewMdp'], $_SESSION['ID']);
+            $hash =  password_hash($_POST['NewMdp'], PASSWORD_DEFAULT);
+            modifMdpUtilisateur($hash, $_SESSION['ID']);
         }
     }
 }
