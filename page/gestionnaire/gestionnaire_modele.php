@@ -1,4 +1,5 @@
 <?php
+
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -8,18 +9,30 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-function AfficherDomicile()
+function IS_gestionnaire()
 {
     global $bdd;
-    $reponse = $bdd->query('SELECT * from domicile WHERE ID_gestionnaire = 1');
-    return $reponse;
-    $reponse->closeCursor();
+
+    $ses = $bdd->prepare('SELECT * from gestionnaire WHERE ID_utilisateur = ?');
+    $ses->execute(array(1));
+    return $ses;
+    $ses -> closeCursor();
 }
 
+function AfficherDomicile()
+{
+        global $bdd;
+        $reponse = $bdd->prepare('SELECT * from domicile WHERE ID_gestionnaire = ?');
+        $reponse -> execute(array(1));
+        return $reponse;
+        $reponse -> closeCursor();
+}
+    
+    
 function AfficherPiece()
 {
     global $bdd;
-    $reponse = $bdd->query('SELECT * from piece WHERE ID_domicile = 1');
+    $reponse = $bdd->query('SELECT * from piece WHERE ID_domicile = 0');
     return $reponse;
     $reponse->closeCursor();
 }
@@ -27,16 +40,9 @@ function AfficherPiece()
 function AfficherUser()
 {
     global $bdd;
-    $reponse = $bdd->query('SELECT * from utilisateur WHERE ID_domicile = 1');
+    $reponse = $bdd->query('SELECT * from utilisateur WHERE ID_domicile = 0');
     return $reponse;
     $reponse->closeCursor();
 }
     
 ?>
-
-
-
-
-
-
-

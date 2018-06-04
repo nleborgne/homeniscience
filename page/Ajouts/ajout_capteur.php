@@ -20,14 +20,15 @@
         die('Erreur : '.$e->getMessage());
     }
     $id_dom_utilisateur = 1;
+
     ?>
     <br>
-    <img src="sensorsicon.png" style="height: 80px;width: 80px;">
+    <img src="../image/sensorsicon.png" style="height: 80px;width: 80px;">
     <div class="formulaire">
         <form class="add_capt" method="post">
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
             <select class="select-style" id="piece" name="piece" required>
-                <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = $id_dom_utilisateur ORDER BY ID");
+                <?php $reponse_piece = $bdd->query("SELECT nom,ID FROM piece WHERE ID_domicile = '$id_dom_utilisateur' ORDER BY ID");
                 while ($donnees_piece = $reponse_piece->fetch()){
                     ?>
                     <option value="<?php echo $donnees_piece['ID']; ?>"> <?php echo $donnees_piece['nom']; ?> </option>
@@ -48,6 +49,8 @@
             <?php
 
             if(isset($_POST['add'])){
+                $id_piece = $_POST['piece'];
+                $nbr_capteur=$bdd->exec("UPDATE piece SET nombre_capteurs = nombre_capteurs + 1 WHERE ID = $id_piece");
                    if(!empty($_POST['nom'])) {
 
                              $requete = $bdd ->prepare('INSERT INTO equipement(ID,ID_piece,nom,ID_type_equipement,consommation)

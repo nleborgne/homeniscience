@@ -11,25 +11,52 @@
 </head>
 <?php require('../header.php'); ?>
 <body>
+  <h1>SUPPORT</h1>
   <div class="container">
-    <a href="panne/index/0">
-      <div class="child">
-        <i class="fas fa-exclamation-triangle fa-5x"></i>
-        <h3>GÉRER LES PANNES</h3>
-      </div>
+    <a href="javascript:window.open('ajout_capteur.php','mywindowtitle','width=300,height=400')">
+    <button class="child">
+        <i class="fas  fa-exclamation-triangle"></i>&nbsp;
+        <p>Ajouter une panne</p>
+    </button>
+  </a>
+    <a href="mailto:support@domisep.fr">
+      <button class="child">
+        <i class="fas fa-comment"></i>&nbsp;
+        <p>Contacter Domisep</p>
+      </button>
     </a>
-    <a href="">
-      <div class="child">
-        <i class="fas fa-comment fa-5x"></i>
-        <h3>CHAT</h3>
-      </div>
-    </a>
-    <a href="">
-      <div class="child">
-        <i class="fas fa-cog fa-5x"></i>
-        <h3>OTHER STUFF</h3>
-      </div>
-    </a>
+  </div>
+  <div class="container2">
+    <div class="column">
+      <article class="main">
+        <a class="probleme">Liste des pannes</a>
+        <ul class="liste">
+          <li>ID panne</li>
+          <li>ID user</li>
+          <li>Nom user</li>
+          <li>Type capteur</li>
+          <li>Date panne</li>
+          <li>Statut</li>
+          <li>Détail</li>
+        </ul>
+
+        <?php
+        while ($donnees = $reponse->fetch()) {
+          echo '<a href="/homeniscience/page/support/panne/index/'.$donnees['ID'].'#detail">';
+          echo '<ul class="listepanne">';
+          echo '<li>'.$donnees['ID'].'</li> ';
+          echo '<li>'.$donnees['ID_utilisateur_principal'].'</li> ';
+          echo '<li>'.$donnees['nom_utilisateur'].'</li> ';
+          echo '<li>'.$donnees['nom_equipement'].'</li> ';
+          echo '<li>'.$donnees['date_panne'].'</li> ';
+          echo '<li>'.$donnees['nom_type'].'</li> ';
+          echo '<li>'.$donnees['descriptif_panne'].'</li> ';
+          echo '</ul>';
+          echo '</a>';
+        }
+        ?>
+      </article>
+    </div>
   </div>
 </body>
 </html>

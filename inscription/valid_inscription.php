@@ -13,7 +13,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', 'tristank');
+    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
@@ -53,14 +53,15 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
         */
 
         /* Requête qui permet d'ajouter un utilisateur dans la base de donnée avec tous les attributs nécessaires */
-
+        $hash =  password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+        echo $hash;
+        echo gettype($hash);
         $requete = $bdd ->prepare('INSERT INTO utilisateur (ID_domicile, email, mot_de_passe, nom, prenom, adresse, numero_fixe, numero_mobile, ID_type_utilisateur, ID_langue, image, ID_theme, ID_mode_paiement)
                                 VALUES (:ID_domicile, :email, :mot_de_passe, :nom, :prenom, :adresse, :numero_fixe, :numero_mobile, :ID_type_utilisateur, :ID_langue, :image, :ID_theme, :ID_mode_paiement)');
         $requete ->execute(array(
             'ID_domicile' =>0,
             'email' => $_POST['email'],
-            'mot_de_passe' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
-
+            'mot_de_passe' => $hash,
             'nom' => $_POST['nom'],
             'prenom' => $_POST['prenom'],
             'adresse' =>'',
@@ -85,7 +86,7 @@ if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) 
 else
 {
     echo "Vous n'avez pas rempli tous les champs necessaires"; /* message affichant que des champs manques */
-    include("Inscription.php"); /* redirection vers le formulaire*/
+    //include("Inscription.php"); /* redirection vers le formulaire*/
 }
 ?>
 

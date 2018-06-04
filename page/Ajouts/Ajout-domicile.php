@@ -24,7 +24,7 @@ $mail='';
 ?>
 <br>
 <div style="display:flex;flex-wrap: nowrap">
-<img src="homeicone.png" style="height: 100px;width: 100px;">
+<img src="../image/homeicone.png" style="height: 100px;width: 100px;">
 <div style="display: inline-block">
 <?php $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID=10 ORDER BY ID");
 while ($dom = $domicile->fetch()){
