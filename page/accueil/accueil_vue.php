@@ -75,10 +75,11 @@
       </div>
     </div>
   </div>
-  <?php //require('../footer.php') ?>
+  <footer style="position: inherit">
+      <?php require ('../footer.php')?>
+  </footer>
   <script src="script.js"></script>
+
 </body>
-<footer style="position: inherit">
-    <?php require ('../footer.php')?>
-</footer>
+
 </html>

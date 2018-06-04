@@ -1,0 +1,36 @@
+body
+{
+    background-image: url("fond.jpg");
+}
+#conteneur
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15%;
+}
+.description
+{
+    //border: 3px green dashed;
+    margin-left: 18% ;
+    margin-right: auto;
+}
+.formulaire
+{
+    //border: 3px green dashed;
+    margin-left: 35% ;
+    margin-right: auto;
+}
+label
+{
+    color : white;
+}
+.Valider
+{
+    //border: 3px green dashed;
+    border-radius: 10px;
+    background-color: #00629f;
+    color: white;
+    padding: 7px 15px 7px 15px;
+    margin-left: 35%;
+}
