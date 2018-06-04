@@ -22,10 +22,10 @@
                 </div>
                 <div id="reseau">
                     <h2 class="foot_titre">Réseaux sociaux</h2>
-                    <i class="fab fa-facebook-square foot_fb"></i>
-                    <i class="fab fa-twitter-square foot_tw"></i>
-                    <i class="fab fa-linkedin foot_in"></i>
-                    <i class="fab fa-google-plus-square foot_gg"></i>
+                    <i class="fab fa-facebook-square foot_fb" title="facbook"></i>
+                    <i class="fab fa-twitter-square foot_tw" title="twitter"></i>
+                    <i class="fab fa-linkedin foot_in" title="linkedin"></i>
+                    <i class="fab fa-google-plus-square foot_gg" title="google"></i>
                 </div>
                 <div id="about">
                     <h2 class="foot_titre">A propos d'Hexateam</h2>
@@ -97,25 +97,25 @@ h2
 }
 .foot_fb:hover
 {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     color: #3b5998;
     cursor: pointer;
 }
 .foot_tw:hover
 {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     color: #33CCFF;
     cursor: pointer;
 }
 .foot_in:hover
 {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     color: black;
     cursor: pointer;
 }
 .foot_gg:hover
 {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     color: #EA4335;
     cursor: pointer;
 }
