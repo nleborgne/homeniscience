@@ -32,7 +32,7 @@ function ID_domicile($ID_utilisateur_principal)
 function Afficher_domicile($ID_domicile)
 {
     global $bdd;
-    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
+    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie,pays FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
     return $domicile;
     $domicile->closeCursor();
 }
@@ -79,10 +79,8 @@ function Ajouter_domicile($ID_utilisateur_principal)
 function Supprimer_domicile($ID_domicile)
 {
     global $bdd;
-    if (!empty($_POST['nom']) AND !empty($_POST['rue']) AND !empty($_POST['size'])) {
+    $req = $bdd->exec('DELETE FROM domicile WHERE ID="' . $ID_domicile . '" ');
 
-        $req = $bdd->exec('DELETE FROM domicile WHERE ID="' . $ID_domicile . '" ');
-    }
 
 
 }

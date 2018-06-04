@@ -29,7 +29,7 @@ $mail='';
     <h4>Rechercher et ajouter un utilisateur</h4>
     <form class="add_capt" method="post" action="index.php">
         <input class="champ" type="text" id="nom" name="nom" placeholder="utilisateurs a rechercher" required>
-        <input class="boutton" type="submit" name="recherche" value="rechercher">
+        <input class="boutton" type="submit" name="recherche" value="Rechercher">
         <?php
 
         if(isset($_POST['recherche'])){
@@ -53,6 +53,7 @@ $mail='';
                 <?php
             }
             ?>
+
 
 
         <input class="boutton" type="submit" name="Valider" value="Valider" >
@@ -116,7 +117,7 @@ $mail='';
                 ?>
 
 
-                <input class="boutton" type="submit" name="admin" value="ajouter" >
+                <input class="boutton" type="submit" name="admin" value="Ajouter" >
         </form>
     </div>
     <div class="formulaire">
