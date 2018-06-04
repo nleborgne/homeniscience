@@ -11,8 +11,8 @@ function htmlspe($post)
     return $post;
 }
 
-function test_remplissage(array $post){
-    if(!empty($post['numero']) && !empty($post['rue']) && !empty($post['postal']) && !empty($post['pays'])&& !empty($post['nbre_piece'])&& !empty($post['superficie'])){
+function test_remplissage(){
+    if(!empty($_POST['nom_domicile'])&&!empty($_POST['numero']) && !empty($_POST['rue']) && !empty($_POST['postal']) && !empty($_POST['pays'])&& !empty($_POST['nbre_piece'])&& !empty($_POST['superficie'])){
         return True;
     }
     return False;
