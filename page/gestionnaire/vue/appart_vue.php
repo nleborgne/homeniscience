@@ -19,7 +19,7 @@
   	</header>
   	<?php require('../modele/gestionnaire_modele.php'); ?>
   	
-    <div class="container_left">
+    <div class="container">
     	<div class="flex2">
     		<form method="post" action="index.php" enctype="multipart/form-data"><input type="button"
       name="appart" value="<?php echo $donnees_domicile['nom'] ?>" class="accordion" title="Retour" OnClick="window.location.href='../controller/index.php'"></form>
@@ -31,15 +31,22 @@
     		    <p><strong>Nombre de pieces</strong> : <?php echo $donnees_domicile['nombre_pieces'] ?><p>
       
       			<h3>Listes des utilisateurs</h3>
-      			<ul title="Contacter" class="list_user">
+      			<ul class="list_user">
       				<?php 
       				while ($donnees_user = $user -> fetch()) {
       				    ?>
-      				    <li> <?php echo $donnees_user['prenom'].' '.$donnees_user['nom'] ?></li>
+      				    <li>
+          				    <form method="post" action="../controller/index.php" enctype="multipart/form-data" class="user_form">
+          				    <span class="list" title="Contacter"><?php echo $donnees_user['prenom'].' '.$donnees_user['nom']; ?></span>
+          				  	  <input type="hidden" name="<?php echo $donnees_user['ID']; ?>" value="<?php echo $donnees_user['ID_domicile']; ?>" />
+          				   	  <input type="submit" class="user_input" value="Supprimer" />
+          				   	</form>
+      				   	</li>
       				<?php 
       				}
       				?>
       			</ul>
+      			<h3>Ajouter un utilisateur</h3>
       			
     		</div>
     	</div>

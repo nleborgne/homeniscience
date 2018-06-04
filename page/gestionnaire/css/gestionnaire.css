@@ -13,10 +13,12 @@ body{
   flex-wrap: wrap;
   justify-content: center;
 }
-.container_left {
+.container2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
+  height: 50px;
 }
 .flex1 {
   width:400px;
@@ -123,7 +125,7 @@ body{
   overflow-y: auto;
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
-  text-align: center;
+  
 }
 
 .panel5
@@ -138,7 +140,7 @@ body{
   text-align: center;
 }
 
-.panel h3, .panel2 h3 {
+.panel h3, .panel2 h3, .panel3 h3, .panel4 h3 {
 	background:linear-gradient(-90deg, #4650E2, #00A2E8);
 	text-align:center;
 	padding-top: 5px;
@@ -363,20 +365,18 @@ input[type=range]:focus::-ms-fill-upper {
 	margin-left: 75px;
 }
 
-
-
-
-.list_user li
+.list_user
 {
-	
-	padding-bottom: 5px;
-	cursor: pointer;
-	max-width: 100px;
+	display: inline-block;
 }
 
-.list_user li:hover
+.list
 {
-	color: gray;
+	margin-right: 7px;
+}
+.user_form
+{
+	margin-bottom: 5px;
 }
 
 .bareme
