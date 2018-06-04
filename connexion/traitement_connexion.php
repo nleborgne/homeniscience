@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 try //préparation du fichier au cas où des erreurs surviennent
 {
   $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
@@ -28,7 +27,6 @@ while($donnees = $reponse->fetch()) //vérification des données saisies avec ce
 echo "<p>Echec de la connexion. Veuillez réessayer.</p>";
 echo "<p><a href='vue_connexion.php'>Connexion</a></p>";
 $reponse->closeCursor(); //termine le traitement de la requête
-=======
+
 require ('modele_connexion.php');
->>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
 ?>

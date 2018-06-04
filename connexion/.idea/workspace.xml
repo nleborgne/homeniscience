@@ -54,10 +54,10 @@
       <file leaf-file-name="traitement_connexion.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/traitement_connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="544">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <marker date="1528105782211" expanded="true" signature="370:417" ph="SELECT ID, e... utilisateur" />
+                <marker date="1528128832532" expanded="true" signature="357:404" ph="SELECT ID, e... utilisateur" />
               </folding>
             </state>
           </provider>
@@ -156,12 +156,12 @@
       <workItem from="1527699429654" duration="874000" />
       <workItem from="1527796203023" duration="104000" />
       <workItem from="1527840096142" duration="3442000" />
-      <workItem from="1528128587534" duration="130000" />
+      <workItem from="1528128587534" duration="245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10400000" />
+    <option name="totallyTimeSpent" value="10515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -362,10 +362,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/traitement_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
+        <state relative-caret-position="544">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <marker date="1528105782211" expanded="true" signature="370:417" ph="SELECT ID, e... utilisateur" />
+            <marker date="1528128832532" expanded="true" signature="357:404" ph="SELECT ID, e... utilisateur" />
           </folding>
         </state>
       </provider>
