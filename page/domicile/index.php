@@ -13,12 +13,12 @@ try {
     $piece = Afficher_piece($ID_domicile);
     $piece_ajoutées = Afficher_piece($ID_domicile);
 
-    if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
+    /*if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
 
         Supprimer_domicile($ID_domicile);
         header('Location:../domicile/index.php#home');
 
-    }
+    }*/
 
     if(isset($_POST['Suprimer'])) {
         Supprimer_piece($ID_domicile);
@@ -29,7 +29,7 @@ try {
 
     if(isset($_POST['ajouter'])){
         if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
-
+            Supprimer_domicile($ID_domicile);
             Ajouter_domicile($ID_utilisateur_principal);
             header('Location:../domicile/index.php#home');
         }

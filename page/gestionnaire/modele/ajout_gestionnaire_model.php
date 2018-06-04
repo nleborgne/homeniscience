@@ -66,8 +66,18 @@ function get_right_gest(){
     global $bdd;
     $gest=1;
     $req = $bdd->prepare('UPDATE gestionnaire SET gestionnaire = :gestionnaire WHERE ID_utilisateur = :ID_utilisateur');
-    $req->bindParam('gestionnaire',$gest);
-    $req->bindParam('ID_utilisateur',$_SESSION['ID']);
+    $req->bindParam('gestionnaire',$gest, PDO::PARAM_STR);
+    $req->bindParam('ID_utilisateur',$_SESSION['ID'], PDO::PARAM_INT);
+    $req->execute();
+}
+
+function get_right_gest2($nom_dom){
+    global $bdd;
+    $ID_gest=1;
+    $req = $bdd->prepare('UPDATE domicile SET ID_gestionnaire = :ID_gestionnaire WHERE ID_utilisateur_principal = :ID_utilisateur AND nom = :nom');
+    $req->bindParam('ID_gestionnaire',$ID_gest,PDO::PARAM_STR);
+    $req->bindParam('ID_utilisateur',$_SESSION['ID'],PDO::PARAM_INT);
+    $req->bindParam('nom',$nom_dom,PDO::PARAM_STR);
     $req->execute();
 }
 
