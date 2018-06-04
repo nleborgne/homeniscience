@@ -28,14 +28,14 @@ function ajout_domicile($ID_type_habitation, $ID_gestionnaire){
     $req->execute();
 }*/
 
-function Adddomicile($ID_utilisateur_principal,$nom,$size,$num,$rue,$nbre_piece,$cp,$pays)
+function Adddomicile($ID_gestionnaire,$nom,$size,$num,$rue,$nbre_piece,$cp,$pays)
 {
     global $bdd;
     $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire, consommation)
                                 VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire, :conso)');
     $requete ->execute(array(
         'ID' =>NULL,
-        'ID_utilisateur_principal' => $ID_utilisateur_principal,
+        'ID_utilisateur_principal' => 0,
         'nom' => $nom,
         'nombre_pieces' => $nbre_piece,
         'superficie' =>$size,
@@ -45,7 +45,7 @@ function Adddomicile($ID_utilisateur_principal,$nom,$size,$num,$rue,$nbre_piece,
         'code_postal' =>$cp,
         'pays' =>$pays,
         'ID_confidentialite' =>1,
-        'ID_gestionnaire'=>$ID_utilisateur_principal,
+        'ID_gestionnaire'=>$ID_gestionnaire,
         'conso'=>0,
     ));
 
@@ -92,10 +92,10 @@ function add_right_gest($id, $id_dom){
     ));
 }
 
-function get_ID_domi($id){
+function get_ID_domi($id_gest){
     global $bdd;
-    $req = $bdd->prepare('SELECT ID FROM domicile WHERE ID_utilisateur_principal = :ID_utilisateur_principal AND ID_gestionnaire = 1');
-    $req->bindParam('ID_utilisateur_principal',$id, PDO::PARAM_INT);
+    $req = $bdd->prepare('SELECT ID FROM domicile WHERE ID_gestionnaire = :ID_gestionnaire');
+    $req->bindParam('ID_gestionnaire',$id_gest, PDO::PARAM_INT);
     $req->execute();
     return $req;
 }

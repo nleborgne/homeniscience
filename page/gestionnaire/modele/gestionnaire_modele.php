@@ -16,7 +16,7 @@ function AfficherDomicile()
         global $bdd;
         $reponse = $bdd->prepare('SELECT *,
 domicile.ID AS id_domicile 
-from gestionnaire INNER JOIN domicile ON gestionnaire.ID = domicile.ID_gestionnaire WHERE gestionnaire.ID_utilisateur = ?');
+from gestionnaire INNER JOIN domicile ON gestionnaire.ID_utilisateur = domicile.ID_gestionnaire WHERE gestionnaire.ID_utilisateur = ?');
 
         $reponse -> execute(array($_SESSION['ID']));
         return $reponse;
