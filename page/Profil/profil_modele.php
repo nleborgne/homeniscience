@@ -18,13 +18,21 @@ function getUtilisateur($id_user) {
     return $req;
 }
 
-function modifInfoUtilisateur($email,$nom,$prenom,$id_user) {
+function modifNomUtilisateur($nom,$prenom,$id_user) {
     global $bdd;
-    $req = $bdd->prepare('UPDATE utilisateur SET email = :nvemail, nom = :nvnom, prenom = :nvprenom WHERE ID = :id');
+    $req = $bdd->prepare('UPDATE utilisateur SET nom = :nvnom, prenom = :nvprenom WHERE ID = :id');
     $req->execute( array(
-        'nvemail' => $email,
         'nvnom' => $nom,
         'nvprenom' => $prenom,
+        'id' => $id_user
+    ));
+}
+
+function modifEmailUtilisateur($email, $id_user){
+    global $bdd;
+    $req = $bdd->prepare('UPDATE utilisateur SET email = :nvemail WHERE ID = :id');
+    $req->execute( array(
+        'nvemail' => $email,
         'id' => $id_user
     ));
 }
