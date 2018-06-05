@@ -63,7 +63,7 @@ $mail='';
     <form method="POST">
         <h4>Supprimer un utilisateur</h4>
         <select class="select-style" id="piece" name="member" required>
-
+            <option value="NULL"> Sélectionnez </option>
             <?php
 
             while ($donnees_utilisateurs = $reponse_ajout2->fetch()){
@@ -106,7 +106,7 @@ $mail='';
         <form method="POST">
             <h4>Ajouter un utilisateur principal</h4>
             <select class="select-style" id="piece" name="princip" required>
-
+                <option value="NULL"> Sélectionnez  </option>
                 <?php
 
                 while ($donnees_utilisateurs = $reponse_ajout3->fetch()){
@@ -124,7 +124,7 @@ $mail='';
         <form method="POST">
             <h4>Supprimer un utilisateur principal</h4>
             <select class="select-style" id="piece" name="noprincip" required>
-
+                <option value="NULL"> Sélectionnez  </option>
                 <?php
 
                 while ($donnees_utilisateurs = $reponse_ajout4->fetch()){
