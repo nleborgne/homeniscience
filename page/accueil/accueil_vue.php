@@ -9,7 +9,7 @@
   <title>Accueil</title>
   <link rel="stylesheet" href="accueil.css">
 </head
-<?php require('../page/header.php'); ?>
+<?php require('../header.php'); ?>
 <body>
   <h1 class="title">Bonjour <?php echo $name['prenom'].' '.$name['nom'];?></h1>
 
