@@ -9,8 +9,14 @@
 </head>
 <body>
 <div class="bg">
+<<<<<<< HEAD
   <img class="imgHome" src="img/logo.png" alt="">
   <!-- Module de connexion -->
+=======
+
+       <img class="imgHome" src="img/logo.png" alt="">
+    <!-- Module de connexion -->
+>>>>>>> cc5084b1aa9d2d23a295cee456e03e5b59776664
 
       <div class="connexion">
         <form method="POST" action="controler_connexion.php">
@@ -26,6 +32,7 @@
         <a href="../inscription/Inscription.php">Créer un compte</a>
       </div>
   </div>
+<<<<<<< HEAD
 <!--
     <img class="imgHome" src="img/logo.png" alt="">
 
@@ -46,3 +53,8 @@
     -->
 </body>
 </html>
+=======
+</body>
+</html>
+
+>>>>>>> cc5084b1aa9d2d23a295cee456e03e5b59776664

@@ -14,18 +14,18 @@
       <file leaf-file-name="vue_connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue_connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controler_connexion.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controler_connexion.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controler_connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="61" lean-forward="false" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+            <state relative-caret-position="323">
+              <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -34,28 +34,65 @@
       <file leaf-file-name="accueil_vue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../page/accueil/accueil_vue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="17" />
+              <folding>
+                <marker date="1528189811368" expanded="true" signature="2444:2482" ph="SELECT * fro... utilisateur" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modele_connexion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele_connexion.php">
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/Controller/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state relative-caret-position="-119">
+              <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="traitement_connexion.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Actualites.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/View/Actualites.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="56" lean-forward="true" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller_functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/Controller/Controller_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model_functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/Model/Model_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <marker date="1527846844905" expanded="true" signature="398:495" ph="INSERT INTO personne... " />
+                <marker date="1527846844905" expanded="true" signature="876:933" ph="SELECT ID, n... personne" />
+                <marker date="1527846844905" expanded="true" signature="1451:1728" ph="SELECT m.ID messages" />
+                <marker date="1527846844905" expanded="true" signature="5097:5247" ph="INSERT INTO messages... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traitement_connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traitement_connexion.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <marker date="1528128832532" expanded="true" signature="357:404" ph="SELECT ID, e... utilisateur" />
               </folding>
@@ -65,16 +102,23 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>foot</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modele_connexion.php" />
-        <option value="$PROJECT_DIR$/controler_connexion.php" />
-        <option value="$PROJECT_DIR$/../page/accueil/accueil_vue.php" />
-        <option value="$PROJECT_DIR$/vue_connexion.php" />
         <option value="$PROJECT_DIR$/../page_contact/vue_contact.css" />
         <option value="$PROJECT_DIR$/../page_contact/controler_contact.php" />
         <option value="$PROJECT_DIR$/traitement_connexion.php" />
+        <option value="$PROJECT_DIR$/../page/support/style.css" />
+        <option value="$PROJECT_DIR$/modele_connexion.php" />
+        <option value="$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/Controller/Controller.php" />
+        <option value="$PROJECT_DIR$/vue_connexion.php" />
+        <option value="$PROJECT_DIR$/../page/accueil/accueil_vue.php" />
+        <option value="$PROJECT_DIR$/controler_connexion.php" />
       </list>
     </option>
   </component>
@@ -86,13 +130,13 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="113" />
-    <option name="y" value="23" />
+    <option name="x" value="392" />
+    <option name="y" value="-10" />
     <option name="width" value="967" />
     <option name="height" value="788" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -117,7 +161,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="connexion" type="cbb8eebc:String" user="connexion" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -156,12 +210,13 @@
       <workItem from="1527699429654" duration="874000" />
       <workItem from="1527796203023" duration="104000" />
       <workItem from="1527840096142" duration="3442000" />
-      <workItem from="1528128587534" duration="245000" />
+      <workItem from="1528128587534" duration="2551000" />
+      <workItem from="1528180872415" duration="5814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10515000" />
+    <option name="totallyTimeSpent" value="18635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -200,6 +255,66 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/vue_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="61" lean-forward="false" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../page/support/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../page/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../page/gestionnaire/vue/gestionnaire_vue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="2" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+          <folding>
+            <marker date="1528186575786" expanded="true" signature="524:526" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traitement_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <marker date="1528128832532" expanded="true" signature="357:404" ph="SELECT ID, e... utilisateur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
@@ -218,7 +333,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
+          <folding>
+            <marker date="1528189811368" expanded="true" signature="2444:2482" ph="SELECT * fro... utilisateur" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -226,7 +343,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1528186575786" expanded="true" signature="524:526" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -293,14 +412,6 @@
     <entry file="file://$PROJECT_DIR$/../../prep_exam_php_sql_js/ressources/inscription_controller.php" />
     <entry file="file://$PROJECT_DIR$/../../prep_exam_php/bdd_ajout_user.php" />
     <entry file="file://$PROJECT_DIR$/../../prep_exam_php/bdd_test_conn.php" />
-    <entry file="file://$PROJECT_DIR$/../page/accueil/accueil_vue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../page_contact/vue_contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -336,37 +447,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controler_connexion.php">
+    <entry file="file://$PROJECT_DIR$/../page/support/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="61" lean-forward="false" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../page/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../page/gestionnaire/vue/gestionnaire_vue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../inscription/inscription_mvc/Model/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <marker date="1527585896655" expanded="true" signature="287:337" ph="SELECT email... utilisateur" />
+            <marker date="1527585896655" expanded="true" signature="878:1257" ph="INSERT INTO utilisateur... " />
+            <marker date="1527585896655" expanded="true" signature="2331:2371" ph="SELECT * FRO... utilisateur" />
+            <marker date="1527585896655" expanded="true" signature="2542:2583" ph="SELECT ID FR... utilisateurs" />
+            <marker date="1527585896655" expanded="true" signature="2701:2748" ph="SELECT ID_do... utilisateurs" />
+            <marker date="1527585896655" expanded="true" signature="2895:3015" ph="INSERT INTO gestionnaire... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modele_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+          <folding>
+            <marker date="1528186575786" expanded="true" signature="524:526" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traitement_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <marker date="1528128832532" expanded="true" signature="357:404" ph="SELECT ID, e... utilisateur" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/Model/Model_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <marker date="1527846844905" expanded="true" signature="398:495" ph="INSERT INTO personne... " />
+            <marker date="1527846844905" expanded="true" signature="876:933" ph="SELECT ID, n... personne" />
+            <marker date="1527846844905" expanded="true" signature="1451:1728" ph="SELECT m.ID messages" />
+            <marker date="1527846844905" expanded="true" signature="5097:5247" ph="INSERT INTO messages... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/Controller/Controller_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/Controller/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TP_info/G9C_Meynet_Guillaume_rattrapage_TP_PHP_SQL_JS/View/Actualites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="56" lean-forward="true" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../page/accueil/accueil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../inscription/inscription_mvc/Controller/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../page/accueil/accueil_vue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <marker date="1528189811368" expanded="true" signature="2444:2482" ph="SELECT * fro... utilisateur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
