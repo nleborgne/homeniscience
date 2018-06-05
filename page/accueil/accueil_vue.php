@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width">
   <title>Accueil</title>
   <link rel="stylesheet" href="accueil.css">
-</head>
-<?php require('../header.php'); ?>
+</head
+<?php require('../page/header.php'); ?>
 <body>
   <h1 class="title">Bonjour <?php echo $name['prenom'].' '.$name['nom'];?></h1>
 
