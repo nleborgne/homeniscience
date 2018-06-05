@@ -18,7 +18,7 @@
   	</header>
   	
   	<div class="new_gest">
-		<p>Vous n'etes pas gestionnaire, vous n'avez pas acces a cette page.</p>
+		<p>Vous n'êtes pas gestionnaire, vous n'avez pas accès à cette page.</p>
 		
 		<button onclick="window.location='formulaire_gestionnaire.php';">Devenir Gestionnaire</button>
 	</div>

@@ -83,7 +83,7 @@ while ($dom = $domicile->fetch()){
         <br>
         <h4>Supprimer une piece</h4>
         <select class="select-style" id="piece" name="nom_piece" required>
-
+            <option value="NULL"> Sélectionnez une piece </option>
             <?php
 
             while ($donnees_pieces = $piece->fetch()){
@@ -94,7 +94,7 @@ while ($dom = $domicile->fetch()){
             ?>
 
 
-            <input class="boutton" type="submit" name="Suprimer" value="Supprimer" >
+            <input class="boutton" type="submit" name="accepter" value="Supprimer" >
 
 
 

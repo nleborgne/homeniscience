@@ -60,7 +60,7 @@ $name = getNom()->fetch();?>
     font-size: 17px;
     border: none;
     outline: none;
-    color: white;
+    color: #f2f2f2;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;

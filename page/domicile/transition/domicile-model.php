@@ -10,7 +10,7 @@ catch(Exception $e)
 
 function verifcation_acces($ID_type){
     if($ID_type!=2){
-        header('Location:transition/index.php');
+        header('Location:../accueil/index.php');
     }
 
 }
