@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="306c3c9a-ca69-4334-8770-6519028bad7d" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/domicile/ajout_utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/domicile/ajout_utilisateur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/domicile/domicile.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/domicile/domicile.php" afterDir="false" />
@@ -13,6 +14,13 @@
       <change beforePath="$PROJECT_DIR$/page/accueil/accueil.css" afterPath="$PROJECT_DIR$/page/accueil/accueil.css" />
       <change beforePath="$PROJECT_DIR$/page/accueil/accueil_vue.php" afterPath="$PROJECT_DIR$/page/accueil/accueil_vue.php" />
 >>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+=======
+      <change beforePath="" afterPath="$PROJECT_DIR$/page_contact/vue-contact.css" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change beforePath="$PROJECT_DIR$/page/domicile/domicile2.0.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/domicile/domicile2.0.css" afterDir="false" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,9 +30,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="accueil_vue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/accueil/accueil_vue.php">
+=======
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+=======
+    <leaf>
+      <file leaf-file-name="ajout_utilisateur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/domicile/ajout_utilisateur.php">
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
             <state relative-caret-position="369">
@@ -108,6 +132,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -128,6 +153,16 @@
         <option value="$PROJECT_DIR$/page/ajout.css" />
         <option value="$PROJECT_DIR$/page/ajout_utilisateur.php" />
         <option value="$PROJECT_DIR$/page/ajout_capteur.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/tests/mail.php" />
+        <option value="$PROJECT_DIR$/Page Contact/envoi_mail.php" />
+        <option value="$PROJECT_DIR$/../Tests/mail.php" />
+        <option value="$PROJECT_DIR$/page_contact/traitement_contact.php" />
+        <option value="$PROJECT_DIR$/../exam/examtk.html" />
+        <option value="$PROJECT_DIR$/../exam/examtk.css" />
+        <option value="$PROJECT_DIR$/page_contact/vue_contact.php" />
+        <option value="$PROJECT_DIR$/page_contact/vue-contact.css" />
+=======
         <option value="$PROJECT_DIR$/page/accueil.css" />
         <option value="$PROJECT_DIR$/page/Ajout-domicile.php" />
         <option value="$PROJECT_DIR$/page/domicile2.0.php" />
@@ -143,12 +178,16 @@
         <option value="$PROJECT_DIR$/page/domicile/index.php" />
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/page/domicile/domicile2.0.css" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/page/domicile/domicile.php" />
         <option value="$PROJECT_DIR$/page/domicile/ajout_utilisateur.php" />
 =======
         <option value="$PROJECT_DIR$/page/accueil/accueil_vue.php" />
         <option value="$PROJECT_DIR$/page/accueil/accueil.css" />
 >>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+=======
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
       </list>
     </option>
   </component>
@@ -161,11 +200,15 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+<<<<<<< HEAD
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
     <include_path>
       <path value="" />
     </include_path>
   </component>
+=======
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="524" />
     <option name="y" value="-12" />
@@ -195,6 +238,8 @@
               <item name="homeniscience" type="b2602c69:ProjectViewProjectNode" />
               <item name="homeniscience" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+<<<<<<< HEAD
+=======
             <path>
               <item name="homeniscience" type="b2602c69:ProjectViewProjectNode" />
               <item name="homeniscience" type="2a2b976b:PhpTreeStructureProvider$1" />
@@ -206,6 +251,7 @@
               <item name="page" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="accueil" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
           </expand>
           <select />
         </subPane>
@@ -214,7 +260,14 @@
 =======
       <pane id="Scratches" />
       <pane id="Scope" />
+<<<<<<< HEAD
 >>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+=======
+<<<<<<< HEAD
+      <pane id="Scratches" />
+=======
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,7 +276,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+=======
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prep_exam_php_sql_js" />
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -263,10 +321,19 @@
       <workItem from="1525713619106" duration="821000" />
       <workItem from="1525714462522" duration="4372000" />
       <workItem from="1525719838675" duration="985000" />
+<<<<<<< HEAD
+      <workItem from="1525726742883" duration="8074000" />
+      <workItem from="1525854439834" duration="4472000" />
+      <workItem from="1526366759914" duration="2528000" />
+      <workItem from="1526541628387" duration="3026000" />
+      <workItem from="1526549630524" duration="1232000" />
+      <workItem from="1526586481870" duration="640000" />
+=======
       <workItem from="1525726742883" duration="13132000" />
       <workItem from="1525799121646" duration="1727000" />
       <workItem from="1525849869669" duration="3669000" />
       <workItem from="1525853664963" duration="674000" />
+<<<<<<< HEAD
       <workItem from="1525855431813" duration="18256000" />
       <workItem from="1525934653137" duration="1827000" />
 <<<<<<< HEAD
@@ -277,10 +344,15 @@
       <workItem from="1526366846018" duration="1286000" />
       <workItem from="1526368248100" duration="1278000" />
 >>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+=======
+      <workItem from="1525855431813" duration="12542000" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="63978000" />
   </component>
@@ -295,10 +367,23 @@
 >>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16380237" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="32072000" />
+=======
+    <option name="totallyTimeSpent" value="43844000" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -312,6 +397,43 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
     </layout>
 <<<<<<< HEAD
     <layout-to-restore>
@@ -349,6 +471,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/page/ajout.css" />
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
     <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php" />
     <entry file="file://$PROJECT_DIR$/page/domicile2.0.css" />
     <entry file="file://$PROJECT_DIR$/page/domicile2.0.php" />
@@ -410,14 +542,100 @@
     <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
+<<<<<<< HEAD
           <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+=======
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire_modele.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
+<<<<<<< HEAD
+          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="3" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="88" lean-forward="false" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+=======
           <caret line="34" column="2" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="34" selection-end-column="2" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
         </state>
       </provider>
     </entry>
@@ -425,8 +643,95 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/index.php" />
     <entry file="file://$PROJECT_DIR$/page/gestionnaire/gestionnaire_vue_inner.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1258">
           <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="476">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="52" />
+=======
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
@@ -439,8 +744,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/domicile/domicile2.0.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2289">
           <caret line="109" column="23" lean-forward="false" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="476">
+          <caret line="28" column="112" lean-forward="false" selection-start-line="28" selection-start-column="112" selection-end-line="28" selection-end-column="112" />
+=======
+        <state relative-caret-position="1258">
+          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
@@ -451,16 +766,41 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/page/domicile/ajout_capteur.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="34">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/page/domicile2.0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        </state>
+      </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/page/domicile/ajout.css">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="697">
+          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+=======
+        <state relative-caret-position="1360">
+          <caret line="80" column="76" selection-start-line="80" selection-start-column="76" selection-end-line="80" selection-end-column="76" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/domicile/index.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="544">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
 =======
@@ -474,33 +814,77 @@
         <state relative-caret-position="462">
           <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
 >>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="51">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+=======
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/domicile/Ajout-domicile.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="1139">
           <caret line="99" selection-start-line="99" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/domicile/domicile-model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" selection-start-line="10" selection-end-line="26" />
 =======
-        <state relative-caret-position="21">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
->>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+        <state relative-caret-position="731">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+=======
+        <state relative-caret-position="1518">
+          <caret line="138" column="76" selection-start-line="138" selection-start-column="76" selection-end-line="138" selection-end-column="76" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/domicile/domicile-model.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+        <state relative-caret-position="306">
+          <caret line="18" column="5" selection-start-line="10" selection-end-line="26" />
+=======
+        <state relative-caret-position="21">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+>>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="255">
+          <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+=======
+        <state relative-caret-position="765">
+          <caret line="45" column="64" lean-forward="true" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/domicile/domicile-model.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="672">
           <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Ajout-domicile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="49" />
+=======
+        <state relative-caret-position="656">
+          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
@@ -531,6 +915,7 @@
     <entry file="file://$PROJECT_DIR$/page/accueil/accueil.css">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="369">
           <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
           <folding>
@@ -542,6 +927,119 @@
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
 >>>>>>> d81cdec9fded4a12b4a4fa5b1da56984bfa4d0b7
+=======
+        <state relative-caret-position="107">
+          <caret line="85" column="86" lean-forward="false" selection-start-line="85" selection-start-column="86" selection-end-line="85" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connexion/traitement_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscription/valid_inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Page Contact/envoi_mail.php" />
+    <entry file="file://$PROJECT_DIR$/../exam/prepexam.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tests/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connexion/vue_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accueil/accueil_vue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accueil/accueil_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../exam/examtk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="74" lean-forward="false" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../exam/examtk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_contact/traitement_contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_contact/vue-contact.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_contact/vue_contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+=======
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+>>>>>>> 3a15db429be3492faa4c90b0ab4eaacf0da04dbe
+>>>>>>> 4e9ea15fc020a2a0e69aa879f96e5cb26836021a
         </state>
       </provider>
     </entry>
