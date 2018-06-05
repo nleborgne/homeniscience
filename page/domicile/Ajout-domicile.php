@@ -27,6 +27,12 @@ $mail='';
 <img src="homeicone.png" style="height: 100px;width: 100px;">
 <div style="display: inline-block">
 <?php
+$rue='';
+$nom='';
+$num='';
+$pays='';
+$cpost='';
+$super='';
 while ($dom = $domicile->fetch()){
     ?>
     <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px ">
@@ -52,12 +58,12 @@ while ($dom = $domicile->fetch()){
 
             <form class="deff_domicile" method="post">
             <h4>&nbsp Editer le domicile</h4>
-        <input type="text" id="name" name="nom" placeholder="nom du domicile " value="<?php echo ' ', $nom; ?>" style="width: 280px;  margin: 5px " >
-        <input type="text" id="adresse" name="rue" placeholder="votre rue" value="<?php echo ' ',$rue; ?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="num" name="num" placeholder="numero de rue" value="<?php echo ' ', $num; ?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="cpost" name="post" placeholder="code postal" value="<?php echo ' ',$cpost; ?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="pays" name="pays" placeholder="pays" value="<?php echo ' ',$pays ;?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="superficie" name="size" placeholder="superficie " value="<?php echo ' ',$super; ?>"style="width: 280px;  margin: 5px" >
+        <input type="text" id="name" name="nom" placeholder="nom du domicile "  <?php if(strlen( $nom )>1){ echo 'value="',$nom,'"'; }?>" style="width: 280px;  margin: 5px " >
+        <input type="text" id="adresse" name="rue" placeholder="votre rue" <?php if(strlen( $nom )>1){ echo 'value="',$rue,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="num" name="num" placeholder="numero de rue" <?php if(strlen( $nom )>1){ echo 'value="',$num,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="cpost" name="post" placeholder="code postal" <?php if(strlen( $nom )>1){ echo 'value="',$cpost,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="pays" name="pays" placeholder="pays" <?php if(strlen( $nom )>1){ echo 'value="',$pays,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="superficie" name="size" placeholder="superficie " <?php if(strlen( $nom )>1){ echo 'value="',$super,'"';} ?>" style="width: 280px;  margin: 5px" >
         <br>
                 &nbsp  &nbsp &nbsp&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input class="boutton" type="submit" name="ajouter" value="Definir" >
 
