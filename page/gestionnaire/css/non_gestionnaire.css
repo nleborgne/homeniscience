@@ -1,4 +1,40 @@
 
+/*cette partie est pour non_gestionnaire */
+.new_gest{
+	width: 1200px;
+	height: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 200px;
+	text-align: center;
+}
+.new_gest button{
+	background-image:linear-gradient(-45deg, #4650E2, #00A2E8);
+	color: white;
+	border: solid 1px #434343;
+	padding: 12px 20px;
+	margin-top: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.new_gest button:hover{
+	background-image: linear-gradient(-45deg, #5450E2, #5450E2);
+}
+.new_gest p{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 25px;
+	background: white;
+	border: solid 1px rgba(0, 0, 0, .2);
+	border-radius: 2px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+	width: 500px;
+	height: 50px;
+}
+
+
+/*cette partie est pour formulaire_gestionnaire*/
 .header_non_gest{
 	margin-bottom: 20px;
 }
@@ -114,7 +150,6 @@ legend {
 	color: white;
 	font-weight: bold;
 }
-
 
 
 
