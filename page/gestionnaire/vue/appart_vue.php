@@ -36,7 +36,7 @@
       				while ($donnees_user = $user -> fetch()) {
       				    ?>
       				    <li>
-          				    <form method="post" action="../controller/index.php" enctype="multipart/form-data" class="user_form">
+          				    <form method="post" action="../controller/appart_controller.php?id=<?php echo $_GET['id']?>" enctype="multipart/form-data" class="user_form">
           				    <span class="list" title="Contacter"><?php echo $donnees_user['prenom'].' '.$donnees_user['nom']; ?></span>
           				  	  <input type="hidden" name="<?php echo $donnees_user['ID']; ?>" value="<?php echo $donnees_user['ID_domicile']; ?>" />
           				   	  <input type="submit" class="user_input" value="Supprimer" />
@@ -47,6 +47,20 @@
       				?>
       			</ul>
       			<h3>Ajouter un utilisateur</h3>
+      			
+      			<form method="post" action="../controller/appart_controller.php?id=<?php echo $_GET['id']?>" enctype="multipart/form-data" class="user_form">
+				
+					<p class="formulaire">
+						<label for="email">Adresse e-mail :</label>
+					</p>
+
+        			<input type="email" id="email" name="email" placeholder="Email"
+        				size="20" /> 
+        			
+        			<input type="submit" name="firstsubmit" value="Ajouter"
+        				class="boutton" />
+        
+        		</form>
       			
     		</div>
     	</div>

@@ -9,25 +9,24 @@
 </head>
 <body>
 <div class="bg">
-  <!-- Module de connexion -->
 
        <img class="imgHome" src="img/logo.png" alt="">
     <!-- Module de connexion -->
 
-        <div class="connexion">
+      <div class="connexion">
         <form method="POST" action="controler_connexion.php">
-            <input class="txtinput" type="text" name="email" placeholder="Email">
-            <br>
-            <input class="txtinput" type="password" name="mot_de_passe" placeholder="Mot de passe">
-            <input class="btn" type="submit">
+          <input class="txtinput" type="text" name="email" placeholder="Email">
+          <br>
+          <input class="txtinput" type="password" name="mot_de_passe" placeholder="Mot de passe">
+          <input class="btn" type="submit">
         </form>
-    </div>
-    <!-- Créer un compte / mdp oublié -->
-    <div class="links">
+      </div>
+      <!-- Créer un compte / mdp oublié -->
+      <div class="links">
         <a href="">Mot de passe oublié ?</a>
         <a href="../inscription/Inscription.php">Créer un compte</a>
-    </div>
-</div>
+      </div>
   </div>
 </body>
 </html>
+

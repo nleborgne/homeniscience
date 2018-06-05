@@ -175,19 +175,19 @@ body{
 	height: 300px
 }
 
-.panel::-webkit-scrollbar-track, .panel2::-webkit-scrollbar-track
+.panel::-webkit-scrollbar-track, .panel2::-webkit-scrollbar-track, .panel4::-webkit-scrollbar-track
 {
   border-radius: 10px;
   background-color: #F5F5F5;
 }
 
-.panel::-webkit-scrollbar, .panel2::-webkit-scrollbar
+.panel::-webkit-scrollbar, .panel2::-webkit-scrollbar, .panel4::-webkit-scrollbar
 {
   width: 8px;
   background-color: #F5F5F5;
 }
 
-.panel::-webkit-scrollbar-thumb, .panel2::-webkit-scrollbar-thumb
+.panel::-webkit-scrollbar-thumb, .panel2::-webkit-scrollbar-thumb, .panel4::-webkit-scrollbar-thumb
 {
   border-radius: 10px;
   background-color: #555;
@@ -368,15 +368,63 @@ input[type=range]:focus::-ms-fill-upper {
 .list_user
 {
 	display: inline-block;
+	margin-top: 0;
 }
 
 .list
 {
 	margin-right: 7px;
+	cursor: pointer;
+}
+.list:hover
+{
+	color:gray;
 }
 .user_form
 {
 	margin-bottom: 5px;
+}
+
+.user_input {
+  width:75px;
+  line-height: 12px;
+  max-width:100px;
+  border-radius : 5px;
+  background-color: #0099ff;
+  color:white;
+  padding:2px;
+  font-size:12px;
+  border:none;
+  cursor:pointer;
+}
+.boutton {
+  width:75px;
+  line-height: 12px;
+  max-width:100px;
+  border-radius : 5px;
+  background-color: #0099ff;
+  color:white;
+  padding:8px;
+  font-size:12px;
+  border:none;
+  cursor:pointer;
+  margin-top: 5px;
+  display: block;
+  margin: auto;
+}
+
+.boutton:hover, .user_input:hover {
+  background-color: #4353E2;
+}
+
+.formulaire {
+	/* evite les espaces entre le nom et l'entrée d'un formulaire */
+	margin-bottom: 0px;
+}
+
+input[type=email]
+{
+	margin-bottom: 10px;
 }
 
 .bareme
