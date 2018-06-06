@@ -33,10 +33,10 @@
                 </div>
             </div>
             <div id="elementdessous">
-                <a id="foot_emailing" href="la page de l'email">E-mailing</a>
-                <a id="foot_legale" href="MentionsLegales">Mentions légales</a>
-                <a id="foot_CGU" href="CGU">CGU</a>
-                <a id="foot_rgbd" href="RGBD">RGBD</a>
+                <a id="foot_emailing" href="/homeniscience/page_contact/controler_contact.php">E-mailing</a>
+                <a id="foot_legale" href="/homeniscience/Doc-administratif/Mentions-legales.php">Mentions légales</a>
+                <a id="foot_CGU" href="/homeniscience/Doc-administratif/CGU.php">CGU</a>
+                <a id="foot_rgbd" href="/homeniscience/Doc-administratif/RGBD.php">RGBD</a>
                 <span class="copyright">Copyright © 2018 | Domisep.fr</span>
             </div>
         </div>
