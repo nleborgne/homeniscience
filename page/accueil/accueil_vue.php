@@ -45,42 +45,85 @@
           <input type="text" class="message" id="superficie" name="msg_forum" placeholder="entrez un message"  style="width: 280px;  margin: 5px" >
          <input class="boutton" type="submit" name="ajouter" value="valider" >
           </form>
-
+          <div style="padding:20px"
           <?php  while ($message=$messageforum->fetch()){
               ?>
               <p><?php echo '<strong>', $message['prenom'],'</strong>',' ','le ',$message['date'],':   ',$message['contenu'] ?> </p>
           <?php } ?>
 
-
+      </div>
       </div>
     </div>
 
 
       <div class="flex1">
+
       <button class="accordion" type="button" name="button" style="color:white;  background: #00A2E8">Sécurité</button>
       <div class="panel">
         <br><br>
+          <p>Alarme:</p>
+          <form method="post" action="index.php" style="font-size: 40px">
+           <br>
+
+          <input type="text" class="clock" id="clock" name="alarm_h" placeholder="Heure" Value="08"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >:
+          <input type="text" class="clock" id="clock" name="alarm_min" placeholder="Min" Value="30"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >
         <label class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
+          </form>
         </label>
-        Alarme
+
       </div>
     </div>
     <div class="flex1">
       <button class="accordion" type="button" name="button" style="color:white ;  background: #00A2E8">Infos</button>
       <div class="panel">
-        <?php
-        try {
-          $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
-        } catch (Exception $e) {
-          die('Erreur : ' . $e->getMessage());
-        }
-        $get = $bdd->prepare('SELECT * from utilisateur WHERE ID = ?');
-        $get->execute(array($_SESSION['ID']));
-        $data = $get->fetch();
-        echo 'Bonjour ' . $data['prenom'] . ' ' . $data['nom'];
-        ?>
+        <?php ?>
+
+
+
+
+
+          <link rel="stylesheet" type="text/css" href="clock_style.css">
+          <script type="text/javascript">
+              window.onload = setInterval(clock,1000);
+
+              function clock()
+              {
+                  var d = new Date();
+
+                  var date = d.getDate();
+
+                  var month = d.getMonth();
+                  var montharr =["Jan","Fev","Mar","Avril","Mai","Juin","Juillet","Aout","Sep","Oct","Nov","Dec"];
+                  month=montharr[month];
+
+                  var year = d.getFullYear();
+
+                  var day = d.getDay();
+                  var dayarr =["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"];
+                  day=dayarr[day];
+
+                  var hour =d.getHours();
+                  var min = d.getMinutes();
+                  var sec = d.getSeconds();
+
+                  document.getElementById("date").innerHTML=day+" "+date+" "+month+" "+year;
+                  document.getElementById("time").innerHTML=hour+":"+min+":"+sec;
+              }
+          </script>
+          </head>
+
+          <article classe="clock">
+
+          <p id="date"></p>
+          <p id="time"></p>
+
+          </article>
+
+
+
+
       </div>
     </div>
 
