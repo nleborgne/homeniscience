@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <head>
     <title> "Inscription" </title>
-    <link rel="stylesheet" href="/homeniscience/inscription/inscription_mvc/css/css_inscription.css" />
+    <link rel="stylesheet" href="/homeniscience/inscription/css/css_inscription.css" />
     <meta charset="utf-8" />
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div class="bg">
-    <img class="imgHome" src="../img/logo.png" alt="logo_home">
+    <img class="imgHome" src="/homeniscience/inscription/img/logo.png" alt="logo_home">
     <p class="phrase1">Complétez le formulaire pour créer votre compte</p>
     <!-- création formulaire d'inscription avec tous les champs à remplir -->
     <div class="formulaire_connexion">
-        <form action= "Controller/inscription.php" method = "post">
+        <form action= "/homeniscience/inscription/Controller/inscription.php" method = "post">
             <input class="champ" type="text" name="nom" id="nom" placeholder="Nom" required>
             <input class="champ" type="text" name="prenom" id="prenom" placeholder="Prenom" required>
             <input class="champ" type="email" name="email" id="email" placeholder="E-mail" required>
