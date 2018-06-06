@@ -15,10 +15,13 @@
 
   <!-- Affichage dynamique des pièces et capteurs avec barre de recherche-->
   <div class="container">
-    <input class="search" id="search" name="search" placeholder="Rechercher..." type="text" autocomplete="off">
+
     <div class="flex2">
       <button class="accordion" type="button" name="button">Domicile</button>
+        <input class="search" id="search" name="search" placeholder="Rechercher..." type="text" autocomplete="off">
+
       <div class="panel">
+
         <?php include('vue_domicile.php'); ?>
       </div>
     </div>
@@ -37,11 +40,22 @@
     <div class="flex1">
       <button class="accordion" type="button" name="button">Général</button>
       <div class="panel">
-        <p><strong>maman</strong> : je ne serai pas là cette aprem </p>
-        <p><strong>john</strong> : ne fermez pas la cave à clé svp </p>
+          <form action="index.php" method="post">
+          <input type="text" id="superficie" name="msg_forum" placeholder="entrez un message"  style="width: 280px;  margin: 5px" >
+         <input class="boutton" type="submit" name="ajouter" value="valider" >
+          </form>
+
+          <?php  while ($message=$messageforum->fetch()){
+              ?>
+              <p><?php echo '<strong>', $message['prenom'],'</strong>',' ','le ',$message['date'],':   ',$message['contenu'] ?> </p>
+          <?php } ?>
+
+
       </div>
     </div>
-    <div class="flex1">
+
+
+      <div class="flex1">
       <button class="accordion" type="button" name="button">Sécurité</button>
       <div class="panel">
         <br><br>
