@@ -184,7 +184,6 @@ a.probleme{
 }
 footer {
   overflow-x: hidden;
-  display: none;
 }
 
 .main::-webkit-scrollbar-track {
