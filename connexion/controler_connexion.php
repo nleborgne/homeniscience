@@ -15,7 +15,7 @@ while($donnees = $connexion->fetch()) //vérification des données saisies avec 
         $_SESSION['prenom']=$donnees['prenom'];
         $_SESSION['nom']=$donnees['nom'];
         //print_r($_SESSION);
-        require('../page/accueil/index.php'); //connexion à la page d'accueil du site Internet
+        header('location: ../page/accueil/index.php'); //connexion à la page d'accueil du site Internet
     }
 }
 echo "<p>Echec de la connexion. Veuillez réessayer.</p>";
