@@ -16,8 +16,10 @@
   <!-- Affichage dynamique des pièces et capteurs avec barre de recherche-->
   <div class="container">
 
+
+
     <div class="flex2">
-      <button class="accordion" type="button" name="button">Domicile</button>
+      <button class="accordion" type="button" name="button" style="color:white;  background:(-90deg, #4650E2, #00A2E8)">Domicile</button>
         <input class="search" id="search" name="search" placeholder="Rechercher..." type="text" autocomplete="off">
 
       <div class="panel">
@@ -29,19 +31,18 @@
 
   <!-- Affichage statique de l'historique -->
   <div id="topContainer" class="container">
-    <div class="flex1">
-      <button class="accordion" type="button" name="button">Historique</button>
-      <div class="panel">
-        <p>30/04 16:05 : fenêtre cuisine ouverte</p>
-        <p>30/04 17:05 : lumière chambre 2 allumée</p>
-      </div>
-    </div>
 
+      <div class="flex1">
+          <button class="accordion" type="button" name="button" style="color:white;  background: #00A2E8">Statistiques</button>
+          <div class="panel">
+              <img class="graph" src="graph.png" alt="">
+          </div>
+      </div>
     <div class="flex1">
-      <button class="accordion" type="button" name="button">Général</button>
+      <button class="accordion" type="button" name="button" style="color:white ;  background: #00A2E8">Général</button>
       <div class="panel">
           <form action="index.php" method="post">
-          <input type="text" id="superficie" name="msg_forum" placeholder="entrez un message"  style="width: 280px;  margin: 5px" >
+          <input type="text" class="message" id="superficie" name="msg_forum" placeholder="entrez un message"  style="width: 280px;  margin: 5px" >
          <input class="boutton" type="submit" name="ajouter" value="valider" >
           </form>
 
@@ -56,7 +57,7 @@
 
 
       <div class="flex1">
-      <button class="accordion" type="button" name="button">Sécurité</button>
+      <button class="accordion" type="button" name="button" style="color:white;  background: #00A2E8">Sécurité</button>
       <div class="panel">
         <br><br>
         <label class="switch">
@@ -67,7 +68,7 @@
       </div>
     </div>
     <div class="flex1">
-      <button class="accordion" type="button" name="button">Infos</button>
+      <button class="accordion" type="button" name="button" style="color:white ;  background: #00A2E8">Infos</button>
       <div class="panel">
         <?php
         try {
@@ -82,12 +83,16 @@
         ?>
       </div>
     </div>
-    <div class="flex1">
-      <button class="accordion" type="button" name="button">Statistiques</button>
-      <div class="panel">
-        <img class="graph" src="graph.png" alt="">
+
+
+      <div class="flex1">
+          <button class="accordion" type="button" name="button" style="color:white; background: #00A2E8;">Historique</button>
+          <div class="panel">
+              <p>30/04 16:05 : fenêtre cuisine ouverte</p>
+              <p>30/04 17:05 : lumière chambre 2 allumée</p>
+          </div>
       </div>
-    </div>
+
   </div>
   <footer style="position: inherit">
       <?php require ('../footer.php')?>

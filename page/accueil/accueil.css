@@ -294,6 +294,10 @@ tr {
     background: rgba(5, 114, 255, 0.78);
   }
 
+  input.message{
+    height: 30px;
+  }
+
 .boutton {
   width:100px;
   line-height: 12px;
