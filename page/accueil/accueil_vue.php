@@ -127,14 +127,14 @@
       </div>
     </div>
 
-
+  <!--
       <div class="flex1">
           <button class="accordion" type="button" name="button" style="color:white; background: #00A2E8;">Historique</button>
           <div class="panel">
-              
+
           </div>
       </div>
-
+    -->
   </div>
   <footer style="position: inherit">
       <?php require ('../footer.php')?>
