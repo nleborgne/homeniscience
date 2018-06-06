@@ -12,12 +12,14 @@ $donnees = $id_user -> fetch();
 //modifier le nom
 if(isset($_POST['prenom']) && isset($_POST['nom'])) {
     modifNomUtilisateur($_POST['nom'],$_POST['prenom'],$_SESSION['ID']);
+    header('Refresh:0');
 }
 
 //modifier l'email
 if(isset($_POST['email'])){
     if($_POST['email'] == $_POST['email2']){
         modifEmailUtilisateur($_POST['email'],$_SESSION['ID']);
+        header('Refresh:0');
     }
 }
 
@@ -33,6 +35,7 @@ if(!empty($_POST['OldMdp'])){
         }
     }
 }
+
 
 require('Profil.php');
 

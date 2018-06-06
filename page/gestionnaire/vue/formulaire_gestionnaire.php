@@ -61,7 +61,7 @@ if(!isset($_SESSION)){
                     </div>
                     <div class="col-75">
                         <select name="choix" class="choix">
-                            <option value="">Choisir un type d'habitation</option>
+                            <option id="defaut_choix" value="">Choisir un type d'habitation</option>
                             <?php while($ID_hab=$ID_habitation->fetch()){?>
                                 <option value="<?php echo $ID_hab['ID'] ?>"><?php echo $ID_hab['nom_type'] ?></option>
                             <?php } ?>

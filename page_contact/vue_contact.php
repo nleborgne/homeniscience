@@ -6,44 +6,54 @@
     <title>Contact</title>
 </head>
 
+<header>
+
+</header>
+
 <body>
 <div id="conteneur">
-<section class="description"> <!-- texte d'introduction de la page -->
-    <h1>
-    Bienvenue sur cette page Contact.
-    </h1>
+    <h1>Bienvenue sur la page de contact</h1>
+
     <p>
         Bonjour <!-- salutation-->
         <?php echo htmlspecialchars($_SESSION["prenom"]) . ' ' . htmlspecialchars($_SESSION["nom"]) . ',' ?>
-    </br>
-        Cette page est faite pour vous laissez vous exprimer et nous envoyer des mails.<br/>
+    </p>
+    <p>
+        Cette page est faite pour vous exprimer et nous envoyer des mails.<br />
+    </p>
+    <p>
         N'hésitez pas à nous poser <strong>toutes vos questions</strong> et l'un de nos collaborateurs vous enverra un mail aussi vite que possible !
     </p>
-</section>
 
-<section class="formulaire"> <!-- le formulaire de la page -->
     <form enctype="text/plain" method="get" action="mailto:test@test.fr" id="contact">
-
-        <label for="subject">
-            Quel est l'objet ?
-        </label>
-        </br>
-        <input type="text" name="subject" id="subject" placeholder="Votre objet" required/> <!--l'objet du mail-->
-        </br>
-
-        <label for="message">
-            Quelle question souhaitez-vous nous demander ?
-        </label>
-        <br /> <!-- ci-dessous, le message du mail-->
-        <textarea form="contact" name="body" id="message" rows="10" cols="50" required>Votre message
-            </textarea>
-        <br/>
-
-        <input class="Valider" type="submit" value="Envoyer" /> <!-- envoi du mail -->
-
-        </p>
+        <fieldset>
+            <legend>Contactez-nous !</legend>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Quel est l'objet ?</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="subject" name="subject" placeholder="Votre objet" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="message">Quelle question souhaitez-vous nous poser ?</label>
+                </div>
+                <div class="col-75">
+                    <textarea form="contact" id="message" name="message" placeholder="Votre message" rows="10" cols="50" required></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <div class="row">
+            <input type="submit" value="Envoyer">
+        </div>
     </form>
-</section>
 </div>
+
+<footer>
+    <?php require ('../page/footer.php'); //appel du footer ?>
+</footer>
+
 </body>
 </html>

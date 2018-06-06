@@ -10,8 +10,6 @@ while($donnees = $connexion->fetch()) //vérification des données saisies avec 
 {
     if($_POST['email'] == $donnees['email'] and password_verify ( $_POST['mot_de_passe'] , $donnees['mot_de_passe'] ) )
     {
-        //echo 'cezcz';
-        //$compteur = 1;
         session_start(); //adaptation de la variable de session de l'utilisateur connecté
         $_SESSION['ID']=$donnees['ID'];
         $_SESSION['prenom']=$donnees['prenom'];
