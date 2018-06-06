@@ -369,6 +369,7 @@ input[type=range]:focus::-ms-fill-upper {
 {
 	display: inline-block;
 	margin-top: 0;
+	padding-left: 0px;
 }
 
 .list
