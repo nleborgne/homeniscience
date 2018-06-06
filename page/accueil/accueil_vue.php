@@ -131,8 +131,7 @@
       <div class="flex1">
           <button class="accordion" type="button" name="button" style="color:white; background: #00A2E8;">Historique</button>
           <div class="panel">
-              <p>30/04 16:05 : fenêtre cuisine ouverte</p>
-              <p>30/04 17:05 : lumière chambre 2 allumée</p>
+              
           </div>
       </div>
 
