@@ -24,7 +24,8 @@
 
       <div class="panel">
 
-        <?php include('vue_domicile.php'); ?>
+
+        <?php include('vue_domicile2.php');?>
       </div>
     </div>
   </div>
@@ -34,21 +35,24 @@
 
       <div class="flex1">
           <button class="accordion" type="button" name="button" style="color:white;  background: #00A2E8">Statistiques</button>
-          <div class="panel">
+          <div class="panel" >
               <img class="graph" src="graph.png" alt="">
           </div>
       </div>
-    <div class="flex1">
+    <div class="flex1" id="forummsg">
       <button class="accordion" type="button" name="button" style="color:white ;  background: #00A2E8">Général</button>
-      <div class="panel">
+      <div class="panel" >
           <form action="index.php" method="post">
           <input type="text" class="message" id="superficie" name="msg_forum" placeholder="entrez un message"  style="width: 280px;  margin: 5px" >
          <input class="boutton" type="submit" name="ajouter" value="valider" >
           </form>
-          <div style="padding:20px"
-          <?php  while ($message=$messageforum->fetch()){
+          <div style="padding:20px">
+          <?php
+          echo '<p style="color: #BEBEBE">laissez une note</p>';
+          while ($message=$messageforum->fetch()){
               ?>
-              <p><?php echo '<strong>', $message['prenom'],'</strong>',' ','le ',$message['date'],':   ',$message['contenu'] ?> </p>
+              <p><?php echo '<strong>', $message['prenom'],'</strong>',' ','le ',$message['date'],':   ',$message['contenu'] ; ?> </p>
+
           <?php } ?>
 
       </div>
@@ -56,10 +60,10 @@
     </div>
 
 
-      <div class="flex1">
+      <div class="flex1" >
 
       <button class="accordion" type="button" name="button" style="color:white;  background: #00A2E8">Sécurité</button>
-      <div class="panel">
+      <div class="panel" id="alarme">
         <br><br>
           <p>Alarme:</p>
           <form method="post" action="index.php" style="font-size: 40px">
@@ -78,7 +82,7 @@
     <div class="flex1">
       <button class="accordion" type="button" name="button" style="color:white ;  background: #00A2E8">Infos</button>
       <div class="panel">
-        <?php ?>
+
 
 
 
@@ -136,11 +140,12 @@
       </div>
     -->
   </div>
+  <div>
   <footer style="position: inherit">
       <?php require ('../footer.php')?>
   </footer>
   <script src="script.js"></script>
-
+  </div>
 </body>
 
 </html>

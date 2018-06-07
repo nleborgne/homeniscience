@@ -23,6 +23,15 @@ function ID_domicile($ID_utilisateur_principal)
 
 }
 
+function Afficher_domicile($ID_domicile)
+{
+    global $bdd;
+    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie,pays FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
+    $rue=$domicile->fetch();
+    return $rue['rue'];
+    $domicile->closeCursor();
+}
+
 
 
 
@@ -63,6 +72,8 @@ function Ajouter_message($ID_domicile,$contenu,$ID_user){
     $requete->bindParam(':ID_utilisateur_envoi',$ID_user,PDO::PARAM_INT);
     $requete->bindParam(':contenu',$contenu,PDO::PARAM_STR);
     $requete->execute();
+
+
 
 }
 
