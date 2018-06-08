@@ -487,7 +487,7 @@ function Supprimer_utilisateur_principal()
 function Afficher_utilisateur_principal($ID_domicile)
 {
     global $bdd;
-    $reponse_utilisateurs = $bdd->query("SELECT ID,prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 ORDER BY ID");
+    $reponse_utilisateurs = $bdd->query("SELECT ID,prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 AND ID_domicile>0 ORDER BY ID");
     return $reponse_utilisateurs;
     $reponse_utilisateurs->closeCursor();
 }
