@@ -38,7 +38,7 @@
       				    <li>
           				    <form method="post" action="../controller/appart_controller.php?id=<?php echo $_GET['id']?>" enctype="multipart/form-data" class="user_form">
           				    <span class="list" title="Contacter"><?php echo $donnees_user['prenom'].' '.$donnees_user['nom']; ?></span>
-          				  	  <input type="hidden" name="<?php echo $donnees_user['ID']; ?>" value="<?php echo $donnees_user['ID_domicile']; ?>" />
+          				  	  <input type="hidden" name="<?php echo $donnees_user['ID']; ?>" value="<?php echo $donnees_user['ID']; ?>" />
           				   	  <input type="submit" class="user_input" value="Supprimer" />
           				   	</form>
       				   	</li>
@@ -46,7 +46,7 @@
       				}
       				?>
       			</ul>
-      			<h3>Ajouter un utilisateur</h3>
+      			<h3>Ajouter un utilisateur principal</h3>
       			
       			<form method="post" action="../controller/appart_controller.php?id=<?php echo $_GET['id']?>" enctype="multipart/form-data" class="user_form">
 				
