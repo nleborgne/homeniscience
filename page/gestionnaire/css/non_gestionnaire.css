@@ -2,7 +2,7 @@
 /*cette partie est pour non_gestionnaire */
 .new_gest{
 	width: 1200px;
-	height: 320px;
+	height: 420px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 200px;
@@ -20,17 +20,17 @@
 .new_gest button:hover{
 	background-image: linear-gradient(-45deg, #5450E2, #5450E2);
 }
-.new_gest p{
+.new_gest .conteneur{
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	padding-top: 25px;
+	padding-top: 15px;
 	background: white;
 	border: solid 1px rgba(0, 0, 0, .2);
 	border-radius: 2px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 	width: 500px;
-	height: 50px;
+	height: 130px;
 }
 
 

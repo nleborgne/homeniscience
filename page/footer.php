@@ -36,7 +36,7 @@
                 <a id="foot_emailing" href="/homeniscience/page_contact/controler_contact.php">E-mailing</a>
                 <a id="foot_legale" href="/homeniscience/Doc-administratif/Mentions-legales.php">Mentions légales</a>
                 <a id="foot_CGU" href="/homeniscience/Doc-administratif/CGU.php">CGU</a>
-                <a id="foot_rgbd" href="/homeniscience/Doc-administratif/RGBD.php">RGBD</a>
+                <a id="foot_rgpd" href="/homeniscience/Doc-administratif/RGPD.php">RGPD</a>
                 <span class="copyright">Copyright © 2018 | Domisep.fr</span>
             </div>
         </div>
@@ -130,7 +130,7 @@ h2
 {
     font-size: 13px;
 }
-#foot_CGU, #foot_legale, #foot_emailing, .copyright, #foot_rgbd
+#foot_CGU, #foot_legale, #foot_emailing, .copyright, #foot_rgpd
 {
     font-size: 10px;
     font-weight: bold;
