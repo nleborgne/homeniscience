@@ -48,6 +48,8 @@ if(!isset($_SESSION)){
             <h4>Ajouter un CeMac</h4>
             <input class="champ" type="text" id="numero" name="numero" placeholder="numero CeMac" required>
             <select class="select-style" id="piece" name="piece" required>
+
+                <option value="NULL"> Sélectionnez une piece </option>
                 <?php
                 while ($pie = $p->fetch()){
                     ?>
@@ -64,10 +66,10 @@ if(!isset($_SESSION)){
         </form>
     </div>
         <div class="formulaire">
-        <form method="POST" action="domicile-model.php">
+        <form method="POST" action="index.php">
             <h4>Supprimer un CeMac</h4>
             <select class="select-style" id="piece" name="ID_cem" required>
-
+                <option value="NULL"> Sélectionnez un CeMac </option>
                 <?php
 
                 while ($cem = $cemac2->fetch()){
@@ -91,19 +93,21 @@ if(!isset($_SESSION)){
             <h4>Ajouter un capteur</h4>
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
             <select class="select-style" id="piece" name="piece" required>
+                <option value="NULL"> Sélectionnez une piece </option>
                 <?php
                 while ($donnees_piece = $reponse_piece->fetch()){
                     ?>
-                    <option value="<?php echo  $donnees_piece['ID']; ?>"> <?php echo'piece: ', $donnees_piece['nom']; ?> </option>
+                    <option value="<?php echo  $donnees_piece['ID']; ?>"> <?php echo $donnees_piece['nom']; ?> </option>
                 <?php
                 }
                 ?>
             </select>
             <select class="select-style" id="type_capteur" name="type_capteur" required>
+                <option value="NULL"> Type de capteur </option>
                 <?php
                 while ($donnees_capteur = $reponse_capteur->fetch()){
                     ?>
-                    <option value="<?php echo $donnees_capteur['ID']; ?>"> <?php echo'type: ', $donnees_capteur['nom_type']; ?> </option>
+                    <option value="<?php echo $donnees_capteur['ID']; ?>"> <?php echo $donnees_capteur['nom_type']; ?> </option>
                 <?php
                 }
                 ?>
@@ -117,6 +121,7 @@ if(!isset($_SESSION)){
         <form method="POST">
             <h4>Supprimer un capteur</h4>
             <select class="select-style" id="piece" name="ID_capt" required>
+                <option value="NULL"> Sélectionnez une capteur </option>
                 <?php
                 while ($cap = $capt->fetch()){
                     ?>

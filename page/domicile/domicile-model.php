@@ -8,6 +8,44 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
+
+
+function Verification_domicile($ID_domicile)
+{
+    global $bdd;
+    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie,pays FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
+    $rue=$domicile->fetch();
+    return $rue['rue'];
+    $domicile->closeCursor();
+}
+
+
+
+
+function Verification_utilisateur($ID_utilisateur_principal)
+{
+    global $bdd;
+        $ID= $ID_utilisateur_principal;
+        $sql = "UPDATE utilisateur SET ID_type_utilisateur=2 WHERE ID=:ID";
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute(array(
+            'ID' => $ID
+        ));
+
+
+}
+
+
+
+
+function verifcation_acces($ID_type){
+    if($ID_type!=2){
+        header('Location:transition/index.php');
+    }
+
+}
+
+
 function ID_domicile($ID_utilisateur_principal)
 {
     global $bdd;
@@ -25,6 +63,40 @@ function ID_domicile($ID_utilisateur_principal)
 
 }
 
+function ID_domicile2($ID_SESSION)
+{
+    global $bdd;
+
+    $ID = $bdd->query("SELECT ID_domicile FROM utilisateur WHERE ID=$ID_SESSION");
+    $ID_domicile=$ID->fetch();
+    if ($ID_domicile>0){
+        return $ID_domicile['ID_domicile'];
+    }
+    else{
+        $ID_domicile=0;
+        return $ID_domicile;
+    }
+    $ID->closeCursor();
+
+}
+
+function ID_type($ID_SESSION)
+{
+    global $bdd;
+
+    $ID = $bdd->query("SELECT ID_type_utilisateur FROM utilisateur WHERE ID=$ID_SESSION");
+    $ID_type=$ID->fetch();
+    if ($ID_type>0){
+        return $ID_type['ID_type_utilisateur'];
+    }
+    else{
+        $ID_type=0;
+        return $ID_type;
+    }
+    $ID->closeCursor();
+
+}
+
 
 
 
@@ -32,7 +104,7 @@ function ID_domicile($ID_utilisateur_principal)
 function Afficher_domicile($ID_domicile)
 {
     global $bdd;
-    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
+    $domicile = $bdd->query("SELECT nom,numero_habitation,rue,code_postal,superficie,pays FROM domicile WHERE ID= $ID_domicile ORDER BY ID");
     return $domicile;
     $domicile->closeCursor();
 }
@@ -48,8 +120,8 @@ function Ajouter_domicile($ID_utilisateur_principal)
     if(isset($_POST['ajouter'])){
         if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
 
-            $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire)
-                                VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire)');
+            $requete = $bdd ->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire,consommation)
+                                VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire,:consommation)');
             $requete ->execute(array(
                 'ID' =>NULL,
                 'ID_utilisateur_principal' => $ID_utilisateur_principal,
@@ -63,6 +135,7 @@ function Ajouter_domicile($ID_utilisateur_principal)
                 'pays' =>$_POST['pays'],
                 'ID_confidentialite' =>1,
                 'ID_gestionnaire'=>0,
+                'consommation'=>0,
             ));
 
 
@@ -76,13 +149,50 @@ function Ajouter_domicile($ID_utilisateur_principal)
 
 
 
+function Ajouter_domicile2($ID_utilisateur_principal)
+{
+    global $bdd;
+    if (isset($_POST['ajouter'])) {
+        if (!empty($_POST['nom']) AND !empty($_POST['rue']) AND !empty($_POST['size'])) {
+
+            $requete = $bdd->prepare('INSERT INTO domicile(ID,ID_utilisateur_principal,nom,nombre_pieces,superficie,ID_type_habitation,numero_habitation,rue,code_postal,pays,ID_confidentialite,ID_gestionnaire)
+                                VALUES (:ID,:ID_utilisateur_principal,:nom,:nombre_pieces,:superficie,:ID_type_habitation,:numero_habitation,:rue,:code_postal,:pays,:ID_confidentialite,:ID_gestionnaire)');
+            $requete->execute(array(
+                'ID' => NULL,
+                'ID_utilisateur_principal' => $ID_utilisateur_principal,
+                'nom' => $_POST['nom'],
+                'nombre_pieces' => 0,
+                'superficie' => $_POST['size'],
+                'ID_type_habitation' => 1,
+                'numero_habitation' => $_POST['num'],
+                'rue' => $_POST['rue'],
+                'code_postal' => $_POST['post'],
+                'pays' => $_POST['pays'],
+                'ID_confidentialite' => 1,
+                'ID_gestionnaire' => 0,
+            ));
+            $ID = $bdd->query("SELECT ID FROM domicile ORDER BY ID DESC LIMIT 1");
+            $ID_dom = $ID->fetch();
+            $ID_domicile = $ID_dom['ID'];
+
+            $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile WHERE ID=:ID";
+            $stmt = $bdd->prepare($sql);
+            $stmt->execute(array(
+                'ID' => $ID_utilisateur_principal));
+        }
+
+
+    }
+}
+
+
+
+
 function Supprimer_domicile($ID_domicile)
 {
     global $bdd;
-    if (!empty($_POST['nom']) AND !empty($_POST['rue']) AND !empty($_POST['size'])) {
+    $req = $bdd->exec('DELETE FROM domicile WHERE ID="' . $ID_domicile . '" ');
 
-        $req = $bdd->exec('DELETE FROM domicile WHERE ID="' . $ID_domicile . '" ');
-    }
 
 
 }
@@ -180,18 +290,13 @@ function Ajouter_cemac()
 function Supprimer_cemac()
 {
     global $bdd;
-    if(isset($_POST['delce'])) {
 
         $ID_cem= $_POST['ID_cem'];
         $req = $bdd->exec('DELETE FROM cemac WHERE ID="'.$ID_cem.'"  ' );
-        if ( !$req AND isset($_POST['Suprimer'])) {
-            echo 'Erreur de suppression';
-        } else {
-            echo 'Entrée supprimée';
-        }
+
         //));
 
-    }
+
 }
 
 
@@ -304,7 +409,7 @@ function Ajouter_utilisateur($ID_domicile)
     $mail='';
     if(isset($_POST['Valider'])) {
         $mail= $_POST['user'];
-        $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile WHERE email=:email";
+        $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile,ID_type_utilisateur=1 WHERE email=:email";
         $stmt = $bdd->prepare($sql);
         $stmt->execute(array(
         'email' => $mail
@@ -322,7 +427,7 @@ function Ajouter_utilisateur($ID_domicile)
 function Afficher_utilisateur($ID_domicile)
 {
     global $bdd;
-    $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile  ");
+    $reponse_ajout = $bdd->query("SELECT prenom,ID FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_domicile>0  ");
     return $reponse_ajout;
     $reponse_ajout->closeCursor();
 }
@@ -382,7 +487,7 @@ function Supprimer_utilisateur_principal()
 function Afficher_utilisateur_principal($ID_domicile)
 {
     global $bdd;
-    $reponse_utilisateurs = $bdd->query("SELECT ID,prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 ORDER BY ID");
+    $reponse_utilisateurs = $bdd->query("SELECT ID,prenom FROM utilisateur WHERE ID_domicile=$ID_domicile AND ID_type_utilisateur=2 AND ID_domicile>0 ORDER BY ID");
     return $reponse_utilisateurs;
     $reponse_utilisateurs->closeCursor();
 }

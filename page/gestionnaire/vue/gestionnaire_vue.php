@@ -17,7 +17,7 @@
   		<?php require ('../../header.php'); ?>
   	</header>
   	
-  	<div class="container">
+  	<div class="container2">
   		<h3>Selectionner un domicile pour y acceder : &nbsp</h3>
       		<select  onchange="location.href='#'+this.value">
       			<option value="" disabled selected>Aller a un appartement ...</option>

@@ -57,9 +57,10 @@
     </div>
 
   </div>
-  <?php include('../footer.php'); ?>
-
+  <footer style="position: inherit">
+      <?php require ('../footer.php')?>
+  </footer>
   <script type="text/javascript" src="script.js"></script>
-
 </body>
+
 </html>

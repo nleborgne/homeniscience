@@ -29,7 +29,7 @@ $mail='';
     <h4>Rechercher et ajouter un utilisateur</h4>
     <form class="add_capt" method="post" action="index.php">
         <input class="champ" type="text" id="nom" name="nom" placeholder="utilisateurs a rechercher" required>
-        <input class="boutton" type="submit" name="recherche" value="rechercher">
+        <input class="boutton" type="submit" name="recherche" value="Rechercher">
         <?php
 
         if(isset($_POST['recherche'])){
@@ -55,6 +55,7 @@ $mail='';
             ?>
 
 
+
         <input class="boutton" type="submit" name="Valider" value="Valider" >
     </form>
 </div>
@@ -62,7 +63,7 @@ $mail='';
     <form method="POST">
         <h4>Supprimer un utilisateur</h4>
         <select class="select-style" id="piece" name="member" required>
-
+            <option value="NULL"> Sélectionnez </option>
             <?php
 
             while ($donnees_utilisateurs = $reponse_ajout2->fetch()){
@@ -105,7 +106,7 @@ $mail='';
         <form method="POST">
             <h4>Ajouter un utilisateur principal</h4>
             <select class="select-style" id="piece" name="princip" required>
-
+                <option value="NULL"> Sélectionnez  </option>
                 <?php
 
                 while ($donnees_utilisateurs = $reponse_ajout3->fetch()){
@@ -116,14 +117,14 @@ $mail='';
                 ?>
 
 
-                <input class="boutton" type="submit" name="admin" value="ajouter" >
+                <input class="boutton" type="submit" name="admin" value="Ajouter" >
         </form>
     </div>
     <div class="formulaire">
         <form method="POST">
             <h4>Supprimer un utilisateur principal</h4>
             <select class="select-style" id="piece" name="noprincip" required>
-
+                <option value="NULL"> Sélectionnez  </option>
                 <?php
 
                 while ($donnees_utilisateurs = $reponse_ajout4->fetch()){

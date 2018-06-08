@@ -7,18 +7,22 @@ if(!isset($_SESSION)){
 require('domicile-model.php');
 
 try {
-    $ID_domicile=ID_domicile($ID_utilisateur_principal);  //recupere ID_domicile si l'utilisateur principale a deja defini son domicile O sinon
-
+    //$ID_domicile=ID_domicile($ID_utilisateur_principal);  //recupere ID_domicile si l'utilisateur principale a deja defini son domicile O sinon
+    $ID_domicile=ID_domicile2($ID_utilisateur_principal);
     $domicile = Afficher_domicile($ID_domicile);
     $piece = Afficher_piece($ID_domicile);
     $piece_ajoutées = Afficher_piece($ID_domicile);
-
-    if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
+    $kay=Verification_domicile($ID_domicile);
+    if(strlen($kay)<2) {
+        Verification_utilisateur($ID_utilisateur_principal);
+    }
+    verifcation_acces( ID_type($ID_utilisateur_principal));
+    /*if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
 
         Supprimer_domicile($ID_domicile);
         header('Location:../domicile/index.php#home');
 
-    }
+    }*/
 
     if(isset($_POST['Suprimer'])) {
         Supprimer_piece($ID_domicile);
@@ -29,8 +33,9 @@ try {
 
     if(isset($_POST['ajouter'])){
         if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
-
-            Ajouter_domicile($ID_utilisateur_principal);
+            Supprimer_domicile($ID_domicile);
+            //Ajouter_domicile($ID_utilisateur_principal);
+            Ajouter_domicile2($ID_utilisateur_principal);
             header('Location:../domicile/index.php#home');
         }
     }

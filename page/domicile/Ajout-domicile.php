@@ -27,21 +27,28 @@ $mail='';
 <img src="homeicone.png" style="height: 100px;width: 100px;">
 <div style="display: inline-block">
 <?php
+$rue='';
+$nom='';
+$num='';
+$pays='';
+$cpost='';
+$super='';
 while ($dom = $domicile->fetch()){
     ?>
     <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px ">
-        <?php echo $dom['nom'], ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?></h3>
+        <?php echo /*$dom['nom'],*/ ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?></h3>
     <?php
+     //if(strlen(  $dom['nom'] )>1){ echo $dom['rue'];}else{ echo 'numero de rue';}
+    $rue=$dom['rue'];
+    $nom=$dom['nom'];
+    $num=$dom['numero_habitation'];
+    $pays=$dom['pays'];
+    $cpost=$dom['code_postal'];
+    $super=$dom['superficie'];
+
 }
 ?>
-
-    <form method="post">
-
-
-
-
-
-    </form>
+    <?php //if(strlen(  $dom['nom'] )>1){ echo $dom['rue'];}else{ echo 'numero de rue';}?>
 </div>
 </div>
 
@@ -50,15 +57,15 @@ while ($dom = $domicile->fetch()){
         <div class="formulaire">
 
             <form class="deff_domicile" method="post">
-            <h4>Ajouter un domicile</h4>
-        <input type="text" id="name" name="nom" placeholder="nom du domicile ">
-        <input type="text" id="adresse" name="rue" placeholder="votre adresse">
-        <input type="text" id="num" name="num" placeholder="numero de rue">
-        <input type="text" id="cpost" name="post" placeholder="code postal">
-        <input type="text" id="pays" name="pays" placeholder="pays">
-        <input type="text" id="superficie" name="size" placeholder="superficie ">
+            <h4>&nbsp Editer le domicile</h4>
+        <input type="text" id="name" name="nom" placeholder="nom du domicile "  <?php if(strlen( $nom )>1){ echo 'value="',$nom,'"'; }?>" style="width: 280px;  margin: 5px " >
+        <input type="text" id="adresse" name="rue" placeholder="votre rue" <?php if(strlen( $nom )>1){ echo 'value="',$rue,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="num" name="num" placeholder="numero de rue" <?php if(strlen( $nom )>1){ echo 'value="',$num,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="cpost" name="post" placeholder="code postal" <?php if(strlen( $nom )>1){ echo 'value="',$cpost,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="pays" name="pays" placeholder="pays" <?php if(strlen( $nom )>1){ echo 'value="',$pays,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="superficie" name="size" placeholder="superficie " <?php if(strlen( $nom )>1){ echo 'value="',$super,'"';} ?>" style="width: 280px;  margin: 5px" >
         <br>
-        <input class="boutton" type="submit" name="ajouter" value="definir" >
+                &nbsp  &nbsp &nbsp&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input class="boutton" type="submit" name="ajouter" value="Definir" >
 
     </form>
 </div>
@@ -68,7 +75,7 @@ while ($dom = $domicile->fetch()){
     <form class="add_room" method="post">
         <input type="text" id="piece" name="piece" placeholder="piece a ajouter ">
 
-        <input class="boutton" type="submit" name="ajoutpiece" value="ajouter">
+        <input class="boutton" type="submit" name="ajoutpiece" value="Ajouter">
 
     </form>
 
@@ -76,7 +83,7 @@ while ($dom = $domicile->fetch()){
         <br>
         <h4>Supprimer une piece</h4>
         <select class="select-style" id="piece" name="nom_piece" required>
-
+            <option value="NULL"> Sélectionnez une piece </option>
             <?php
 
             while ($donnees_pieces = $piece->fetch()){
@@ -87,11 +94,20 @@ while ($dom = $domicile->fetch()){
             ?>
 
 
-            <input class="boutton" type="submit" name="Suprimer" value="Supprimer" >
+            <input class="boutton" type="submit" name="accepter" value="Supprimer" >
 
 
 
     </form>
+    <br>
+    <?php
+    while ($piece_dom = $piece_ajoutées->fetch()){
+    ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
+
+        <?php  echo  $piece_dom['nom']; ?>
+        <?php
+        }
+        ?>
 
 </div>
         </article>

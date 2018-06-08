@@ -32,4 +32,7 @@
     </a>
   </div>
 </body>
+<footer style="position: inherit">
+    <?php require ('../footer.php')?>
+</footer>
 </html>

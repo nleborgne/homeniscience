@@ -13,10 +13,12 @@ body{
   flex-wrap: wrap;
   justify-content: center;
 }
-.container_left {
+.container2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
+  height: 50px;
 }
 .flex1 {
   width:400px;
@@ -123,7 +125,7 @@ body{
   overflow-y: auto;
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
-  text-align: center;
+  
 }
 
 .panel5
@@ -138,7 +140,7 @@ body{
   text-align: center;
 }
 
-.panel h3, .panel2 h3 {
+.panel h3, .panel2 h3, .panel3 h3, .panel4 h3 {
 	background:linear-gradient(-90deg, #4650E2, #00A2E8);
 	text-align:center;
 	padding-top: 5px;
@@ -173,19 +175,19 @@ body{
 	height: 300px
 }
 
-.panel::-webkit-scrollbar-track, .panel2::-webkit-scrollbar-track
+.panel::-webkit-scrollbar-track, .panel2::-webkit-scrollbar-track, .panel4::-webkit-scrollbar-track
 {
   border-radius: 10px;
   background-color: #F5F5F5;
 }
 
-.panel::-webkit-scrollbar, .panel2::-webkit-scrollbar
+.panel::-webkit-scrollbar, .panel2::-webkit-scrollbar, .panel4::-webkit-scrollbar
 {
   width: 8px;
   background-color: #F5F5F5;
 }
 
-.panel::-webkit-scrollbar-thumb, .panel2::-webkit-scrollbar-thumb
+.panel::-webkit-scrollbar-thumb, .panel2::-webkit-scrollbar-thumb, .panel4::-webkit-scrollbar-thumb
 {
   border-radius: 10px;
   background-color: #555;
@@ -363,20 +365,67 @@ input[type=range]:focus::-ms-fill-upper {
 	margin-left: 75px;
 }
 
-
-
-
-.list_user li
+.list_user
 {
-	
-	padding-bottom: 5px;
-	cursor: pointer;
-	max-width: 100px;
+	display: inline-block;
+	margin-top: 0;
+	padding-left: 0px;
 }
 
-.list_user li:hover
+.list
 {
-	color: gray;
+	margin-right: 7px;
+	cursor: pointer;
+}
+.list:hover
+{
+	color:gray;
+}
+.user_form
+{
+	margin-bottom: 5px;
+}
+
+.user_input {
+  width:75px;
+  line-height: 12px;
+  max-width:100px;
+  border-radius : 5px;
+  background-color: #0099ff;
+  color:white;
+  padding:2px;
+  font-size:12px;
+  border:none;
+  cursor:pointer;
+}
+.boutton {
+  width:75px;
+  line-height: 12px;
+  max-width:100px;
+  border-radius : 5px;
+  background-color: #0099ff;
+  color:white;
+  padding:8px;
+  font-size:12px;
+  border:none;
+  cursor:pointer;
+  margin-top: 5px;
+  display: block;
+  margin: auto;
+}
+
+.boutton:hover, .user_input:hover {
+  background-color: #4353E2;
+}
+
+.formulaire {
+	/* evite les espaces entre le nom et l'entrée d'un formulaire */
+	margin-bottom: 0px;
+}
+
+input[type=email]
+{
+	margin-bottom: 10px;
 }
 
 .bareme
