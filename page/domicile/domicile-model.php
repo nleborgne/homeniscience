@@ -140,9 +140,7 @@ function Ajouter_domicile($ID_utilisateur_principal)
 
 
         }
-        else{
-            echo"ajout impossible";
-        }
+
     }
 
 }
@@ -270,7 +268,7 @@ function Ajouter_cemac()
 {
     global $bdd;
     if(isset($_POST['addc'])){
-        if(!empty($_POST['numero'])) {
+        if(!empty($_POST['numero']) AND $_POST['piece']!='NULL' ) {
 
             $requete = $bdd ->prepare('INSERT INTO cemac( ID ,ID_piece ,nom, port )
                               VALUES ( :ID , :ID_piece , :nom , :port )');
@@ -324,7 +322,7 @@ function Ajouter_capteur()
 {
     global $bdd;
     if(isset($_POST['add'])){
-        if(!empty($_POST['nom'])) {
+        if(!empty($_POST['nom'] AND $_POST['piece']!='NULL' AND $_POST['type_capteur']!='NULL' )) {
 
             $requete = $bdd ->prepare('INSERT INTO equipement( ID ,ID_piece ,nom, ID_type_equipement )
                               VALUES ( :ID , :ID_piece , :nom , :ID_type_equipement )');
@@ -364,12 +362,7 @@ function Supprimer_capteur()
 
         $ID_cap= $_POST['ID_capt'];
         $req = $bdd->exec('DELETE FROM equipement WHERE ID="'.$ID_cap.'"  ' );
-        if ( !$req AND isset($_POST['Suprimer'])) {
-            echo 'Erreur de suppression';
-        } else {
-            echo 'Entrée supprimée';
-        }
-        //));
+
 
     }
 }

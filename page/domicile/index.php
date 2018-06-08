@@ -17,12 +17,7 @@ try {
         Verification_utilisateur($ID_utilisateur_principal);
     }
     verifcation_acces( ID_type($ID_utilisateur_principal));
-    /*if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
 
-        Supprimer_domicile($ID_domicile);
-        header('Location:../domicile/index.php#home');
-
-    }*/
 
     if(isset($_POST['Suprimer'])) {
         Supprimer_piece($ID_domicile);
