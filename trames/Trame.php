@@ -62,5 +62,8 @@ Class Trame
     public function getSeconde() {
         return substr($this->trame,31,2);
     }
+    public function getDate() {
+        return $this->getAnnee().'-'.$this->getMois().'-'.$this->getJour().'-'.$this->getHeure().'-'.$this->getMinute().'-'.$this->getSeconde();
+    }
 
 }
