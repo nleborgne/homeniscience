@@ -46,10 +46,10 @@ if(!isset($_SESSION)){
     <div class="formulaire">
         <form class="add_cEMAC" action="index.php" method="post">
             <h4>Ajouter un CeMac</h4>
-            <input class="champ" type="text" id="numero" name="numero" placeholder="numero CeMac" required>
+            <input class="champ" type="text" id="numero" name="numero" placeholder="Numéro CeMac" required>
             <select class="select-style" id="piece" name="piece" required>
 
-                <option value="NULL"> Sélectionnez une piece </option>
+                <option value="NULL"> Sélectionnez une pièce </option>
                 <?php
                 while ($pie = $p->fetch()){
                     ?>
@@ -91,9 +91,9 @@ if(!isset($_SESSION)){
     <div class="formulaire">
         <form class="add_capt" method="post">
             <h4>Ajouter un capteur</h4>
-            <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required>
+            <input class="champ" type="text" id="nom" name="nom" placeholder="Nom équipement" required>
             <select class="select-style" id="piece" name="piece" required>
-                <option value="NULL"> Sélectionnez une piece </option>
+                <option value="NULL"> Sélectionnez une pièce </option>
                 <?php
                 while ($donnees_piece = $reponse_piece->fetch()){
                     ?>
@@ -121,7 +121,7 @@ if(!isset($_SESSION)){
         <form method="POST">
             <h4>Supprimer un capteur</h4>
             <select class="select-style" id="piece" name="ID_capt" required>
-                <option value="NULL"> Sélectionnez une capteur </option>
+                <option value="NULL"> Sélectionnez un capteur </option>
                 <?php
                 while ($cap = $capt->fetch()){
                     ?>
