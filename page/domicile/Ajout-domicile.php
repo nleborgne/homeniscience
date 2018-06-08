@@ -83,7 +83,7 @@ while ($dom = $domicile->fetch()){
         <br>
         <h4>Supprimer une pièce</h4>
         <select class="select-style" id="piece" name="nom_piece" required>
-            <option value="NULL"> Sélectionnez une pièce </option>
+            <option value="NULL"> Sélection de pièce </option>
             <?php
 
             while ($donnees_pieces = $piece->fetch()){

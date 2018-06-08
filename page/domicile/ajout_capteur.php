@@ -46,15 +46,13 @@ if(!isset($_SESSION)){
     <div class="formulaire">
         <form class="add_cEMAC" action="index.php" method="post">
             <h4>Ajouter un CeMac</h4>
-<<<<<<< HEAD
-            <input class="champ" type="text" id="numero" name="numero" placeholder="Numéro CeMac" required>
-            <select class="select-style" id="piece" name="piece" required>
-=======
+
+
             <input class="champ" type="text" id="numero" name="numero" placeholder="numero CeMac" required style="width: 280px;  margin: 5px ">
             <select class="select-style" id="piece" name="piece" required style="width: 280px;  margin: 5px ">
->>>>>>> 7d1c8964ef60b06b971767ae1f4babe666089771
 
-                <option value="NULL"> Sélectionnez une pièce </option>
+
+                <option value="NULL"> Sélection de pièce </option>
                 <?php
                 while ($pie = $p->fetch()){
                     ?>
@@ -74,7 +72,7 @@ if(!isset($_SESSION)){
         <form method="POST" action="index.php">
             <h4>Supprimer un CeMac</h4>
             <select class="select-style" id="piece" name="ID_cem" required >
-                <option value="NULL"> Sélectionnez un CeMac </option>
+                <option value="NULL"> Sélection CeMac </option>
                 <?php
 
                 while ($cem = $cemac2->fetch()){
@@ -96,15 +94,12 @@ if(!isset($_SESSION)){
     <div class="formulaire">
         <form class="add_capt" method="post">
             <h4>Ajouter un capteur</h4>
-<<<<<<< HEAD
-            <input class="champ" type="text" id="nom" name="nom" placeholder="Nom équipement" required>
-            <select class="select-style" id="piece" name="piece" required>
-                <option value="NULL"> Sélectionnez une pièce </option>
-=======
+
+
             <input class="champ" type="text" id="nom" name="nom" placeholder="Nom equipement" required style="width: 280px;  margin: 5px ">
             <select class="select-style" id="piece" name="piece" required style="width: 280px;  margin: 5px ">
-                <option value="NULL"> Sélectionnez une piece </option>
->>>>>>> 7d1c8964ef60b06b971767ae1f4babe666089771
+                <option value="NULL"> Sélection de piece </option>
+
                 <?php
                 while ($donnees_piece = $reponse_piece->fetch()){
                     ?>
@@ -132,7 +127,7 @@ if(!isset($_SESSION)){
         <form method="POST">
             <h4>Supprimer un capteur</h4>
             <select class="select-style" id="piece" name="ID_capt" required>
-                <option value="NULL"> Sélectionnez un capteur </option>
+                <option value="NULL"> Sélection de capteur </option>
                 <?php
                 while ($cap = $capt->fetch()){
                     ?>
