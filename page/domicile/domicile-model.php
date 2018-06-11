@@ -375,11 +375,11 @@ function Afficher_email()
 {
     global $bdd;
     $recherche=' ';
-    $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."'  ");
+    $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."' AND ID_domicile=0 ");
     if(isset($_POST['recherche'])){
         if(!empty(isset($_POST['nom']))) {
             $recherche = $_POST['nom'];
-            $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."'  ");
+            $reponse_ajout = $bdd->query("SELECT email FROM utilisateur WHERE nom='".$recherche."' AND ID_domicile=0  ");
         }
     }
 
