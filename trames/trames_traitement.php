@@ -88,9 +88,9 @@ if (count($trameArray) != 0) {
             $sql .= ',';
         }
     }
-    echo "Tout s'est bien passé";
     // On effectue la requête
     $result = $bdd->query($sql);
+    echo "Tout s'est bien passé";
 } else {
     echo "Rien à ajouter";
 }

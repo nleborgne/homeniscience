@@ -23,7 +23,7 @@
     </div>
     <!-- Créer un compte / mdp oublié -->
     <div class="links">
-        <a href="">Mot de passe oublié ?</a>
+        <a href="controleur_oubli.php">Mot de passe oublié ?</a>
         <a href="../inscription/Vue/vue_inscription.php">Créer un compte</a>
     </div>
 </div>

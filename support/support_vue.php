@@ -33,6 +33,6 @@
   </div>
 </body>
 <footer style="position: inherit">
-    <?php require ('../footer.php')?>
+    <?php require ('../page/footer.php')?>
 </footer>
 </html>
