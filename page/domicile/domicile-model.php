@@ -396,13 +396,13 @@ function Afficher_email()
 
 
 
-function Ajouter_utilisateur($ID_domicile)
+function Ajouter_utilisateur($ID_domicile,$ID_utilisateur_principal)
 {
     global $bdd;
     $mail='';
     if(isset($_POST['Valider'])) {
         $mail= $_POST['user'];
-        $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile,ID_type_utilisateur=1 WHERE email=:email";
+        $sql = "UPDATE utilisateur SET ID_domicile=$ID_domicile,ID_type_utilisateur=1 WHERE email=:email AND ID!=$ID_utilisateur_principal";
         $stmt = $bdd->prepare($sql);
         $stmt->execute(array(
         'email' => $mail
@@ -430,12 +430,12 @@ function Afficher_utilisateur($ID_domicile)
 
 
 
-function Supprimer_utilisateur()
+function Supprimer_utilisateur($ID_utilisateur_principal)
 {
     global $bdd;
     if (isset($_POST['Supp'])) {
         $member = $_POST['member'];
-        $sql = "UPDATE utilisateur SET ID_domicile=0 WHERE ID=:ID";
+        $sql = "UPDATE utilisateur SET ID_domicile=0 WHERE ID=:ID AND ID!=$ID_utilisateur_principal";
         $stmt = $bdd->prepare($sql);
         $stmt->execute(array(
             'ID' => $member

@@ -67,7 +67,7 @@
         <br><br>
           <p>Actictivez l'alarme de:</p>
           <form method="post" action="index.php" style="font-size: 40px">
-       
+
 
           <input type="text" class="clock" id="clock" name="alarm_h" placeholder="Heure" Value="08"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >:
           <input type="text" class="clock" id="clock" name="alarm_min" placeholder="Min" Value="30"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >
