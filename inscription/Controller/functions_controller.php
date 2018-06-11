@@ -24,3 +24,9 @@ function test_remplissage(array $post){
     return False;
 }
 
+function test_double(){
+    if($_POST['email'] != $_POST['email_verif'] || $_POST['mdp'] != $_POST['mdp_verif']){
+        return false;
+    }
+    return true;
+}
