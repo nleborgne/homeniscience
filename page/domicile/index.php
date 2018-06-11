@@ -88,13 +88,13 @@ try {
     $reponse_ajout4 = Afficher_utilisateur_principal($ID_domicile);
     $reponse_utilisateurs2 = Afficher_utilisateur_principal($ID_domicile);
     if(isset($_POST['Valider'])) {
-        Ajouter_utilisateur($ID_domicile);
+        Ajouter_utilisateur($ID_domicile,$ID_utilisateur_principal);
         header('Location:../domicile/index.php#user');
 
     }
 
     if(isset($_POST['Supp'])) {
-        Supprimer_utilisateur();
+        Supprimer_utilisateur($ID_utilisateur_principal);
         header('Location:../domicile/index.php#user');
     }
 

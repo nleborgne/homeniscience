@@ -27,7 +27,7 @@
             echo '<td>';
             echo '<div class="child">';
             /* On affiche la pièce */
-            echo '<h3>'.$piece['piece_nom'].'</h3>';
+            echo '<h3 style="color: #696969; ">'.$piece['piece_nom'].'</h3>';
             $afficherEffecteurs = getEffecteurs($piece['piece_ID']);
             while($effecteur = $afficherEffecteurs->fetch()) {
                 echo "<div class='blockEffecteur'>";

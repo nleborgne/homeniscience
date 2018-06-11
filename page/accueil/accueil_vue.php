@@ -22,7 +22,7 @@
       <button class="accordion" type="button" name="button" style="color:white;  background:(-90deg, #4650E2, #00A2E8)">Domicile</button>
         <input class="search" id="search" name="search" placeholder="Rechercher..." type="text" autocomplete="off">
 
-      <div class="panel">
+      <div class="panel" style="padding-left:130px ; min-height: AUTO">
 
 
         <?php include('vue_domicile2.php');?>
@@ -65,18 +65,23 @@
       <button class="accordion" type="button" name="button" style="color:white;  background: #00A2E8">Sécurité</button>
       <div class="panel" id="alarme">
         <br><br>
-          <p>Alarme:</p>
+          <p>Actictivez l'alarme de:</p>
           <form method="post" action="index.php" style="font-size: 40px">
-           <br>
+
 
           <input type="text" class="clock" id="clock" name="alarm_h" placeholder="Heure" Value="08"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >:
           <input type="text" class="clock" id="clock" name="alarm_min" placeholder="Min" Value="30"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >
-        <label class="switch">
+
+          <label class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
-          </form>
-        </label>
 
+        </label>
+              <p style="font-size: 20px">a:</p>
+
+          <input type="text" class="clock" id="clock" name="alarm_h" placeholder="Heure" Value="14"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >:
+          <input type="text" class="clock" id="clock" name="alarm_min" placeholder="Min" Value="30"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >
+          </form>
       </div>
     </div>
     <div class="flex1">

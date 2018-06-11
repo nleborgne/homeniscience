@@ -475,6 +475,7 @@ label
 
 .consulter
 {
+	display: block;
 	cursor: pointer;
 	color: black;
 	background: white;
@@ -486,6 +487,7 @@ label
 	margin: auto;
 }
 
+
 .consulter:hover
 {
 	background: linear-gradient(-90deg, #4650E2, #00A2E8);
@@ -496,6 +498,19 @@ label
 {
 	text-align: center;
 }
+
+
+h1
+{
+	margin: 5px;
+}
+
+
+
+
+
+
+
 
 
 
