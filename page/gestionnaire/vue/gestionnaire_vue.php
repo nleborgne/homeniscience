@@ -50,7 +50,7 @@
     				<span class="slider round"></span>
     			</label>
   
-   			<input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput(this.value);"></input>
+   			<input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput(this.value);" />
    			<p id="textInput">0</p>
     		<h3>Bareme d'eau</h3>
     		<label class="switch">
@@ -58,7 +58,7 @@
     				<span class="slider round"></span>
     			</label>
   
-   			<input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput2(this.value);"></input>
+   			<input type="range" value="0" max="1000" min="0" step="50" onchange="updateTextInput2(this.value);" />
    			<p id="textInput2">0</p>
     	</div>
     </div>
