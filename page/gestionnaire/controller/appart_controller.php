@@ -1,12 +1,14 @@
 <?php 
 
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-}
+    try {
+        $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '', 
+array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    }
+    
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
 
-catch(Exception $e) {
-    die('Erreur : '.$e->getMessage());
-}
 
 require('../modele/appart_modele.php');
 
@@ -20,9 +22,10 @@ try {
         $new_use = getUser($_POST['email']);
         if ($new_use -> rowCount() == 1) {
             $new_user = $new_use -> fetch();
-            AjouterUser($_GET['id'], $_POST['email']);
+            if ($new_user['ID_domicile'] == 0) {
+                AjouterUser($_GET['id'], $_POST['email']);
             
-            
+            }
         }
         
     }

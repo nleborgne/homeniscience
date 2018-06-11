@@ -87,6 +87,10 @@
     
     <h1 class="dom">Domiciles</h1>
     
+    <div>
+    	<button class="consulter" onclick="window.location='../vue/formulaire_gestionnaire.php';">Ajouter un nouveau domicile</button>
+    </div>
+    
 <div class="container">
   <?php
   
