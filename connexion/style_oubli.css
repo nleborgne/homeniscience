@@ -130,3 +130,8 @@ legend {
     color: white;
     font-weight: bold;
 }
+#error {
+    text-align: center;
+    font-family: 'Lato',sans-serif;
+    color:red;
+}
