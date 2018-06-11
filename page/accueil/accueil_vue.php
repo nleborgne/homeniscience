@@ -65,7 +65,7 @@
       <button class="accordion" type="button" name="button" style="color:white;  background: #00A2E8">Sécurité</button>
       <div class="panel" id="alarme">
         <br><br>
-          <p>Actictivez l'alarme de:</p>
+
           <form method="post" action="index.php" style="font-size: 40px">
 
 
