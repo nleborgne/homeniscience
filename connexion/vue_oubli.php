@@ -26,9 +26,12 @@
                         </div>
                     </div>
                 </fieldset>
+
                 <div class="row">
+
                     <input type="submit" value="Envoyer le code">
                 </div>
+                <a href="vue_connexion.php">Retour</a>
             </form>
         </div>
     </div>

@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+html,body {
+    margin: 0;
+}
+body {
+    background: url(https://images.unsplash.com/photo-1479981280584-037818c1297d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b8a589919b4e88c299a3e2c9d5244927&auto=format&fit=crop&w=1950&q=80);
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +42,6 @@
     outline: none;
     transition: 0.4s;
     text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
 
 .panel {
@@ -134,4 +143,8 @@ legend {
     text-align: center;
     font-family: 'Lato',sans-serif;
     color:red;
+}
+a {
+    text-decoration: none;
+    color:black;
 }
