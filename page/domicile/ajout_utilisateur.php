@@ -28,7 +28,7 @@ $mail='';
 <div class="formulaire">
     <h4>Rechercher et ajouter un utilisateur</h4>
     <form class="add_capt" method="post" action="index.php">
-        <input class="champ" type="text" id="nom" name="nom" placeholder="utilisateurs a rechercher" required>
+        <input class="champ" type="text" id="nom" name="nom" placeholder="Utilisateur à rechercher" required>
         <input class="boutton" type="submit" name="recherche" value="Rechercher">
         <?php
 
@@ -106,7 +106,7 @@ $mail='';
         <form method="POST">
             <h4>Ajouter un utilisateur principal</h4>
             <select class="select-style" id="piece" name="princip" required>
-                <option value="NULL"> Sélectionnez  </option>
+                <option value="NULL"> Sélectionnez </option>
                 <?php
 
                 while ($donnees_utilisateurs = $reponse_ajout3->fetch()){
@@ -124,7 +124,7 @@ $mail='';
         <form method="POST">
             <h4>Supprimer un utilisateur principal</h4>
             <select class="select-style" id="piece" name="noprincip" required>
-                <option value="NULL"> Sélectionnez  </option>
+                <option value="NULL"> Sélectionnez </option>
                 <?php
 
                 while ($donnees_utilisateurs = $reponse_ajout4->fetch()){

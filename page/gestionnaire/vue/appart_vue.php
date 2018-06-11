@@ -55,7 +55,7 @@
 					</p>
 
         			<input type="email" id="email" name="email" placeholder="Email"
-        				size="20" /> 
+        				size="20" required /> 
         			
         			<input type="submit" name="firstsubmit" value="Ajouter"
         				class="boutton" />

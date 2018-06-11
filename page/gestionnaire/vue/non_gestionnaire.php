@@ -18,14 +18,13 @@
   	</header>
   	
   	<div class="new_gest">
-		<p>Vous n'êtes pas gestionnaire, vous n'avez pas accès à cette page.</p>
-		
-		<button onclick="window.location='formulaire_gestionnaire.php';">Devenir Gestionnaire</button>
+        <div class="conteneur">
+            <p>Vous n'êtes pas gestionnaire, vous n'avez pas accès à cette page.</p>
+            <button onclick="window.location='formulaire_gestionnaire.php';">Devenir Gestionnaire</button>
+        </div>
 	</div>
-
 	
 	<?php require ('../../footer.php')?>
-	
-	
+
 </body>
 </html>

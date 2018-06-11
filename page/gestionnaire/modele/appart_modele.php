@@ -28,10 +28,10 @@ function AjouterUser($id_dom, $email) {
 }
 
 
-/* fonction pour recuperer l'ID d'un utilisateur suivant son email */
+/* fonction pour recuperer l'ID et l'ID_domicile d'un utilisateur d'un utilisateur suivant son email */
 function getUser($email) {
     global $bdd;
-    $req = $bdd -> prepare('SELECT ID FROM utilisateur WHERE email = :email');
+    $req = $bdd -> prepare('SELECT ID, ID_domicile FROM utilisateur WHERE email = :email');
     $req -> bindParam('email', $email, PDO::PARAM_STR);
     $req -> execute(); 
     return $req;

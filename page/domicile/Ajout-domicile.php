@@ -58,22 +58,22 @@ while ($dom = $domicile->fetch()){
 
             <form class="deff_domicile" method="post">
             <h4>&nbsp Editer le domicile</h4>
-        <input type="text" id="name" name="nom" placeholder="nom du domicile "  <?php if(strlen( $nom )>1){ echo 'value="',$nom,'"'; }?>" style="width: 280px;  margin: 5px " >
-        <input type="text" id="adresse" name="rue" placeholder="votre rue" <?php if(strlen( $nom )>1){ echo 'value="',$rue,'"';} ?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="num" name="num" placeholder="numero de rue" <?php if(strlen( $nom )>1){ echo 'value="',$num,'"';} ?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="cpost" name="post" placeholder="code postal" <?php if(strlen( $nom )>1){ echo 'value="',$cpost,'"';} ?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="pays" name="pays" placeholder="pays" <?php if(strlen( $nom )>1){ echo 'value="',$pays,'"';} ?>" style="width: 280px;  margin: 5px">
-        <input type="text" id="superficie" name="size" placeholder="superficie " <?php if(strlen( $nom )>1){ echo 'value="',$super,'"';} ?>" style="width: 280px;  margin: 5px" >
+        <input type="text" id="name" name="nom" placeholder="Nom du domicile "  <?php if(strlen( $nom )>1){ echo 'value="',$nom,'"'; }?>" style="width: 280px;  margin: 5px " >
+        <input type="text" id="adresse" name="rue" placeholder="Votre rue" <?php if(strlen( $nom )>1){ echo 'value="',$rue,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="num" name="num" placeholder="Numéro de rue" <?php if(strlen( $nom )>1){ echo 'value="',$num,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="cpost" name="post" placeholder="Code postal" <?php if(strlen( $nom )>1){ echo 'value="',$cpost,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="pays" name="pays" placeholder="Pays" <?php if(strlen( $nom )>1){ echo 'value="',$pays,'"';} ?>" style="width: 280px;  margin: 5px">
+        <input type="text" id="superficie" name="size" placeholder="Superficie " <?php if(strlen( $nom )>1){ echo 'value="',$super,'"';} ?>" style="width: 280px;  margin: 5px" >
         <br>
-                &nbsp  &nbsp &nbsp&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input class="boutton" type="submit" name="ajouter" value="Definir" >
+                &nbsp  &nbsp &nbsp&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input class="boutton" type="submit" name="ajouter" value="Définir" >
 
     </form>
 </div>
 <div class="formulaire">
 
-    <h4>Ajouter une piece</h4>
+    <h4>Ajouter une pièce</h4>
     <form class="add_room" method="post">
-        <input type="text" id="piece" name="piece" placeholder="piece a ajouter ">
+        <input type="text" id="piece" name="piece" placeholder="Pièce à ajouter ">
 
         <input class="boutton" type="submit" name="ajoutpiece" value="Ajouter">
 
@@ -81,9 +81,9 @@ while ($dom = $domicile->fetch()){
 
     <form method="POST">
         <br>
-        <h4>Supprimer une piece</h4>
+        <h4>Supprimer une pièce</h4>
         <select class="select-style" id="piece" name="nom_piece" required>
-            <option value="NULL"> Sélectionnez une piece </option>
+            <option value="NULL"> Sélection de pièce </option>
             <?php
 
             while ($donnees_pieces = $piece->fetch()){
