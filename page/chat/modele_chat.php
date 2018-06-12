@@ -25,19 +25,3 @@ function ajouterMessage($id, $parent, $contenu)
     $insert->bindParam('contenu', $contenu);
     $insert->execute();
 }
-
-function getLastParentID()
-{
-    global $bdd;
-    $get = $bdd->query('
-    select  ID,
-        contenu,
-        ID_utilisateur_envoi,
-        ID_parent 
-from    (select * from chat_domisep
-         order by ID_parent, ID) products_sorted,
-        (select @pv := \'0\') initialisation
-where   find_in_set(ID_parent, @pv)
-and     length(@pv := concat(@pv, \',\', ID)) ORDER BY DATE DESC LIMIT 1');
-    return $get->fetch();
-}
