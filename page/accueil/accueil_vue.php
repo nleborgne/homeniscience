@@ -15,9 +15,6 @@
 
   <!-- Affichage dynamique des pièces et capteurs avec barre de recherche-->
   <div class="container">
-
-
-
     <div class="flex2">
       <button class="accordion" type="button" name="button" style="color:white;  background:(-90deg, #4650E2, #00A2E8)">Domicile</button>
         <input class="search" id="search" name="search" placeholder="Rechercher..." type="text" autocomplete="off">
@@ -146,6 +143,7 @@
     -->
   </div>
   <div>
+      <?php require('../chat/controleur_chat.php'); ?>
   <footer style="position: inherit">
       <?php require ('../footer.php')?>
   </footer>

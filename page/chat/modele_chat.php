@@ -1,0 +1,43 @@
+<?php
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+
+function getMessages($ide,$idr)
+{
+    global $bdd;
+    $get = $bdd->prepare('SELECT * FROM chat_domisep WHERE ID_utilisateur_envoi = :ID_e OR ID_receiver = :ID_r ORDER BY date ASC');
+    $get->bindParam('ID_e',$ide);
+    $get->bindParam('ID_r',$idr);
+    $get->execute();
+    return $get;
+}
+
+function ajouterMessage($id, $parent, $contenu)
+{
+    global $bdd;
+    $insert = $bdd->prepare('INSERT INTO chat_domisep(ID_utilisateur_envoi,ID_receiver,contenu) VALUES(:ID_utilisateur_envoi,:ID_parent,:contenu)');
+    $insert->bindParam('ID_utilisateur_envoi', $id);
+    $insert->bindParam('ID_parent', $parent);
+    $insert->bindParam('contenu', $contenu);
+    $insert->execute();
+}
+
+function getLastParentID()
+{
+    global $bdd;
+    $get = $bdd->query('
+    select  ID,
+        contenu,
+        ID_utilisateur_envoi,
+        ID_parent 
+from    (select * from chat_domisep
+         order by ID_parent, ID) products_sorted,
+        (select @pv := \'0\') initialisation
+where   find_in_set(ID_parent, @pv)
+and     length(@pv := concat(@pv, \',\', ID)) ORDER BY DATE DESC LIMIT 1');
+    return $get->fetch();
+}
