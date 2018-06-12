@@ -34,7 +34,7 @@
             /* Redirection vers la page de menu une fois que l'utilisateur a créé son compte */
             header('Location: ' . $url);
         }
-        
+
     }
     else {
         echo "<p class='phrase2'>Vous n'avez pas rempli tous les champs necessaires</p>"; /* message affichant que des champs manques */
