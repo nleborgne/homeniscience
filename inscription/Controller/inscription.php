@@ -14,8 +14,13 @@
         if ($query->rowCount() > 0) { /* Si les 'row' sont trouvés dans la requête, qui voudrait dire que l'email a été trouvé */
             echo "<p class='phrase2'>L'email utilisé est déja utilisé</p>";
             include("../Vue/vue_inscription.php"); /* redirection vers le formulaire*/
-        } else if (!test_double()) /* Partie pour vérifier si les champs à double entrées sont bien remplis */ {
+        }
+        else if (!test_double()) /* Partie pour vérifier si les champs à double entrées sont bien remplis */ {
             echo "<p class='phrase2'>Veuillez verifier que vous avez bien rempli deux fois votre adresse email et votre mot de passe correctement</p>"; /* message affiché si les champs à remplir deux fois sont incorrectes */
+            include("../Vue/vue_inscription.php"); /* redirection vers le formulaire*/
+        }
+        else if(!test_mdp()){
+            echo "<p class='phrase2'>Votre mot de passe n'est pas conforme, veuillez verifier qu'il y ait au moins une minuscule, une majuscule et un chiffre</p>";
             include("../Vue/vue_inscription.php"); /* redirection vers le formulaire*/
         }
 
