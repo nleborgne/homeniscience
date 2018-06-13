@@ -19,7 +19,7 @@ try {
     verifcation_acces( ID_type($ID_utilisateur_principal));
 
 
-    if(isset($_POST['Suprimer'])) {
+    if(isset($_POST['accepter'])) {
         Supprimer_piece($ID_domicile);
         header('Location:../domicile/index.php#home');
 
@@ -30,9 +30,11 @@ try {
         if(!empty($_POST['nom']) AND !empty($_POST['rue'])  AND !empty($_POST['size']) ) {
             Supprimer_domicile($ID_domicile);
             //Ajouter_domicile($ID_utilisateur_principal);
-            Ajouter_domicile2($ID_utilisateur_principal);
+            Ajouter_domicile2($ID_utilisateur_principal,$ID_domicile);
             header('Location:../domicile/index.php#home');
         }
+        Ajouter_domicile2($ID_utilisateur_principal,$ID_domicile);
+        header('Location:../domicile/index.php#home');
     }
 
     if(isset($_POST['ajoutpiece'])){

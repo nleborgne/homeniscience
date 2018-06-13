@@ -33,10 +33,10 @@ function test_double(){
 
 function test_mdp(){
     $password = $_POST['mdp'];
-    if(strlen($password)<7){
+    if(strlen($password)<6){
         return false;
     }
-    else if(preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])', $password)){
+    else if(preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])#', $password)){
         return true;
     }
     else {

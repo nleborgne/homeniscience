@@ -7,7 +7,7 @@
 </head>
 
 <header>
-
+    <?php require ('../page/header.php') ; //appel du header ?>
 </header>
 
 <body>

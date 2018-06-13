@@ -16,8 +16,10 @@
             <input class="champ" type="text" name="prenom" id="prenom" placeholder="Prenom" required>
             <input class="champ" type="email" name="email" id="email" placeholder="E-mail" required>
             <input class="champ" type="email" name="email_verif" id="email_verif" placeholder="Confirmation e-mail" required>
-            <input class="champ" type="password" name="mdp" id="mdp" placeholder="Mot de passe" required>
-            <input class="champ" type="password" name="mdp_verif" id="mdp_verif" placeholder="Confirmation mot de passe" required>
+            <input class="champ" type="password" name="mdp" id="mdp" placeholder="Mot de passe" onkeyup="verificationMdp(this)">
+            <div id="erreur_mdp1" class="erreur_mdp1"></div>
+            <input class="champ" type="password" name="mdp_verif" id="mdp_verif" placeholder="Confirmation mot de passe" onkeyup="verifDouble(this)">
+            <div id="erreur_mdp2" class="erreur_mdp2"></div>
             <div class="cgu">
                 <input type="checkbox" name="cgu" id="cgu" required> <label for="cgu">J'accepte les <a href="" target="_blank">CGU</a></label>
             </div>
@@ -26,5 +28,31 @@
     </div>
     <div class="lien_connexion"> <a href="/homeniscience/connexion/vue_connexion.php">Vous avez déjà un compte ?</a> </div>
 </div>
+<script>
+    function verificationMdp(champ){
+        var regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})");
 
+        if(!regex.test(champ.value) && champ.value > 0){
+            document.getElementById("erreur_mdp1").innerHTML = "Veuillez rentrer un mot de passe contenant au moins une majuscule et un chiffre de longueur supérieur";
+            champ.style.borderColor = "#EA4335";
+        }
+
+        else {
+            champ.style.borderColor = "#3a768f";
+            document.getElementById("erreur_mdp1").innerHTML = "";
+        }
+    }
+    function verifDouble(champ){
+        mdp1 = document.getElementById("mdp").value;
+        mdp2 = champ.value;
+        if(mdp1 != mdp2){
+            champ.style.borderColor = "#EA4335";
+            document.getElementById("erreur_mdp2").innerHTML = "Veuillez rentrer le même mot de passe dans les deux champs";
+        }
+        else {
+            champ.style.borderColor = "#3a768f";
+            document.getElementById("erreur_mdp2").innerHTML = "";
+        }
+    }
+</script>
 </body>

@@ -147,7 +147,7 @@ function Ajouter_domicile($ID_utilisateur_principal)
 
 
 
-function Ajouter_domicile2($ID_utilisateur_principal)
+function Ajouter_domicile2($ID_utilisateur_principal,$ID_domicile)
 {
     global $bdd;
     if (isset($_POST['ajouter'])) {
@@ -177,6 +177,14 @@ function Ajouter_domicile2($ID_utilisateur_principal)
             $stmt = $bdd->prepare($sql);
             $stmt->execute(array(
                 'ID' => $ID_utilisateur_principal));
+        }
+        else{
+            $sql = "UPDATE domicile SET nom'=".$_POST['nom'].", superficie = ".$_POST['size'].", numero_habitation =". $_POST['num'].", code_postal = ".$_POST['post'].",pays = ".$_POST['pays']." WHERE ID=:ID";
+            $stmt = $bdd->prepare($sql);
+            $stmt->execute(array(
+                'ID' => $ID_domicile
+            ));
+
         }
 
 
@@ -239,7 +247,7 @@ function Afficher_piece($ID_domicile)
 function Supprimer_piece($ID_domicile)
 {
     global $bdd;
-    if(isset($_POST['Suprimer'])) {
+    if(isset($_POST['accepter'])) {
         $nom_piece= $_POST['nom_piece'];
 
         $req = $bdd->exec('DELETE FROM piece WHERE nom="'.$nom_piece.'"AND  ID_domicile="'.$ID_domicile.'"  ' );
