@@ -1,4 +1,4 @@
-<?php require ('../page/header.php') ; //appel du header
+<?php
 require ('modele_contact.php'); //appel du modèle
 require ('vue_contact.php') ; //appel de la vue
 
