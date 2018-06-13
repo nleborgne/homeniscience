@@ -29,7 +29,7 @@
                 </div>
                 <div id="about">
                     <h2 class="foot_titre">A propos d'Hexateam</h2>
-                    <a id="hexateam_foot" href="Hexateam"><img class="logo_Hexateam" src="/homeniscience/page/img/logoHexateam.png" alt="Hexateam" title="Hexateam"></a>
+                    <a id="hexateam_foot" href="/homeniscience/page/EasterEgg.php"><img class="logo_Hexateam" src="/homeniscience/page/img/logoHexateam.png" alt="Hexateam" title="Hexateam"></a>
                 </div>
             </div>
             <div id="elementdessous">
@@ -81,7 +81,6 @@ footer {
 }
 #contact, #reseau, #about
 {
-
     padding: 0px 10px 0px 10px;
 }
 h2
