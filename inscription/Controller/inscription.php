@@ -20,7 +20,7 @@
             include("../Vue/vue_inscription.php"); /* redirection vers le formulaire*/
         }
         else if(!test_mdp()){
-            echo "<p class='phrase2'>Votre mot de passe n'est pas conforme, veuillez verifier qu'il y ait au moins une minuscule, une majuscule et un chiffre</p>";
+            echo "<p class='phrase2'>Votre mot de passe n'est pas conforme, veuillez verifier qu'il ai une longueur supérieur à 6 et qu'il y ait au moins une minuscule, une majuscule et un chiffre</p>";
             include("../Vue/vue_inscription.php"); /* redirection vers le formulaire*/
         }
 
