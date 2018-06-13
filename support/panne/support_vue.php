@@ -43,7 +43,7 @@
         <?php
         while ($donnees = $reponse->fetch()) {
           echo '<div class="childPanne">';
-          echo '<a href="/homeniscience/support/panne/index/'.$donnees['panne_ID'].'#detail">';
+          echo '<a href="/homeniscience/support/panne/index?id='.$donnees['panne_ID'].'#detail">';
           echo '<ul>';
           echo '<li><strong> ID panne</strong> : '.$donnees['panne_ID'].'</li> ';
           echo '<li><strong> ID user</strong> : '.$donnees['ID_utilisateur_principal'].'</li> ';

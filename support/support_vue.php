@@ -12,7 +12,7 @@
 <?php require('header2.php'); ?>
 <body>
   <div class="container">
-    <a href="panne/index/0">
+    <a href="panne/index?id=0">
       <div class="child">
         <i class="fas fa-exclamation-triangle fa-5x"></i>
         <h3>GÉRER LES PANNES</h3>

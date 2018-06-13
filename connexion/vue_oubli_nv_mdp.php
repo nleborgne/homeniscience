@@ -64,7 +64,7 @@
             message.innerHTML = "<p>Les mots de passe ne correspondent pas</p>"
             return false;
         } else {
-            if (pass.value.length < 8) {
+            if (pass.length < 8) {
                 message.innerHTML = "<p>Mot de passe pas assez long</p>";
                 return false;
             }
