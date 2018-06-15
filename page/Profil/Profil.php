@@ -68,7 +68,8 @@
                         <label for="NewMdp">Nouveau mot de passe</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="NewMdp" name="NewMdp" value="">
+                        <input class="champ" type="password" id="NewMdp" name="NewMdp" onkeyup="verificationMdp()">
+                        <div id="erreur_mdp1" class="erreur_mdp1"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -76,7 +77,8 @@
                         <label for="NewMdp2">Confirmer mot de passe</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="NewMdp2" name="NewMdp2" value="">
+                        <input class="champ" type="password" id="NewMdp2" name="NewMdp2" onkeyup="verifDouble(this)">
+                        <div id="erreur_mdp2" class="erreur_mdp2"></div>
                     </div>
                 </div>
             </fieldset>
@@ -87,7 +89,34 @@
     </div>
 </div>
 </div>
+<script>
+    function verificationMdp(){
+        champ = document.getElementById("NewMdp");
+        var regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})");
 
+        if(!regex.test(champ.value) && champ.value > 0){
+            document.getElementById("erreur_mdp1").innerHTML = "Veuillez rentrer un mot de passe contenant au moins une majuscule et un chiffre de longueur supérieur";
+            champ.style.borderColor = "#EA4335";
+        }
+
+        else {
+            champ.style.borderColor = "#3a768f";
+            document.getElementById("erreur_mdp1").innerHTML = "";
+        }
+    }
+    function verifDouble(champ){
+        mdp1 = document.getElementById("NewMdp").value;
+        mdp2 = champ.value;
+        if(mdp1 != mdp2){
+            champ.style.borderColor = "#EA4335";
+            document.getElementById("erreur_mdp2").innerHTML = "Veuillez rentrer le même mot de passe dans les deux champs";
+        }
+        else {
+            champ.style.borderColor = "#3a768f";
+            document.getElementById("erreur_mdp2").innerHTML = "";
+        }
+    }
+</script>
 </body>
 <footer style="position: inherit">
     <?php require ('../footer.php')?>

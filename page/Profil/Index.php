@@ -22,6 +22,20 @@ if(isset($_POST['email'])){
         header('Refresh:0');
     }
 }
+//verification si le mot de passe vérifie les normes
+function test_mdp(){
+    $password = $_POST['NewMdp'];
+    if(strlen($password)<6){
+        return false;
+    }
+    else if(preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])#', $password)){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 
 //modifier mot de passe
 $id_user_mdp = getMdpUtilisateur($_SESSION['ID']);
@@ -29,9 +43,11 @@ $bdd_mdp = $id_user_mdp -> fetch();
 if(!empty($_POST['OldMdp'])){
     $mdp_client = $_POST['OldMdp'];
     if(password_verify($mdp_client, $bdd_mdp['mot_de_passe'])) {
-        if ($_POST['NewMdp'] == $_POST['NewMdp2']) {
-            $hash =  password_hash($_POST['NewMdp'], PASSWORD_DEFAULT);
-            modifMdpUtilisateur($hash, $_SESSION['ID']);
+        if (!test_mdp()){
+            if ($_POST['NewMdp'] == $_POST['NewMdp2']) {
+                $hash =  password_hash($_POST['NewMdp'], PASSWORD_DEFAULT);
+                modifMdpUtilisateur($hash, $_SESSION['ID']);
+            }
         }
     }
 }
