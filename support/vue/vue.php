@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>Chat</title>
-    <link rel="stylesheet" href="/homeniscience/page/chat/style.css">
+    <link rel="stylesheet" href="/homeniscience/support/vue/style_chat.css">
 </head>
 <body>
+<?php require('../header2.php'); ?>
 <div id="chatbox" class="chatbox">
     <div class="chat-label" onclick="pullMenu()">CHAT</div>
     <div class="chatlogs">
@@ -29,20 +30,6 @@
         <input type="submit" value="Send" name="submitForm">
     </form>
 </div>
-<script type="text/javascript">
-    var current;
-    var pullChat = 0;
-    var pullMenu = function () {
-        if (pullChat === 0) {
-            current = document.getElementById('chatbox');
-            current.style.bottom = '0px';
-            pullChat = 1;
-        } else {
-            current = document.getElementById('chatbox');
-            current.style.bottom = '-380px';
-            pullChat = 0;
-        }
-    }
-</script>
+
 </body>
 </html>

@@ -9,7 +9,7 @@ try {
 function getMessages($ide,$idr)
 {
     global $bdd;
-    $get = $bdd->prepare('SELECT contenu, ID_utilisateur_envoi, ID_receiver, DATE_FORMAT(date,"%d/%m/%Y %H:%i") AS date FROM chat_domisep WHERE ID_utilisateur_envoi = :ID_e OR ID_receiver = :ID_r ORDER BY date ASC');
+    $get = $bdd->prepare('SELECT contenu, ID_utilisateur_envoi, ID_receiver, DATE_FORMAT(date,"%d/%m/%Y %H:%i") AS date FROM chat_domisep WHERE (ID_utilisateur_envoi = :ID_e AND ID_receiver = :ID_r) OR (ID_utilisateur_envoi = :ID_r AND ID_receiver = :ID_e) ORDER BY date ASC');
     $get->bindParam('ID_e',$ide);
     $get->bindParam('ID_r',$idr);
     $get->execute();
@@ -24,4 +24,5 @@ function ajouterMessage($id, $parent, $contenu)
     $insert->bindParam('ID_parent', $parent);
     $insert->bindParam('contenu', $contenu);
     $insert->execute();
+    return true;
 }
