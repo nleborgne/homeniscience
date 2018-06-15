@@ -3,6 +3,9 @@ session_start();
 // On importe le modèle
 require('../modele/modele_chat.php');
 
+// On récupère les utilisateurs
+$user = getUsers();
+
 // On récupère les messages
 $messages = getMessages($_SESSION['ID'],$_GET['id']);
 

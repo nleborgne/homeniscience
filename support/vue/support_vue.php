@@ -22,7 +22,7 @@ session_start();
             <h3>GÉRER LES PANNES</h3>
         </div>
     </a>
-    <a href="../controleur/controleur_chat.php">
+    <a href="../chat-0">
         <div class="child chat">
             <i class="fas fa-comment fa-5x"></i>
             <h3>CHAT</h3>
