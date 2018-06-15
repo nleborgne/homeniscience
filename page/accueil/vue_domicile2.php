@@ -4,12 +4,12 @@
 <?php  if(strlen($domicile)<2){ ?>
     <div class="container1" id="home" >
         <div class="container1">
-            <div class="flex1"  >
+            <div class="flex1" style="margin-left: auto; margin-right: auto">
                 <form method="post" action="index.php">
 
-                    <div class="panel" style="max-height: 500px" >
+                    <div class="panel" style="max-height: 500px; border: solid 1px #DDDDDD; text-align: center">
                         <img src="warning.png" style="height: 250px;width: 250px;margin-top: 20px; margin-left: 250px; margin-right: 250px; position: center">
-                        <P style="padding-left: 100px;padding-right: 100px"> Ajoutez et configurez un domicile!! </P>
+                        <P style="padding-left: 100px;padding-right: 100px"> Ajoutez et configurez un domicile ! </P>
 
                         <input class="boutton" type="submit" name="ajouterdomicile" value="mon domicile" style=" margin-left: 325px; margin-right: 325px; max-height: 40px; background-color: #ff9a00;  position: center">
 
