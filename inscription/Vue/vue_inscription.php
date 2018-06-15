@@ -22,7 +22,7 @@
             <div id="erreur_mdp2" class="erreur_mdp2"></div>
             <div class="cgu">
 
-                <input type="checkbox" name="cgu" id="cgu" required> <label for="cgu">J'accepte les <a href="/homeniscience/Doc administratif/controlleur_cgu.php" target="_blank">CGU</a></label>
+                <input type="checkbox" name="cgu" id="cgu" required> <label for="cgu">J'accepte les <a href="/homeniscience/Doc administratif/controlleur_cgu.php" target="_blank">CGU</a>, vous pourrez à tout moment retirer votre consentement et envoyer une demande de suppression de données</label>
 
             </div>
             <div class="cgu">
