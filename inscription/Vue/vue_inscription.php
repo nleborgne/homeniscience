@@ -21,7 +21,7 @@
             <input class="champ" type="password" name="mdp_verif" id="mdp_verif" placeholder="Confirmation mot de passe" onkeyup="verifDouble(this)">
             <div id="erreur_mdp2" class="erreur_mdp2"></div>
             <div class="cgu">
-                <input type="checkbox" name="cgu" id="cgu" required> <label for="cgu">J'accepte les <a href="" target="_blank">CGU</a></label>
+                <input type="checkbox" name="cgu" id="cgu" required> <label for="cgu">J'accepte les <a href="/homeniscience/Doc administratif/controlleur_cgu.php" target="_blank">CGU</a></label>
             </div>
             <div class="g-recaptcha" data-sitekey="6LevW1YUAAAAAEQ-hWFFC_3QnQQ8MOj2ph4Z-qDr" ></div>
             <input class="boutton" type = "submit" value = "Valider">
