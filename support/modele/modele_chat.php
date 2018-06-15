@@ -26,3 +26,9 @@ function ajouterMessage($id, $parent, $contenu)
     $insert->execute();
     return true;
 }
+
+function getUsers() {
+    global $bdd;
+    $get = $bdd->query('SELECT ID, email, nom, prenom from utilisateur WHERE 1');
+    return $get;
+}

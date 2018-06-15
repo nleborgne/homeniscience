@@ -77,7 +77,7 @@
     <p id="text" class="text_default">Homeniscience</p>
     <a id="accueil" href="/homeniscience/support/">Accueil</a>
     <a id="pannes" href="/homeniscience/support/panne/index/0">Pannes</a>
-    <a id="chat" href="">Chat</a>
+    <a id="chat" href="/homeniscience/support/controleur/controleur_chat.php?id=0">Chat</a>
     <a id="other" href="">Other</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
