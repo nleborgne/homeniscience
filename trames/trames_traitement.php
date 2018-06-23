@@ -14,14 +14,14 @@ try {
 function verifTrame($i)
 {
 
-    $sub0 = substr($i, 6, 1);
-    $sub1 = (int)substr($i, 7, 2);
-    $sub3 = (int)substr($i, 19, 4);
-    $sub4 = (int)substr($i, 23, 2);
-    $sub5 = (int)substr($i, 25, 2);
-    $sub6 = (int)substr($i, 27, 2);
-    $sub7 = (int)substr($i, 29, 2);
-    $sub8 = (int)substr($i, 31, 2);
+    $sub0 = substr($i, 7, 1);
+    $sub1 = (int)substr($i, 8, 2);
+    $sub3 = (int)substr($i, 20, 4);
+    $sub4 = (int)substr($i, 24, 2);
+    $sub5 = (int)substr($i, 26, 2);
+    $sub6 = (int)substr($i, 28, 2);
+    $sub7 = (int)substr($i, 30, 2);
+    $sub8 = (int)substr($i, 32, 2);
 
 
     if (is_numeric($sub0) && is_numeric($sub1)) {
@@ -49,7 +49,7 @@ function verifTrame($i)
 }
 
 // LIRE AVEC CURL
-$lien = "http://pastebin.com/raw/Pz33XpXT";
+$lien = "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=009C";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $lien);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);

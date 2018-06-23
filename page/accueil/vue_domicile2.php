@@ -15,7 +15,6 @@
 
                             <input class="boutton" type="submit" name="ajouterdomicile" value="mon domicile"
                                    style=" margin-left: 325px; margin-right: 325px; max-height: 40px; background-color: #ff9a00;  position: center">
-
                         </div>
                     </form>
                 </div>
@@ -35,13 +34,13 @@
             while ($effecteur = $afficherEffecteurs->fetch()) {
                 echo "<div class='blockEffecteur'>";
                 switch ($effecteur['ID_type_equipement']) {
-                    case 1:
-                        echo '<i class="fas fa-tint fa-2x"></i>&nbsp;';
-                        echo '10%';
+                    case 4:
+                        echo '<i class="fas fa-thermometer fa-2x"></i>&nbsp;';
+                        echo $ValTempArr[0],$ValTempArr[1].",".$ValTempArr[2],$ValTempArr[3]."°C";
                         break;
                     case 2:
                         echo '<i class="fas fa-lightbulb fa-2x"></i>';
-                        echo '<input type="range" name="" value="">';
+                        echo '<input id="light" type="range" name="" value="">';
                         break;
                     case 3:
                         echo '<i class="fas fa-child fa-2x"></i>&nbsp;';
@@ -51,7 +50,11 @@
                         echo "moteur";
                         echo " <label class='switch'>
    			   		<input type='checkbox'>
-    				<span class='slider round' id='moteurslider'></span>
+    				<span class='slider round' id='moteursliderallumer'></span>
+    			</label>";
+                        echo " <label class='switch'>
+   			   		<input type='checkbox'>
+    				<span class='slider round' id='moteurslidereteint'></span>
     			</label>";
                 }
                 echo '</div>';
@@ -63,9 +66,30 @@
 </table>
 
 <script>
-    $("#moteurslider").click(function () {
-    $.ajax({
-       url: 'http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009C&TRAME=1009C13021111'
+
+    $("#moteursliderallumer").click(function () {
+
+        //on allume le moteur
+        $.ajax({
+            url: 'http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009C&TRAME=1009C13021111' // La ressource ciblée
+        });
     });
+
+    $("#moteurslidereteint").click(function () {
+
+        // on eteint le moteur
+        $.ajax({
+            url: 'http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009C&TRAME=1009C13020000' // La ressource ciblée
+        });
     });
+
+    $("#light").click(function () {
+        valueLight = document.getElementById("light").value *30;
+        //on allume la lampe
+        $.ajax({
+            url: 'http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009C&TRAME=1009C1305'+valueLight // La ressource ciblée
+        });
+    });
+
+
 </script>

@@ -92,14 +92,16 @@ function Ajouter_message2($ID_domicile,$contenu){
 
 }
 
-
-
-
-
 function Afficher_message($ID_domicile){
     global $bdd;
     $messageforum = $bdd->query("SELECT forum_interne.date as date,forum_interne.contenu as contenu, utilisateur.prenom as prenom FROM forum_interne JOIN utilisateur ON forum_interne.ID_utilisateur_envoi=utilisateur.ID WHERE forum_interne.ID_domicile=$ID_domicile ORDER BY forum_interne.date DESC LIMIT 5 ");
     return $messageforum ;
 
     $messageforum->closeCursor();
+}
+
+function getValeurTemperature() {
+    global $bdd;
+    $get = $bdd->query("SELECT * from statistiques WHERE ID_equipement = 3 ORDER BY date DESC LIMIT 1");
+    return $get->fetch();
 }

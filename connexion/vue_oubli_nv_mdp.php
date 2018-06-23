@@ -61,7 +61,7 @@
         var message = document.getElementById("error");
 
         if (pass !== pass2) {
-            message.innerHTML = "<p>Les mots de passe ne correspondent pas</p>"
+            message.innerHTML = "<p>Les mots de passe ne correspondent pas</p>";
             return false;
         } else {
             if (pass.length < 6) {
