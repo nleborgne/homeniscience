@@ -21,9 +21,7 @@
             <input class="champ" type="password" name="mdp_verif" id="mdp_verif" placeholder="Confirmation mot de passe" onkeyup="verifDouble(this)">
             <div id="erreur_mdp2" class="erreur_mdp2"></div>
             <div class="cgu">
-
                 <input type="checkbox" name="cgu1" id="cgu1" required> <label for="cgu1">J'accepte les <a href="/homeniscience/Doc administratif/controlleur_cgu.php" target="_blank">CGU</a>, vous pourrez à tout moment retirer votre consentement et envoyer une demande de suppression de données</label>
-
             </div>
             <div class="cgu">
                 <input type="checkbox" name="cgu2" id="cgu2" required> <label for="cgu2">J'ai au mois 16 ans</label>
@@ -35,16 +33,16 @@
 </div>
 <script>
     function verificationMdp(champ){
-        var regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})");
+        var regex = new RegExp('^(?=.*[A-Z])$');
+        champ.style.borderColor = "#EA4335";
+        if(true)){
+            champ.innerHTML = "Veuillez rentrer un mot de passe contenant au moins une majuscule et un chiffre de longueur supérieure à 6 caractères";
 
-        if(!regex.test(champ.value) && champ.value > 0){
-            document.getElementById("erreur_mdp1").innerHTML = "Veuillez rentrer un mot de passe contenant au moins une majuscule et un chiffre de longueur supérieur";
-            champ.style.borderColor = "#EA4335";
         }
 
         else {
             champ.style.borderColor = "#3a768f";
-            document.getElementById("erreur_mdp1").innerHTML = "";
+            document.getElementById("erreur_mdp1").innerHTML = "a";
         }
     }
     function verifDouble(champ){

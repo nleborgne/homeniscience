@@ -43,7 +43,7 @@ $bdd_mdp = $id_user_mdp -> fetch();
 if(!empty($_POST['OldMdp'])){
     $mdp_client = $_POST['OldMdp'];
     if(password_verify($mdp_client, $bdd_mdp['mot_de_passe'])) {
-        if (!test_mdp()){
+        if (test_mdp()){
             if ($_POST['NewMdp'] == $_POST['NewMdp2']) {
                 $hash =  password_hash($_POST['NewMdp'], PASSWORD_DEFAULT);
                 modifMdpUtilisateur($hash, $_SESSION['ID']);

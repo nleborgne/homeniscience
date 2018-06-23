@@ -19,7 +19,7 @@
       <button class="accordion" type="button" name="button" style="color:white;  background:(-90deg, #4650E2, #00A2E8)">Domicile</button>
         <input class="search" id="search" name="search" placeholder="Rechercher..." type="text" autocomplete="off">
 
-      <div class="panel" style="padding-left:130px ; min-height: AUTO">
+      <div class="panel" style="min-height: AUTO">
 
 
         <?php include('vue_domicile2.php');?>
@@ -72,9 +72,9 @@
           <label class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
-
-        </label>
-              <p style="font-size: 20px">a:</p>
+          </label>
+              
+              <p style="font-size: 20px">à:</p>
 
           <input type="text" class="clock" id="clock" name="alarm_h" placeholder="Heure" Value="14"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >:
           <input type="text" class="clock" id="clock" name="alarm_min" placeholder="Min" Value="30"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >
