@@ -1,6 +1,6 @@
 <?php
 
-require('../../../connexion_bdd.php');
+require('../connexion_bdd.php');
 
 require('modele/modele.php');
 

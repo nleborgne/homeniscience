@@ -11,5 +11,3 @@ RewriteEngine on
 #--------------------------------------------------
 # Règles de réécriture d'URL :
 #--------------------------------------------------
-
-RewriteRule ^chat-([0-9]+)$   controleur/controleur_chat.php?id=$1 [L]

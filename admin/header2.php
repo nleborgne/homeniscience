@@ -73,11 +73,11 @@
 <body>
 
   <div class="topnav" id="myTopnav">
-    <img class="img_default" id="img" src="/homeniscience/page/support/header_logo.png" alt="">
+    <img class="img_default" id="img" src="/homeniscience/page/admin/header_logo.png" alt="">
     <p id="text" class="text_default">Homeniscience</p>
-    <a id="accueil" href="/homeniscience/support/">Accueil</a>
-    <a id="pannes" href="/homeniscience/support/panne/index/0">Pannes</a>
-    <a id="chat" href="/homeniscience/support/controleur/controleur_chat.php?id=0">Chat</a>
+    <a id="accueil" href="/homeniscience/admin/">Accueil</a>
+    <a id="pannes" href="/homeniscience/admin/panne/index.php?id=0">Pannes</a>
+    <a id="chat" href="/homeniscience/admin/controleur/controleur_chat.php?id=0">Chat</a>
     <a id="other" href="">Other</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
