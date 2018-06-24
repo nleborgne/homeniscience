@@ -73,7 +73,7 @@
 <body>
 
   <div class="topnav" id="myTopnav">
-    <img class="img_default" id="img" src="/homeniscience/page/admin/header_logo.png" alt="">
+    <img class="img_default" id="img" src="/homeniscience/page/support/header_logo.png" alt="">
     <p id="text" class="text_default">Homeniscience</p>
     <a id="accueil" href="/homeniscience/admin/">Accueil</a>
     <a id="pannes" href="/homeniscience/admin/panne/index.php?id=0">Pannes</a>

@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <!-- trying to code a homepage for support section -->
 <html lang="fr" dir="ltr">
@@ -22,7 +19,7 @@ session_start();
             <h3>GÉRER LES PANNES</h3>
         </div>
     </a>
-    <a href="../chat-0">
+    <a href="../controleur/controleur_chat.php?id=0">
         <div class="child chat">
             <i class="fas fa-comment fa-5x"></i>
             <h3>CHAT</h3>
