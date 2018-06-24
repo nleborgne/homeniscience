@@ -14,7 +14,7 @@ $messages = getMessages($_SESSION['ID'],$_GET['id']);
 
 if(isset($_POST['submitForm'])) {
     if(ajouterMessage($_SESSION['ID'],$_GET['id'],$_POST['contenu'])) {
-        header('Refresh:0');
+        $messages = getMessages($_SESSION['ID'],$_GET['id']);
     }
 }
 

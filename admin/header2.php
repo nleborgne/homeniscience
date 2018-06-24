@@ -79,13 +79,14 @@
     <a id="pannes" href="/homeniscience/admin/panne/index.php?id=0">Pannes</a>
     <a id="chat" href="/homeniscience/admin/controleur/controleur_chat.php?id=0">Chat</a>
     <a id="other" href="">Other</a>
+    <a id="Deconnexion" href="/homeniscience/page/disconnect.php">Deconnexion</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 
   <script>
 
   var page = window.location.href;
-  if (page == "http://localhost/homeniscience/support/") {
+  if (page.includes("index_controleur.php")) {
     document.getElementById('accueil').className += "active";
   } else if (page.includes("panne")) {
     document.getElementById('pannes').className += "active";
