@@ -1,4 +1,7 @@
 <?php
+
+require('../connexion_bdd.php');
+
 require ('modele_connexion.php');
 /*
 if ($compteur == 1) {

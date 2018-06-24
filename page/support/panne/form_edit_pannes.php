@@ -1,4 +1,5 @@
 <?php
+require('../../connexion_bdd.php');
 require('support_modele.php');
 try {
   miseAJour();}
@@ -7,3 +8,6 @@ try {
   }
 header("Location:index/".$_POST['ID']);
 ?>
+
+
+

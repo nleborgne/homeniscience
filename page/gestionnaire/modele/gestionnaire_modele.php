@@ -42,16 +42,27 @@ function AfficherUser()
 
 
 
-    function User($domicil)
-    {
-        global $bdd;
-        $reponse = $bdd->prepare("SELECT nom, prenom FROM utilisateur WHERE ID_domicile= :dom ");
-        $reponse -> bindParam('dom', $domicil, PDO::PARAM_INT);
-        $reponse -> execute();
-        return $reponse;
-        
-    }
+function User($domicil)
+{
+    global $bdd;
+    $reponse = $bdd->prepare("SELECT nom, prenom FROM utilisateur WHERE ID_domicile= :dom ");
+    $reponse -> bindParam('dom', $domicil, PDO::PARAM_INT);
+    $reponse -> execute();
+    return $reponse;
+    
+}
 
+function conso($id_gest) {
+    global $bdd;
+    $req = $bdd -> prepare("SELECT SUM(consommation) AS conso_totale 
+FROM domicile 
+INNER JOIN gestionnaire 
+ON ID_gestionnaire = gestionnaire.ID
+WHERE ID_utilisateur = ?");
+    $req -> bindParam(1, $id_gest,  PDO::PARAM_INT);
+    $req -> execute();
+    return $req;
+}
     
 
     

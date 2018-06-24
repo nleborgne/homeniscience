@@ -1,4 +1,5 @@
 <?php
+require('../../../connexion_bdd.php');
 require('support_modele.php');
 try {
   miseAJour();}

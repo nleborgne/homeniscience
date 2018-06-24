@@ -1,5 +1,7 @@
 <?php
 
+require('../../../connexion_bdd.php');
+
 require('modele/modele.php');
 
 if (isset($_POST['submitLogin'])) {

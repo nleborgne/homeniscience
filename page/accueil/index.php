@@ -3,6 +3,9 @@
 if (!isset($_SESSION)) {
     session_start();
 }
+
+require('../../connexion_bdd.php');
+
 /* Appel du modèle */
 require('accueil_modele.php');
 $ID_user = $_SESSION['ID'];

@@ -5,13 +5,9 @@
     if(!isset($_SESSION)){
         session_start();
     }
+    
+    require('../../../connexion_bdd.php');
 
-try {
-        $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    }
-catch(Exception $e) {
-        die('Erreur : '.$e->getMessage());
-    }
 
 require('../modele/gestionnaire_modele.php');
 
@@ -26,7 +22,10 @@ try {
         $domicile = AfficherDomicile();
         $domicile1 = AfficherDomicile();
         
-        require('../vue/gestionnaire_vue.php');
+        $conso = conso($gest['ID_utilisateur']);
+        $consosum = $conso -> fetch();
+        
+        require('../vue/gestionnaire_vue(2).php');
         
         
     }

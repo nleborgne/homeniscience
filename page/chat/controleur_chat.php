@@ -1,5 +1,7 @@
 <?php
 
+require('../../connexion_bdd.php');
+
 // On importe le modèle
 require('modele_chat.php');
 

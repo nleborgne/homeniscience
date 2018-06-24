@@ -1,10 +1,5 @@
 <?php
-// Connexion à la base de données via PDO
-try {
-  $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
-} catch (Exception $e) {
-  die('Erreur : '.$e->getMessage());
-}
+
 
 function ID_domicile($ID_utilisateur_principal)
 {

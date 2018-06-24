@@ -36,7 +36,7 @@
 	<div class=flex3>
     	<button type="button" class="accordion" name="button">Statistiques Globales de Consommation</button>
     	<div class="panel">
-    		<canvas id="myChart" width="400" height="250" data-mesLabels="??" data-mesDatas="??"></canvas>
+    		<canvas id="myChart" width="400" height="250" data-meslabels='["Mars"]' data-mesdatas='[<?php echo $consosum['conso_totale']; ?>]'></canvas>
     		<canvas id="myChart2" width="400" height="250"></canvas>
     	</div>
     </div>
@@ -87,6 +87,10 @@
     
     <h1 class="dom">Domiciles</h1>
     
+    <div>
+    	<button class="consulter" onclick="window.location='../vue/formulaire_gestionnaire.php';">Ajouter un nouveau domicile</button>
+    </div>
+    
 <div class="container">
   <?php
   
@@ -134,16 +138,16 @@ function elec1() {
 	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
-	var mesLabels = ?? // ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout"]
-	var mesDatas = ?? // [30, 50, 45, 20, 2, 10]
-	
+	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
+	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas); 
+
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
-	        labels: mesLabels,
+	        labels: meslabels,
 	        datasets: [{
 	            label: 'Consommation d\'Electricite',
-	            data: mesDatas,
+	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
 	                'rgba(54, 162, 235, 0.2)',
@@ -190,20 +194,22 @@ function elec1() {
 
 var x = document.getElementById("case1");
 
- x.onclick = function elec() {
+ x.onclick = function elec1() {
 
 	var ctx = document.getElementById("myChart").getContext('2d');
 	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
+	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
+	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas);
 	
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
-	        labels: ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout"],
+	        labels: meslabels,
 	        datasets: [{
 	            label: 'Consommation d\'Electricite',
-	            data: [30, 50, 45, 20, 2, 10],
+	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
 	                'rgba(54, 162, 235, 0.2)',

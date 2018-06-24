@@ -5,6 +5,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+require('../connexion_bdd.php');
+
 require('modele_connexion.php');
 
 // Si le get n'est pas défini, on appelle d'abord la 1ere vue

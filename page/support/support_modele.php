@@ -2,12 +2,6 @@
 if(!isset($_SESSION)){
   session_start();
 }
-// Connexion à la base de données via PDO
-try {
-  $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
-} catch (Exception $e) {
-  die('Erreur : '.$e->getMessage());
-}
 
 /* Fonction permettant d'afficher les différentes pannes */
 function afficherPannes() {
