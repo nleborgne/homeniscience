@@ -2,7 +2,7 @@
 
    // set_include_path("homeniscience/inscription/inscription_mvc/Controller/functions_controller.php");
     include("functions_controller.php");
-    require('../../connexion_bdd');
+    require('../../connexion_bdd.php');
     include("../Model/model.php");
     $POST=htmlspe($_POST); /* On créer un nouveau tableau post inoffensif */
     $url = "/homeniscience/connexion/vue_connexion.php";
