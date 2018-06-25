@@ -32,18 +32,52 @@ try {
     
     
     $capteur = getValeurCapteur(1, $_GET['id']);
-    $array_val = array();
     $array_date = array();
+    $array_date_debut = array();
+    $array_date_fin = array();
+    
+    $i = 0;
+   
     while ($donnees = $capteur -> fetch()) {
-        array_push($array_val, $donnees['moyenne']);
-        $date = explode(' ', $donnees['date']);
-        array_push($array_date, $date[0]);
         
+        if ($donnees['donnee'] > 0050) {
+            $date = explode(' ', $donnees['date']);
+            array_push($array_date, $date[0]);
+            echo "bonjour";
+            if ($i == 0) {
+                echo "coucou";
+                array_push($array_date_debut, $date[0]);
+                $i = 1;
+                print_r($array_date_debut);
+            }
+        }
+        else {
+            
+            $date = explode(' ', $donnees['date']);
+            array_push($array_date, $date[0]);
+            if ($i == 1) {
+                array_push($array_date_fin, $date[0]);
+                $i = 0;
+            }
+        } 
     }
     
-   
-    $array_val = json_encode($array_val);
+    $heure = array();
+    $date = array();
+    $j = 0;
+    while ($j <= count($array_date_debut) - 1) {
+        
+        if ($array_date[$j] = $array_date[$j+1]) {
+            $heure[$j] +=  $array_date_fin[$j] - $array_date_debut[$j];
+        }
+        else {
+            $heure[$j+1] += $array_date_fin[$j] - $array_date_debut[$j];
+        }
+        $j += 1;
+    }
+    
     $array_date = json_encode($array_date);
+    $heure = json_encode($heure);
     
     
     
