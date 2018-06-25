@@ -52,18 +52,24 @@ function User($domicil)
     
 }
 
-function conso($id_gest) {
+function conso($id_type) {
     global $bdd;
-    $req = $bdd -> prepare("SELECT SUM(consommation) AS conso_totale 
-FROM domicile 
-INNER JOIN gestionnaire 
-ON ID_gestionnaire = gestionnaire.ID
-WHERE ID_utilisateur = ?");
-    $req -> bindParam(1, $id_gest,  PDO::PARAM_INT);
+    $req = $bdd -> prepare("SELECT *, AVG(donnee) from statistiques 
+LEFT JOIN equipement on equipement.ID = ID_equipement 
+LEFT JOIN piece on piece.ID = ID_piece 
+LEFT JOIN domicile ON domicile.ID = piece.ID_domicile 
+LEFT JOIN gestionnaire on domicile.ID_gestionnaire = gestionnaire.ID 
+LEFT JOIN utilisateur ON domicile.ID = utilisateur.ID_domicile 
+WHERE utilisateur.ID = :id_gest AND equipement.ID_type_equipement = :id_type Group by DATE(date)
+ORDER BY date ASC LIMIT 7");
+    $req -> bindParam('id_type', $id_type, PDO::PARAM_INT);
+    $req -> bindParam('id_gest', $_SESSION['ID'],  PDO::PARAM_INT);
     $req -> execute();
     return $req;
 }
     
+
+
 
     
 

@@ -56,7 +56,7 @@ INNER JOIN piece ON equipement.ID_piece = piece.ID
 INNER JOIN domicile ON domicile.ID = piece.ID_domicile 
 WHERE equipement.ID = :id_cap AND domicile.ID = :id_dom
 GROUP BY DATE(date) 
-ORDER BY date DESC LIMIT 5');
+ORDER BY date ASC LIMIT 7');
     $req -> bindParam('id_cap', $id_cap, PDO::PARAM_INT);
     $req -> bindParam('id_dom', $id_dom, PDO::PARAM_INT);
     $req -> execute();

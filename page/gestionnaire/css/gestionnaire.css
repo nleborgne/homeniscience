@@ -138,6 +138,7 @@ body{
   transition: max-height 0.2s ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
   text-align: center;
+  margin-top: 20px;
 }
 
 .panel h3, .panel2 h3, .panel3 h3, .panel4 h3 {
