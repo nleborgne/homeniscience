@@ -100,3 +100,4 @@ function getValeurTemperature() {
     $get = $bdd->query("SELECT * from statistiques WHERE ID_equipement = 3 ORDER BY date DESC LIMIT 1");
     return $get->fetch();
 }
+

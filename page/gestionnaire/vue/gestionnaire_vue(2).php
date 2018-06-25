@@ -36,7 +36,7 @@
 	<div class=flex3>
     	<button type="button" class="accordion" name="button">Statistiques Globales de Consommation</button>
     	<div class="panel">
-    		<canvas id="myChart" width="400" height="250" data-meslabels='["Mars"]' data-mesdatas='[<?php echo $consosum['conso_totale']; ?>]'></canvas>
+    		<canvas id="myChart" width="400" height="250" data-monaxe="Heures" data-meslabels='["Mars"]' data-mesdatas='[<?php echo $consosum['conso_totale']; ?>]'></canvas>
     		<canvas id="myChart2" width="400" height="250"></canvas>
     	</div>
     </div>
@@ -140,6 +140,8 @@ function elec1() {
 
 	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
 	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas); 
+	var monaxe = document.getElementById("myChart").dataset.monaxe;
+
 
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
@@ -175,7 +177,7 @@ function elec1() {
 	                },
 	                scaleLabel: {
 		                display:true,
-		                labelString: 'Consommation (kWh)'
+		                labelString: monaxe
 	                }
                 
 	            }]

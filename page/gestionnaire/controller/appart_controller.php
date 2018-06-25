@@ -31,6 +31,24 @@ try {
     
     
     
+    $capteur = getValeurCapteur(1, $_GET['id']);
+    $array_val = array();
+    $array_date = array();
+    while ($donnees = $capteur -> fetch()) {
+        array_push($array_val, $donnees['donnee']);
+        $date = explode(' ', $donnees['date']);
+        array_push($array_date, $date[0]);
+        
+    }
+    
+    $date1 = strtotime($array_date[0]);
+    $date2 = strtotime($array_date[1]);
+    echo round(abs($date2 - $date1) / (60*60*24),0);
+    $array_val = json_encode($array_val);
+    $array_date = json_encode($array_date);
+    
+    
+    
     
     
     

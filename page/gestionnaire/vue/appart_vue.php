@@ -68,7 +68,7 @@
     	<div class=flex4>
     		<button type="button" class="accordion" name="button">Statistiques</button>
     		<div class="panel4">
-    			<canvas id="myChart" width="400" height="250"></canvas>
+    			<canvas id="myChart" data-meslabels='<?php echo $array_date; ?>' data-mesdatas='<?php echo $array_val; ?>' width="400" height="250"></canvas>
     			<canvas id="myChart2" width="400" height="250"></canvas>
     		</div>
     	</div>
@@ -76,8 +76,9 @@
     <div class=panel3>
    	    <div class ="checktitle">Consommation Globale</div> 
    	    <span class="radio">
-    	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" /><label for="case1">Electricite</label><br />
+    	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" /><label for="case1">Lumiere</label><br />
 		</span>
+		<!--  
 		<span class="radio">
 		<input type="radio" name="conso" id ="case2" value="eau" /><label for="case2">Eau</label><br />
     	</span>
@@ -89,6 +90,7 @@
 		<span class="radio">
 		<input type="radio" name="temps" id ="case4" value="mois" checked="checked" /><label for="case4">Mois</label>
     	</span>
+    	-->
     </div>
     	
 		
@@ -97,10 +99,6 @@
     
 	<?php require ('../../footer.php')?>
 	
-</body>
-</html>
-
-
 	<script type="text/javascript">
 
 	
@@ -112,14 +110,19 @@
 	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
+	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
+	console.log(meslabels);
+	
+	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas);
+	console.log(mesdatas);
 	
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
-	        labels: ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout"],
+	        labels: meslabels,
 	        datasets: [{
 	            label: 'Consommation d\'Electricite',
-	            data: [30, 50, 45, 20, 2, 10],
+	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
 	                'rgba(54, 162, 235, 0.2)',
@@ -147,7 +150,7 @@
 	                },
 	                scaleLabel: {
 		                display:true,
-		                labelString: 'Consommation (kWh)'
+		                labelString: 'Valeur Moyenne'
 	                }
                 
 	            }]
@@ -208,7 +211,7 @@
 		                },
 		                scaleLabel: {
 			                display:true,
-			                labelString: 'Consommation (kWh)'
+			                labelString: 'Valeur moyenne'
 		                }
 	                
 		            }]
@@ -225,66 +228,14 @@
 		});
 		}
 
-	 var y = document.getElementById('case2');
-	 
-		y.onclick = function water(){
-			
-			var crx = document.getElementById("myChart2").getContext('2d');
-			document.getElementById("myChart").style.height = '0';
-			document.getElementById("myChart2").style.height = 'auto';
-
-			var myChart2 = new Chart(crx, {
-			    type: 'bar',
-			    data: {
-			        labels: ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout"],
-			        datasets: [{
-			            label: 'Consommation d\'Eau',
-			            data: [1500, 1200, 900, 1800, 2500, 2439],
-			            backgroundColor: [
-			                'rgba(255, 99, 132, 0.2)',
-			                'rgba(54, 162, 235, 0.2)',
-			                'rgba(255, 206, 86, 0.2)',
-			                'rgba(75, 192, 192, 0.2)',
-			                'rgba(153, 102, 255, 0.2)',
-			                'rgba(255, 159, 64, 0.2)'
-			            ],
-			            borderColor: [
-			                'rgba(255,99,132,1)',
-			                'rgba(54, 162, 235, 1)',
-			                'rgba(255, 206, 86, 1)',
-			                'rgba(75, 192, 192, 1)',
-			                'rgba(153, 102, 255, 1)',
-			                'rgba(255, 159, 64, 1)'
-			            ],
-			            borderWidth: 1
-			        }]
-			    },
-			    options: {
-			        scales: {
-			            yAxes: [{
-			                ticks: {
-			                    beginAtZero:true
-			                },
-			                scaleLabel: {
-				                display:true,
-				                labelString: 'Litres'
-			                }
-		              
-			            }]
-			          
-			 		  
-			        },
-			        legend: {
-				        labels: {
-					        fontColor:'blue'
-				        }
-			        }
-		  }
-			});
-
-		}
 	
     </script>
+	
+</body>
+</html>
+
+
+	
 
 
 
