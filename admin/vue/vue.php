@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Chat</title>
     <link rel="stylesheet" href="/homeniscience/admin/vue/style_chat.css">
 </head>
 <body>

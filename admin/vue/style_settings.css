@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.CGU {
+    width: 800px;
+    height: 700px;
+    margin : 0 auto;
+}
+.accordion {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    background-color: #0099ff;
+    margin-top:5%;
+
+}
+
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+
+.panel {
+    margin : 0 auto;
+    max-height:0;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    padding: 0 18px;
+    background-color: white;
+    overflow-y: auto;
+    transition: max-height 0.2s ease-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ .CGU .panel form {
+     margin: 0 auto;
+     padding:2%;
+     text-align: center;
+ }

@@ -25,7 +25,7 @@
             <h3>CHAT</h3>
         </div>
     </a>
-    <a href="">
+    <a href="../controleur/settings_controleur.php">
         <div class="child other">
             <i class="fas fa-cog fa-5x"></i>
             <h3>OTHER STUFF</h3>
