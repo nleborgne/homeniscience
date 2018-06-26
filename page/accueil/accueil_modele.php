@@ -57,6 +57,14 @@ function getPieces() {
     $get->execute(array($ID));
     return $get;
   }
+
+function getEffecteurs2($ID) {
+    global $bdd;
+    $get = $bdd->prepare('SELECT * FROM equipement WHERE ID_piece = ?');
+    $get->execute(array($ID));
+    return $get;
+}
+
 function Ajouter_message($ID_domicile,$contenu,$ID_user){
   global $bdd;
     echo'model ok';
@@ -101,3 +109,14 @@ function getValeurTemperature() {
     return $get->fetch();
 }
 
+function getValeurDistance() {
+    global $bdd;
+    $get = $bdd->query("SELECT * from statistiques WHERE ID_equipement = 1 ORDER BY date DESC LIMIT 1");
+    return $get->fetch();
+}
+
+function getValeurLumi() {
+    global $bdd;
+    $get = $bdd->query("SELECT * from statistiques WHERE ID_equipement = 8 ORDER BY date DESC LIMIT 1");
+    return $get->fetch();
+}

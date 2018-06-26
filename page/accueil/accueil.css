@@ -194,7 +194,9 @@ input:checked + .slider:before {
 .blockEffecteur {
     height: 45px;
 }
-
+.blockActionneur {
+    height: 45px;
+}
 /* Pieces de la vue domicile */
 
 table {
@@ -202,6 +204,7 @@ table {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    overflow-x:hidden;
 }
 
 tr {
