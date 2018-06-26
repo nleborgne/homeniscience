@@ -5,6 +5,7 @@
 
 require('Trame.php');
 
+
 require($_SERVER['DOCUMENT_ROOT'].'/homeniscience/connexion_bdd.php');
 
 function verifTrame($i)
@@ -64,7 +65,7 @@ for ($i = strlen($data); $i >= 0; $i--) {
     if (substr($data, $i, 5) == "1009" && strlen(substr($data, $i, 33)) == 33) {
         // On vérifie avec le log
         if (substr($data, $i, 33) == $log[0]) {
-            echo "log rencontré <br>";
+            // echo "log rencontré <br>";
             break;
             // Vérifier que les valeurs sont bien du bon type
         } else if (verifTrame(substr($data, $i, 33))) {
@@ -86,7 +87,7 @@ if (count($trameArray) != 0) {
     }
     // On effectue la requête
     $result = $bdd->query($sql);
-    echo "Tout s'est bien passé";
+    //echo "Tout s'est bien passé";
 } else {
-    echo "Rien à ajouter";
+    //echo "Rien à ajouter";
 }

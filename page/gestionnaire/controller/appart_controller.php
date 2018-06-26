@@ -33,7 +33,7 @@ try {
     
     
     
-    $capteur = getValeurCapteur(1, $_GET['id']);
+    $capteur = getValeurCapteur(8, $_GET['id']);
   /*  $date_capteur = getDateCapteur(1, $_GET['id']); */
     $array_valeur = array();
     $array_date = array();
