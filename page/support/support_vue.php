@@ -12,7 +12,7 @@
   <?php require('../header.php'); ?>
   <h1>Support</h1>
   <div class="container">
-    <a href="">
+    <a href="controlleur_faq.php">
       <button class="child">
         <i class="far fa-question-circle"></i>&nbsp;
         <p>Foire aux questions</p>

@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: 'Lato';
+    background: url('/homeniscience/page/img/funky-lines.png');
+    background-attachment: fixed;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conteneur {
+    display: block;
+    width: 1200px;
+    background: white;
+    margin: 35px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+}
+
+.accordion {
+    font-family: 'Roboto';
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    background: linear-gradient(-45deg, #4650E2, #00A2E8);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text {
+    padding: 20px;
+}
+
+.text h2 {
+    color: #0099ff;
+    text-align: center;
+}
+
+img {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+}
