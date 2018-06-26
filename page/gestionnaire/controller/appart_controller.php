@@ -22,6 +22,8 @@ try {
         
     }
     
+    require('../../../trames/trames_traitement.php');
+    
     
     while ($donnees_user = $user2 -> fetch()) {
         if (!empty($_POST[$donnees_user['ID']])) {
@@ -32,8 +34,11 @@ try {
     
     
     $capteur = getValeurCapteur(1, $_GET['id']);
-    $date_capteur = getDateCapteur(1, $_GET['id']);
+  /*  $date_capteur = getDateCapteur(1, $_GET['id']); */
+    $array_valeur = array();
     $array_date = array();
+    
+    /*
     $array_date_debut = array();
     $array_date_fin = array();
     
@@ -42,11 +47,15 @@ try {
         $date = explode(' ', $datum['date']);
         array_push($array_date, $date[0]);
     }
+    */
     
-    
-    $i = 0;
+    /* $i = 0; */
     while ($donnees = $capteur -> fetch()) {
+        $date = explode(' ', $donnees['date']);
+        array_push($array_date, $date[0]);
         
+        array_push($array_valeur, $donnees['moyenne']);
+        /*
         if ($donnees['donnee'] > 0100) {
             if ($i == 0) {
                 array_push($array_date_debut, $donnees['date']);
@@ -123,11 +132,12 @@ try {
             $heure[$j] = $years."-".$months."-".$days." ".$hours.":".$minutes.":".$seconds;
         }
         $j+=1;
+        */
     }
     
-    print_r($heure);
+    
     $array_date = json_encode($array_date);
-    $heure = json_encode($heure);
+    $array_valeur = json_encode($array_valeur);
     
     
     
