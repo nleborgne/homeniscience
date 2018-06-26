@@ -71,7 +71,7 @@
                         break;
                     case 5:
                         echo "<div id='actionneur'>";
-                        echo "moteur ";
+                        echo "<img id='fan' src='https://d30y9cdsu7xlg0.cloudfront.net/png/172-200.png'> ";
                         echo "<label for='moteursliderallumer'></label>";
                         echo "<button id='moteursliderallumer'>Allumer</button>";
                         echo "<label for='moteurslidereteint'></label>";
@@ -82,7 +82,6 @@
                 }
             }
             echo '</div>';
-
         }
     } ?>
 </table>
@@ -93,7 +92,6 @@
         //on allume le moteur
         $.ajax({
             url: 'http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009C&TRAME=1009C13021111',
-            dataType: "text",
             // La ressource ciblée
         });
     });
@@ -103,7 +101,6 @@
         // on eteint le moteur
         $.ajax({
             url: 'http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009C&TRAME=1009C13020000',
-            dataType: "text",// La ressource ciblée
         });
     });
 
@@ -114,6 +111,7 @@
             url: 'http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009C&TRAME=1009C1305' + valueLight // La ressource ciblée
         });
     });
+
 
     function executeQuery() {
         $.ajax({
@@ -127,6 +125,7 @@
     }
 
     // run the first time; all subsequent calls will take care of themselves
-    setTimeout(executeQuery, 1000);
+     setTimeout(executeQuery, 1000);
+
 
 </script>

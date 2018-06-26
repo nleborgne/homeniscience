@@ -366,3 +366,8 @@ h1 {
     width: 220px;
 
 }
+
+#fan {
+    max-width:38px;
+    max-height:38px;
+}
