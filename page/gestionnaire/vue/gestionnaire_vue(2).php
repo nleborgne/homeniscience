@@ -36,11 +36,12 @@
 	<div class=flex3>
     	<button type="button" class="accordion" name="button">Statistiques Globales de Consommation</button>
     	<div class="panel">
-    		<canvas id="myChart" width="400" height="250" data-meslabels='["Mars"]' data-mesdatas='[<?php echo $consosum['conso_totale']; ?>]'></canvas>
+    		<canvas id="myChart" width="400" height="250" data-monaxe="Heures" data-meslabels='<?php echo $array_date; ?>' data-mesdatas='<?php echo $array_val; ?>'></canvas>
     		<canvas id="myChart2" width="400" height="250"></canvas>
     	</div>
     </div>
    <div class="checkpart">
+   <!--  
     <div class="flex1">
     	<button type="button" class="accordion" name="button">Bareme de consommation</button>
     	<div class="panel2">
@@ -62,24 +63,14 @@
    			<p id="textInput2">0</p>
     	</div>
     </div>
-   	
+   	-->
    	<div class="flex5">
    	<div class=panel5>
    	    <div class ="checktitle">Consommation Globale</div> 
    	    <span class="radio">
-    	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" /><label for="case1">Electricite</label><br />
+    	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" /><label for="case1">Lumiere</label><br />
 		</span>
-		<span class="radio">
-		<input type="radio" name="conso" id ="case2" value="eau" /><label for="case2">Eau</label><br />
-    	</span>
-    	
-    	<div class="checktitle">Intervalle de temps</div> 
-    	<span class="radio">
-    	<input type="radio" name="temps" id="case3"  value="semaines" /><label for="case3">Semaines</label><br />
-		</span>
-		<span class="radio">
-		<input type="radio" name="temps" id ="case4" value="mois" checked="checked" /><label for="case4">Mois</label>
-    	</span>
+		
     </div>
     </div>
    </div>
@@ -140,6 +131,8 @@ function elec1() {
 
 	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
 	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas); 
+	var monaxe = document.getElementById("myChart").dataset.monaxe;
+
 
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
@@ -175,7 +168,7 @@ function elec1() {
 	                },
 	                scaleLabel: {
 		                display:true,
-		                labelString: 'Consommation (kWh)'
+		                labelString: monaxe
 	                }
                 
 	            }]

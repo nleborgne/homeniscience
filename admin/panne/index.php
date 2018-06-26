@@ -1,6 +1,6 @@
 <?php
 /* Contrôleur pour la page de support */
-require('../../../connexion_bdd.php');
+require('../../connexion_bdd.php');
 /* Appel du modèle */
 require('support_modele.php');
 

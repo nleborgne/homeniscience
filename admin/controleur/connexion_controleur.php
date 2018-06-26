@@ -1,6 +1,6 @@
 <?php
-
-require('../../../connexion_bdd.php');
+session_start();
+require('../connexion_bdd.php');
 
 require('modele/modele.php');
 
@@ -19,7 +19,7 @@ if (isset($_POST['submitLogin'])) {
     }
 
 } else if(isset($_SESSION['ID'])) {
-    header('Location:index_controleur.php');
+    header('Location:controleur/index_controleur.php');
 } else {
     require('vue/vue_connexion.php');
 

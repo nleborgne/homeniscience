@@ -1,6 +1,7 @@
 <!-- passer en mvc -->
 <table id="table" align="center">
 
+<<<<<<< HEAD
 
 
     <?php if (strlen($domicile) < 2) { ?>
@@ -14,6 +15,17 @@
                                  style="height: 250px;width: 250px;margin-top: 20px; margin-left: 250px; margin-right: 250px; position: center">
                             <P style="padding-left: 100px;padding-right: 100px"> Ajoutez et configurez un
                                 domicile!! </P>
+=======
+<?php  if(strlen($domicile)<2){ ?>
+    <div class="container1" id="home" >
+        <div class="container1">
+            <div class="flex1" style="margin-left: auto; margin-right: auto">
+                <form method="post" action="index.php">
+
+                    <div class="panel" style="max-height: 500px; border: solid 1px #DDDDDD; text-align: center">
+                        <img src="warning.png" style="height: 250px;width: 250px;margin-top: 20px; margin-left: 250px; margin-right: 250px; position: center">
+                        <P style="padding-left: 100px;padding-right: 100px"> Ajoutez et configurez un domicile ! </P>
+>>>>>>> 9c925bd4b2064204483da05970b58cc48634a01c
 
                             <input class="boutton" type="submit" name="ajouterdomicile" value="mon domicile"
                                    style=" margin-left: 325px; margin-right: 325px; max-height: 40px; background-color: #ff9a00;  position: center">

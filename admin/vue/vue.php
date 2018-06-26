@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Chat</title>
-    <link rel="stylesheet" href="/homeniscience/support/vue/style_chat.css">
+    <link rel="stylesheet" href="/homeniscience/admin/vue/style_chat.css">
 </head>
 <body>
 <?php require('../header2.php'); ?>

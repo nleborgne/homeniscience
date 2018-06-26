@@ -24,7 +24,7 @@
                 <input type="checkbox" name="cgu1" id="cgu1" required> <label for="cgu1">J'accepte les <a href="/homeniscience/Doc administratif/controlleur_cgu.php" target="_blank">CGU</a>, vous pourrez à tout moment retirer votre consentement et envoyer une demande de suppression de données</label>
             </div>
             <div class="cgu">
-                <input type="checkbox" name="cgu2" id="cgu2" required> <label for="cgu2">J'ai au mois 16 ans</label>
+                <input type="checkbox" name="cgu2" id="cgu2" required> <label for="cgu2">J'ai au moins 16 ans</label>
             </div>
             <div class="g-recaptcha" data-sitekey="6LevW1YUAAAAAEQ-hWFFC_3QnQQ8MOj2ph4Z-qDr" ></div>
             <input class="boutton" type = "submit" value = "Valider">
