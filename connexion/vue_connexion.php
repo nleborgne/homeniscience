@@ -15,7 +15,7 @@
 
     <div class="connexion">
         <form method="POST" action="controler_connexion.php">
-            <input class="txtinput" type="text" name="email" placeholder="Email">
+            <input class="txtinput" type="email" name="email" placeholder="Email">
             <br>
             <input class="txtinput" type="password" name="mot_de_passe" placeholder="Mot de passe">
             <input class="btn" type="submit">

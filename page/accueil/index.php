@@ -10,6 +10,7 @@ require('../../connexion_bdd.php');
 require('accueil_modele.php');
 $ID_user = $_SESSION['ID'];
 
+
 $ID_domicile = ID_domicile($_SESSION['ID']);
 //echo $ID_domicile;
 $messageforum = Afficher_message($ID_domicile);
@@ -17,6 +18,12 @@ $domicile = Afficher_domicile($ID_domicile);
 
 $ValTemp0 = getValeurTemperature();
 $ValTempArr= str_split($ValTemp0['donnee']);
+
+$ValDist0 = getValeurDistance();
+$ValDistArr = str_split($ValDist0['donnee']);
+
+$ValLumi0 = getValeurLumi();
+
 
 try {
     $infos = getUserInfos();
