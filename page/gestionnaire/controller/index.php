@@ -22,6 +22,8 @@ try {
         $domicile = AfficherDomicile();
         $domicile1 = AfficherDomicile();
         
+        require('../../../trames/trames_traitement.php');
+        
         $capteur = conso(2);
         $array_val = array();
         $array_date = array();
@@ -34,6 +36,8 @@ try {
         
         $array_val = json_encode($array_val);
         $array_date = json_encode($array_date);
+        
+        
         
         
         
