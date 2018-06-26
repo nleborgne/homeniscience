@@ -68,7 +68,7 @@
     	<div class=flex4>
     		<button type="button" class="accordion" name="button">Statistiques</button>
     		<div class="panel4">
-    			<canvas id="myChart" data-meslabels='<?php echo $array_date; ?>' data-mesdatas='<?php echo $heure; ?>' width="400" height="250"></canvas>
+    			<canvas id="myChart" data-meslabels='<?php echo $array_date; ?>' data-mesdatas='<?php echo $array_valeur; ?>' width="400" height="250"></canvas>
     			<canvas id="myChart2" width="400" height="250"></canvas>
     		</div>
     	</div>

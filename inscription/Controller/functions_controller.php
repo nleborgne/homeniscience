@@ -43,3 +43,13 @@ function test_mdp(){
         return false;
     }
 }
+
+function test_mail(){
+    $email = $_POST['email'];
+    // Vérifie si la chaine ressemble à un email
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return true;
+    } else {
+        return false;
+    }
+}

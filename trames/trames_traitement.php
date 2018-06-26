@@ -5,7 +5,8 @@
 
 require('Trame.php');
 
-require('../connexion_bdd.php');
+
+require($_SERVER['DOCUMENT_ROOT'].'/homeniscience/connexion_bdd.php');
 
 function verifTrame($i)
 {
@@ -54,7 +55,7 @@ curl_close($ch);
 
 
 // On ouvre le fichier log
-$log = file("log.txt");
+$log = file($_SERVER['DOCUMENT_ROOT']."/homeniscience/trames/log.txt");
 
 $trameArray = array();
 

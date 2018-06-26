@@ -22,6 +22,8 @@ try {
         
     }
     
+    require('../../../trames/trames_traitement.php');
+    
     
     while ($donnees_user = $user2 -> fetch()) {
         if (!empty($_POST[$donnees_user['ID']])) {
@@ -32,8 +34,11 @@ try {
     
     
     $capteur = getValeurCapteur(1, $_GET['id']);
-    $date_capteur = getDateCapteur(1, $_GET['id']);
+  /*  $date_capteur = getDateCapteur(1, $_GET['id']); */
+    $array_valeur = array();
     $array_date = array();
+    
+    /*
     $array_date_debut = array();
     $array_date_fin = array();
     
@@ -42,11 +47,15 @@ try {
         $date = explode(' ', $datum['date']);
         array_push($array_date, $date[0]);
     }
+    */
     
-    
-    $i = 0;
+    /* $i = 0; */
     while ($donnees = $capteur -> fetch()) {
+        $date = explode(' ', $donnees['date']);
+        array_push($array_date, $date[0]);
         
+        array_push($array_valeur, $donnees['moyenne']);
+        /*
         if ($donnees['donnee'] > 0100) {
             if ($i == 0) {
                 array_push($array_date_debut, $donnees['date']);
@@ -61,13 +70,11 @@ try {
         } 
     }
     
-    print_r($array_date);
-    print_r($array_date_debut);
-    print_r($array_date_fin);
-    
-    echo $array_date_debut[0];
-    
     $heure = array();
+    for ($k = 0; $k < count($array_date); $k++) {
+        array_push($heure, "0");
+    }
+    
     $debut = array();
     $fin = array();
     $j = 0;
@@ -77,24 +84,60 @@ try {
         $date = explode(' ', $array_date_fin[$j]);
         array_push($fin, $date[0]);
         
-        $date1 = date_create($array_date_debut[$j]);
-        $date2 = date_create($array_date_fin[$j]);
-        $diff = date_diff($date1, $date2);
+        $date1 = $array_date_debut[$j];
+        $date2 = $array_date_debut[$j];
         
+        $diff = abs(strtotime($date2) - strtotime($date1));
+        
+        $years = floor($diff / (365*60*60*24));
+        $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+        $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+        
+        $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60)/ (60*60));
+        $minutes = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60 - $hours*60*60)/ (60));
+        $seconds = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60 - $hours*60*60 - $minutes*60));
+        
+        $fetcha = $years."-".$months."-".$days." ".$hours.":".$minutes.":".$seconds;
+        echo $fetcha;
         if ($debut[$j] = $fin[$j] && $j != 0 && $debut[$j] == $debut[$j-1]) {
-            $heure[$j-1] +=  $diff;
+            $tamp = $heure[$j-1];
+            $heure[$j-1] = "";
+            
+            $sum = abs(strtotime($tamp) + strtotime($fetcha));
+            
+            $years = floor($sum / (365*60*60*24));
+            $months = floor(($sum - $years * 365*60*60*24) / (30*60*60*24));
+            $days = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+            
+            $hours = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60)/ (60*60));
+            $minutes = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60 - $hours*60*60)/ (60));
+            $seconds = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60 - $hours*60*60 - $minutes*60));
+            
+            $heure[$j-1] = $years."-".$months."-".$days." ".$hours.":".$minutes.":".$seconds;
         }
         else if ($debut[$j] = $fin[$j]) {
-            $heure[$j] += $diff;
-        }
-        else {
-            $heure[$j+1] += $diff;
+            $tamp = $heure[$j];
+            $heure[$j] = "";
+            
+            $sum = abs(strtotime($tamp) + strtotime($fetcha));
+            
+            $years = floor($sum / (365*60*60*24));
+            $months = floor(($sum - $years * 365*60*60*24) / (30*60*60*24));
+            $days = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+            
+            $hours = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60)/ (60*60));
+            $minutes = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60 - $hours*60*60)/ (60));
+            $seconds = floor(($sum - $years * 365*60*60*24 - $months*30*60*60*24 - $days*24*60*60 - $hours*60*60 - $minutes*60));
+            
+            $heure[$j] = $years."-".$months."-".$days." ".$hours.":".$minutes.":".$seconds;
         }
         $j+=1;
+        */
     }
     
+    
     $array_date = json_encode($array_date);
-    $heure = json_encode($heure);
+    $array_valeur = json_encode($array_valeur);
     
     
     
