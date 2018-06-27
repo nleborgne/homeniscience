@@ -36,7 +36,7 @@ html, body {
 .panel {
     overflow:hidden;
     margin : 0 auto;
-    max-height:0;
+    max-height:700px;
     display: flex;
     font-family: 'Lato', sans-serif;
     padding: 0 18px;

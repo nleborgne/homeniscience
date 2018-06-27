@@ -23,6 +23,17 @@
     </div>
 </div>
 
+<div class="CGU">
+    <button class="accordion">Supprimer des données</button>
+    <div class="panel">
+        <form action="" method="POST">
+            <label for="email">Email</label>
+            <input type="email" name="emailDelete">
+            <input type="submit" value="Supprimer" name="delete">
+        </form>
+    </div>
+</div>
+
 
 </body>
 
