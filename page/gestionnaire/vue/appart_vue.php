@@ -68,8 +68,11 @@
     	<div class=flex4>
     		<button type="button" class="accordion" name="button">Statistiques</button>
     		<div class="panel4">
-    			<canvas id="myChart" data-meslabels='<?php echo $array_date; ?>' data-mesdatas='<?php echo $array_valeur; ?>' width="400" height="250"></canvas>
-    			<canvas id="myChart2" width="400" height="250"></canvas>
+    			<canvas id="myChart" data-monaxe="Valeur Moyenne (lux)" 
+    			data-meslabels='<?php echo $array_date; ?>' 
+    			data-mesdatas='<?php echo $array_valeur; ?>' 
+    			data-title="Variation du taux lumiere en fonction des 7 derniers jours"
+    			width="400" height="250"></canvas>
     		</div>
     	</div>
     	
@@ -94,20 +97,22 @@
 	function elec1() {
 
 	var ctx = document.getElementById("myChart").getContext('2d');
-	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
 	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
 	
 	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas);
+
+	var monaxe = document.getElementById("myChart").dataset.monaxe;
 	
+	var montitre = document.getElementById("myChart").dataset.title;
 	
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
 	        labels: meslabels,
 	        datasets: [{
-	            label: 'Consommation d\'Electricite',
+	            label: montitre,
 	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
@@ -136,7 +141,7 @@
 	                },
 	                scaleLabel: {
 		                display:true,
-		                labelString: 'Valeur Moyenne'
+		                labelString: monaxe
 	                }
                 
 	            }]
@@ -159,20 +164,22 @@
 	 x.onclick = function elec() {
 
 			var ctx = document.getElementById("myChart").getContext('2d');
-			document.getElementById("myChart2").style.height = '0';
 			document.getElementById("myChart").style.height = 'auto';
 
 			var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
 			
 			var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas);
-			
+
+			var monaxe = document.getElementById("myChart").dataset.monaxe;
+
+			var montitre = document.getElementById("myChart").dataset.title;
 			
 			var myChart = new Chart(ctx, {
 			    type: 'bar',
 			    data: {
 			        labels: meslabels,
 			        datasets: [{
-			            label: 'Consommation d\'Electricite',
+			            label: montitre,
 			            data: mesdatas,
 			            backgroundColor: [
 			                'rgba(255, 99, 132, 0.2)',
@@ -201,7 +208,7 @@
 			                },
 			                scaleLabel: {
 				                display:true,
-				                labelString: 'Valeur Moyenne'
+				                labelString: monaxe
 			                }
 		                
 			            }]

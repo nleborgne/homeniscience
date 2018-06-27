@@ -133,7 +133,7 @@ if(!isset($_SESSION)){
         <?php
         while ($equ_dom = $equipement_ajoutés->fetch()){
         ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
-            <?php echo $equ_dom['nom']; ?>
+            <?php echo ' - '. $equ_dom['nom']; ?>
             <?php
             }
             ?>

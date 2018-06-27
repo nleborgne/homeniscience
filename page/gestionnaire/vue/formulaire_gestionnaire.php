@@ -14,7 +14,7 @@ if(!isset($_SESSION)){
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width">
-  <title>Accueil</title>
+  <title>Non-gestionnaire</title>
   <link rel="stylesheet" href="../css/non_gestionnaire.css">
 </head>
 <header class="header_non_gest">

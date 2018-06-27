@@ -1,8 +1,17 @@
 <?php 
 
+if(!isset($_SESSION)){
+    session_start();
+}
+
 require('../../../connexion_bdd.php');
 
 require('../modele/appart_modele.php');
+
+
+$access = access();
+if ($access -> rowCount() == 1) {
+
 
 try {
     $user = AfficherUser2();
@@ -140,15 +149,25 @@ try {
     $array_valeur = json_encode($array_valeur);
     
     
-    
-    
-    
-    
-    
 }catch (Exception $e) {
     echo 'Erreur : '.$e->getMessage();
 }
 
 require('../vue/appart_vue.php');
 
+}
+else {
+    echo "Vous n'avez pas acces a cette page.";
+}
+
+
 ?>
+
+
+
+
+
+
+
+
+
