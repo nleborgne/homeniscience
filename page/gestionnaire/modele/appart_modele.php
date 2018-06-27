@@ -1,5 +1,18 @@
 <?php 
 
+function access()
+{
+    global $bdd;
+    $req = $bdd -> prepare('select * from utilisateur 
+inner join gestionnaire on gestionnaire.ID_utilisateur = utilisateur.ID 
+INNER JOIN domicile on gestionnaire.ID = ID_gestionnaire 
+Where ID_utilisateur = :id_user');
+    $req -> bindParam('id_user', $_SESSION['ID'], PDO::PARAM_INT);
+    $req -> execute();
+    return $req;
+}
+
+
 
 function AfficherUser2()
 {
