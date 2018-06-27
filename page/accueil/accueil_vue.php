@@ -73,7 +73,7 @@
           <input type="checkbox">
           <span class="slider round"></span>
           </label>
-              
+
               <p style="font-size: 20px">à:</p>
 
           <input type="text" class="clock" id="clock" name="alarm_h" placeholder="Heure" Value="14"  style="width: 120px; max-height: 60px; font-size: 40px;  margin: 5px" >:
