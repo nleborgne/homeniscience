@@ -5,13 +5,9 @@
     if(!isset($_SESSION)){
         session_start();
     }
+    
+    require('../../../connexion_bdd.php');
 
-try {
-        $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    }
-catch(Exception $e) {
-        die('Erreur : '.$e->getMessage());
-    }
 
 require('../modele/gestionnaire_modele.php');
 
@@ -26,7 +22,26 @@ try {
         $domicile = AfficherDomicile();
         $domicile1 = AfficherDomicile();
         
-        require('../vue/gestionnaire_vue.php');
+        require('../../../trames/trames_traitement.php');
+        
+        $capteur = conso(2);
+        $array_val = array();
+        $array_date = array();
+        while ($donnees = $capteur -> fetch()) {
+            array_push($array_val, $donnees['AVG(donnee)']);
+            $date = explode(' ', $donnees['date']);
+            array_push($array_date, $date[0]);
+            
+        }
+        
+        $array_val = json_encode($array_val);
+        $array_date = json_encode($array_date);
+        
+        
+        
+        
+        
+        require('../vue/gestionnaire_vue(2).php');
         
         
     }

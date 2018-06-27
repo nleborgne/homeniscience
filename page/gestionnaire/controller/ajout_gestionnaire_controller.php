@@ -4,6 +4,7 @@ if(!isset($_SESSION)){
   session_start();
 }
 
+require('../../../connexion_bdd.php');
 
 include("functions_ajout_gestionnaire.php");
 include("../modele/ajout_gestionnaire_model.php");

@@ -42,17 +42,34 @@ function AfficherUser()
 
 
 
-    function User($domicil)
-    {
-        global $bdd;
-        $reponse = $bdd->prepare("SELECT nom, prenom FROM utilisateur WHERE ID_domicile= :dom ");
-        $reponse -> bindParam('dom', $domicil, PDO::PARAM_INT);
-        $reponse -> execute();
-        return $reponse;
-        
-    }
-
+function User($domicil)
+{
+    global $bdd;
+    $reponse = $bdd->prepare("SELECT nom, prenom FROM utilisateur WHERE ID_domicile= :dom ");
+    $reponse -> bindParam('dom', $domicil, PDO::PARAM_INT);
+    $reponse -> execute();
+    return $reponse;
     
+}
+
+function conso($id_type) {
+    global $bdd;
+    $req = $bdd -> prepare("SELECT *, AVG(donnee) from statistiques 
+LEFT JOIN equipement on equipement.ID = ID_equipement 
+LEFT JOIN piece on piece.ID = ID_piece 
+LEFT JOIN domicile ON domicile.ID = piece.ID_domicile 
+LEFT JOIN gestionnaire on domicile.ID_gestionnaire = gestionnaire.ID 
+LEFT JOIN utilisateur ON domicile.ID = utilisateur.ID_domicile 
+WHERE utilisateur.ID = :id_gest AND equipement.ID_type_equipement = :id_type Group by DATE(date)
+ORDER BY date ASC LIMIT 7");
+    $req -> bindParam('id_type', $id_type, PDO::PARAM_INT);
+    $req -> bindParam('id_gest', $_SESSION['ID'],  PDO::PARAM_INT);
+    $req -> execute();
+    return $req;
+}
+    
+
+
 
     
 

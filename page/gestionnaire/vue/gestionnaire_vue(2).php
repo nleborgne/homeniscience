@@ -36,11 +36,12 @@
 	<div class=flex3>
     	<button type="button" class="accordion" name="button">Statistiques Globales de Consommation</button>
     	<div class="panel">
-    		<canvas id="myChart" width="400" height="250" data-mesLabels="??" data-mesDatas="??"></canvas>
+    		<canvas id="myChart" width="400" height="250" data-monaxe="Heures" data-meslabels='<?php echo $array_date; ?>' data-mesdatas='<?php echo $array_val; ?>'></canvas>
     		<canvas id="myChart2" width="400" height="250"></canvas>
     	</div>
     </div>
    <div class="checkpart">
+   <!--  
     <div class="flex1">
     	<button type="button" class="accordion" name="button">Bareme de consommation</button>
     	<div class="panel2">
@@ -62,30 +63,24 @@
    			<p id="textInput2">0</p>
     	</div>
     </div>
-   	
+   	-->
    	<div class="flex5">
    	<div class=panel5>
    	    <div class ="checktitle">Consommation Globale</div> 
    	    <span class="radio">
-    	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" /><label for="case1">Electricite</label><br />
+    	<input type="radio" name="conso" id="case1"  value="electricite" checked="checked" /><label for="case1">Lumiere</label><br />
 		</span>
-		<span class="radio">
-		<input type="radio" name="conso" id ="case2" value="eau" /><label for="case2">Eau</label><br />
-    	</span>
-    	
-    	<div class="checktitle">Intervalle de temps</div> 
-    	<span class="radio">
-    	<input type="radio" name="temps" id="case3"  value="semaines" /><label for="case3">Semaines</label><br />
-		</span>
-		<span class="radio">
-		<input type="radio" name="temps" id ="case4" value="mois" checked="checked" /><label for="case4">Mois</label>
-    	</span>
+		
     </div>
     </div>
    </div>
 </div>
     
     <h1 class="dom">Domiciles</h1>
+    
+    <div>
+    	<button class="consulter" onclick="window.location='../vue/formulaire_gestionnaire.php';">Ajouter un nouveau domicile</button>
+    </div>
     
 <div class="container">
   <?php
@@ -134,16 +129,18 @@ function elec1() {
 	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
-	var mesLabels = ?? // ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout"]
-	var mesDatas = ?? // [30, 50, 45, 20, 2, 10]
-	
+	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
+	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas); 
+	var monaxe = document.getElementById("myChart").dataset.monaxe;
+
+
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
-	        labels: mesLabels,
+	        labels: meslabels,
 	        datasets: [{
 	            label: 'Consommation d\'Electricite',
-	            data: mesDatas,
+	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
 	                'rgba(54, 162, 235, 0.2)',
@@ -171,7 +168,7 @@ function elec1() {
 	                },
 	                scaleLabel: {
 		                display:true,
-		                labelString: 'Consommation (kWh)'
+		                labelString: monaxe
 	                }
                 
 	            }]
@@ -190,20 +187,22 @@ function elec1() {
 
 var x = document.getElementById("case1");
 
- x.onclick = function elec() {
+ x.onclick = function elec1() {
 
 	var ctx = document.getElementById("myChart").getContext('2d');
 	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
+	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
+	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas);
 	
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
-	        labels: ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout"],
+	        labels: meslabels,
 	        datasets: [{
 	            label: 'Consommation d\'Electricite',
-	            data: [30, 50, 45, 20, 2, 10],
+	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
 	                'rgba(54, 162, 235, 0.2)',

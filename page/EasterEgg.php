@@ -30,7 +30,7 @@
 
     .egg{
         background-color: rgba(255,255,255,0.5);
-        width:30%;
+        width:600px;
         margin: auto;
         text-align: center;
         border-radius: 5px;

@@ -4,6 +4,8 @@ if(!isset($_SESSION)){
     session_start();
 }
 
+require('../../connexion_bdd.php');
+
 require('profil_modele.php');
 
 $id_user = getUtilisateur($_SESSION['ID']);

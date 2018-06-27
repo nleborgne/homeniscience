@@ -5,23 +5,20 @@
 
 require('Trame.php');
 
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
+
+require($_SERVER['DOCUMENT_ROOT'].'/homeniscience/connexion_bdd.php');
 
 function verifTrame($i)
 {
 
-    $sub0 = substr($i, 6, 1);
-    $sub1 = (int)substr($i, 7, 2);
-    $sub3 = (int)substr($i, 19, 4);
-    $sub4 = (int)substr($i, 23, 2);
-    $sub5 = (int)substr($i, 25, 2);
-    $sub6 = (int)substr($i, 27, 2);
-    $sub7 = (int)substr($i, 29, 2);
-    $sub8 = (int)substr($i, 31, 2);
+    $sub0 = substr($i, 7, 1);
+    $sub1 = (int)substr($i, 8, 2);
+    $sub3 = (int)substr($i, 20, 4);
+    $sub4 = (int)substr($i, 24, 2);
+    $sub5 = (int)substr($i, 26, 2);
+    $sub6 = (int)substr($i, 28, 2);
+    $sub7 = (int)substr($i, 30, 2);
+    $sub8 = (int)substr($i, 32, 2);
 
 
     if (is_numeric($sub0) && is_numeric($sub1)) {
@@ -49,7 +46,7 @@ function verifTrame($i)
 }
 
 // LIRE AVEC CURL
-$lien = "http://pastebin.com/raw/Pz33XpXT";
+$lien = "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=009C";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $lien);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
@@ -58,7 +55,7 @@ curl_close($ch);
 
 
 // On ouvre le fichier log
-$log = file("log.txt");
+$log = file($_SERVER['DOCUMENT_ROOT']."/homeniscience/trames/log.txt");
 
 $trameArray = array();
 
@@ -68,7 +65,7 @@ for ($i = strlen($data); $i >= 0; $i--) {
     if (substr($data, $i, 5) == "1009" && strlen(substr($data, $i, 33)) == 33) {
         // On vérifie avec le log
         if (substr($data, $i, 33) == $log[0]) {
-            echo "log rencontré <br>";
+            // echo "log rencontré <br>";
             break;
             // Vérifier que les valeurs sont bien du bon type
         } else if (verifTrame(substr($data, $i, 33))) {
@@ -90,7 +87,7 @@ if (count($trameArray) != 0) {
     }
     // On effectue la requête
     $result = $bdd->query($sql);
-    echo "Tout s'est bien passé";
+    //echo "Tout s'est bien passé";
 } else {
-    echo "Rien à ajouter";
+    //echo "Rien à ajouter";
 }

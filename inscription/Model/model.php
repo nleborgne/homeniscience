@@ -4,15 +4,6 @@ if(!isset($_SESSION)){
 session_start();
 }
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=homeniscience;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
-
 
 function check_mail($post){
     global $bdd;

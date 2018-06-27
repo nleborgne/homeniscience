@@ -143,7 +143,6 @@
     -->
   </div>
   <div>
-      <?php require('../chat/controleur_chat.php'); ?>
   <footer style="position: inherit">
       <?php require ('../footer.php')?>
   </footer>

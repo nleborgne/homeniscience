@@ -1,22 +1,4 @@
-/*
-var acc = document.getElementsByClassName("accordion");
-//var cont = document.getElementById("topContainer");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-acc[i].addEventListener("click", function () {
-this.classList.toggle("active");
-var panel = this.nextElementSibling;
-if (panel.style.maxHeight) {
-panel.style.maxHeight = null;
-//cont.style.maxHeight = null;
-} else {
-panel.style.maxHeight = panel.scrollHeight + "px";
-//  cont.style.maxHeight = panel.scrollHeight + "px";
-}
-});
-}*/
-
+// Barre de recherche
 var $rows = $('#table tr');
 
 $('#search').keyup(function() {

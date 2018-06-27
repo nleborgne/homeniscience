@@ -3,6 +3,9 @@
 if(!isset($_SESSION)){
   session_start();
 }
+
+require('../../connexion_bdd.php');
+
 /* Appel du modèle */
 require('support_modele.php');
 

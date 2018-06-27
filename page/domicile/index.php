@@ -4,6 +4,8 @@ if(!isset($_SESSION)){
   $ID_utilisateur_principal=$_SESSION['ID'];
 }
 
+require('../../connexion_bdd.php');
+
 require('domicile-model.php');
 
 try {
