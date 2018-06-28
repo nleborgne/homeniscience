@@ -29,6 +29,7 @@
         <form action="" method="POST">
             <label for="email">Email</label>
             <input type="email" name="emailDelete">
+            <input type="submit" value="Exporter" name="export">
             <input type="submit" value="Supprimer" name="delete">
         </form>
     </div>
