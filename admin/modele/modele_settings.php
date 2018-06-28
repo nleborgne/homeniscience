@@ -13,3 +13,11 @@ function postCGU($contenu) {
     $insert->execute();
     $insert->closeCursor();
 }
+
+function delete($email) {
+    global $bdd;
+    $delete = $bdd->prepare("DELETE FROM utilisateur WHERE email = :email");
+    $delete->bindParam('email',$email);
+    $delete->execute();
+    $delete->closeCursor();
+}

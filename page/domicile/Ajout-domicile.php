@@ -28,7 +28,7 @@ $cpost='';
 $super='';
 while ($dom = $domicile->fetch()){
     ?>
-    <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px ">
+    <h3 style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); font-size: 28px; border: 1px solid rgb(240,240,240)">
         <?php echo /*$dom['nom'],*/ ' ', $dom['numero_habitation'],' ', $dom['rue'],' ', $dom['code_postal']; ?></h3>
     <?php
      //if(strlen(  $dom['nom'] )>1){ echo $dom['rue'];}else{ echo 'numero de rue';}
@@ -97,7 +97,7 @@ while ($dom = $domicile->fetch()){
     while ($piece_dom = $piece_ajoutées->fetch()){
     ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
 
-        <?php  echo  $piece_dom['nom']; ?>
+        <?php  echo ' - '.  $piece_dom['nom']; ?>
         <?php
         }
         ?>
@@ -105,16 +105,6 @@ while ($dom = $domicile->fetch()){
 </div>
         </article>
     <br>
-
-    <?php
-    while ($piece_dom = $piece_ajoutées->fetch()){
-        ?><p style="/*box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);*/">
-
-        <?php  echo  $piece_dom['nom']; ?>
-        <?php
-    }
-    ?>
-
 
 </div>
 </html>

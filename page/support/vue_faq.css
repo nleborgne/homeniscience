@@ -1,23 +1,24 @@
 body {
-    margin:0;
-    font-family:'Lato';
+    margin: 0;
+    font-family: 'Lato';
     background: url('/homeniscience/page/img/funky-lines.png');
     background-attachment: fixed;
 }
-.block
-{
+
+.block {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.conteneur
-{
+
+.conteneur {
     display: block;
     width: 1200px;
     background: white;
-    margin: 38px;
+    margin: 35px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
+
 .accordion {
     font-family: 'Roboto';
     padding: 18px;
@@ -27,26 +28,23 @@ body {
     transition: 0.4s;
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
-    background:linear-gradient(-45deg, #4650E2, #00A2E8);
+    background: linear-gradient(-45deg, #4650E2, #00A2E8);
     color: white;
     font-weight: bold;
     font-size: 20px;
 }
-.text{
+
+.text {
     padding: 20px;
 }
-.logo_legale{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -20px;
-    width: 300px;
-    height: 300px;
+
+.text h2 {
+    color: #0099ff;
+    text-align: center;
 }
 
-.article
-{
-    color : #0099ff;
-    font-weight: bold;
+img {
+    max-width: 500px;
+    display: block;
+    margin: auto;
 }
-
-

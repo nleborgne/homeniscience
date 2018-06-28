@@ -14,7 +14,7 @@ if(!isset($_SESSION)){
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width">
-  <title>Accueil</title>
+  <title>Non-gestionnaire</title>
   <link rel="stylesheet" href="../css/non_gestionnaire.css">
 </head>
 <header class="header_non_gest">
@@ -34,7 +34,7 @@ if(!isset($_SESSION)){
 	
 		<p>Vous n'aurez pas accès aux informations relatives au données des capteurs,
 	ce serait une atteinte à la vie privée ! Pour en savoir plus, lisez les
-	<a href="/homeniscience/Doc administratif/controlleur_cgu.php" target="_blank">CGU</a>.</p>
+	<a href="/homeniscience/Doc administratif/controlleur/controlleur_cgu.php" target="_blank">CGU</a>.</p>
 	
 		<p>En revanche, toutes les données utiles et pratiques vous seront accessibles,
 	comme la lecture de statistiques, la maîtrise d'un plafond de consommation,

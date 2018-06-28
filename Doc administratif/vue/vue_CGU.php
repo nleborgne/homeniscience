@@ -10,8 +10,11 @@
 </head>
 
 <body>
-
-<?php require('../../page/header.php'); ?>
+<?php
+if (!empty($_SESSION['ID'])) {
+	 require('../../page/header.php'); 
+}
+?>
 
 <div class="block">
 <div class="conteneur">
@@ -24,7 +27,11 @@
 </div>
 </div>
 
-<?php require('../../page/footer.php'); ?>
+<?php 
+if (!empty($_SESSION['ID'])) {
+    require('../../page/footer.php'); 
+}
+?>
 
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="domicile2.0.css">
-    <title>MON DOMICILE</title>
+    <title>Domicile</title>
 </head>
 <?php require ('../header.php'); ?>
 <body>

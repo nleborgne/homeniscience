@@ -36,8 +36,9 @@
 	<div class=flex3>
     	<button type="button" class="accordion" name="button">Statistiques Globales de Consommation</button>
     	<div class="panel">
-    		<canvas id="myChart" width="400" height="250" data-monaxe="Heures" data-meslabels='<?php echo $array_date; ?>' data-mesdatas='<?php echo $array_val; ?>'></canvas>
-    		<canvas id="myChart2" width="400" height="250"></canvas>
+    		<canvas id="myChart" width="400" height="250" 
+    		data-monaxe="Valeur Moyenne (lux)" data-meslabels='<?php echo $array_date; ?>' 
+    		data-mesdatas='<?php echo $array_val; ?>' data-title="Variation du taux lumiere en fonction des 7 derniers jours"></canvas>
     	</div>
     </div>
    <div class="checkpart">
@@ -126,20 +127,19 @@ elec1()
 function elec1() {
 
 	var ctx = document.getElementById("myChart").getContext('2d');
-	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
 	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
 	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas); 
 	var monaxe = document.getElementById("myChart").dataset.monaxe;
-
+	var montitre = document.getElementById("myChart").dataset.title;
 
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
 	        labels: meslabels,
 	        datasets: [{
-	            label: 'Consommation d\'Electricite',
+	            label: montitre,
 	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
@@ -190,18 +190,19 @@ var x = document.getElementById("case1");
  x.onclick = function elec1() {
 
 	var ctx = document.getElementById("myChart").getContext('2d');
-	document.getElementById("myChart2").style.height = '0';
 	document.getElementById("myChart").style.height = 'auto';
 
 	var meslabels = JSON.parse(document.getElementById("myChart").dataset.meslabels); 
 	var mesdatas = JSON.parse(document.getElementById("myChart").dataset.mesdatas);
+	var monaxe = document.getElementById("myChart").dataset.monaxe;
+	var montitre = document.getElementById("myChart").dataset.title;
 	
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
 	        labels: meslabels,
 	        datasets: [{
-	            label: 'Consommation d\'Electricite',
+	            label: montitre,
 	            data: mesdatas,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
@@ -230,7 +231,7 @@ var x = document.getElementById("case1");
 	                },
 	                scaleLabel: {
 		                display:true,
-		                labelString: 'Consommation (kWh)'
+		                labelString: monaxe
 	                }
                 
 	            }]
@@ -245,74 +246,6 @@ var x = document.getElementById("case1");
     }
    
 	});
-	}
-
- var y = document.getElementById('case2');
- 
-	y.onclick = function water(){
-		
-		var crx = document.getElementById("myChart2").getContext('2d');
-		document.getElementById("myChart").style.height = '0';
-		document.getElementById("myChart2").style.height = 'auto';
-
-		var myChart2 = new Chart(crx, {
-		    type: 'bar',
-		    data: {
-		        labels: ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout"],
-		        datasets: [{
-		            label: 'Consommation d\'Eau',
-		            data: [1500, 1200, 900, 1800, 2500, 2439],
-		            backgroundColor: [
-		                'rgba(255, 99, 132, 0.2)',
-		                'rgba(54, 162, 235, 0.2)',
-		                'rgba(255, 206, 86, 0.2)',
-		                'rgba(75, 192, 192, 0.2)',
-		                'rgba(153, 102, 255, 0.2)',
-		                'rgba(255, 159, 64, 0.2)'
-		            ],
-		            borderColor: [
-		                'rgba(255,99,132,1)',
-		                'rgba(54, 162, 235, 1)',
-		                'rgba(255, 206, 86, 1)',
-		                'rgba(75, 192, 192, 1)',
-		                'rgba(153, 102, 255, 1)',
-		                'rgba(255, 159, 64, 1)'
-		            ],
-		            borderWidth: 1
-		        }]
-		    },
-		    options: {
-		        scales: {
-		            yAxes: [{
-		                ticks: {
-		                    beginAtZero:true
-		                },
-		                scaleLabel: {
-			                display:true,
-			                labelString: 'Litres'
-		                }
-	              
-		            }]
-		          
-		 		  
-		        },
-		        legend: {
-			        labels: {
-				        fontColor:'blue'
-			        }
-		        }
-	  }
-		});
-
-	}
-
-
-function updateTextInput(val) {
-  document.getElementById('textInput').innerHTML = val;
-}
-
-function updateTextInput2(val2) {
-	  document.getElementById('textInput2').innerHTML = val2;
 	}
 
 

@@ -22,21 +22,21 @@
                 </div>
                 <div id="reseau">
                     <h2 class="foot_titre">Réseaux sociaux</h2>
-                    <i class="fab fa-facebook-square foot_fb" title="facbook"></i>
+                    <i class="fab fa-facebook-square foot_fb" title="facebook"></i>
                     <i class="fab fa-twitter-square foot_tw" title="twitter"></i>
                     <i class="fab fa-linkedin foot_in" title="linkedin"></i>
                     <i class="fab fa-google-plus-square foot_gg" title="google"></i>
                 </div>
                 <div id="about">
                     <h2 class="foot_titre">A propos d'Hexateam</h2>
-                    <a id="hexateam_foot" href="/homeniscience/page/EasterEgg.php"><img class="logo_Hexateam" src="/homeniscience/page/img/logoHexateam.png" alt="Hexateam" title="Hexateam"></a>
+                    <a id="hexateam_foot" href="/homeniscience/page/footer_modifie.php"><img class="logo_Hexateam" src="/homeniscience/page/img/logoHexateam.png" alt="Hexateam" title="Hexateam"></a>
                 </div>
             </div>
             <div id="elementdessous">
                 <a id="foot_emailing" href="/homeniscience/page_contact/controler_contact.php">E-mailing</a>
-                <a id="foot_legale" href="/homeniscience/Doc administratif/controlleur/controlleur_mentions_legales.php">Mentions légales</a>
-                <a id="foot_CGU" href="/homeniscience/Doc administratif/controlleur/controlleur_cgu.php">CGU</a>
-                <a id="foot_rgpd" href="/homeniscience/Doc administratif/controlleur/controlleur_rgpd.php">RGPD</a>
+                <a id="foot_legale" href="/homeniscience/Doc administratif/controlleur/controlleur_mentions_legales.php" target="_blank">Mentions légales</a>
+                <a id="foot_CGU" href="/homeniscience/Doc administratif/controlleur/controlleur_cgu.php" target="_blank">CGU</a>
+                <a id="foot_rgpd" href="/homeniscience/Doc administratif/controlleur/controlleur_rgpd.php" target="_blank">RGPD</a>
                 <span class="copyright">Copyright © 2018 | Domisep.fr</span>
             </div>
         </div>
