@@ -12,7 +12,7 @@
     <h3>Homeniscience - Administration</h3>
     <div class="form">
         <form class="login-form" method="post" action="">
-            <input type="text" placeholder="email" name="email"/>
+            <input type="email" placeholder="email" name="email"/>
             <input type="password" placeholder="password" name="mot_de_passe"/>
             <input type="submit" name="submitLogin" value="login">
         </form>
