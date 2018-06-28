@@ -17,18 +17,20 @@
         <form action="" method="POST">
             <label for="contenu">
             </label>
-            <textarea name="contenu" id="contenu" cols="100" rows="30"><?php echo $cgu['contenu']; ?></textarea>
+            <textarea name="contenu" id="contenu" cols="100" rows="30"><?php echo htmlspecialchars($cgu['contenu']); ?></textarea>
             <input type="submit" value="Modifier" name="submitCGU">
         </form>
     </div>
 </div>
 
 <div class="CGU">
-    <button class="accordion">Supprimer des données</button>
+    <button class="accordion">Exporter / Supprimer des données</button>
+
     <div class="panel">
         <form action="" method="POST">
             <label for="email">Email</label>
             <input type="email" name="emailDelete">
+            <input type="submit" value="Exporter" name="export">
             <input type="submit" value="Supprimer" name="delete">
         </form>
     </div>
