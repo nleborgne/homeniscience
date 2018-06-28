@@ -40,9 +40,10 @@ try {
         }
     }
     
+    $nbr = getnbrcap2(2, $_GET['id']);
+    $nbre = $nbr -> fetch();
     
-    
-    $capteur = getValeurCapteur(8, $_GET['id']);
+    $capteur = getValeurCapteur(2, $_GET['id']);
   /*  $date_capteur = getDateCapteur(1, $_GET['id']); */
     $array_valeur = array();
     $array_date = array();
@@ -62,8 +63,8 @@ try {
     while ($donnees = $capteur -> fetch()) {
         $date = explode(' ', $donnees['date']);
         array_push($array_date, $date[0]);
-        
-        array_push($array_valeur, $donnees['moyenne']);
+        $data = $donnees['moyenne']*$nbre['count(*)'];
+        array_push($array_valeur, $data);
         /*
         if ($donnees['donnee'] > 0100) {
             if ($i == 0) {
