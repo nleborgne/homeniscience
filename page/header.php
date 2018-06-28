@@ -152,7 +152,6 @@ $name = getNom()->fetch();?>
       </button>
       <div class="dropdown-content">
         <a href="/homeniscience/page/Profil/Index.php">Gérer son profil</a>
-        <a href="#">Paramètres</a>
         <a href="/homeniscience/page/disconnect.php">Se déconnecter</a>
       </div>
     </div>
