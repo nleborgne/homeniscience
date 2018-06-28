@@ -1,4 +1,5 @@
 <table id="table" align="center">
+
     <?php if (strlen($domicile) < 2) { ?>
         <div class="container1" id="home">
             <div class="container1">
@@ -9,6 +10,7 @@
                                  style="height: 250px;width: 250px;margin-top: 20px; margin-left: 250px; margin-right: 250px; position: center">
                             <p style="padding-left: 100px;padding-right: 100px"> Ajoutez et configurez un domicile
                                 ! </p>
+
                             <input class="boutton" type="submit" name="ajouterdomicile" value="mon domicile"
                                    style=" margin-left: 325px; margin-right: 325px; max-height: 40px; background-color: #ff9a00;  position: center">
                         </div>
@@ -33,28 +35,32 @@
             while ($effecteur = $afficherEffecteurs->fetch()) {
                 switch ($effecteur['ID_type_equipement']) {
                     case 4:
-                        echo "<div id='capteur'>";
-                        echo '<i class="fas fa-thermometer fa-2x"></i>&nbsp;';
+                        echo "<div id='capteur' >";
+                        echo '<i class="fas fa-thermometer fa-2x"></i>&nbsp &nbsp &nbsp;';
                         echo $ValTempArr[0], $ValTempArr[1] . "," . $ValTempArr[2], $ValTempArr[3] . "°C";
                         echo "</div>";
+                        echo "<br>";
                         break;
                     case 3:
                         echo "<div id='capteur'>";
-                        echo '<i class="fas fa-child fa-2x"></i>&nbsp;';
+                        echo '<i class="fas fa-child fa-2x"></i>&nbsp &nbsp &nbsp;';
                         echo 'nobody detected';
                         echo "</div>";
+                        echo "<br>";
                         break;
                     case 6:
                         echo "<div id='capteur'>";
-                        echo "<i class='fas fa-ruler-horizontal fa-2x'> </i>";
-                        echo $ValDist0['donnee'];
+                        echo "<i class='fas fa-ruler-horizontal fa-2x'> </i>&nbsp &nbsp &nbsp;";
+                        echo $ValDist0['donnee'],'cm';
                         echo "</div>";
+                        echo "<br>";
                         break;
                     case 7:
                         echo "<div id='capteur'>";
-                        echo "<i class='fas fa-sun fa-2x'></i>";
-                        echo $ValLumi0['donnee'];
+                        echo "<i class='fas fa-sun fa-2x'></i>&nbsp &nbsp &nbsp;";
+                        echo (4095 - $ValLumi0['donnee'] )*15, 'lux';
                         echo "</div>";
+                        echo "<br>";
                         break;
 
                 }
@@ -73,9 +79,9 @@
                         echo "<div id='actionneur'>";
                         echo "<img id='fan' src='https://d30y9cdsu7xlg0.cloudfront.net/png/172-200.png'> ";
                         echo "<label for='moteursliderallumer'></label>";
-                        echo "<button id='moteursliderallumer'>Allumer</button>";
+                        echo "<button id='moteursliderallumer' style='background-color: background-color:  #008CBA; border: none; color: white; padding: 7px 15px; text-align: center; display: inline-block; font-size: 16px; margin: 2px 1px; cursor: pointer;'>Allumer</button>";
                         echo "<label for='moteurslidereteint'></label>";
-                        echo "<button id='moteurslidereteint'>Eteindre</button>";
+                        echo "<button id='moteurslidereteint'  style='background-color: background-color:  #008CBA; border: none; color: white; padding: 7px 15px; text-align: center; display: inline-block; font-size: 16px; margin: 2px 1px; cursor: pointer;' >Eteindre</button>";
                         echo "</div>";
                         break;
 

@@ -61,21 +61,38 @@ function supprUser($id_user) {
 
 
 /* fonction pour recuperer les données d'un capteur suivant l'ID_equipement */
-function getValeurCapteur($id_cap, $id_dom) {
+function getValeurCapteur($id_type, $id_dom) {
     global $bdd;
     $req = $bdd -> prepare('SELECT *, AVG(donnee) as moyenne FROM statistiques 
 INNER JOIN equipement ON ID_equipement = equipement.ID 
 INNER JOIN piece ON equipement.ID_piece = piece.ID 
 INNER JOIN domicile ON domicile.ID = piece.ID_domicile 
-WHERE equipement.ID = :id_cap AND domicile.ID = :id_dom
+WHERE equipement.ID_type_equipement = :id_type AND domicile.ID = :id_dom
 Group By DATE(date)
 ORDER BY date ASC
 Limit 7');
-    $req -> bindParam('id_cap', $id_cap, PDO::PARAM_INT);
+    $req -> bindParam('id_type', $id_type, PDO::PARAM_INT);
     $req -> bindParam('id_dom', $id_dom, PDO::PARAM_INT);
     $req -> execute();
     return $req;
 }
+
+function getnbrcap2($id_type, $id_dom) {
+    global $bdd;
+    $req = $bdd -> prepare('SELECT count(*) from 
+(SELECT AVG(donnee) as moyenne FROM statistiques 
+INNER JOIN equipement ON ID_equipement = equipement.ID 
+INNER JOIN piece ON equipement.ID_piece = piece.ID 
+INNER JOIN domicile ON domicile.ID = piece.ID_domicile 
+WHERE equipement.ID_type_equipement = :id_type AND domicile.ID = :id_dom) 
+as subquerry');
+    $req -> bindParam('id_type', $id_type, PDO::PARAM_INT);
+    $req -> bindParam('id_dom', $id_dom, PDO::PARAM_INT);
+    $req -> execute();
+    return $req;
+}
+
+
 
 /*
 function getDateCapteur($id_cap, $id_dom) {
