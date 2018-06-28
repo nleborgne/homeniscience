@@ -23,11 +23,16 @@ try {
         
         require('../../../trames/trames_traitement.php');
         
+        $nbr = getnbrcap(2);
+        $nbre = $nbr -> fetch();
+        
+        
         $capteur = conso(2);
         $array_val = array();
         $array_date = array();
         while ($donnees = $capteur -> fetch()) {
-            array_push($array_val, $donnees['AVG(donnee)']);
+            $data = $donnees['AVG(donnee)']*$nbre['count(*)'];
+            array_push($array_val, $data);
             $date = explode(' ', $donnees['date']);
             array_push($array_date, $date[0]);
             
