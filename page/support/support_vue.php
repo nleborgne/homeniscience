@@ -18,7 +18,7 @@
         <p>Foire aux questions</p>
       </button>
     </a>
-    <a href="mailto:support@domisep.fr">
+    <a href="/homeniscience/page_contact/controler_contact.php">
       <button class="child">
         <i class="fas fa-comment"></i>&nbsp;
         <p>Contacter Domisep</p>
