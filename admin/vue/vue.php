@@ -17,7 +17,7 @@
             }
             ?>
         </select>
-        <input type="submit" value="Selectionner">
+        <input type="submit" class="sub" value="Selectionner">
     </form>
 </div>
 

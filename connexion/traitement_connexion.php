@@ -5,6 +5,7 @@ try //préparation du fichier au cas où des erreurs surviennent
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
+
 $url = "../page/accueil/index.php"; //définition de l'URL à laquelle accéder en cas de succès de la connexion
 
 $reponse = $bdd->query('SELECT ID, email, mot_de_passe FROM utilisateur');

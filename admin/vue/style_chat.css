@@ -158,3 +158,16 @@ html, body {
     float:right;
     margin-right:100px;
 }
+
+.sub {
+    width: 100px;
+    line-height: 12px;
+    max-width: 100px;
+    border-radius: 5px;
+    background-color: #0099ff;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
